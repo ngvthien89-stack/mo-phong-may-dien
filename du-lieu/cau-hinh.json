@@ -1,0 +1,104 @@
+{
+  "_ghiChu": "Các giá trị dưới đây là SỐ LIỆU MINH HỌA phục vụ giảng dạy. Giảng viên có thể chỉnh tùy ý (xem README.md).",
+  "capDienAp": {
+    "phat": {
+      "ten": "Điện áp phát (đầu cực máy phát)",
+      "hienThi": "10,5 – 22 kV",
+      "kV": 15.75,
+      "mau": "#8e44ad"
+    },
+    "truyenTai": {
+      "ten": "Truyền tải siêu cao áp",
+      "hienThi": "500 kV",
+      "kV": 500,
+      "mau": "#d62828"
+    },
+    "caoAp": {
+      "ten": "Truyền tải cao áp",
+      "hienThi": "220 / 110 kV",
+      "kV": 110,
+      "mau": "#f77f00"
+    },
+    "trungAp": {
+      "ten": "Phân phối trung áp",
+      "hienThi": "22 / 35 kV",
+      "kV": 22,
+      "mau": "#1b9e77"
+    },
+    "haAp": {
+      "ten": "Phân phối hạ áp",
+      "hienThi": "0,4 / 0,23 kV",
+      "kV": 0.4,
+      "mau": "#2a78d6"
+    }
+  },
+  "truyenTai": {
+    "_ghiChu": "Đường dây truyền tải B dùng để tính tổn thất trong chế độ vận hành bình thường.",
+    "capDienAp": "truyenTai",
+    "chieuDai_km": 300,
+    "r0_ohm_km": 0.028,
+    "cosPhi": 0.9
+  },
+  "phanPhoi": {
+    "_ghiChu": "Tổn thất lưới phân phối được ước tính tỉ lệ bình phương công suất.",
+    "congSuatDinhMuc_MW": 300,
+    "tonThatDinhMuc_phanTram": 4
+  },
+  "phuTai": [
+    {
+      "id": "cong-nghiep",
+      "ten": "Nhà máy công nghiệp",
+      "Pmax_MW": 120,
+      "doThi": [0.55, 0.52, 0.5, 0.5, 0.5, 0.55, 0.7, 0.85, 0.95, 1, 1, 0.95, 0.8, 0.95, 1, 1, 0.95, 0.85, 0.7, 0.65, 0.62, 0.6, 0.58, 0.56]
+    },
+    {
+      "id": "toa-nha",
+      "ten": "Tòa nhà cao tầng",
+      "Pmax_MW": 60,
+      "doThi": [0.25, 0.22, 0.2, 0.2, 0.2, 0.25, 0.35, 0.6, 0.85, 0.95, 1, 1, 0.95, 1, 1, 0.98, 0.9, 0.8, 0.7, 0.6, 0.5, 0.4, 0.32, 0.28]
+    },
+    {
+      "id": "dan-cu",
+      "ten": "Hộ gia đình",
+      "Pmax_MW": 110,
+      "doThi": [0.35, 0.3, 0.28, 0.27, 0.28, 0.38, 0.55, 0.6, 0.5, 0.45, 0.45, 0.5, 0.55, 0.5, 0.45, 0.45, 0.5, 0.7, 0.9, 1, 0.98, 0.85, 0.65, 0.45]
+    }
+  ],
+  "kichBanDienAp": {
+    "_ghiChu": "Kịch bản 'Vì sao phải truyền tải điện áp cao?'",
+    "cacDienAp_kV": [22, 110, 220, 500],
+    "dienApMacDinh_kV": 110,
+    "P_MW": 50,
+    "P_min_MW": 10,
+    "P_max_MW": 200,
+    "chieuDai_km": 50,
+    "chieuDai_min_km": 10,
+    "chieuDai_max_km": 200,
+    "r0_ohm_km": 0.1,
+    "cosPhi": 0.9
+  },
+  "kichBanSuCo": {
+    "thoiGianCat_s": 0.8,
+    "thoiGianChoDongLai_s": 2.5,
+    "thoiGianCoLap_s": 1.5
+  },
+  "kichBanTangTai": {
+    "khuVuc": "cong-nghiep",
+    "deltaP_MW": 60,
+    "thoiGianKhoiDong_s": 2,
+    "tanSo": {
+      "f0": 50,
+      "H_s": 5,
+      "S_MVA": 600,
+      "doDoc_R": 0.05,
+      "Tg_s": 1.0,
+      "Ki": 0.03
+    }
+  },
+  "hoatHinh": {
+    "matDoHat": 1.0,
+    "tocDoHat_px_s": 90,
+    "gioMacDinh": 19,
+    "giayThucMoiGio": 3
+  }
+}

@@ -1,0 +1,139 @@
+{
+  "_huongDan": "Thứ tự trong 'boPhan' cũng là thứ tự trình chiếu. Có thể dùng {{phat}}, {{truyenTai}}, {{caoAp}}, {{trungAp}}, {{haAp}} để chèn cấp điện áp lấy từ cau-hinh.json.",
+  "moDau": {
+    "tieuDe": "Tổng quan hệ thống năng lượng điện",
+    "loiGiang": "Hệ thống năng lượng điện gồm các khâu: sản xuất (nhà máy điện) → truyền tải (điện áp cao, đi xa) → phân phối (điện áp trung và hạ áp, đến từng khu vực) → tiêu thụ. Các hạt sáng chạy trên đường dây thể hiện dòng công suất; màu đường dây cho biết cấp điện áp."
+  },
+  "ketLuan": {
+    "tieuDe": "Tóm tắt",
+    "loiGiang": "Điện năng được sản xuất ở điện áp {{phat}}, nâng lên {{truyenTai}} để truyền tải đi xa với tổn thất nhỏ, sau đó giảm dần qua {{caoAp}}, {{trungAp}} và {{haAp}} để phân phối đến hộ tiêu thụ. Sản xuất và tiêu thụ điện diễn ra đồng thời: phụ tải thay đổi thì nhà máy phải thay đổi công suất phát theo."
+  },
+  "boPhan": [
+    {
+      "id": "nguon-phat",
+      "ma": "A",
+      "ten": "Nguồn phát – Nhà máy điện",
+      "tenNgan": "Nhà máy điện",
+      "capDienAp": "{{phat}} (đầu cực máy phát)",
+      "chucNang": "Biến đổi năng lượng sơ cấp (nhiệt năng của than, khí; thế năng của nước; năng lượng gió, mặt trời…) thành điện năng xoay chiều 3 pha tần số 50 Hz.",
+      "thietBiChinh": ["Lò hơi / buồng đốt", "Tuabin (hơi, khí hoặc thủy lực)", "Máy phát điện đồng bộ 3 pha", "Hệ thống kích từ và bộ điều tốc", "Tháp làm mát, ống khói (nhà máy nhiệt điện)"],
+      "ghiChu": [
+        "Hình vẽ minh họa nhà máy nhiệt điện: hơi nước áp suất cao làm quay tuabin, tuabin kéo rô-to máy phát đồng bộ.",
+        "Điện năng hầu như không tích trữ được với quy mô lớn, nên công suất phát phải luôn cân bằng với công suất tiêu thụ cộng tổn thất."
+      ],
+      "loiGiang": "Nhà máy điện là nơi sản xuất điện năng. Tuabin quay kéo máy phát đồng bộ, tạo ra điện áp {{phat}}. Quan sát: khi phụ tải tăng, tuabin quay \"mạnh\" hơn và mật độ hạt công suất tăng."
+    },
+    {
+      "id": "mba-tang-ap",
+      "ma": "",
+      "ten": "MBA truyền tải (MBA tăng áp tại nhà máy)",
+      "tenNgan": "MBA tăng áp",
+      "capDienAp": "{{phat}} → {{truyenTai}}",
+      "chucNang": "Nâng điện áp từ đầu cực máy phát lên cấp truyền tải để giảm dòng điện trên đường dây, nhờ đó giảm tổn thất công suất và tiết diện dây dẫn.",
+      "thietBiChinh": ["Máy biến áp tăng áp 3 pha (hoặc tổ 3 MBA 1 pha)", "Sứ xuyên cao áp", "Hệ thống làm mát dầu (cánh tản nhiệt, quạt)", "Máy cắt, dao cách ly, chống sét van phía cao áp"],
+      "ghiChu": [
+        "Thường đấu theo sơ đồ khối máy phát – máy biến áp (mỗi tổ máy một MBA tăng áp).",
+        "Cùng công suất truyền tải, tăng điện áp k lần thì dòng điện giảm k lần và tổn thất ΔP = 3·I²·R giảm k² lần."
+      ],
+      "loiGiang": "MBA tăng áp nâng điện áp lên {{truyenTai}}. Đây là chìa khóa để truyền tải đi xa: điện áp càng cao, dòng điện càng nhỏ, tổn thất càng ít (xem kịch bản b)."
+    },
+    {
+      "id": "duong-day-truyen-tai",
+      "ma": "B",
+      "ten": "Đường dây truyền tải",
+      "tenNgan": "Đường dây truyền tải",
+      "capDienAp": "{{truyenTai}}; {{caoAp}}",
+      "chucNang": "Truyền tải công suất lớn đi xa từ các nhà máy điện đến các trạm biến áp truyền tải và liên kết các vùng của hệ thống điện.",
+      "thietBiChinh": ["Cột thép (nhiều mạch)", "Dây dẫn nhôm lõi thép, thường phân pha nhiều sợi ở cấp siêu cao áp", "Chuỗi cách điện", "Dây chống sét (có thể kết hợp cáp quang OPGW)"],
+      "ghiChu": [
+        "Cấp siêu cao áp dùng dây phân pha (nhiều sợi mỗi pha) để giảm tổn thất vầng quang và điện kháng đường dây.",
+        "Đường dây 500 kV Bắc – Nam mạch 1 đưa vào vận hành năm 1994, là xương sống liên kết hệ thống điện ba miền."
+      ],
+      "loiGiang": "Đường dây truyền tải {{truyenTai}} trên cột thép cao, nhiều mạch. Phía sau trạm truyền tải là lưới {{caoAp}}. Dòng điện, tổn thất và hiệu suất truyền tải được tính trực tiếp theo phụ tải."
+    },
+    {
+      "id": "tba-truyen-tai",
+      "ma": "",
+      "ten": "Trạm biến áp truyền tải (giảm áp)",
+      "tenNgan": "TBA truyền tải",
+      "capDienAp": "{{truyenTai}} → {{caoAp}}",
+      "chucNang": "Giảm điện áp từ cấp truyền tải xuống cấp cao áp thấp hơn, đồng thời là điểm nút đấu nối, đóng cắt và bảo vệ các đường dây.",
+      "thietBiChinh": ["MBA (tự ngẫu) 500/220 kV, 220/110 kV", "Thanh cái, máy cắt, dao cách ly", "Máy biến dòng (TI), máy biến điện áp (TU)", "Hệ thống rơ-le bảo vệ, điều khiển, SCADA"],
+      "ghiChu": [
+        "Máy cắt cao áp phải cắt được dòng ngắn mạch rất lớn; ở cấp cao áp thường dùng máy cắt khí SF6.",
+        "Trạm thường có hàng rào bảo vệ, khoảng cách an toàn lớn; nhiều trạm hiện nay vận hành theo mô hình không người trực."
+      ],
+      "loiGiang": "Trạm biến áp truyền tải hạ điện áp từ {{truyenTai}} xuống {{caoAp}} để đưa điện đến gần các khu vực tiêu thụ."
+    },
+    {
+      "id": "tba-phan-phoi",
+      "ma": "",
+      "ten": "Trạm biến áp phân phối (trạm trung gian)",
+      "tenNgan": "TBA phân phối",
+      "capDienAp": "{{caoAp}} → {{trungAp}}",
+      "chucNang": "Hạ điện áp xuống cấp trung áp và chia điện năng ra nhiều xuất tuyến (lộ ra) cung cấp cho các khu vực.",
+      "thietBiChinh": ["MBA 110/22 kV có bộ điều áp dưới tải", "Tủ hợp bộ trung áp (máy cắt các xuất tuyến)", "Rơ-le bảo vệ quá dòng, chạm đất", "Tụ bù công suất phản kháng"],
+      "ghiChu": [
+        "Bộ điều áp dưới tải giúp giữ điện áp phía trung áp ổn định khi phụ tải thay đổi trong ngày.",
+        "Mỗi xuất tuyến trung áp có máy cắt riêng ở đầu nguồn, sự cố trên một xuất tuyến không làm mất điện các xuất tuyến khác."
+      ],
+      "loiGiang": "Trạm biến áp phân phối hạ áp từ {{caoAp}} xuống {{trungAp}} và chia ra các xuất tuyến đi đến khu công nghiệp, đô thị, khu dân cư."
+    },
+    {
+      "id": "duong-day-phan-phoi",
+      "ma": "D",
+      "ten": "Đường dây phân phối điện",
+      "tenNgan": "Đường dây phân phối",
+      "capDienAp": "Trung áp {{trungAp}}; hạ áp {{haAp}}",
+      "chucNang": "Dẫn điện từ TBA phân phối đến các trạm biến áp của khách hàng (trung áp) và từ MBA phân phối đến từng hộ dùng điện (hạ áp).",
+      "thietBiChinh": ["Cột bê tông ly tâm", "Xà, sứ đứng, sứ treo", "Dây nhôm trần hoặc cáp vặn xoắn", "Cầu chì tự rơi, chống sét van"],
+      "ghiChu": [
+        "Ở Việt Nam, lưới trung áp 22 kV được dùng phổ biến; 35 kV thường gặp ở khu vực miền núi, đường dây dài.",
+        "Lưới hạ áp 3 pha 4 dây cho phép lấy điện áp dây 0,4 kV cho động cơ và điện áp pha 0,23 kV cho hộ gia đình."
+      ],
+      "loiGiang": "Đường dây phân phối trung áp {{trungAp}} chạy trên cột bê tông, rẽ nhánh đến từng trạm biến áp khách hàng; phía hạ áp {{haAp}} đến từng ngôi nhà."
+    },
+    {
+      "id": "thiet-bi-tu-dong",
+      "ma": "E",
+      "ten": "Thiết bị tự động phân phối (Recloser, LBS)",
+      "tenNgan": "Thiết bị tự động phân phối",
+      "capDienAp": "{{trungAp}}",
+      "chucNang": "Tự động phát hiện và cắt sự cố, tự đóng lại khi sự cố thoáng qua; phân đoạn và cô lập đoạn lưới bị sự cố để thu hẹp vùng mất điện.",
+      "thietBiChinh": ["Recloser – máy cắt tự đóng lại (cắt được dòng ngắn mạch)", "LBS – cầu dao phụ tải (đóng cắt dòng phụ tải, phân đoạn)", "Tủ điều khiển, rơ-le, kết nối SCADA / DAS"],
+      "ghiChu": [
+        "Phần lớn sự cố trên lưới điện trên không là thoáng qua (sét đánh, cành cây chạm dây…), nên tự đóng lại giúp cấp điện trở lại rất nhanh.",
+        "LBS không cắt được dòng ngắn mạch; khi phối hợp với recloser, LBS chỉ mở trong khoảng thời gian không điện (sau khi recloser đã cắt)."
+      ],
+      "loiGiang": "Recloser đặt đầu tuyến và các LBS phân đoạn tạo thành hệ thống tự động hóa lưới phân phối. Hãy thử kịch bản c: bấm vào một đoạn đường dây để tạo sự cố."
+    },
+    {
+      "id": "khu-tieu-thu",
+      "ma": "C",
+      "ten": "Khu vực tiêu thụ điện năng",
+      "tenNgan": "Khu vực tiêu thụ",
+      "capDienAp": "Nhận {{trungAp}}, hạ xuống {{haAp}} qua MBA riêng",
+      "chucNang": "Các phụ tải lớn như nhà máy công nghiệp, tòa nhà cao tầng nhận điện trung áp và có trạm biến áp phân phối riêng.",
+      "thietBiChinh": ["Trạm biến áp khách hàng 22/0,4 kV", "Tủ điện tổng, tủ phân phối", "Động cơ, chiếu sáng, điều hòa, thang máy", "Tụ bù nâng cao hệ số công suất"],
+      "ghiChu": [
+        "Phụ tải công nghiệp thường cao vào ban ngày theo ca sản xuất; tòa nhà văn phòng – thương mại cao vào giờ hành chính.",
+        "Khách hàng lớn thường dùng công tơ điện tử nhiều biểu giá (cao điểm, bình thường, thấp điểm) để khuyến khích dịch chuyển phụ tải."
+      ],
+      "loiGiang": "Khu vực tiêu thụ gồm nhà máy công nghiệp và tòa nhà cao tầng, mỗi nơi có máy biến áp phân phối riêng. Kéo thanh thời gian để thấy phụ tải thay đổi trong ngày."
+    },
+    {
+      "id": "ho-tieu-thu",
+      "ma": "F",
+      "ten": "Hộ tiêu thụ điện năng (sinh hoạt)",
+      "tenNgan": "Hộ tiêu thụ",
+      "capDienAp": "{{haAp}} (qua MBA treo cột 22/0,4 kV)",
+      "chucNang": "Các hộ gia đình nhận điện hạ áp từ máy biến áp phân phối treo trên cột qua lưới hạ áp và công tơ điện.",
+      "thietBiChinh": ["MBA phân phối treo cột 22/0,4 kV", "Lưới hạ áp, hộp công tơ", "Aptomat (CB), thiết bị chống dòng rò (RCD)", "Thiết bị gia dụng"],
+      "ghiChu": [
+        "Phụ tải sinh hoạt có cao điểm vào buổi tối khi nhiều gia đình cùng dùng chiếu sáng, nấu ăn, điều hòa.",
+        "Một MBA treo cột thường có dung lượng từ vài chục đến vài trăm kVA, cấp điện cho một cụm dân cư."
+      ],
+      "loiGiang": "Hộ gia đình nhận điện {{haAp}} qua máy biến áp treo trên cột. Đây là điểm cuối của quá trình: từ nhà máy điện đến ổ cắm trong nhà."
+    }
+  ]
+}

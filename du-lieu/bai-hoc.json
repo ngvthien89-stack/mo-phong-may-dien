@@ -1,0 +1,20 @@
+{
+  "_huongDan": "trangThai: \"san-sang\" (đã có trang) hoặc \"sap-ra-mat\". Các bài 'sắp ra mắt' dưới đây là ví dụ, giảng viên sửa theo đề cương môn học.",
+  "chuong": [
+    {
+      "ten": "Chương 1. Mở đầu",
+      "baiHoc": [
+        { "ma": "1.1", "ten": "Hệ thống năng lượng điện", "moTa": "Mô phỏng quá trình sản xuất, truyền tải, phân phối và tiêu thụ điện năng; vì sao truyền tải ở điện áp cao; sự cố lưới phân phối.", "duongDan": "he-thong-dien.html", "trangThai": "san-sang" }
+      ]
+    },
+    {
+      "ten": "Các chương tiếp theo",
+      "baiHoc": [
+        { "ma": "", "ten": "Máy biến áp", "moTa": "Cấu tạo, nguyên lý làm việc, mạch tương đương.", "duongDan": "", "trangThai": "sap-ra-mat" },
+        { "ma": "", "ten": "Máy điện không đồng bộ", "moTa": "Từ trường quay, hệ số trượt, đặc tính cơ.", "duongDan": "", "trangThai": "sap-ra-mat" },
+        { "ma": "", "ten": "Máy điện đồng bộ", "moTa": "Máy phát đồng bộ, hòa đồng bộ, đặc tính góc.", "duongDan": "", "trangThai": "sap-ra-mat" },
+        { "ma": "", "ten": "Máy điện một chiều", "moTa": "Cổ góp, phản ứng phần ứng, các phương pháp kích từ.", "duongDan": "", "trangThai": "sap-ra-mat" }
+      ]
+    }
+  ]
+}

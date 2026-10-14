@@ -1,0 +1,59 @@
+{
+  "_huongDan": "Mỗi lần làm bài lấy ngẫu nhiên 'soCauMoiLan' câu. 'dapAn' là chỉ số của lựa chọn đúng, bắt đầu từ 0.",
+  "soCauMoiLan": 5,
+  "cauHoi": [
+    {
+      "cauHoi": "Vì sao điện năng được truyền tải đi xa ở điện áp cao?",
+      "luaChon": ["Để tăng dòng điện trên đường dây", "Để giảm dòng điện, từ đó giảm tổn thất công suất trên đường dây", "Để tăng tần số của hệ thống", "Để thiết bị trong nhà hoạt động mạnh hơn"],
+      "dapAn": 1,
+      "giaiThich": "Với cùng công suất P, I = P/(√3·U·cosφ): U càng lớn thì I càng nhỏ. Tổn thất ΔP = 3·I²·R tỉ lệ với I², nên giảm rất nhanh khi tăng điện áp."
+    },
+    {
+      "cauHoi": "Giữ nguyên P, cosφ và điện trở R của đường dây, nếu tăng điện áp truyền tải lên 2 lần thì tổn thất công suất trên đường dây:",
+      "luaChon": ["Giảm 2 lần", "Không đổi", "Giảm 4 lần", "Tăng 2 lần"],
+      "dapAn": 2,
+      "giaiThich": "I giảm 2 lần nên ΔP = 3·I²·R giảm 2² = 4 lần. Ví dụ: chuyển từ 110 kV lên 220 kV thì tổn thất còn 1/4."
+    },
+    {
+      "cauHoi": "Thiết bị nào nâng điện áp từ đầu cực máy phát lên cấp truyền tải?",
+      "luaChon": ["Recloser", "Máy biến áp tăng áp đặt tại nhà máy điện", "MBA treo cột 22/0,4 kV", "Cầu dao phụ tải LBS"],
+      "dapAn": 1,
+      "giaiThich": "Máy biến áp tăng áp (MBA truyền tải) đặt ngay tại nhà máy, nâng điện áp từ 10,5–22 kV lên 220/500 kV."
+    },
+    {
+      "cauHoi": "Hộ gia đình thường được cung cấp điện ở cấp điện áp nào?",
+      "luaChon": ["0,4 / 0,23 kV", "22 kV", "110 kV", "500 kV"],
+      "dapAn": 0,
+      "giaiThich": "Lưới hạ áp 3 pha 4 dây có điện áp dây 0,4 kV và điện áp pha 0,23 kV; hộ gia đình dùng điện 1 pha 0,23 kV."
+    },
+    {
+      "cauHoi": "Chức năng chính của recloser trên lưới phân phối là gì?",
+      "luaChon": ["Đo đếm điện năng cho khách hàng", "Nâng điện áp lưới phân phối", "Tự động cắt dòng sự cố và tự động đóng lại", "Bù công suất phản kháng"],
+      "dapAn": 2,
+      "giaiThich": "Recloser là máy cắt có chức năng tự đóng lại: cắt khi có sự cố, sau một thời gian chờ thì tự đóng lại. Nếu sự cố thoáng qua đã hết, lưới được cấp điện trở lại ngay."
+    },
+    {
+      "cauHoi": "Tần số định mức của hệ thống điện Việt Nam là:",
+      "luaChon": ["50 Hz", "60 Hz", "100 Hz", "25 Hz"],
+      "dapAn": 0,
+      "giaiThich": "Hệ thống điện Việt Nam vận hành ở tần số định mức 50 Hz."
+    },
+    {
+      "cauHoi": "Khi phụ tải tăng đột ngột, trong những giây đầu tiên phần công suất thiếu hụt được bù chủ yếu từ đâu?",
+      "luaChon": ["Từ tụ bù ở trạm phân phối", "Từ động năng quay của rô-to các tổ máy, làm tần số giảm", "Từ dây chống sét", "Không cần bù, tải tự giảm về như cũ"],
+      "dapAn": 1,
+      "giaiThich": "Bộ điều tốc cần thời gian để tăng công suất tuabin. Trong lúc đó rô-to bị hãm, giải phóng động năng, nên tần số giảm; sau đó bộ điều tốc và điều chỉnh tần số khôi phục lại 50 Hz."
+    },
+    {
+      "cauHoi": "Thứ tự đúng của dòng điện năng từ nguồn đến tải là:",
+      "luaChon": [
+        "Nhà máy → TBA phân phối → MBA tăng áp → Đường dây truyền tải → Hộ tiêu thụ",
+        "Nhà máy → MBA tăng áp → Đường dây truyền tải → TBA truyền tải → TBA phân phối → Đường dây phân phối → Hộ tiêu thụ",
+        "Nhà máy → Đường dây phân phối → TBA truyền tải → Hộ tiêu thụ",
+        "Nhà máy → MBA treo cột → Đường dây truyền tải → Hộ tiêu thụ"
+      ],
+      "dapAn": 1,
+      "giaiThich": "Điện áp được nâng lên ngay tại nhà máy, truyền tải ở điện áp cao, rồi giảm dần qua TBA truyền tải, TBA phân phối và MBA phân phối trước khi đến hộ tiêu thụ."
+    }
+  ]
+}
