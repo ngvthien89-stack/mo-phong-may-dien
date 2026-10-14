@@ -1,0 +1,12 @@
+{
+  "name": "mo-phong-may-dien",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Website mô phỏng môn Máy điện (HTML/CSS/JS thuần, chạy trên GitHub Pages)",
+  "type": "module",
+  "scripts": {
+    "test": "node --test tests/*.test.js",
+    "serve": "npx --yes http-server -p 8080 -c-1 .",
+    "screenshot": "node tests/chup-man-hinh.mjs"
+  }
+}

@@ -1,0 +1,65 @@
+/* chung.css — Biến màu, kiểu chữ và thành phần dùng chung */
+:root {
+  --nen: #eef3f8;
+  --mat: #ffffff;
+  --mat-2: #f6f9fc;
+  --chu: #13202b;
+  --chu-phu: #4a5b6b;
+  --chu-mo: #6b7c8c;
+  --vien: #d3dde7;
+  --chinh: #0b5cad;
+  --chinh-dam: #08467f;
+  --chinh-nhat: #e3effb;
+  --dau: #1d3557;
+  --nguy-hiem: #c62828;
+  --nguy-hiem-nhat: #fdecec;
+  --tot: #2e7d32;
+  --tot-nhat: #e8f5e9;
+  --canh-bao: #b26a00;
+  --vang: #ffd166;
+  --bo-goc: 12px;
+  --bong: 0 2px 6px rgba(19, 32, 43, .08), 0 8px 24px rgba(19, 32, 43, .08);
+  --font: "Segoe UI", system-ui, -apple-system, Roboto, "Noto Sans", "Helvetica Neue", Arial, sans-serif;
+  color-scheme: light;
+}
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  font-family: var(--font);
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--chu);
+  background: var(--nen);
+}
+h1, h2, h3 { line-height: 1.25; margin: 0; }
+a { color: var(--chinh); }
+code { font-size: .9em; background: var(--chinh-nhat); padding: .05em .35em; border-radius: 4px; }
+[hidden] { display: none !important; }
+
+.nut {
+  display: inline-flex; align-items: center; justify-content: center; gap: .4em;
+  min-height: 40px; padding: .45em .95em;
+  font: inherit; font-weight: 600; font-size: .95rem;
+  color: var(--chu); background: var(--mat);
+  border: 1px solid var(--vien); border-radius: 10px;
+  cursor: pointer; transition: background .15s, border-color .15s, transform .1s;
+  white-space: nowrap;
+}
+.nut:hover { background: var(--chinh-nhat); border-color: #a9c6e6; }
+.nut:active { transform: translateY(1px); }
+.nut:disabled { opacity: .5; cursor: not-allowed; }
+.nut-chinh { background: var(--chinh); border-color: var(--chinh); color: #fff; }
+.nut-chinh:hover { background: var(--chinh-dam); border-color: var(--chinh-dam); }
+.nut[aria-pressed="true"] { background: var(--dau); border-color: var(--dau); color: #fff; }
+.nut-bieu-tuong { padding: .45em .6em; }
+:focus-visible { outline: 3px solid #f4a261; outline-offset: 2px; }
+
+.huy-hieu-html {
+  display: inline-grid; place-items: center;
+  width: 1.7em; height: 1.7em; margin-right: .45em;
+  border-radius: 50%; background: var(--dau); color: #fff;
+  font-weight: 800; font-size: .85em; flex: none;
+}
+.huy-hieu-html.nho { width: 1.45em; height: 1.45em; font-size: .72em; }
+.ghi-chu-nho { font-size: .82rem; color: var(--chu-mo); margin: .6em 0 0; }

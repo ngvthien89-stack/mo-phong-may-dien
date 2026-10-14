@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>1.1. Hệ thống năng lượng điện – Mô Phỏng Môn Máy Điện</title>
+  <meta name="description" content="Mô phỏng sinh động quá trình sản xuất, truyền tải, phân phối và tiêu thụ điện năng.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230b5cad'/%3E%3Cpath d='M18 3 7 18h7l-2 11 11-15h-7z' fill='%23ffd166'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link rel="stylesheet" href="css/chung.css">
+  <link rel="stylesheet" href="css/he-thong-dien.css">
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script type="module" src="js/he-thong-dien.js"></script>
+</head>
+<body class="trang-mo-phong">
+  <header class="thanh-dau">
+    <a class="ve-trang-chu" href="index.html" title="Về danh sách bài học"><span aria-hidden="true">←</span> <span class="chu-an-nho">Bài học</span></a>
+    <h1><span class="so-bai">1.1.</span> Hệ thống năng lượng điện</h1>
+    <div class="nhom-nut">
+      <label class="chon-kich-ban">
+        <span class="chu-an-nho">Kịch bản</span>
+        <select id="chon-kich-ban" aria-label="Chọn kịch bản mô phỏng">
+          <option value="binh-thuong">a) Vận hành bình thường</option>
+          <option value="dien-ap">b) Vì sao phải truyền tải điện áp cao?</option>
+          <option value="su-co">c) Sự cố ngắn mạch lưới phân phối</option>
+          <option value="tang-tai">d) Tăng phụ tải đột ngột</option>
+        </select>
+      </label>
+      <button type="button" id="nut-trinh-chieu" class="nut" aria-pressed="false" title="Chế độ trình chiếu (phím ← →)"><span aria-hidden="true">▣</span> Trình chiếu</button>
+      <button type="button" id="nut-cau-hoi" class="nut" title="Câu hỏi kiểm tra nhanh"><span aria-hidden="true">?</span> Câu hỏi</button>
+      <button type="button" id="nut-toan-man-hinh" class="nut nut-bieu-tuong" title="Toàn màn hình" aria-label="Toàn màn hình">
+        <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M4 9V4h5M15 4h5v5M20 15v5h-5M9 20H4v-5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <main class="bo-cuc">
+    <section class="vung-so-do" aria-label="Sơ đồ hệ thống điện">
+      <p class="goi-y-vuot">← Vuốt ngang để xem toàn bộ sơ đồ →</p>
+      <div class="khung-so-do">
+        <div class="cuon-so-do" id="cuon-so-do">
+          <svg id="so-do" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid meet" role="img"
+               aria-label="Sơ đồ hệ thống điện: nhà máy điện, MBA tăng áp, đường dây truyền tải, trạm biến áp truyền tải, trạm biến áp phân phối, đường dây phân phối, thiết bị tự động, khu vực tiêu thụ và hộ tiêu thụ"></svg>
+        </div>
+      </div>
+      <div id="chu-thich-buoc" class="chu-thich-buoc" role="status" aria-live="polite"></div>
+      <div class="thanh-dieu-khien">
+        <button type="button" id="nut-chay" class="nut nut-chinh" aria-pressed="false"><span aria-hidden="true">⏸</span> Tạm dừng</button>
+        <label class="dieu-khien toc-do">Tốc độ
+          <input type="range" id="toc-do" min="0.25" max="3" step="0.25" value="1">
+          <output id="gia-tri-toc-do">1×</output>
+        </label>
+        <label class="dieu-khien thoi-gian">Thời gian trong ngày
+          <input type="range" id="thoi-gian" min="0" max="24" step="0.25" value="19">
+          <output id="gia-tri-gio">19:00</output>
+        </label>
+        <label class="o-chon"><input type="checkbox" id="tu-chay-gio"> Tự chạy giờ</label>
+      </div>
+    </section>
+
+    <aside class="bang-ben" aria-label="Bảng điều khiển và số liệu">
+      <section id="bang-kich-ban" class="the"></section>
+      <section id="bang-so-lieu" class="the bang-so-lieu" aria-live="off">
+        <h2>Số liệu trực tiếp <span class="gio-so-lieu" id="sl-gio"></span></h2>
+        <dl class="luoi-so-lieu">
+          <div class="hang nhan-manh"><dt><span class="huy-hieu-html nho">A</span>Công suất phát</dt><dd id="sl-p-phat">—</dd></div>
+          <div class="hang" id="hang-p-yeu-cau" hidden><dt>Phụ tải yêu cầu (điện)</dt><dd id="sl-p-yeu-cau">—</dd></div>
+          <div class="hang" id="hang-tan-so" hidden><dt>Tần số hệ thống</dt><dd id="sl-tan-so">—</dd></div>
+          <div class="nhom-tieu-de"><span class="huy-hieu-html nho">B</span>Đường dây truyền tải <span id="sl-u-tt"></span></div>
+          <div class="hang"><dt>Dòng điện</dt><dd id="sl-i-tt">—</dd></div>
+          <div class="hang"><dt>Tổn thất ΔP</dt><dd id="sl-dp-tt">—</dd></div>
+          <div class="hang nhan-manh"><dt>Hiệu suất truyền tải</dt><dd id="sl-eta-tt">—</dd></div>
+          <div class="hang"><dt>Tổn thất phân phối (ước tính)</dt><dd id="sl-dp-pp">—</dd></div>
+          <div class="nhom-tieu-de">Công suất tiêu thụ</div>
+          <div class="hang thanh-tai"><dt><span class="huy-hieu-html nho">C</span>Nhà máy công nghiệp</dt><dd id="sl-tai-cong-nghiep">—</dd><div class="thanh-ngang"><span id="thanh-cong-nghiep"></span></div></div>
+          <div class="hang thanh-tai"><dt><span class="huy-hieu-html nho">C</span>Tòa nhà cao tầng</dt><dd id="sl-tai-toa-nha">—</dd><div class="thanh-ngang"><span id="thanh-toa-nha"></span></div></div>
+          <div class="hang thanh-tai"><dt><span class="huy-hieu-html nho">F</span>Hộ gia đình</dt><dd id="sl-tai-dan-cu">—</dd><div class="thanh-ngang"><span id="thanh-dan-cu"></span></div></div>
+          <div class="hang nhan-manh"><dt>Tổng tiêu thụ</dt><dd id="sl-p-tai">—</dd></div>
+          <div class="hang"><dt>Hiệu suất toàn hệ thống</dt><dd id="sl-eta-tong">—</dd></div>
+        </dl>
+        <p class="ghi-chu-nho">Số liệu minh họa, cấu hình trong <code>du-lieu/cau-hinh.json</code>.</p>
+      </section>
+    </aside>
+  </main>
+
+  <aside id="bang-thong-tin" class="bang-thong-tin" role="dialog" aria-modal="false" aria-labelledby="tieu-de-thong-tin" hidden>
+    <div class="dau-thong-tin">
+      <h2 class="tieu-de-thong-tin" id="tieu-de-thong-tin"></h2>
+      <button type="button" class="nut-dong" aria-label="Đóng bảng thông tin">✕</button>
+    </div>
+    <div class="noi-dung-thong-tin"></div>
+  </aside>
+
+  <div id="chu-giai-noi" class="chu-giai-noi" role="tooltip" hidden></div>
+  <div id="thanh-trinh-chieu" class="thanh-trinh-chieu" hidden></div>
+
+  <dialog id="hop-cau-hoi" class="hop-cau-hoi" aria-labelledby="ch-tieu-de">
+    <div class="ch-dau">
+      <h2 id="ch-tieu-de">Câu hỏi kiểm tra nhanh</h2>
+      <button type="button" class="nut-dong" aria-label="Đóng">✕</button>
+    </div>
+    <div id="ch-noi-dung"></div>
+  </dialog>
+
+  <div id="thong-bao-loi" class="thong-bao-loi" role="alert" hidden></div>
+  <noscript><div class="thong-bao-loi">Trang mô phỏng cần bật JavaScript.</div></noscript>
+</body>
+</html>
