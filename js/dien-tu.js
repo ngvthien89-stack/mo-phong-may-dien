@@ -94,3 +94,12 @@ export class BoDaoHam {
     this.giaTri = 0;
   }
 }
+
+/**
+ * Sđđ cảm ứng trong thanh dẫn chuyển động vuông góc với từ trường: e = B·l·v (V).
+ * B: mật độ từ cảm (T = Wb/m²), l: chiều dài thanh dẫn (m), v: vận tốc (m/s, có dấu theo chiều chuyển động).
+ */
+export function sddThanhDan(B, l, v) {
+  const e = B * l * v;
+  return e === 0 ? 0 : e;
+}

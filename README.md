@@ -67,12 +67,17 @@ Thuộc mục 1.2 "Các định luật điện từ thường dùng trong máy �
 - a) **Nam châm chuyển động:** kéo thả nam châm, hoặc bật chế độ tự động; có nút đảo cực.
 - b) **Từ thông biến thiên đều** theo dạng hình thang, cho thấy φ không đổi thì e = 0.
 - c) **Từ thông hình sin** (nam châm quay như máy phát): `Em = 2π·f·w·Φm`, `E = 4,44·f·w·Φm`.
+- d) **Thanh dẫn chuyển động trong từ trường** (slide 3/6, Hình 1.2): `e = B·l·v`, chiều e theo **quy tắc bàn tay phải**.
+  - Thanh dẫn trượt trên hai thanh ray nối vôn kế; chỉnh được v (có dấu), B, l; tự đổi chiều ở cuối ray.
+  - Hình bàn tay phải xoay theo chiều chuyển động; đồ thị v(t), e(t).
+
+![Kịch bản d – thanh dẫn và quy tắc bàn tay phải](docs/anh/thanh-dan-1920x1080.png)
 
 **Tùy chọn và tiện ích:**
 
 - Thanh trượt số vòng w.
 - Hiện/ẩn chiều dương quy ước; hiện từ thông của dòng cảm ứng (định luật Lenz).
-- Trình chiếu 7 bước, câu hỏi kiểm tra nhanh.
+- Trình chiếu 9 bước, câu hỏi kiểm tra nhanh (ngân hàng 13 câu, mỗi lần 5 câu).
 
 Prompt dùng để xây dựng bài này lưu trong [`docs/prompts/1.2a-dinh-luat-faraday.md`](docs/prompts/1.2a-dinh-luat-faraday.md).
 
@@ -104,6 +109,7 @@ js/
   dien-tu.js            Hàm tính toán bài 1.2.a (e = −w·dφ/dt, ψ = wφ, từ thông hình thang/hình sin/nam châm)
   hinh-dien-tu.js       Vẽ sân khấu SVG bài 1.2.a
   cam-ung-dien-tu.js    Logic trang bài 1.2.a
+  thanh-dan.js          Kịch bản d bài 1.2.a: Hình 1.2, quy tắc bàn tay phải, e = B·l·v
   trang-chu.js          Trang chủ
 du-lieu/                Nội dung cho giảng viên chỉnh sửa (JSON)
 tests/                  Test Node và script chụp màn hình Playwright
@@ -122,7 +128,7 @@ Các khóa bắt đầu bằng `_` (ví dụ `_ghiChu`) chỉ là chú thích, t
 | `cau-hinh.json` | Bài 1.1 – `capDienAp`: tên, chữ hiển thị (`hienThi`), giá trị tính toán (`kV`) và màu từng cấp điện áp (màu đường dây và chú giải). `truyenTai`: chiều dài, điện trở r₀, cosφ của đường dây B. `phuTai`: công suất cực đại và đồ thị phụ tải 24 giờ (hệ số 0…1) của từng khu vực. `kichBanDienAp`, `kichBanSuCo`, `kichBanTangTai`: thông số các kịch bản. `hoatHinh`: mật độ, tốc độ hạt, giờ mặc định. |
 | `bo-phan.json` | Bài 1.1 – thông tin từng bộ phận: tên, chức năng, thiết bị chính, ghi chú thực tế, lời giảng cho chế độ trình chiếu. Thứ tự trong mảng `boPhan` là thứ tự trình chiếu. Viết `{{phat}}`, `{{truyenTai}}`, `{{caoAp}}`, `{{trungAp}}`, `{{haAp}}` để tự chèn cấp điện áp lấy từ `cau-hinh.json` (sửa điện áp một chỗ, mọi nơi cập nhật theo). |
 | `cau-hoi.json` | Ngân hàng câu hỏi trắc nghiệm bài 1.1. Mỗi lần làm bài lấy ngẫu nhiên `soCauMoiLan` câu. `dapAn` là **số thứ tự của lựa chọn đúng, bắt đầu từ 0**. |
-| `cam-ung-dien-tu.json` | Bài 1.2.a: lý thuyết theo slide (công thức viết bằng LaTeX, kèm dạng chữ thường `duPhong`), thông số mặc định của 3 kịch bản, các bước trình chiếu (`trangThai` cho biết kịch bản, số vòng w, tùy chọn hiển thị ở mỗi bước). Trong JSON, mỗi dấu `\` của LaTeX viết thành `\\`. |
+| `cam-ung-dien-tu.json` | Bài 1.2.a: lý thuyết theo slide (`lyThuyet` cho phần vòng dây, `thanhDan.lyThuyet` cho phần thanh dẫn) (công thức viết bằng LaTeX, kèm dạng chữ thường `duPhong`), thông số mặc định của 3 kịch bản, các bước trình chiếu (`trangThai` cho biết kịch bản, số vòng w, tùy chọn hiển thị ở mỗi bước). Trong JSON, mỗi dấu `\` của LaTeX viết thành `\\`. |
 | `cau-hoi-cam-ung-dien-tu.json` | Ngân hàng câu hỏi bài 1.2.a, cùng định dạng với `cau-hoi.json`. |
 | `bai-hoc.json` | Danh sách bài trên trang chủ. `trangThai`: `"san-sang"` (có trang) hoặc `"sap-ra-mat"`. Các bài "sắp ra mắt" hiện có là ví dụ, sửa theo đề cương môn học. |
 

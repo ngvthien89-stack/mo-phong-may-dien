@@ -69,7 +69,7 @@ function veNamCham(cha) {
 }
 
 /** Đồ thị theo thời gian vẽ trong SVG chính. */
-function taoDoThi(cha, { x, y, w, h, tieuDe, mau, coTiepTuyen = false, coTrucThoiGian = false }) {
+export function taoDoThi(cha, { x, y, w, h, tieuDe, mau, coTiepTuyen = false, coTrucThoiGian = false }) {
   const g = el('g', { class: 'do-thi-dt' }, cha);
   const tieu = el('text', { x: x - 86, y: y - 12, class: 'tieu-de-do-thi-dt' }, g);
   tieu.textContent = tieuDe;
@@ -132,9 +132,11 @@ export function veSanKhau(svg) {
   const ref = { tuThong: [], lenz: [], mui: [] };
   // nền tràn khung (lấp khoảng trống khi tỉ lệ khung khác 16:9)
   el('rect', { x: -2000, y: -1200, width: 5600, height: 3300, class: 'nen-san-khau' }, svg);
+  // Sân khấu kịch bản a–c (vòng dây); kịch bản d (thanh dẫn) vẽ trong nhóm riêng ở thanh-dan.js
+  ref.gCuon = el('g', { class: 'san-khau-cuon' }, svg);
 
   // ======================= HÌNH 1.1 =======================
-  const gMat = el('g', { class: 'khu', 'data-khu': 'mat' }, svg);
+  const gMat = el('g', { class: 'khu', 'data-khu': 'mat' }, ref.gCuon);
   el('rect', { x: 20, y: 20, width: 800, height: 870, rx: 18, class: 'the-svg' }, gMat);
   el('text', { x: 44, y: 60, class: 'tieu-de-svg' }, gMat).textContent = 'Hình 1.1 – Vòng dây nhìn chính diện';
   kyHieuTuThong(gMat, 56, 92, 11, 'chu-giai-ky-hieu').dat(1, 1);
@@ -201,7 +203,7 @@ export function veSanKhau(svg) {
   ref.chiQuaThang = el('text', { x: cx + 92, y: 734, class: 'qua-thang', 'text-anchor': 'end' }, vk);
 
   // ======================= NGUỒN TẠO TỪ THÔNG (nhìn ngang) =======================
-  const gNg = el('g', { class: 'khu', 'data-khu': 'nguon' }, svg);
+  const gNg = el('g', { class: 'khu', 'data-khu': 'nguon' }, ref.gCuon);
   el('rect', { x: 840, y: 20, width: 740, height: 420, rx: 18, class: 'the-svg' }, gNg);
   ref.tieuDeNguon = el('text', { x: 864, y: 60, class: 'tieu-de-svg' }, gNg);
   el('line', { x1: 870, x2: 1566, y1: NGANG.truc, y2: NGANG.truc, class: 'truc-ngang' }, gNg);
@@ -247,7 +249,7 @@ export function veSanKhau(svg) {
   ref.chuPhiNgang.textContent = 'φ';
 
   // ======================= ĐỒ THỊ =======================
-  const gDT = el('g', { class: 'khu', 'data-khu': 'do-thi' }, svg);
+  const gDT = el('g', { class: 'khu', 'data-khu': 'do-thi' }, ref.gCuon);
   el('rect', { x: 840, y: 456, width: 740, height: 434, rx: 18, class: 'the-svg' }, gDT);
   ref.doThiPhi = taoDoThi(gDT, { x: 950, y: 506, w: 606, h: 140, tieuDe: '', mau: MAU.tuThong, coTiepTuyen: true });
   ref.doThiE = taoDoThi(gDT, { x: 950, y: 706, w: 606, h: 140, tieuDe: '', mau: MAU.sdd, coTrucThoiGian: true });

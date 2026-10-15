@@ -71,3 +71,44 @@
 .cham-dt { stroke: #fff; stroke-width: 2; }
 .tiep-tuyen { stroke: #13202b; stroke-width: 2.5; stroke-dasharray: 6 4; }
 .chu-tiep-tuyen { font-size: 15px; font-weight: 700; fill: #13202b; text-anchor: end; paint-order: stroke; stroke: #fff; stroke-width: 4; stroke-linejoin: round; }
+
+/* ---------- Kịch bản d: thanh dẫn (Hình 1.2) ---------- */
+body[data-kich-ban="thanh-dan"] .chi-cuon { display: none; }
+.ky-hieu-ly-thuyet { margin: 4px 0 0; padding-left: 1.1em; display: grid; gap: 2px; font-size: .93rem; }
+.ky-hieu-ly-thuyet i { font-family: "Times New Roman", serif; font-size: 1.1em; }
+.quy-tac { margin: 10px 0 0; padding: 8px 10px; border-radius: 8px; background: #fff4e5; font-size: .9rem; }
+.cuc-tu .mat-tren { stroke: #fff; stroke-width: 1.5; }
+.cuc-tu .mat-truoc { stroke: #fff; stroke-width: 1.5; }
+.cuc-n .mat-tren { fill: #f4a7a7; fill-opacity: .55; }
+.cuc-n .mat-truoc { fill: #d62828; }
+.cuc-s .mat-tren { fill: #a9c4d6; }
+.cuc-s .mat-truoc { fill: #457b9d; }
+.chu-cuc-tu { font-size: 22px; font-weight: 800; fill: #fff; }
+.mui-ten line { stroke-linecap: round; }
+.mui-b line { stroke: #2a78d6; stroke-width: 2; }
+.mui-b path { fill: #2a78d6; }
+.duong-suc-b .mui-b line { stroke-dasharray: 2 0; }
+.ray { fill: none; stroke: #8d99ae; stroke-width: 7; stroke-linecap: round; }
+.thanh-dan { fill: none; stroke: #d62828; stroke-width: 18; stroke-linecap: round; }
+.thanh-dan-sang { fill: none; stroke: #ff8f8f; stroke-width: 4; stroke-linecap: round; }
+.dau-thanh { fill: #ffb3b3; stroke: #a61b1b; stroke-width: 1.5; }
+.mui-e-thanh line, .mui-e-tay line { stroke: #eb6834; stroke-width: 5; }
+.mui-e-thanh path, .mui-e-tay path { fill: #eb6834; }
+.mui-v line, .mui-v-tay line { stroke: #2e7d32; stroke-width: 5; }
+.mui-v path, .mui-v-tay path { fill: #2e7d32; }
+.chu-vec { font-size: 28px; font-style: italic; font-weight: 700; font-family: "Times New Roman", serif !important; }
+.vec-e { fill: #eb6834; }
+.vec-v { fill: #2e7d32; }
+.vec-b { fill: #2a78d6; }
+.vec-l { fill: #13202b; font-size: 22px; }
+.duong-l { fill: none; stroke: #13202b; stroke-width: 1.8; stroke-dasharray: 6 5; }
+.dau-dien-tich circle { stroke-width: 2; fill: #fff; }
+.dau-dien-tich text { font-size: 20px; font-weight: 800; }
+.dau-dien-tich.duong circle { stroke: #c62828; }
+.dau-dien-tich.duong text { fill: #c62828; }
+.dau-dien-tich.am circle { stroke: #1d4ed8; }
+.dau-dien-tich.am text { fill: #1d4ed8; }
+.da-tay { fill: #ffd7b5; stroke: #b07a50; stroke-width: 2; }
+.co-tay { fill: #b3cde0; stroke: #6b8ba4; stroke-width: 2; }
+.chi-tay { fill: none; stroke: #c99470; stroke-width: 1.5; }
+.chu-vec-nho { font-size: 22px; }

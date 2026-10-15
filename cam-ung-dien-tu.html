@@ -24,6 +24,7 @@
           <option value="nam-cham">a) Nam châm chuyển động</option>
           <option value="hinh-thang">b) Từ thông biến thiên đều</option>
           <option value="hinh-sin">c) Từ thông hình sin (máy phát)</option>
+          <option value="thanh-dan">d) Thanh dẫn chuyển động trong từ trường</option>
         </select>
       </label>
       <a class="nut nut-bai-tiep" href="he-thong-dien.html" title="Bài trước: 1.1"><span aria-hidden="true">←</span> 1.1</a>
@@ -51,12 +52,12 @@
           <input type="range" id="toc-do" min="0.25" max="3" step="0.25" value="1">
           <output id="gia-tri-toc-do">1×</output>
         </label>
-        <label class="dieu-khien so-vong">Số vòng w
+        <label class="dieu-khien so-vong chi-cuon">Số vòng w
           <input type="range" id="so-vong" min="1" max="200" step="1" value="100">
           <output id="gia-tri-so-vong">100</output>
         </label>
-        <label class="o-chon"><input type="checkbox" id="hien-quy-uoc" checked> Chiều dương quy ước</label>
-        <label class="o-chon"><input type="checkbox" id="hien-lenz"> Từ thông cảm ứng (Lenz)</label>
+        <label class="o-chon chi-cuon"><input type="checkbox" id="hien-quy-uoc" checked> Chiều dương quy ước</label>
+        <label class="o-chon chi-cuon"><input type="checkbox" id="hien-lenz"> Từ thông cảm ứng (Lenz)</label>
       </div>
     </section>
 
@@ -68,6 +69,17 @@
       </section>
       <section class="the bang-so-lieu">
         <h2>Số liệu trực tiếp</h2>
+        <div id="so-lieu-thanh" hidden>
+          <dl class="luoi-so-lieu">
+            <div class="hang"><dt>Mật độ từ cảm B</dt><dd id="sl-b">—</dd></div>
+            <div class="hang"><dt>Chiều dài thanh l</dt><dd id="sl-l">—</dd></div>
+            <div class="hang"><dt>Vận tốc v</dt><dd id="sl-v">—</dd></div>
+            <div class="hang"><dt>|dφ/dt| = B·l·|v|</dt><dd id="sl-dphi-thanh">—</dd></div>
+            <div class="hang nhan-manh"><dt>Sức điện động e</dt><dd id="sl-e-thanh">—</dd></div>
+          </dl>
+          <div class="cong-thuc" id="ct-thanh"></div>
+        </div>
+        <div id="so-lieu-cuon">
         <dl class="luoi-so-lieu">
           <div class="hang"><dt>Từ thông φ</dt><dd id="sl-phi">—</dd></div>
           <div class="hang"><dt>Tốc độ biến thiên dφ/dt</dt><dd id="sl-dphi">—</dd></div>
@@ -82,6 +94,7 @@
             <div class="hang nhan-manh"><dt>Trị hiệu dụng E</dt><dd id="sl-ehd">—</dd></div>
           </dl>
           <div class="cong-thuc" id="ct-sin"></div>
+        </div>
         </div>
         <p class="ghi-chu-nho">Thông số cấu hình trong <code>du-lieu/cam-ung-dien-tu.json</code>.</p>
       </section>

@@ -76,3 +76,18 @@ test('Bộ đạo hàm: tín hiệu tăng đều 0,5 Wb/s → hội tụ về 0,
   for (let i = 0; i < 300; i++) bo.capNhat(x, 0.01);
   gan(bo.giaTri, 0, 1e-9);
 });
+
+test('Thanh dẫn: B = 0,8 T, l = 0,5 m, v = 5 m/s → e = B·l·v = 2 V; đổi chiều v thì e đổi dấu', async () => {
+  const { sddThanhDan } = await import('../js/dien-tu.js');
+  gan(sddThanhDan(0.8, 0.5, 5), 2, 1e-12);           // 0,8·0,5·5 = 2 V
+  gan(sddThanhDan(1.2, 0.25, 4), 1.2, 1e-12);        // 1,2·0,25·4 = 1,2 V
+  gan(sddThanhDan(0.8, 0.5, -5), -2, 1e-12);
+  assert.equal(Object.is(sddThanhDan(0.8, 0.5, 0), 0), true);
+});
+
+test('Thanh dẫn phù hợp định luật Faraday: φ = B·l·x(t) ⇒ |dφ/dt| = B·l·v', async () => {
+  const { sddThanhDan } = await import('../js/dien-tu.js');
+  const [B, l, v] = [0.6, 0.4, 3];
+  const phi = (t) => B * l * (0.1 + v * t);          // diện tích mạch tăng l·v·dt mỗi khoảng dt
+  gan(Math.abs(daoHamSo(phi, 1.3)), Math.abs(sddThanhDan(B, l, v)), 1e-6);
+});

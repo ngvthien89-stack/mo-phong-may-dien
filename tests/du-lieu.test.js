@@ -59,7 +59,7 @@ test('cam-ung-dien-tu.json: lý thuyết đủ công thức, bước trình chi�
   const nd = doc('cam-ung-dien-tu.json');
   assert.ok(nd.lyThuyet.phatBieu && nd.lyThuyet.congThuc.length >= 3);
   for (const c of nd.lyThuyet.congThuc) assert.ok(c.tex && c.duPhong, c.chu);
-  const kichBan = ['nam-cham', 'hinh-thang', 'hinh-sin'];
+  const kichBan = ['nam-cham', 'hinh-thang', 'hinh-sin', 'thanh-dan'];
   assert.ok(kichBan.includes(nd.macDinh.kichBan));
   assert.ok(nd.macDinh.w >= nd.macDinh.wMin && nd.macDinh.w <= nd.macDinh.wMax);
   const ids = new Set();
@@ -72,6 +72,10 @@ test('cam-ung-dien-tu.json: lý thuyết đủ công thức, bước trình chi�
   }
   const ht = nd.hinhThang;
   assert.ok(ht.Phim_Wb >= ht.PhimMin_Wb && ht.Phim_Wb <= ht.PhimMax_Wb);
+  const td = nd.thanhDan;
+  assert.ok(td.lyThuyet.phatBieu && td.lyThuyet.congThuc.length && td.lyThuyet.quyTac);
+  assert.ok(td.B_T >= td.BMin_T && td.B_T <= td.BMax_T && td.l_m >= td.lMin_m && td.l_m <= td.lMax_m);
+  assert.ok(Math.abs(td.v_ms) <= td.vMax_ms);
   const hs = nd.hinhSin;
   assert.ok(hs.f_Hz >= hs.fMin_Hz && hs.f_Hz <= hs.fMax_Hz && hs.heSoCham > 0);
 });
