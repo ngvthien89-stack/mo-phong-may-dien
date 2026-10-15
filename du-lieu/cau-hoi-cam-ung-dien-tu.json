@@ -4,51 +4,146 @@
   "cauHoi": [
     {
       "cauHoi": "Sức điện động cảm ứng xuất hiện trong vòng dây khi nào?",
-      "luaChon": ["Khi có từ thông lớn xuyên qua vòng dây", "Khi từ thông xuyên qua vòng dây biến thiên", "Khi vòng dây làm bằng vật liệu từ", "Khi vòng dây có điện trở nhỏ"],
+      "luaChon": [
+        "Khi có từ thông lớn xuyên qua vòng dây",
+        "Khi từ thông xuyên qua vòng dây biến thiên",
+        "Khi vòng dây làm bằng vật liệu từ",
+        "Khi vòng dây có điện trở nhỏ"
+      ],
       "dapAn": 1,
       "giaiThich": "Theo định luật cảm ứng điện từ, sđđ chỉ xuất hiện khi từ thông xuyên qua vòng dây biến thiên: e = −dφ/dt."
     },
     {
       "cauHoi": "Từ thông xuyên qua cuộn dây rất lớn nhưng không đổi theo thời gian. Sđđ cảm ứng trong cuộn dây bằng:",
-      "luaChon": ["Rất lớn", "Bằng w·φ", "Bằng 0", "Bằng φ"],
+      "luaChon": [
+        "Rất lớn",
+        "Bằng w·φ",
+        "Bằng 0",
+        "Bằng φ"
+      ],
       "dapAn": 2,
       "giaiThich": "φ không đổi thì dφ/dt = 0 nên e = −w·dφ/dt = 0. Sđđ phụ thuộc tốc độ biến thiên, không phụ thuộc độ lớn từ thông."
     },
     {
       "cauHoi": "Từ thông qua cuộn dây 50 vòng tăng đều từ 0 đến 0,02 Wb trong 0,1 s. Độ lớn sđđ cảm ứng là:",
-      "luaChon": ["0,2 V", "1 V", "10 V", "100 V"],
+      "luaChon": [
+        "0,2 V",
+        "1 V",
+        "10 V",
+        "100 V"
+      ],
       "dapAn": 2,
       "giaiThich": "dφ/dt = 0,02/0,1 = 0,2 Wb/s; |e| = w·dφ/dt = 50·0,2 = 10 V."
     },
     {
       "cauHoi": "Dấu “−” trong công thức e = −dφ/dt thể hiện điều gì?",
-      "luaChon": ["Sđđ luôn có giá trị âm", "Sđđ có chiều sao cho dòng điện do nó sinh ra chống lại sự biến thiên của từ thông (định luật Lenz)", "Từ thông luôn giảm theo thời gian", "Vòng dây tiêu thụ năng lượng"],
+      "luaChon": [
+        "Sđđ luôn có giá trị âm",
+        "Sđđ có chiều sao cho dòng điện do nó sinh ra chống lại sự biến thiên của từ thông (định luật Lenz)",
+        "Từ thông luôn giảm theo thời gian",
+        "Vòng dây tiêu thụ năng lượng"
+      ],
       "dapAn": 1,
       "giaiThich": "Đó là nội dung định luật Lenz: dòng điện cảm ứng tạo từ thông chống lại sự biến thiên của từ thông ban đầu."
     },
     {
       "cauHoi": "Đại lượng ψ = w·φ được gọi là gì và có đơn vị nào?",
-      "luaChon": ["Từ thông móc vòng, đơn vị Wb", "Từ cảm, đơn vị T", "Cường độ từ trường, đơn vị A/m", "Điện cảm, đơn vị H"],
+      "luaChon": [
+        "Từ thông móc vòng, đơn vị Wb",
+        "Từ cảm, đơn vị T",
+        "Cường độ từ trường, đơn vị A/m",
+        "Điện cảm, đơn vị H"
+      ],
       "dapAn": 0,
       "giaiThich": "ψ = wφ là từ thông móc vòng của cuộn dây, đơn vị Wb (vêbe); khi đó e = −dψ/dt."
     },
     {
       "cauHoi": "Giữ nguyên tốc độ biến thiên từ thông dφ/dt, tăng số vòng dây w lên 2 lần thì sđđ cảm ứng:",
-      "luaChon": ["Không đổi", "Tăng 2 lần", "Tăng 4 lần", "Giảm 2 lần"],
+      "luaChon": [
+        "Không đổi",
+        "Tăng 2 lần",
+        "Tăng 4 lần",
+        "Giảm 2 lần"
+      ],
       "dapAn": 1,
       "giaiThich": "e = −w·dφ/dt tỉ lệ thuận với w nên tăng 2 lần."
     },
     {
       "cauHoi": "Từ thông hình sin có Φm = 0,01 Wb, f = 50 Hz qua cuộn dây w = 100 vòng. Trị hiệu dụng sđđ cảm ứng xấp xỉ:",
-      "luaChon": ["22,2 V", "157 V", "222 V", "314 V"],
+      "luaChon": [
+        "22,2 V",
+        "157 V",
+        "222 V",
+        "314 V"
+      ],
       "dapAn": 2,
       "giaiThich": "E = 4,44·f·w·Φm = 4,44·50·100·0,01 ≈ 222 V. (314 V là biên độ Em = 2π·f·w·Φm.)"
     },
     {
       "cauHoi": "Khi từ thông biến thiên hình sin φ = Φm·sin ωt thì sđđ cảm ứng e:",
-      "luaChon": ["Cùng pha với φ", "Ngược pha với φ", "Chậm pha 90° so với φ", "Là hằng số"],
+      "luaChon": [
+        "Cùng pha với φ",
+        "Ngược pha với φ",
+        "Chậm pha 90° so với φ",
+        "Là hằng số"
+      ],
       "dapAn": 2,
       "giaiThich": "e = −w·ω·Φm·cos ωt = w·ω·Φm·sin(ωt − 90°): e chậm pha 90° so với φ."
+    },
+    {
+      "cauHoi": "Thanh dẫn dài l = 0,5 m chuyển động với v = 5 m/s, vuông góc với từ trường B = 0,8 T. Sđđ cảm ứng trong thanh là:",
+      "luaChon": [
+        "0,4 V",
+        "2 V",
+        "4 V",
+        "8 V"
+      ],
+      "dapAn": 1,
+      "giaiThich": "e = B·l·v = 0,8·0,5·5 = 2 V."
+    },
+    {
+      "cauHoi": "Theo quy tắc bàn tay phải (thanh dẫn chuyển động trong từ trường), ngón cái choãi ra 90° chỉ chiều của:",
+      "luaChon": [
+        "Đường sức từ B",
+        "Sức điện động e",
+        "Chuyển động v của thanh dẫn",
+        "Lực điện từ tác dụng lên thanh"
+      ],
+      "dapAn": 2,
+      "giaiThich": "Đường sức từ đi vào lòng bàn tay, ngón cái chỉ chiều chuyển động v, bốn ngón tay chỉ chiều sức điện động e."
+    },
+    {
+      "cauHoi": "Thanh dẫn chuyển động song song với đường sức từ thì sđđ cảm ứng trong thanh:",
+      "luaChon": [
+        "Bằng B·l·v",
+        "Bằng 0 vì thanh không cắt đường sức từ",
+        "Lớn nhất",
+        "Đổi dấu liên tục"
+      ],
+      "dapAn": 1,
+      "giaiThich": "Công thức e = B·l·v áp dụng khi thanh chuyển động vuông góc với từ trường. Chuyển động song song với đường sức thì thanh không cắt đường sức, từ thông qua mạch không đổi nên e = 0."
+    },
+    {
+      "cauHoi": "Giữ nguyên B và l, tăng vận tốc thanh dẫn lên 2 lần thì sđđ cảm ứng:",
+      "luaChon": [
+        "Không đổi",
+        "Tăng 2 lần",
+        "Tăng 4 lần",
+        "Giảm 2 lần"
+      ],
+      "dapAn": 1,
+      "giaiThich": "e = B·l·v tỉ lệ thuận với v nên tăng 2 lần."
+    },
+    {
+      "cauHoi": "Đơn vị của mật độ từ cảm B trong công thức e = B·l·v là:",
+      "luaChon": [
+        "Wb (vêbe)",
+        "T (tesla) = Wb/m²",
+        "A/m",
+        "H (henry)"
+      ],
+      "dapAn": 1,
+      "giaiThich": "B đo bằng tesla: 1 T = 1 Wb/m². Khi đó B·l·v có đơn vị T·m·m/s = Wb/s = V."
     }
   ]
 }

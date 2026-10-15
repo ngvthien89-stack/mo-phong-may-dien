@@ -6,42 +6,11 @@ import { sddCamUng, tuThongMocVong, tuThongNamCham, tuThongHinhThang, bienDoSdd,
 import { dinhDangSo } from './tinh-toan.js';
 import { khoiTaoTrinhChieu } from './trinh-chieu.js';
 import { khoiTaoCauHoi } from './kiem-tra.js';
+import { taoThanhDan } from './thanh-dan.js';
+import { napJSON, soCoNghia, lamTronDep, veCongThuc, soTex } from './tien-ich.js';
 
 const $ = (s) => document.querySelector(s);
 const X_NAM_CHAM = { min: 1000, max: 1320, giua: 1160, bienDo: 155 };
-
-async function napJSON(duongDan) {
-  const r = await fetch(duongDan, { cache: 'no-cache' });
-  if (!r.ok) throw new Error(`${duongDan}: HTTP ${r.status}`);
-  return r.json();
-}
-
-/** Số có khoảng 3 chữ số có nghĩa, định dạng Việt Nam. */
-function soCoNghia(x, so = 3) {
-  if (!Number.isFinite(x)) return '—';
-  if (x === 0) return '0';
-  const le = Math.max(0, Math.min(6, so - 1 - Math.floor(Math.log10(Math.abs(x)))));
-  return dinhDangSo(x, le);
-}
-
-/** Làm tròn lên mốc "đẹp" 1 – 2 – 2,5 – 5 × 10ⁿ (dùng cho thang đo). */
-function lamTronDep(x) {
-  if (!(x > 0)) return 1;
-  const mu = Math.pow(10, Math.floor(Math.log10(x)));
-  for (const k of [1, 2, 2.5, 5, 10]) if (k * mu >= x * 0.999) return k * mu;
-  return 10 * mu;
-}
-
-function veCongThuc(o, tex, duPhong) {
-  if (window.katex) {
-    try {
-      window.katex.render(tex, o, { throwOnError: false, displayMode: true });
-      return;
-    } catch { /* dạng dự phòng */ }
-  }
-  o.innerHTML = `<span class="cong-thuc-du-phong">${duPhong}</span>`;
-}
-const soTex = (s) => s.replace(/\./g, '\\,').replace(',', '{,}');
 
 async function khoiDong() {
   let nd, cauHoi;
@@ -77,16 +46,25 @@ async function khoiDong() {
   };
   const boDaoHam = new BoDaoHam(0.06);
 
-  // ---------- Lý thuyết (theo slide) ----------
-  const lt = nd.lyThuyet;
-  $('#the-ly-thuyet').innerHTML = `
-    <p class="muc-nho">${lt.muc}</p>
-    <h2>${lt.tieuDe}</h2>
-    <p class="phat-bieu">${lt.phatBieu}</p>
-    ${lt.congThuc.map((c, i) => `<p class="dong-ly-thuyet">${c.chu}</p><div class="cong-thuc" data-ct="${i}"></div>${c.sau ? `<p class="dong-ly-thuyet sau">${c.sau}</p>` : ''}`).join('')}
-    <ul class="ghi-chu-ly-thuyet">${lt.ghiChu.map((g) => `<li>${g}</li>`).join('')}</ul>`;
+  // ---------- Kịch bản d: thanh dẫn (Hình 1.2) ----------
+  const thanhDan = taoThanhDan(svg, nd.thanhDan, { soCoNghia, veCongThuc, soTex, lamTronDep });
+
+  // ---------- Lý thuyết (theo slide): phần vòng dây (a–c) hoặc phần thanh dẫn (d) ----------
+  let lt = nd.lyThuyet;
+  function veTheLyThuyet(phan) {
+    lt = phan === 'thanh' ? nd.thanhDan.lyThuyet : nd.lyThuyet;
+    $('#the-ly-thuyet').innerHTML = `
+      <p class="muc-nho">${lt.muc}</p>
+      <h2>${lt.tieuDe}</h2>
+      <p class="phat-bieu">${lt.phatBieu}</p>
+      ${lt.congThuc.map((c, i) => `${c.chu ? `<p class="dong-ly-thuyet">${c.chu}</p>` : ''}<div class="cong-thuc" data-ct="${i}"></div>${c.sau ? `<p class="dong-ly-thuyet sau">${c.sau}</p>` : ''}`).join('')}
+      ${lt.kyHieu ? `<p class="dong-ly-thuyet">trong đó:</p><ul class="ky-hieu-ly-thuyet">${lt.kyHieu.map((k) => `<li><i>${k.tex}</i> – ${k.chu}</li>`).join('')}</ul>` : ''}
+      ${lt.quyTac ? `<p class="quy-tac">${lt.quyTac}</p>` : ''}
+      <ul class="ghi-chu-ly-thuyet">${lt.ghiChu.map((g) => `<li>${g}</li>`).join('')}</ul>`;
+    veLyThuyet();
+  }
   const veLyThuyet = () => lt.congThuc.forEach((c, i) => veCongThuc($(`[data-ct="${i}"]`), c.tex, c.duPhong));
-  veLyThuyet();
+  veTheLyThuyet('cuon');
   if (!window.katex) document.querySelector('script[src*="katex"]')?.addEventListener('load', () => { veLyThuyet(); veSoLieu(true); }, { once: true });
 
   // ---------- Điều khiển chung ----------
@@ -161,6 +139,12 @@ async function khoiDong() {
 
   // ---------- Kịch bản ----------
   function chonKichBan(id) {
+    const laThanh = id === 'thanh-dan';
+    if (laThanh !== (tt.kichBan === 'thanh-dan') || !$('#the-ly-thuyet').innerHTML) veTheLyThuyet(laThanh ? 'thanh' : 'cuon');
+    ref.gCuon.style.display = laThanh ? 'none' : '';
+    thanhDan.g.style.display = laThanh ? '' : 'none';
+    $('#so-lieu-cuon').hidden = laThanh;
+    $('#so-lieu-thanh').hidden = !laThanh;
     tt.kichBan = id;
     $('#chon-kich-ban').value = id;
     document.body.dataset.kichBan = id;
@@ -174,9 +158,12 @@ async function khoiDong() {
       'nam-cham': 'Nguồn từ thông: nam châm thẳng (nhìn ngang)',
       'hinh-thang': 'Nguồn từ thông: nam châm điện, dòng i(t) (nhìn ngang)',
       'hinh-sin': 'Nguồn từ thông: nam châm quay như máy phát (nhìn ngang)',
-    }[id];
+    }[id] || '';
     const dk = $('#dieu-khien-kich-ban');
-    if (id === 'nam-cham') {
+    if (laThanh) {
+      thanhDan.batDau();
+      thanhDan.veDieuKhien(dk);
+    } else if (id === 'nam-cham') {
       dk.innerHTML = `
         <p class="mo-ta"><b>Kéo nam châm</b> trên hình (phần bên phải sân khấu) lại gần hoặc ra xa cuộn dây, hoặc bật chế độ tự động.</p>
         <div class="hang-nut">
@@ -238,6 +225,15 @@ async function khoiDong() {
     const bayGio = performance.now();
     if (!ngay && bayGio - lanSoLieu < 250) return;
     lanSoLieu = bayGio;
+    if (tt.kichBan === 'thanh-dan') {
+      const r = thanhDan.veSoLieu();
+      const c = $('#chu-thich-buoc');
+      c.className = `chu-thich-buoc ${r.loai}`;
+      c.innerHTML = `<span>${r.html}</span>`;
+      const oTC = $('#tc-so-lieu');
+      if (oTC && trinhChieu.idHienTai) oTC.textContent = r.tomTat;
+      return;
+    }
     const { phi, dPhi, e, w } = tt;
     $('#sl-phi').textContent = `${soCoNghia(phi * 1000)} mWb`;
     $('#sl-dphi').textContent = `${soCoNghia(dPhi)} Wb/s`;
@@ -289,6 +285,7 @@ async function khoiDong() {
     if (s.hienQuyUoc !== undefined) { tt.hienQuyUoc = s.hienQuyUoc; oQuyUoc.checked = s.hienQuyUoc; }
     if (s.hienLenz !== undefined) { tt.hienLenz = s.hienLenz; oLenz.checked = s.hienLenz; }
     if (s.tuDong !== undefined && tt.kichBan === 'nam-cham') datTuDong(s.tuDong);
+    if (s.hienBanTay !== undefined) thanhDan.datBanTay(s.hienBanTay);
   };
   const trinhChieu = khoiTaoTrinhChieu({
     noiDung: null,
@@ -308,6 +305,12 @@ async function khoiDong() {
     const dtThuc = Math.min(0.1, Math.max(0, (bayGio - tTruoc) / 1000));
     tTruoc = bayGio;
     const dt = tt.dangChay ? dtThuc * tt.tocDo : 0;
+    if (tt.kichBan === 'thanh-dan') {
+      thanhDan.capNhat(dt);
+      veSoLieu();
+      requestAnimationFrame(khung);
+      return;
+    }
     const ts = thongSoKichBan();
     let tien = 0;
     if (tt.kichBan === 'nam-cham') {

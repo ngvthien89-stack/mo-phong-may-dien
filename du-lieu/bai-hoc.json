@@ -17,6 +17,13 @@
           "moTa": "Từ thông biến thiên sinh ra sức điện động: e = −dφ/dt, cuộn dây w vòng e = −w·dφ/dt = −dψ/dt; dấu “−” và định luật Lenz; từ thông hình sin.",
           "duongDan": "cam-ung-dien-tu.html",
           "trangThai": "san-sang"
+        },
+        {
+          "ma": "1.2.b",
+          "ten": "Định luật lực điện từ",
+          "moTa": "Thanh dẫn mang dòng điện trong từ trường chịu lực F_đt = B·i·l; chiều lực theo quy tắc bàn tay trái; nguyên lý động cơ.",
+          "duongDan": "luc-dien-tu.html",
+          "trangThai": "san-sang"
         }
       ]
     },

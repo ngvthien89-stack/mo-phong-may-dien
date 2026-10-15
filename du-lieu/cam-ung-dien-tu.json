@@ -5,68 +5,209 @@
     "tieuDe": "a. Định luật cảm ứng điện từ (định luật Faraday)",
     "phatBieu": "Khi từ thông biến thiên xuyên qua vòng dây, trong vòng dây sẽ cảm ứng sức điện động.",
     "congThuc": [
-      { "chu": "Sđđ cảm ứng trong một vòng dây được tính theo công thức Maxwell:", "tex": "e = -\\dfrac{d\\phi}{dt}", "duPhong": "e = −dφ/dt" },
-      { "chu": "Trường hợp cuộn dây có w vòng, sđđ cảm ứng là:", "tex": "e = -w\\dfrac{d\\phi}{dt} = -\\dfrac{d\\psi}{dt}", "duPhong": "e = −w·dφ/dt = −dψ/dt" },
-      { "chu": "trong đó", "tex": "\\psi = w\\phi\\ (\\text{Wb})", "duPhong": "ψ = wφ (Wb)", "sau": "là từ thông móc vòng của cuộn dây." }
+      {
+        "chu": "Sđđ cảm ứng trong một vòng dây được tính theo công thức Maxwell:",
+        "tex": "e = -\\dfrac{d\\phi}{dt}",
+        "duPhong": "e = −dφ/dt"
+      },
+      {
+        "chu": "Trường hợp cuộn dây có w vòng, sđđ cảm ứng là:",
+        "tex": "e = -w\\dfrac{d\\phi}{dt} = -\\dfrac{d\\psi}{dt}",
+        "duPhong": "e = −w·dφ/dt = −dψ/dt"
+      },
+      {
+        "chu": "trong đó",
+        "tex": "\\psi = w\\phi\\ (\\text{Wb})",
+        "duPhong": "ψ = wφ (Wb)",
+        "sau": "là từ thông móc vòng của cuộn dây."
+      }
     ],
     "ghiChu": [
       "Dấu “−” (định luật Lenz): sđđ cảm ứng có chiều sao cho dòng điện do nó sinh ra tạo từ thông chống lại sự biến thiên của từ thông φ.",
       "Chiều dương của e được chọn phù hợp với chiều của φ theo quy tắc vặn nút chai. Đơn vị: 1 Wb/s = 1 V."
     ]
   },
-  "macDinh": { "kichBan": "nam-cham", "w": 100, "wMin": 1, "wMax": 200 },
-  "namCham": { "Phimax_Wb": 0.004, "d0_px": 90, "chuKyTuDong_s": 3, "_ghiChu": "Mô hình rút gọn φ(d) = Φmax/(1+(d/d0)²)^1,5 theo khoảng cách d (đơn vị hình vẽ)" },
-  "hinhThang": { "Phim_Wb": 0.02, "PhimMin_Wb": 0.005, "PhimMax_Wb": 0.04, "tTang_s": 2, "tGiu_s": 2, "tGiam_s": 1, "tNghi_s": 2, "dongDienMax_A": 5 },
-  "hinhSin": { "Phim_Wb": 0.01, "PhimMin_Wb": 0.002, "PhimMax_Wb": 0.02, "f_Hz": 50, "fMin_Hz": 10, "fMax_Hz": 60, "heSoCham": 100, "_ghiChu": "heSoCham: hoạt hình chạy chậm bao nhiêu lần so với thời gian thực" },
+  "macDinh": {
+    "kichBan": "nam-cham",
+    "w": 100,
+    "wMin": 1,
+    "wMax": 200
+  },
+  "namCham": {
+    "Phimax_Wb": 0.004,
+    "d0_px": 90,
+    "chuKyTuDong_s": 3,
+    "_ghiChu": "Mô hình rút gọn φ(d) = Φmax/(1+(d/d0)²)^1,5 theo khoảng cách d (đơn vị hình vẽ)"
+  },
+  "hinhThang": {
+    "Phim_Wb": 0.02,
+    "PhimMin_Wb": 0.005,
+    "PhimMax_Wb": 0.04,
+    "tTang_s": 2,
+    "tGiu_s": 2,
+    "tGiam_s": 1,
+    "tNghi_s": 2,
+    "dongDienMax_A": 5
+  },
+  "hinhSin": {
+    "Phim_Wb": 0.01,
+    "PhimMin_Wb": 0.002,
+    "PhimMax_Wb": 0.02,
+    "f_Hz": 50,
+    "fMin_Hz": 10,
+    "fMax_Hz": 60,
+    "heSoCham": 100,
+    "_ghiChu": "heSoCham: hoạt hình chạy chậm bao nhiêu lần so với thời gian thực"
+  },
   "trinhChieu": [
     {
       "id": "hien-tuong",
       "tieuDe": "Hiện tượng cảm ứng điện từ",
       "the": "φ biến thiên ⇒ có e",
       "loiGiang": "Đưa nam châm lại gần hoặc ra xa vòng dây: từ thông φ xuyên qua vòng dây biến thiên và kim vôn kế lệch, tức là trong vòng dây xuất hiện sức điện động cảm ứng e. Khi nam châm đứng yên, kim trở về 0.",
-      "trangThai": { "kichBan": "nam-cham", "w": 100, "tuDong": true, "hienQuyUoc": false, "hienLenz": false }
+      "trangThai": {
+        "kichBan": "nam-cham",
+        "w": 100,
+        "tuDong": true,
+        "hienQuyUoc": false,
+        "hienLenz": false
+      }
     },
     {
       "id": "mot-vong",
       "tieuDe": "Sđđ trong một vòng dây",
       "the": "e = −dφ/dt",
       "loiGiang": "Với một vòng dây, sđđ cảm ứng bằng tốc độ biến thiên của từ thông, lấy dấu trừ: e = −dφ/dt. Trên đồ thị φ(t), độ dốc của tiếp tuyến chính là dφ/dt: dốc càng lớn thì |e| càng lớn.",
-      "trangThai": { "kichBan": "nam-cham", "w": 1, "tuDong": true, "hienQuyUoc": true, "hienLenz": false }
+      "trangThai": {
+        "kichBan": "nam-cham",
+        "w": 1,
+        "tuDong": true,
+        "hienQuyUoc": true,
+        "hienLenz": false
+      }
     },
     {
       "id": "lenz",
       "tieuDe": "Ý nghĩa dấu “−” (định luật Lenz)",
       "the": "Chống lại sự biến thiên",
       "loiGiang": "Chiều dương quy ước của e (mũi tên nét đứt) phù hợp với chiều φ theo quy tắc vặn nút chai. Khi φ tăng, e < 0: e ngược chiều quy ước và dòng cảm ứng tạo từ thông ngược chiều φ (ký hiệu nét đứt). Khi φ giảm thì ngược lại.",
-      "trangThai": { "kichBan": "hinh-thang", "w": 100, "hienQuyUoc": true, "hienLenz": true }
+      "trangThai": {
+        "kichBan": "hinh-thang",
+        "w": 100,
+        "hienQuyUoc": true,
+        "hienLenz": true
+      }
     },
     {
       "id": "khong-doi",
       "tieuDe": "Từ thông không đổi thì e = 0",
       "the": "dφ/dt = 0 ⇒ e = 0",
       "loiGiang": "Quan sát giai đoạn dòng điện nam châm điện được giữ không đổi: từ thông lớn nhất nhưng không biến thiên nên e = 0. Sđđ chỉ phụ thuộc tốc độ biến thiên, không phụ thuộc độ lớn của từ thông.",
-      "trangThai": { "kichBan": "hinh-thang", "w": 100, "hienQuyUoc": true, "hienLenz": false }
+      "trangThai": {
+        "kichBan": "hinh-thang",
+        "w": 100,
+        "hienQuyUoc": true,
+        "hienLenz": false
+      }
     },
     {
       "id": "w-vong",
       "tieuDe": "Cuộn dây w vòng – từ thông móc vòng",
       "the": "e = −w·dφ/dt = −dψ/dt",
       "loiGiang": "Cuộn dây có w vòng nối tiếp, mỗi vòng cảm ứng cùng một sđđ nên e = −w·dφ/dt. Đặt ψ = wφ (Wb) là từ thông móc vòng của cuộn dây thì e = −dψ/dt. Thử thay đổi số vòng w: e tăng tỉ lệ thuận với w.",
-      "trangThai": { "kichBan": "hinh-thang", "w": 200, "hienQuyUoc": true, "hienLenz": false }
+      "trangThai": {
+        "kichBan": "hinh-thang",
+        "w": 200,
+        "hienQuyUoc": true,
+        "hienLenz": false
+      }
     },
     {
       "id": "hinh-sin",
       "tieuDe": "Từ thông biến thiên hình sin",
       "the": "E = 4,44·f·w·Φm",
       "loiGiang": "Nam châm quay (như trong máy phát điện) tạo φ = Φm·sin ωt. Khi đó e = −w·ω·Φm·cos ωt: e chậm pha 90° so với φ, biên độ Em = 2π·f·w·Φm, trị hiệu dụng E = 4,44·f·w·Φm. Đây là công thức cơ bản dùng cho máy biến áp và máy điện xoay chiều.",
-      "trangThai": { "kichBan": "hinh-sin", "w": 100, "hienQuyUoc": true, "hienLenz": false }
+      "trangThai": {
+        "kichBan": "hinh-sin",
+        "w": 100,
+        "hienQuyUoc": true,
+        "hienLenz": false
+      }
+    },
+    {
+      "id": "thanh-dan",
+      "tieuDe": "Thanh dẫn chuyển động trong từ trường",
+      "the": "e = B·l·v",
+      "loiGiang": "Khi thanh dẫn dài l chuyển động với vận tốc v, nằm vuông góc với từ trường có mật độ từ cảm B, trong thanh cảm ứng sđđ e = B·l·v. Đây là một cách viết khác của định luật Faraday: trong thời gian dt thanh quét diện tích l·v·dt, từ thông qua mạch biến thiên dφ = B·l·v·dt.",
+      "trangThai": {
+        "kichBan": "thanh-dan",
+        "hienBanTay": false
+      }
+    },
+    {
+      "id": "ban-tay-phai",
+      "tieuDe": "Quy tắc bàn tay phải",
+      "the": "Xác định chiều e",
+      "loiGiang": "Đặt bàn tay phải sao cho đường sức từ đi vào lòng bàn tay, ngón cái choãi ra 90° chỉ chiều chuyển động v, thì bốn ngón tay chỉ chiều sức điện động e. Khi thanh đổi chiều chuyển động, e cũng đổi chiều.",
+      "trangThai": {
+        "kichBan": "thanh-dan",
+        "hienBanTay": true
+      }
     },
     {
       "id": "tom-tat",
       "tieuDe": "Tóm tắt",
-      "the": "e = −w·dφ/dt",
-      "loiGiang": "Từ thông biến thiên qua vòng dây sinh ra sức điện động cảm ứng. Một vòng: e = −dφ/dt; cuộn w vòng: e = −w·dφ/dt = −dψ/dt với ψ = wφ. Dấu “−” cho biết sđđ chống lại sự biến thiên của từ thông.",
-      "trangThai": { "kichBan": "hinh-sin", "w": 100, "hienQuyUoc": true, "hienLenz": true }
+      "the": "e = −w·dφ/dt ; e = B·l·v",
+      "loiGiang": "Từ thông biến thiên qua vòng dây sinh ra sức điện động cảm ứng. Một vòng: e = −dφ/dt; cuộn w vòng: e = −w·dφ/dt = −dψ/dt với ψ = wφ. Dấu “−” cho biết sđđ chống lại sự biến thiên của từ thông. Thanh dẫn chuyển động vuông góc từ trường: e = B·l·v, chiều xác định theo quy tắc bàn tay phải.",
+      "trangThai": {
+        "kichBan": "hinh-sin",
+        "w": 100,
+        "hienQuyUoc": true,
+        "hienLenz": true
+      }
     }
-  ]
+  ],
+  "thanhDan": {
+    "lyThuyet": {
+      "muc": "1.2. Các định luật điện từ thường dùng trong máy điện",
+      "tieuDe": "a. Định luật cảm ứng điện từ (định luật Faraday) (tiếp)",
+      "phatBieu": "Khi thanh dẫn chuyển động với vận tốc v, nằm vuông góc từ trường sẽ cảm ứng sđđ e theo quy tắc bàn tay phải (hình 1.2):",
+      "congThuc": [
+        {
+          "tex": "e = Blv",
+          "duPhong": "e = B·l·v"
+        }
+      ],
+      "kyHieu": [
+        {
+          "tex": "B",
+          "chu": "mật độ từ cảm (T = Wb/m²)"
+        },
+        {
+          "tex": "l",
+          "chu": "chiều dài của thanh dẫn (m)"
+        },
+        {
+          "tex": "v",
+          "chu": "vận tốc của thanh dẫn (m/s)"
+        }
+      ],
+      "quyTac": "Quy tắc bàn tay phải: đặt bàn tay phải sao cho đường sức từ đi vào lòng bàn tay, ngón cái choãi ra 90° chỉ chiều chuyển động v của thanh dẫn, thì bốn ngón tay chỉ chiều sức điện động e.",
+      "ghiChu": [
+        "Liên hệ với e = −dφ/dt: trong thời gian dt thanh quét diện tích l·v·dt, từ thông qua mạch biến thiên dφ = B·l·v·dt, nên |e| = B·l·v.",
+        "Thanh chuyển động song song với đường sức từ (không cắt đường sức) thì e = 0."
+      ]
+    },
+    "B_T": 0.8,
+    "BMin_T": 0.1,
+    "BMax_T": 1.5,
+    "l_m": 0.5,
+    "lMin_m": 0.1,
+    "lMax_m": 1.0,
+    "v_ms": 4,
+    "vMax_ms": 10,
+    "pxMoiMs": 30,
+    "tuDoiChieu": true,
+    "_ghiChu": "pxMoiMs: số điểm ảnh hình vẽ thanh dẫn đi được trong 1 giây ứng với vận tốc 1 m/s (chỉ dùng cho hoạt hình)"
+  }
 }

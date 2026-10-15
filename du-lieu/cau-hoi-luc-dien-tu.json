@@ -1,0 +1,54 @@
+{
+  "_huongDan": "Câu hỏi bài 1.2.b. Mỗi lần làm bài lấy ngẫu nhiên 'soCauMoiLan' câu. 'dapAn' là chỉ số lựa chọn đúng, bắt đầu từ 0.",
+  "soCauMoiLan": 5,
+  "cauHoi": [
+    {
+      "cauHoi": "Thanh dẫn dài 0,5 m mang dòng điện 10 A đặt vuông góc với từ trường B = 0,8 T. Lực điện từ tác dụng lên thanh là:",
+      "luaChon": ["0,4 N", "4 N", "8 N", "16 N"],
+      "dapAn": 1,
+      "giaiThich": "F_đt = B·i·l = 0,8·10·0,5 = 4 N."
+    },
+    {
+      "cauHoi": "Theo quy tắc bàn tay trái, ngón cái choãi ra 90° chỉ chiều của:",
+      "luaChon": ["Dòng điện i", "Đường sức từ B", "Lực điện từ F_đt", "Vận tốc của thanh"],
+      "dapAn": 2,
+      "giaiThich": "Đường sức từ đi vào lòng bàn tay, các ngón tay chỉ chiều dòng điện, ngón cái chỉ chiều lực điện từ."
+    },
+    {
+      "cauHoi": "Trong quy tắc bàn tay trái, chiều từ cổ tay đến các ngón tay chỉ chiều của:",
+      "luaChon": ["Dòng điện chạy trong thanh dẫn", "Lực điện từ", "Đường sức từ", "Sức điện động cảm ứng"],
+      "dapAn": 0,
+      "giaiThich": "Các ngón tay chỉ chiều dòng điện i; ngón cái chỉ chiều lực F_đt."
+    },
+    {
+      "cauHoi": "Giữ nguyên từ trường, đổi chiều dòng điện trong thanh dẫn thì lực điện từ:",
+      "luaChon": ["Giữ nguyên chiều", "Đổi chiều, độ lớn không đổi", "Bằng 0", "Tăng gấp đôi"],
+      "dapAn": 1,
+      "giaiThich": "F_đt = B·i·l: độ lớn không đổi, chiều lực đổi theo chiều dòng điện."
+    },
+    {
+      "cauHoi": "Đổi chiều đồng thời cả dòng điện và từ trường thì lực điện từ:",
+      "luaChon": ["Đổi chiều", "Giữ nguyên chiều", "Bằng 0", "Quay đi 90°"],
+      "dapAn": 1,
+      "giaiThich": "Đổi chiều một đại lượng thì lực đổi chiều; đổi cả hai thì lực đổi chiều hai lần, tức giữ nguyên chiều."
+    },
+    {
+      "cauHoi": "Giữ nguyên B và l, tăng dòng điện trong thanh dẫn lên 2 lần thì lực điện từ:",
+      "luaChon": ["Không đổi", "Tăng 2 lần", "Tăng 4 lần", "Giảm 2 lần"],
+      "dapAn": 1,
+      "giaiThich": "F_đt = B·i·l tỉ lệ thuận với i nên tăng 2 lần."
+    },
+    {
+      "cauHoi": "Định luật lực điện từ là cơ sở tạo ra mômen quay của:",
+      "luaChon": ["Động cơ điện", "Máy biến áp", "Tụ điện", "Điện trở"],
+      "dapAn": 0,
+      "giaiThich": "Lực điện từ tác dụng lên các thanh dẫn mang dòng điện đặt trong từ trường tạo ra mômen quay của động cơ điện, biến điện năng thành cơ năng."
+    },
+    {
+      "cauHoi": "Thanh dẫn mang dòng điện đặt song song với đường sức từ thì lực điện từ tác dụng lên thanh:",
+      "luaChon": ["Bằng B·i·l", "Lớn nhất", "Bằng 0", "Hướng dọc theo thanh"],
+      "dapAn": 2,
+      "giaiThich": "Công thức F_đt = B·i·l áp dụng khi thanh dẫn vuông góc với từ trường. Khi thanh dẫn song song với đường sức từ thì lực điện từ bằng 0."
+    }
+  ]
+}
