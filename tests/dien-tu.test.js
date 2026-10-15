@@ -91,3 +91,31 @@ test('Thanh dẫn phù hợp định luật Faraday: φ = B·l·x(t) ⇒ |dφ/dt
   const phi = (t) => B * l * (0.1 + v * t);          // diện tích mạch tăng l·v·dt mỗi khoảng dt
   gan(Math.abs(daoHamSo(phi, 1.3)), Math.abs(sddThanhDan(B, l, v)), 1e-6);
 });
+
+test('Lực điện từ: B = 0,8 T, i = 10 A, l = 0,5 m → F = B·i·l = 4 N; đổi chiều i thì đổi dấu', async () => {
+  const { lucDienTu } = await import('../js/dien-tu.js');
+  gan(lucDienTu(0.8, 10, 0.5), 4, 1e-12);           // 0,8·10·0,5 = 4 N
+  gan(lucDienTu(1.2, 5, 0.25), 1.5, 1e-12);         // 1,2·5·0,25 = 1,5 N
+  gan(lucDienTu(0.8, -10, 0.5), -4, 1e-12);
+  assert.equal(Object.is(lucDienTu(0.8, 0, 0.5), 0), true);
+});
+
+test('Thanh trên ray (động cơ): lúc đầu i = U/R, F = −B·i·l; về sau v → −U/(B·l), i → 0', async () => {
+  const { buocThanhDongCo } = await import('../js/dien-tu.js');
+  const p = { U: 3, R: 0.5, B: 0.8, l: 0.5, m: 0.5 };
+  // t = 0: i = 3/0,5 = 6 A ; F = −0,8·6·0,5 = −2,4 N (sang trái)
+  const dau = buocThanhDongCo(0, 0, p);
+  gan(dau.i, 6, 1e-12);
+  gan(dau.F, -2.4, 1e-12);
+  // k = (0,4)²/(0,5·0,5) = 0,64 s⁻¹ ; v∞ = −3/0,4 = −7,5 m/s
+  let s = { v: 0 };
+  for (let n = 0; n < 2000; n++) s = buocThanhDongCo(s.v, 0.01, p); // 20 s ≈ 12,8 hằng số thời gian
+  gan(s.v, -7.5, 1e-3);
+  gan(s.i, 0, 1e-3);
+  // nghiệm đúng tại t = 1 s: v = −7,5·(1 − e^(−0,64)) = −3,545 m/s
+  const mot = buocThanhDongCo(0, 1, p);
+  gan(mot.v, -7.5 * (1 - Math.exp(-0.64)), 1e-9);
+  gan(mot.v, -3.545, 0.001);
+  // e = B·l·v ngược chiều nguồn: i = (U + e)/R = (3 − 0,4·3,545)/0,5
+  gan(mot.i, (3 + 0.4 * mot.v) / 0.5, 1e-12);
+});

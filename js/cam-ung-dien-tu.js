@@ -7,42 +7,10 @@ import { dinhDangSo } from './tinh-toan.js';
 import { khoiTaoTrinhChieu } from './trinh-chieu.js';
 import { khoiTaoCauHoi } from './kiem-tra.js';
 import { taoThanhDan } from './thanh-dan.js';
+import { napJSON, soCoNghia, lamTronDep, veCongThuc, soTex } from './tien-ich.js';
 
 const $ = (s) => document.querySelector(s);
 const X_NAM_CHAM = { min: 1000, max: 1320, giua: 1160, bienDo: 155 };
-
-async function napJSON(duongDan) {
-  const r = await fetch(duongDan, { cache: 'no-cache' });
-  if (!r.ok) throw new Error(`${duongDan}: HTTP ${r.status}`);
-  return r.json();
-}
-
-/** Số có khoảng 3 chữ số có nghĩa, định dạng Việt Nam. */
-function soCoNghia(x, so = 3) {
-  if (!Number.isFinite(x)) return '—';
-  if (x === 0) return '0';
-  const le = Math.max(0, Math.min(6, so - 1 - Math.floor(Math.log10(Math.abs(x)))));
-  return dinhDangSo(x, le);
-}
-
-/** Làm tròn lên mốc "đẹp" 1 – 2 – 2,5 – 5 × 10ⁿ (dùng cho thang đo). */
-function lamTronDep(x) {
-  if (!(x > 0)) return 1;
-  const mu = Math.pow(10, Math.floor(Math.log10(x)));
-  for (const k of [1, 2, 2.5, 5, 10]) if (k * mu >= x * 0.999) return k * mu;
-  return 10 * mu;
-}
-
-function veCongThuc(o, tex, duPhong) {
-  if (window.katex) {
-    try {
-      window.katex.render(tex, o, { throwOnError: false, displayMode: true });
-      return;
-    } catch { /* dạng dự phòng */ }
-  }
-  o.innerHTML = `<span class="cong-thuc-du-phong">${duPhong}</span>`;
-}
-const soTex = (s) => s.replace(/\./g, '\\,').replace(',', '{,}');
 
 async function khoiDong() {
   let nd, cauHoi;

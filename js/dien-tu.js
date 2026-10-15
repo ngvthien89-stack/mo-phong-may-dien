@@ -103,3 +103,34 @@ export function sddThanhDan(B, l, v) {
   const e = B * l * v;
   return e === 0 ? 0 : e;
 }
+
+/**
+ * Lực điện từ tác dụng lên thanh dẫn mang dòng điện đặt vuông góc với từ trường: F = B·i·l (N).
+ * B: từ cảm (T), i: dòng điện (A), l: chiều dài thanh dẫn (m).
+ */
+export function lucDienTu(B, i, l) {
+  const F = B * i * l;
+  return F === 0 ? 0 : F;
+}
+
+/**
+ * Thanh dẫn tự do trên hai thanh ray nối nguồn U qua điện trở R (nguyên lý động cơ, bỏ qua ma sát và điện cảm).
+ * Quy ước dấu theo Hình 1.3: B > 0 hướng xuống; i > 0 chạy dọc thanh vào phía sau; v > 0 sang phải.
+ *   Lực điện từ (quy tắc bàn tay trái): F = −B·i·l   (B, i > 0 ⇒ lực sang trái)
+ *   Sđđ cảm ứng do chuyển động (bàn tay phải): e = B·l·v   (dương khi cùng chiều i)
+ *   Dòng điện: i = (U + e)/R ; phương trình chuyển động: m·dv/dt = F
+ * ⇒ dv/dt = −k·(v − v∞) với k = (B·l)²/(R·m), v∞ = −U/(B·l): giải đúng theo hàm mũ.
+ * @returns {{v:number, i:number, e:number, F:number}} trạng thái sau bước dt
+ */
+export function buocThanhDongCo(v, dt, { U, R, B, l, m }) {
+  const Bl = B * l;
+  let vMoi = v;
+  if (Bl !== 0 && dt > 0) {
+    const k = (Bl * Bl) / (R * m);
+    const vVoCung = -U / Bl;
+    vMoi = vVoCung + (v - vVoCung) * Math.exp(-k * dt);
+  }
+  const e = Bl * vMoi;
+  const i = (U + e) / R;
+  return { v: vMoi, i, e, F: -lucDienTu(B, i, l) };
+}

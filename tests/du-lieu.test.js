@@ -88,3 +88,19 @@ test('cau-hoi-cam-ung-dien-tu.json: đáp án nằm trong danh sách lựa chọ
     assert.ok(Number.isInteger(c.dapAn) && c.dapAn >= 0 && c.dapAn < c.luaChon.length, c.cauHoi);
   }
 });
+
+test('luc-dien-tu.json và câu hỏi 1.2.b: đủ trường, bước trình chiếu hợp lệ, đáp án hợp lệ', () => {
+  const nd = doc('luc-dien-tu.json');
+  assert.ok(nd.lyThuyet.phatBieu && nd.lyThuyet.congThuc.length && nd.lyThuyet.quyTac && nd.lyThuyet.kyHieu.length === 3);
+  assert.ok(['luc', 'dong-co'].includes(nd.macDinh.kichBan));
+  assert.ok(Math.abs(nd.luc.i_A) <= nd.luc.iMax_A && nd.luc.B_T >= nd.luc.BMin_T && nd.luc.B_T <= nd.luc.BMax_T);
+  assert.ok(nd.dongCo.R_ohm > 0 && nd.dongCo.m_kg > 0 && nd.dongCo.U_V <= nd.dongCo.UMax_V);
+  for (const b of nd.trinhChieu) {
+    assert.ok(b.id && b.tieuDe && b.loiGiang, b.id);
+    if (b.trangThai?.kichBan) assert.ok(['luc', 'dong-co'].includes(b.trangThai.kichBan), b.id);
+    if (b.trangThai?.i !== undefined) assert.ok(Math.abs(b.trangThai.i) <= nd.luc.iMax_A, b.id);
+  }
+  const ch = doc('cau-hoi-luc-dien-tu.json');
+  assert.ok(ch.cauHoi.length >= ch.soCauMoiLan);
+  for (const c of ch.cauHoi) assert.ok(Number.isInteger(c.dapAn) && c.dapAn >= 0 && c.dapAn < c.luaChon.length, c.cauHoi);
+});

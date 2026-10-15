@@ -79,7 +79,8 @@ body[data-kich-ban="thanh-dan"] .chi-cuon { display: none; }
 .quy-tac { margin: 10px 0 0; padding: 8px 10px; border-radius: 8px; background: #fff4e5; font-size: .9rem; }
 .cuc-tu .mat-tren { stroke: #fff; stroke-width: 1.5; }
 .cuc-tu .mat-truoc { stroke: #fff; stroke-width: 1.5; }
-.cuc-n .mat-tren { fill: #f4a7a7; fill-opacity: .55; }
+.cuc-n .mat-tren { fill: #f4a7a7; }
+.cuc-tren .mat-tren { fill-opacity: .55; }
 .cuc-n .mat-truoc { fill: #d62828; }
 .cuc-s .mat-tren { fill: #a9c4d6; }
 .cuc-s .mat-truoc { fill: #457b9d; }
@@ -112,3 +113,4 @@ body[data-kich-ban="thanh-dan"] .chi-cuon { display: none; }
 .co-tay { fill: #b3cde0; stroke: #6b8ba4; stroke-width: 2; }
 .chi-tay { fill: none; stroke: #c99470; stroke-width: 1.5; }
 .chu-vec-nho { font-size: 22px; }
+.up-tay .da-tay { fill: #f0c19c; }

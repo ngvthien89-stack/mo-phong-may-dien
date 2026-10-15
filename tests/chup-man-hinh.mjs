@@ -88,7 +88,12 @@ async function moTrang(kichThuoc, duongDan, ten) {
   const ctx = await trinhDuyet.newContext({ viewport: kichThuoc, deviceScaleFactor: 1, hasTouch: kichThuoc.width < 600, isMobile: kichThuoc.width < 600 });
   const trang = await ctx.newPage();
   trang.on('pageerror', (e) => { console.error(`lỗi JS (${ten}): ${e.message}`); loi.push(`${ten}: lỗi JS: ${e.message}`); });
-  trang.on('console', (m) => { if (m.type() === 'error' && !/katex|cdnjs|ERR_|net::/i.test(m.text())) loi.push(`${ten}: console: ${m.text()}`); });
+  trang.on('console', (m) => {
+    if (m.type() === 'error' && !/katex|cdnjs|ERR_|net::/i.test(m.text())) {
+      console.error(`lỗi console (${ten}): ${m.text()}`);
+      loi.push(`${ten}: console: ${m.text()}`);
+    }
+  });
   // Môi trường không truy cập được CDN: có thể trỏ KATEX_DIR tới thư mục dist của gói katex để thử công thức
   await trang.route(/cdnjs\.cloudflare\.com/, (r) => {
     const thuMuc = process.env.KATEX_DIR;
@@ -155,6 +160,35 @@ for (const [nhan, kt] of [['1920x1080', { width: 1920, height: 1080 }], ['390x84
     await trang.locator('#nut-cau-hoi').click();
     await trang.locator('.ch-phuong-an').nth(2).click();
     await chup(trang, `faraday-cau-hoi-${nhan}`);
+    await ctx.close();
+  }
+  // Trang 1.2.b – Định luật lực điện từ
+  {
+    const { ctx, trang } = await moTrang(kt, '/luc-dien-tu.html', `luc-dien-tu ${nhan}`);
+    await trang.waitForSelector('body.da-san-sang');
+    await trang.waitForTimeout(1200);
+    await chup(trang, `luc-a-${nhan}`, { fullPage: laDT });
+    await kiemTraChuSvg(trang, `1.2.b a) lực điện từ ${nhan}`);
+    await trang.locator('#ld-dao-i').click();
+    await trang.waitForTimeout(500);
+    await chup(trang, `luc-a-dao-i-${nhan}`, { fullPage: laDT });
+    await kiemTraChuSvg(trang, `1.2.b a) đảo chiều i ${nhan}`);
+    await trang.locator('#ld-dao-b').click();
+    await trang.waitForTimeout(500);
+    await chup(trang, `luc-a-dao-ca-hai-${nhan}`, { fullPage: laDT });
+    await kiemTraChuSvg(trang, `1.2.b a) đảo cả i và B ${nhan}`);
+    await trang.selectOption('#chon-kich-ban', 'dong-co');
+    await trang.waitForTimeout(2500);
+    await chup(trang, `luc-b-dong-co-${nhan}`, { fullPage: laDT });
+    await kiemTraChuSvg(trang, `1.2.b b) động cơ ${nhan}`);
+    await trang.locator('#nut-trinh-chieu').click();
+    for (let k = 0; k < 2; k++) await trang.keyboard.press('ArrowRight');
+    await trang.waitForTimeout(800);
+    await chup(trang, `luc-trinh-chieu-${nhan}`);
+    await trang.keyboard.press('Escape');
+    await trang.locator('#nut-cau-hoi').click();
+    await trang.locator('.ch-phuong-an').nth(1).click();
+    await chup(trang, `luc-cau-hoi-${nhan}`);
     await ctx.close();
   }
   // Trang mô phỏng 1.1
