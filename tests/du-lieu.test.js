@@ -54,3 +54,33 @@ test('bai-hoc.json: bài sẵn sàng phải có file trang tồn tại', () => {
     if (b.trangThai === 'san-sang') assert.ok(fs.existsSync(new URL(`../${b.duongDan}`, import.meta.url)), b.duongDan);
   }
 });
+
+test('cam-ung-dien-tu.json: lý thuyết đủ công thức, bước trình chiếu dùng kịch bản hợp lệ', () => {
+  const nd = doc('cam-ung-dien-tu.json');
+  assert.ok(nd.lyThuyet.phatBieu && nd.lyThuyet.congThuc.length >= 3);
+  for (const c of nd.lyThuyet.congThuc) assert.ok(c.tex && c.duPhong, c.chu);
+  const kichBan = ['nam-cham', 'hinh-thang', 'hinh-sin'];
+  assert.ok(kichBan.includes(nd.macDinh.kichBan));
+  assert.ok(nd.macDinh.w >= nd.macDinh.wMin && nd.macDinh.w <= nd.macDinh.wMax);
+  const ids = new Set();
+  for (const b of nd.trinhChieu) {
+    assert.ok(b.id && b.tieuDe && b.loiGiang, b.id);
+    assert.ok(!ids.has(b.id), `trùng id ${b.id}`);
+    ids.add(b.id);
+    if (b.trangThai?.kichBan) assert.ok(kichBan.includes(b.trangThai.kichBan), b.id);
+    if (b.trangThai?.w) assert.ok(b.trangThai.w >= nd.macDinh.wMin && b.trangThai.w <= nd.macDinh.wMax, b.id);
+  }
+  const ht = nd.hinhThang;
+  assert.ok(ht.Phim_Wb >= ht.PhimMin_Wb && ht.Phim_Wb <= ht.PhimMax_Wb);
+  const hs = nd.hinhSin;
+  assert.ok(hs.f_Hz >= hs.fMin_Hz && hs.f_Hz <= hs.fMax_Hz && hs.heSoCham > 0);
+});
+
+test('cau-hoi-cam-ung-dien-tu.json: đáp án nằm trong danh sách lựa chọn, đủ số câu', () => {
+  const ch = doc('cau-hoi-cam-ung-dien-tu.json');
+  assert.ok(ch.cauHoi.length >= ch.soCauMoiLan);
+  for (const c of ch.cauHoi) {
+    assert.ok(c.cauHoi && c.giaiThich);
+    assert.ok(Number.isInteger(c.dapAn) && c.dapAn >= 0 && c.dapAn < c.luaChon.length, c.cauHoi);
+  }
+});

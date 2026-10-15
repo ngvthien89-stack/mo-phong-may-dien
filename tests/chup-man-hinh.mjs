@@ -60,6 +60,30 @@ async function kiemTraBoCuc(trang, ten) {
   if (vanDe.length) loi.push(`${ten}: ${vanDe.join(' | ')}`);
 }
 
+/** Trang 1.2.a: kiểm tra các dòng chữ SVG đang hiển thị không đè lên nhau và không tràn khỏi khung thẻ. */
+async function kiemTraChuSvg(trang, ten) {
+  const kq = await trang.evaluate(() => {
+    const hienThi = (e) => e.checkVisibility?.({ opacityProperty: true, visibilityProperty: true }) ?? true;
+    const chu = [...document.querySelectorAll('#so-do text')]
+      .filter((t) => t.textContent.trim() && hienThi(t))
+      .map((t) => ({ t, r: t.getBoundingClientRect(), the: t.closest('.khu')?.querySelector('.the-svg')?.getBoundingClientRect() }))
+      .filter((c) => c.r.width > 0);
+    const giao = (a, b) => Math.min(a.right, b.right) - Math.max(a.left, b.left) > 2 && Math.min(a.bottom, b.bottom) - Math.max(a.top, b.top) > 2;
+    const de = [];
+    for (let i = 0; i < chu.length; i++) for (let j = i + 1; j < chu.length; j++) {
+      if (giao(chu[i].r, chu[j].r)) de.push(`"${chu[i].t.textContent}" ↔ "${chu[j].t.textContent}"`);
+    }
+    const tran = chu.filter((c) => c.the && (c.r.left < c.the.left - 1 || c.r.right > c.the.right + 1 || c.r.top < c.the.top - 1 || c.r.bottom > c.the.bottom + 1)).map((c) => c.t.textContent);
+    return { so: chu.length, de, tran, rongTrang: document.documentElement.scrollWidth, rongCuaSo: innerWidth };
+  });
+  const vanDe = [];
+  if (kq.de.length) vanDe.push(`chữ đè nhau: ${kq.de.join('; ')}`);
+  if (kq.tran.length) vanDe.push(`chữ tràn khỏi khung: ${kq.tran.join('; ')}`);
+  if (kq.rongTrang > kq.rongCuaSo + 1) vanDe.push(`trang tràn ngang (${kq.rongTrang}px > ${kq.rongCuaSo}px)`);
+  console.log(`${vanDe.length ? '✗' : '✓'} ${ten}: ${kq.so} dòng chữ SVG${vanDe.length ? ' — ' + vanDe.join(' | ') : ''}`);
+  if (vanDe.length) loi.push(`${ten}: ${vanDe.join(' | ')}`);
+}
+
 async function moTrang(kichThuoc, duongDan, ten) {
   const ctx = await trinhDuyet.newContext({ viewport: kichThuoc, deviceScaleFactor: 1, hasTouch: kichThuoc.width < 600, isMobile: kichThuoc.width < 600 });
   const trang = await ctx.newPage();
@@ -88,7 +112,40 @@ for (const [nhan, kt] of [['1920x1080', { width: 1920, height: 1080 }], ['390x84
     await kiemTraBoCuc(trang, `trang-chu ${nhan}`);
     await ctx.close();
   }
-  // Trang mô phỏng
+  // Trang 1.2.a – Định luật cảm ứng điện từ
+  {
+    const { ctx, trang } = await moTrang(kt, '/cam-ung-dien-tu.html', `cam-ung ${nhan}`);
+    await trang.waitForSelector('body.da-san-sang');
+    await trang.waitForTimeout(1600);
+    await chup(trang, `faraday-a-nam-cham-${nhan}`, { fullPage: laDT });
+    await kiemTraChuSvg(trang, `1.2.a a) nam châm ${nhan}`);
+    // kéo nam châm bằng chuột
+    const hop = await trang.locator('#so-do .vung-keo').boundingBox();
+    await trang.mouse.move(hop.x + hop.width / 2, hop.y + hop.height / 2);
+    await trang.mouse.down();
+    for (let k = 1; k <= 8; k++) { await trang.mouse.move(hop.x + hop.width / 2 + k * 12, hop.y + hop.height / 2); await trang.waitForTimeout(30); }
+    await chup(trang, `faraday-a-keo-${nhan}`, { fullPage: laDT });
+    await trang.mouse.up();
+    await trang.selectOption('#chon-kich-ban', 'hinh-thang');
+    await trang.locator('#hien-lenz').check();
+    await trang.waitForTimeout(1200);
+    await chup(trang, `faraday-b-hinh-thang-${nhan}`, { fullPage: laDT });
+    await kiemTraChuSvg(trang, `1.2.a b) hình thang ${nhan}`);
+    await trang.selectOption('#chon-kich-ban', 'hinh-sin');
+    await trang.waitForTimeout(1500);
+    await chup(trang, `faraday-c-hinh-sin-${nhan}`, { fullPage: laDT });
+    await kiemTraChuSvg(trang, `1.2.a c) hình sin ${nhan}`);
+    await trang.locator('#nut-trinh-chieu').click();
+    for (let k = 0; k < 2; k++) await trang.keyboard.press('ArrowRight');
+    await trang.waitForTimeout(1500);
+    await chup(trang, `faraday-trinh-chieu-${nhan}`);
+    await trang.keyboard.press('Escape');
+    await trang.locator('#nut-cau-hoi').click();
+    await trang.locator('.ch-phuong-an').nth(2).click();
+    await chup(trang, `faraday-cau-hoi-${nhan}`);
+    await ctx.close();
+  }
+  // Trang mô phỏng 1.1
   const { ctx, trang } = await moTrang(kt, '/he-thong-dien.html', `he-thong-dien ${nhan}`);
   await trang.waitForSelector('body.da-san-sang');
   await trang.waitForTimeout(1500);

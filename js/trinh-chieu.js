@@ -6,8 +6,9 @@
 const $ = (s) => document.querySelector(s);
 
 export function khoiTaoTrinhChieu(ung) {
-  const { noiDung, thayBien } = ung;
-  const cacBuoc = [
+  const { noiDung, thayBien = (s) => s } = ung;
+  // Trang có thể tự cung cấp danh sách bước (ung.cacBuocTrinhChieu); mặc định lấy từ bo-phan.json
+  const cacBuoc = ung.cacBuocTrinhChieu || [
     { id: null, ...noiDung.moDau },
     ...noiDung.boPhan.map((b) => ({ id: b.id, ma: b.ma, tieuDe: b.ten, loiGiang: b.loiGiang, capDienAp: b.capDienAp })),
     { id: null, ...noiDung.ketLuan },
@@ -28,7 +29,7 @@ export function khoiTaoTrinhChieu(ung) {
     <div class="tc-nut">
       <button type="button" class="nut" id="tc-lui" aria-label="Bộ phận trước">◀ Lùi</button>
       <div class="tc-cham" id="tc-cham" role="tablist" aria-label="Các bước trình chiếu">
-        ${cacBuoc.map((b, k) => `<button type="button" role="tab" data-k="${k}" title="${b.tieuDe}">${b.ma || (k === 0 ? '•' : k === cacBuoc.length - 1 ? '✓' : '·')}</button>`).join('')}
+        ${cacBuoc.map((b, k) => `<button type="button" role="tab" data-k="${k}" title="${b.tieuDe}">${b.ma || (ung.cacBuocTrinhChieu ? k + 1 : k === 0 ? '•' : k === cacBuoc.length - 1 ? '✓' : '·')}</button>`).join('')}
       </div>
       <button type="button" class="nut nut-chinh" id="tc-tiep" aria-label="Bộ phận tiếp theo">Tiếp ▶</button>
       <button type="button" class="nut" id="tc-thoat">✕ Thoát</button>
@@ -39,15 +40,16 @@ export function khoiTaoTrinhChieu(ung) {
     const b = cacBuoc[i];
     $('#tc-so').textContent = `${i + 1}/${cacBuoc.length}`;
     $('#tc-tieu-de').innerHTML = `${b.ma ? `<span class="huy-hieu-html">${b.ma}</span>` : ''}${b.tieuDe}`;
-    $('#tc-dien-ap').textContent = b.capDienAp ? thayBien(b.capDienAp) : '';
-    $('#tc-dien-ap').hidden = !b.capDienAp;
+    const the = b.the || (b.capDienAp ? thayBien(b.capDienAp) : '');
+    $('#tc-dien-ap').textContent = the;
+    $('#tc-dien-ap').hidden = !the;
     $('#tc-loi-giang').textContent = thayBien(b.loiGiang);
     $('#tc-so-lieu').textContent = '';
     $('#tc-so-lieu').hidden = !b.id;
     $('#tc-lui').disabled = i === 0;
     $('#tc-tiep').textContent = i === cacBuoc.length - 1 ? 'Kết thúc ✓' : 'Tiếp ▶';
     thanh.querySelectorAll('.tc-cham button').forEach((n, k) => n.setAttribute('aria-selected', String(k === i)));
-    ung.lamNoiBat(b.id);
+    ung.lamNoiBat(b.id, b);
   }
 
   function bat() {

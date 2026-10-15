@@ -1,0 +1,73 @@
+/* cam-ung-dien-tu.css — Phần riêng của trang 1.2.a (định luật cảm ứng điện từ) */
+.thanh-dieu-khien .so-vong input { width: 150px; }
+.hang-nut { display: flex; flex-wrap: wrap; gap: 8px; }
+.hang-nut .nut[aria-pressed="true"] { background: var(--dau); border-color: var(--dau); color: #fff; }
+.the-ly-thuyet h2 { font-size: 1.05rem; }
+.muc-nho { margin: 0 0 4px; font-size: .8rem; font-weight: 700; color: var(--chu-mo); text-transform: uppercase; letter-spacing: .04em; }
+.phat-bieu { margin: 0 0 6px; padding: 8px 10px; border-left: 4px solid var(--chinh); background: var(--chinh-nhat); border-radius: 0 8px 8px 0; font-weight: 600; }
+.dong-ly-thuyet { margin: 8px 0 0; font-size: .93rem; color: var(--chu-phu); }
+.dong-ly-thuyet.sau { margin-top: 0; }
+.ghi-chu-ly-thuyet { margin: 10px 0 0; padding-left: 1.1em; display: grid; gap: 4px; font-size: .85rem; color: var(--chu-phu); }
+@media (max-width: 900px) { .trang-cam-ung #so-do { width: 900px; } }
+
+/* ---------- SVG ---------- */
+#so-do text { font-family: var(--font); }
+.nen-san-khau { fill: #e6eef5; }
+.the-svg { fill: #fff; stroke: #cfd9e3; stroke-width: 1.5; }
+.tieu-de-svg { font-size: 24px; font-weight: 800; fill: #1d3557; }
+.chu-svg { font-size: 17px; fill: #4a5b6b; }
+.chu-svg-nho { font-size: 15px; fill: #6b7c8c; }
+.nhan-phi { font-size: 26px; font-weight: 800; fill: #2a78d6; font-variant-numeric: tabular-nums; }
+.nhan-w { font-size: 19px; font-weight: 700; fill: #8a5a2b; }
+.vong-day { fill: none; stroke: #b87333; stroke-width: 6; stroke-linecap: round; }
+.vong-day-ngang { fill: none; stroke: #b87333; stroke-width: 4; }
+.day-noi { fill: none; stroke: #8a5a2b; stroke-width: 3.5; stroke-linejoin: round; }
+.ky-hieu .vong-ky-hieu { fill: #fff; stroke: #2a78d6; stroke-width: 3; }
+.ky-hieu .dau-vao { stroke: #2a78d6; stroke-width: 3; stroke-linecap: round; }
+.ky-hieu .dau-ra { fill: #2a78d6; }
+.ky-hieu.lenz .vong-ky-hieu { fill: #fff7f2; stroke: #eb6834; stroke-dasharray: 4 3; stroke-width: 2.5; }
+.ky-hieu.lenz .dau-vao { stroke: #eb6834; stroke-width: 2.5; }
+.ky-hieu.lenz .dau-ra { fill: #eb6834; }
+.mui-e { fill: none; stroke: #eb6834; stroke-width: 5; stroke-linecap: round; stroke-linejoin: round; }
+.cung-quy-uoc { fill: none; stroke: #13202b; stroke-width: 3; stroke-dasharray: 9 7; }
+.dau-quy-uoc { fill: #13202b; }
+.chu-e-quy-uoc { font-size: 30px; font-style: italic; font-family: "Times New Roman", serif !important; fill: #13202b; }
+.vo-von-ke { fill: #fbfcfd; stroke: #90a4ae; stroke-width: 2; }
+.thang-do { fill: none; stroke: #90a4ae; stroke-width: 2; }
+.vach-do { stroke: #607d8b; stroke-width: 2.5; }
+.chu-thang-do { font-size: 18px; font-weight: 800; fill: #455a64; }
+.chu-v { font-size: 20px; font-weight: 800; fill: #90a4ae; }
+.kim { stroke: #c62828; stroke-width: 4; stroke-linecap: round; }
+.truc-kim { fill: #37474f; }
+.chu-von-ke { font-size: 17px; font-weight: 800; fill: #13202b; font-variant-numeric: tabular-nums; }
+.qua-thang { font-size: 13px; font-weight: 800; fill: #c62828; }
+.truc-ngang { stroke: #b0bec5; stroke-width: 1.5; stroke-dasharray: 8 6; }
+.mat-nhin path { fill: #fff; stroke: #455a64; stroke-width: 2; }
+.mat-nhin circle { fill: #455a64; }
+.nam-cham rect.cuc-N { fill: #d62828; }
+.nam-cham rect.cuc-S { fill: #457b9d; }
+.chu-cuc { font-size: 24px; font-weight: 800; fill: #fff; pointer-events: none; }
+.duong-suc path { fill: none; stroke: #8fa3b3; stroke-width: 1.6; }
+.duong-suc path.mui-suc { stroke: #607d8b; stroke-width: 2.2; }
+.duong-suc.dien path { stroke: #2a78d6; stroke-opacity: .7; }
+.goi-y-keo { font-size: 15px; font-weight: 700; fill: #6b7c8c; }
+.vung-keo { fill: transparent; cursor: grab; touch-action: none; }
+.tam-dung .vung-keo { cursor: not-allowed; }
+.mui-quay { fill: none; stroke: #6b7c8c; stroke-width: 2; }
+.chu-omega { font-size: 24px; font-style: italic; fill: #6b7c8c; }
+.loi-thep { fill: #b0bec5; stroke: #78909c; stroke-width: 1.5; }
+.vong-quan { fill: none; stroke: #b87333; stroke-width: 4; }
+.hop-nguon { fill: #37474f; }
+.chu-dong-dien { font-size: 17px; font-weight: 800; fill: #fff; font-variant-numeric: tabular-nums; }
+.chu-cuc-dien { font-size: 20px; font-weight: 800; fill: #455a64; }
+.mui-tu-thong line { stroke: #2a78d6; stroke-linecap: round; }
+.mui-tu-thong path { fill: #2a78d6; }
+.chu-phi-ngang { font-size: 26px; font-style: italic; font-weight: 700; fill: #2a78d6; }
+.tieu-de-do-thi-dt { font-size: 19px; font-weight: 800; fill: #1d3557; }
+.luoi-dt { stroke: #e3e9ef; stroke-width: 1; }
+.truc-0 { stroke: #9aa8b5; stroke-width: 1.5; }
+.chu-truc-dt { font-size: 14px; fill: #5b6b7b; font-variant-numeric: tabular-nums; }
+.duong-dt { fill: none; stroke-width: 3; stroke-linejoin: round; }
+.cham-dt { stroke: #fff; stroke-width: 2; }
+.tiep-tuyen { stroke: #13202b; stroke-width: 2.5; stroke-dasharray: 6 4; }
+.chu-tiep-tuyen { font-size: 15px; font-weight: 700; fill: #13202b; text-anchor: end; paint-order: stroke; stroke: #fff; stroke-width: 4; stroke-linejoin: round; }
