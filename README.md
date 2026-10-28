@@ -103,6 +103,33 @@ Theo slide 4/6:
 - Đồ thị theo thời gian; trình chiếu 6 bước; ngân hàng 8 câu hỏi.
 - Prompt lưu trong [`docs/prompts/1.2b-dinh-luat-luc-dien-tu.md`](docs/prompts/1.2b-dinh-luat-luc-dien-tu.md).
 
+## Bài 1.2.c – Định luật toàn dòng điện (`toan-dong-dien.html`)
+
+Theo slide 10 (`Chuong1-MBA.pdf`):
+
+- Định luật Ampere: `∮_C H·dl = Σi_k = F`, C là đường cong khép kín bao quanh các dây dẫn mang dòng điện.
+- Áp dụng cho mạch từ hình 1.4: `H·l = w·i = F`; i là dòng điện từ hóa, w·i là sức từ động.
+
+![Bài 1.2.c trên máy chiếu](docs/anh/toan-dong-dien-1920x1080.png)
+
+**Kịch bản:**
+
+- a) **Đường cong kín C quanh các dòng điện:**
+  - Kéo thả dây dẫn và đường cong C (tròn hoặc chữ nhật), bấm vào dây để đổi chiều dòng điện.
+  - Chấm sáng chạy quanh C cộng dồn ∫H·dl; hết một vòng, kết quả tích phân số bằng tổng đại số Σi.
+  - Biểu đồ cho thấy dây nằm ngoài C đóng góp 0.
+- b) **Mạch từ có cuộn dây w vòng (hình 1.4):**
+  - Mặt cắt cho thấy C bao w thanh dẫn cùng chiều nên Σi = w·i.
+  - Chỉnh w, i, l; xem F = w·i, H = w·i/l.
+  - Phần mở rộng: B = μ0·μr·H, φ = B·S (μr minh họa, giả thiết tuyến tính).
+
+**Tiện ích khác:**
+
+- Trình chiếu 7 bước; ngân hàng 9 câu hỏi.
+- Hàm tính toán trong `js/mach-tu.js`, có test.
+- Prompt lưu trong [`docs/prompts/1.2c-dinh-luat-toan-dong-dien.md`](docs/prompts/1.2c-dinh-luat-toan-dong-dien.md).
+- Lộ trình xây dựng toàn bộ chương 1 theo slide: [`docs/lo-trinh-chuong-1.md`](docs/lo-trinh-chuong-1.md).
+
 ## Lưu ý về số liệu
 
 > Các cấp điện áp, công suất phụ tải, đồ thị phụ tải ngày, thông số đường dây… trong `du-lieu/cau-hinh.json`
@@ -118,8 +145,9 @@ index.html              Trang chủ: danh sách bài học (đọc từ du-lieu/
 he-thong-dien.html      Bài 1.1
 cam-ung-dien-tu.html    Bài 1.2.a
 luc-dien-tu.html        Bài 1.2.b
+toan-dong-dien.html     Bài 1.2.c
 css/                    chung.css, mo-phong.css (bố cục chung các trang mô phỏng), trang-chu.css,
-                        he-thong-dien.css, cam-ung-dien-tu.css, luc-dien-tu.css
+                        he-thong-dien.css, cam-ung-dien-tu.css, luc-dien-tu.css, toan-dong-dien.css
 js/
   tinh-toan.js          Hàm tính toán thuần (dòng điện, tổn thất, hiệu suất, phụ tải, tần số) – dùng chung cho trang và test
   so-do.js              Vẽ sơ đồ SVG
@@ -135,6 +163,8 @@ js/
   thanh-dan.js          Kịch bản d bài 1.2.a: Hình 1.2, quy tắc bàn tay phải, e = B·l·v
   hinh-ray.js           Thành phần vẽ dùng chung cho Hình 1.2 và 1.3 (hình chiếu xiên, nam châm, ray, đồng hồ, bàn tay)
   luc-dien-tu.js        Trang bài 1.2.b: Hình 1.3, quy tắc bàn tay trái, F = B·i·l, nguyên lý động cơ
+  mach-tu.js            Hàm tính toán bài 1.2.c (H của dây dẫn thẳng, tích phân vòng ∮H·dl, F = w·i, H = w·i/l)
+  toan-dong-dien.js     Trang bài 1.2.c: đường cong kín C, mạch từ hình 1.4
   tien-ich.js           Hàm tiện ích dùng chung (nạp JSON, định dạng số, vẽ KaTeX)
   trang-chu.js          Trang chủ
 du-lieu/                Nội dung cho giảng viên chỉnh sửa (JSON)
@@ -158,6 +188,8 @@ Các khóa bắt đầu bằng `_` (ví dụ `_ghiChu`) chỉ là chú thích, t
 | `cau-hoi-cam-ung-dien-tu.json` | Ngân hàng câu hỏi bài 1.2.a, cùng định dạng với `cau-hoi.json`. |
 | `luc-dien-tu.json` | Bài 1.2.b: lý thuyết theo slide, thông số kịch bản a (`luc`) và b (`dongCo`: U, R, khối lượng thanh…), các bước trình chiếu. |
 | `cau-hoi-luc-dien-tu.json` | Ngân hàng câu hỏi bài 1.2.b. |
+| `toan-dong-dien.json` | Bài 1.2.c: lý thuyết theo slide, vị trí và dòng điện các dây dẫn, đường cong C mặc định (kịch bản `ampere`), thông số mạch từ (`machTu`), các bước trình chiếu. |
+| `cau-hoi-toan-dong-dien.json` | Ngân hàng câu hỏi bài 1.2.c. |
 | `bai-hoc.json` | Danh sách bài trên trang chủ. `trangThai`: `"san-sang"` (có trang) hoặc `"sap-ra-mat"`. Các bài "sắp ra mắt" hiện có là ví dụ, sửa theo đề cương môn học. |
 
 Sau khi sửa, chạy `npm test` (nếu máy có Node.js) để kiểm tra cấu trúc dữ liệu: test sẽ báo nếu thiếu trường,

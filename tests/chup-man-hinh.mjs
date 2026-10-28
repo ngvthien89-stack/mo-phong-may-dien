@@ -191,6 +191,31 @@ for (const [nhan, kt] of [['1920x1080', { width: 1920, height: 1080 }], ['390x84
     await chup(trang, `luc-cau-hoi-${nhan}`);
     await ctx.close();
   }
+  // Trang 1.2.c – Định luật toàn dòng điện
+  {
+    const { ctx, trang } = await moTrang(kt, '/toan-dong-dien.html', `toan-dong-dien ${nhan}`);
+    await trang.waitForSelector('body.da-san-sang');
+    await trang.waitForTimeout(2600);
+    await chup(trang, `toan-a-ampere-${nhan}`, { fullPage: laDT });
+    await kiemTraChuSvg(trang, `1.2.c a) ampere ${nhan}`);
+    await trang.locator('#td-cn').click();
+    await trang.waitForTimeout(1200);
+    await chup(trang, `toan-a-chu-nhat-${nhan}`, { fullPage: laDT });
+    await kiemTraChuSvg(trang, `1.2.c a) C hình chữ nhật ${nhan}`);
+    await trang.selectOption('#chon-kich-ban', 'mach-tu');
+    await trang.waitForTimeout(1200);
+    await chup(trang, `toan-b-mach-tu-${nhan}`, { fullPage: laDT });
+    await kiemTraChuSvg(trang, `1.2.c b) mạch từ ${nhan}`);
+    await trang.locator('#nut-trinh-chieu').click();
+    for (let k = 0; k < 2; k++) await trang.keyboard.press('ArrowRight');
+    await trang.waitForTimeout(1500);
+    await chup(trang, `toan-trinh-chieu-${nhan}`);
+    await trang.keyboard.press('Escape');
+    await trang.locator('#nut-cau-hoi').click();
+    await trang.locator('.ch-phuong-an').nth(1).click();
+    await chup(trang, `toan-cau-hoi-${nhan}`);
+    await ctx.close();
+  }
   // Trang mô phỏng 1.1
   const { ctx, trang } = await moTrang(kt, '/he-thong-dien.html', `he-thong-dien ${nhan}`);
   await trang.waitForSelector('body.da-san-sang');

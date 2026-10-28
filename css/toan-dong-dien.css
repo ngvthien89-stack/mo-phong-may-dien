@@ -1,0 +1,50 @@
+/* toan-dong-dien.css — Phần riêng của trang 1.2.c (định luật toàn dòng điện); dùng chung lớp SVG với cam-ung-dien-tu.css */
+.mat-phang { fill: #f7fafc; stroke: #cfd9e3; stroke-width: 1.5; }
+.vung-c { fill: #1d3557; fill-opacity: .05; }
+.duong-c { fill: none; stroke: #1d3557; stroke-width: 4; stroke-dasharray: 14 8; }
+.mui-c { fill: #1d3557; }
+.nhan-c, .vec-c { font-size: 32px; font-style: italic; font-weight: 700; font-family: "Times New Roman", serif !important; fill: #1d3557; }
+.mui-h { stroke: #2a78d6; stroke-width: 2; stroke-linecap: round; }
+.mui-ht { stroke-width: 4; stroke-linecap: round; }
+.mui-ht.duong { stroke: #2e7d32; }
+.mui-ht.am { stroke: #c62828; }
+.day-dan { cursor: grab; touch-action: none; }
+.day-dan circle:first-child { fill: #fff; stroke-width: 4; }
+.day-dan.ra circle:first-child { stroke: #2e7d32; }
+.day-dan.vao circle:first-child { stroke: #c62828; }
+.cham-ra { fill: #2e7d32; }
+.cheo-vao { stroke: #c62828; stroke-width: 4; stroke-linecap: round; }
+.nhan-day { font-size: 17px; font-weight: 800; fill: #13202b; paint-order: stroke; stroke: #fff; stroke-width: 5; stroke-linejoin: round; pointer-events: none; }
+.cham-di { fill: #ffd166; stroke: #b5651d; stroke-width: 3; pointer-events: none; }
+.tay-nam { cursor: grab; touch-action: none; }
+.tam-c circle { fill: #fff; stroke: #1d3557; stroke-width: 2.5; }
+.tam-c text { font-size: 20px; fill: #1d3557; }
+.co-c { fill: #1d3557; stroke: #fff; stroke-width: 3; }
+.tam-dung .cham-di { fill: #e0e0e0; }
+.vong-nen { fill: none; stroke: #e3e9ef; stroke-width: 18; }
+.vong-tien { fill: none; stroke: #2e7d32; stroke-width: 18; stroke-linecap: round; }
+.so-lon { font-size: 40px; font-weight: 800; fill: #13202b; font-variant-numeric: tabular-nums; }
+.chu-kq { font-size: 19px; fill: #13202b; font-variant-numeric: tabular-nums; }
+.chu-kq.dam { font-weight: 800; fill: #2e7d32; }
+.cot-dg.duong { fill: #2e7d32; }
+.cot-dg.am { fill: #c62828; }
+.chu-gt-cot { font-size: 16px; font-weight: 700; fill: #13202b; font-variant-numeric: tabular-nums; }
+
+/* Kịch bản b: mạch từ */
+.loi-thep-mt { fill: #b0bec5; stroke: #78909c; stroke-width: 2; }
+.duong-tb { fill: none; stroke: #1d3557; stroke-width: 2; stroke-dasharray: 10 8; }
+.dong-phi { fill: none; stroke: #2a78d6; stroke-width: 6; stroke-dasharray: 4 36; stroke-linecap: round; }
+.mui-phi { stroke: #2a78d6; stroke-width: 4; }
+.tiet-dien { fill: url(#gach-cheo); stroke: #455a64; stroke-width: 2; }
+.duong-chi { stroke: #13202b; stroke-width: 1.5; }
+.vong-cuon-mt { fill: none; stroke: #b87333; stroke-width: 7; stroke-linecap: round; }
+.day-cuon-mt { fill: none; stroke: #8a5a2b; stroke-width: 3.5; stroke-linejoin: round; }
+.vec-i { fill: #eb6834; }
+.thanh-mc circle:first-child { fill: #fff; stroke-width: 2.5; }
+.thanh-mc.ra circle:first-child { stroke: #2e7d32; }
+.thanh-mc.vao circle:first-child { stroke: #c62828; }
+.thanh-mc .cheo-vao { stroke-width: 2.5; }
+.duong-c-mc { fill: none; stroke: #1d3557; stroke-width: 2.5; stroke-dasharray: 10 6; }
+.duong-gioi { stroke: #2a78d6; stroke-width: 1.5; stroke-dasharray: 5 4; }
+.mo-rong { margin-top: 8px; }
+.mo-rong summary { cursor: pointer; font-weight: 700; font-size: .92rem; }

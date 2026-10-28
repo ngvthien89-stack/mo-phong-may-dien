@@ -104,3 +104,24 @@ test('luc-dien-tu.json và câu hỏi 1.2.b: đủ trường, bước trình chi
   assert.ok(ch.cauHoi.length >= ch.soCauMoiLan);
   for (const c of ch.cauHoi) assert.ok(Number.isInteger(c.dapAn) && c.dapAn >= 0 && c.dapAn < c.luaChon.length, c.cauHoi);
 });
+
+test('toan-dong-dien.json và câu hỏi 1.2.c: đủ trường, C nằm trong mặt phẳng hình, đáp án hợp lệ', () => {
+  const nd = doc('toan-dong-dien.json');
+  assert.ok(nd.lyThuyet.phatBieu && nd.lyThuyet.congThuc.length === 2 && nd.lyThuyet.chuY && nd.lyThuyet.kyHieu.length === 3);
+  assert.ok(['ampere', 'mach-tu'].includes(nd.macDinh.kichBan));
+  const mt = nd.machTu;
+  assert.ok(mt.w >= mt.wMin && mt.w <= mt.wMax && mt.i_A <= mt.iMax_A && mt.l_m >= mt.lMin_m && mt.l_m <= mt.lMax_m);
+  assert.ok(mt.muR >= mt.muRMin && mt.muR <= mt.muRMax && mt.S_cm2 > 0);
+  // mặt phẳng hình: |x| ≤ 470, |y| ≤ 360 (đơn vị hình vẽ); hình chữ nhật có nửa cạnh đứng = 0,62·r
+  const trongMatPhang = (C) => Math.abs(C.cx) + C.r <= 470 && Math.abs(C.cy) + C.r * (C.hinh === 'chu-nhat' ? 0.62 : 1) <= 360;
+  assert.ok(trongMatPhang(nd.ampere.C));
+  for (const d of nd.ampere.dayDan) assert.ok(Math.abs(d.I) <= nd.ampere.iMax_A && Math.abs(d.x) < 470 && Math.abs(d.y) < 360);
+  for (const b of nd.trinhChieu) {
+    assert.ok(b.id && b.tieuDe && b.loiGiang, b.id);
+    if (b.trangThai?.kichBan) assert.ok(['ampere', 'mach-tu'].includes(b.trangThai.kichBan), b.id);
+    if (b.trangThai?.C) assert.ok(trongMatPhang(b.trangThai.C), b.id);
+  }
+  const ch = doc('cau-hoi-toan-dong-dien.json');
+  assert.ok(ch.cauHoi.length >= ch.soCauMoiLan);
+  for (const c of ch.cauHoi) assert.ok(Number.isInteger(c.dapAn) && c.dapAn >= 0 && c.dapAn < c.luaChon.length, c.cauHoi);
+});

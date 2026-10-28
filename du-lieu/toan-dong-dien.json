@@ -1,0 +1,93 @@
+{
+  "_huongDan": "Nội dung bài 1.2.c. Công thức viết theo cú pháp LaTeX (KaTeX); 'duPhong' là dạng chữ thường khi không tải được KaTeX. Trong JSON, mỗi dấu \\ của LaTeX viết thành \\\\. Tọa độ dây dẫn tính bằng đơn vị hình vẽ (gốc ở tâm mặt phẳng, trục y hướng lên).",
+  "lyThuyet": {
+    "muc": "1.2. Các định luật điện từ thường dùng trong máy điện",
+    "tieuDe": "c. Định luật toàn dòng điện",
+    "phatBieu": "Gọi H là cường độ từ trường tạo bởi tập hợp các dòng điện i1, i2, …, in với C là đường cong khép kín trong không gian bao quanh các dây dẫn mang tập hợp dòng điện trên. Theo định luật Ampere ta có:",
+    "congThuc": [
+      { "tex": "\\oint_C H\\,dl = \\sum_{k=1}^{n} i_k = F", "duPhong": "∮ H·dl = Σ i_k = F" },
+      { "chu": "Áp dụng vào mạch từ hình 1.4, ta viết như sau:", "tex": "Hl = wi = F", "duPhong": "H·l = w·i = F" }
+    ],
+    "kyHieu": [
+      { "tex": "H", "chu": "cường độ từ trường trong mạch (A/m)" },
+      { "tex": "l", "chu": "chiều dài trung bình của mạch từ, đo bằng mét" },
+      { "tex": "w", "chu": "số vòng của cuộn dây" }
+    ],
+    "chuY": "Dòng điện i tạo ra từ thông cho mạch từ, gọi là dòng điện từ hóa. Tích số w·i gọi là sức từ động.",
+    "ghiChu": [
+      "Σi_k là tổng đại số: dòng điện có chiều phù hợp với chiều đi của C theo quy tắc vặn nút chai lấy dấu +, ngược lại lấy dấu −.",
+      "Dây dẫn nằm ngoài C vẫn tạo từ trường trên C nhưng không đóng góp vào ∮H·dl; hình dạng của C không làm thay đổi kết quả.",
+      "Mở rộng: trong vật liệu có độ từ thẩm tương đối μr, từ cảm B = μ0·μr·H (μ0 = 4π·10⁻⁷ H/m) và từ thông φ = B·S."
+    ]
+  },
+  "macDinh": { "kichBan": "ampere" },
+  "ampere": {
+    "dayDan": [
+      { "x": -110, "y": 40, "I": 5 },
+      { "x": 90, "y": -60, "I": -3 },
+      { "x": 330, "y": 150, "I": 4 }
+    ],
+    "iMax_A": 10,
+    "C": { "cx": 0, "cy": 0, "r": 210, "hinh": "tron" },
+    "chuKyDiVong_s": 6
+  },
+  "machTu": {
+    "w": 200, "wMin": 10, "wMax": 1000,
+    "i_A": 2, "iMax_A": 5,
+    "l_m": 0.5, "lMin_m": 0.2, "lMax_m": 2,
+    "S_cm2": 25,
+    "muR": 2000, "muRMin": 500, "muRMax": 5000,
+    "_ghiChu": "muR là giá trị minh họa cho vật liệu từ trong vùng tuyến tính; thực tế đường cong từ hóa B–H của thép không tuyến tính và có bão hòa."
+  },
+  "trinhChieu": [
+    {
+      "id": "phat-bieu",
+      "tieuDe": "Định luật toàn dòng điện (định luật Ampere)",
+      "the": "∮H·dl = Σi",
+      "loiGiang": "Lấy một đường cong kín C bao quanh các dây dẫn mang dòng điện. Đi một vòng quanh C và cộng dồn tích H·dl: kết quả đúng bằng tổng các dòng điện xuyên qua mặt giới hạn bởi C. Quan sát chấm sáng chạy quanh C và con số tích lũy.",
+      "trangThai": { "kichBan": "ampere", "C": { "cx": 0, "cy": 0, "r": 210, "hinh": "tron" } }
+    },
+    {
+      "id": "tong-dai-so",
+      "tieuDe": "Σi là tổng đại số",
+      "the": "dấu theo quy tắc vặn nút chai",
+      "loiGiang": "C đi ngược chiều kim đồng hồ: dòng điện đi ra khỏi mặt phẳng (⊙) lấy dấu +, dòng điện đi vào (⊗) lấy dấu −. Với 5 A ⊙ và 3 A ⊗ nằm trong C thì ∮H·dl = 5 − 3 = 2 A.",
+      "trangThai": { "kichBan": "ampere", "C": { "cx": 0, "cy": 0, "r": 210, "hinh": "tron" } }
+    },
+    {
+      "id": "ngoai-C",
+      "tieuDe": "Dây dẫn nằm ngoài C không đóng góp",
+      "the": "mở rộng C: Σi = 5 − 3 + 4 = 6 A",
+      "loiGiang": "Ở bước trước, dây i3 = 4 A nằm ngoài C nên đóng góp của nó bằng 0: dây vẫn tạo từ trường trên C, nhưng phần đóng góp dương và âm dọc theo C triệt tiêu nhau. Mở rộng C để bao cả i3: ∮H·dl tăng thêm đúng 4 A, thành 5 − 3 + 4 = 6 A.",
+      "trangThai": { "kichBan": "ampere", "C": { "cx": 100, "cy": 30, "r": 310, "hinh": "tron" } }
+    },
+    {
+      "id": "hinh-dang",
+      "tieuDe": "Hình dạng của C không quan trọng",
+      "the": "chỉ phụ thuộc dòng bao quanh",
+      "loiGiang": "Đổi C thành hình chữ nhật: H tại từng điểm trên C khác đi, nhưng tích phân vòng vẫn bằng tổng dòng điện được bao quanh. Đây là lý do có thể chọn C trùng đường trung bình của mạch từ.",
+      "trangThai": { "kichBan": "ampere", "C": { "cx": 0, "cy": 0, "r": 210, "hinh": "chu-nhat" } }
+    },
+    {
+      "id": "mach-tu",
+      "tieuDe": "Áp dụng cho mạch từ (hình 1.4)",
+      "the": "H·l = w·i = F",
+      "loiGiang": "Chọn C là đường trung bình của lõi thép, dài l. Cuộn dây w vòng có w thanh dẫn cùng chiều xuyên qua mặt giới hạn bởi C, nên Σi = w·i. H gần như không đổi dọc theo C nên ∮H·dl = H·l, suy ra H·l = w·i = F.",
+      "trangThai": { "kichBan": "mach-tu" }
+    },
+    {
+      "id": "tu-hoa",
+      "tieuDe": "Dòng điện từ hóa và sức từ động",
+      "the": "F = w·i",
+      "loiGiang": "Dòng điện i tạo ra từ thông cho mạch từ, gọi là dòng điện từ hóa. Tích số w·i gọi là sức từ động F (A·vòng). Cùng một F, mạch từ càng dài thì H càng nhỏ: H = w·i/l.",
+      "trangThai": { "kichBan": "mach-tu" }
+    },
+    {
+      "id": "tom-tat",
+      "tieuDe": "Tóm tắt",
+      "the": "∮H·dl = Σi = F",
+      "loiGiang": "Tích phân của H dọc một đường cong kín bằng tổng đại số các dòng điện mà đường cong bao quanh. Với mạch từ có cuộn dây w vòng: H·l = w·i = F. Định luật này dùng để tính dòng điện từ hóa cần thiết cho mạch từ của máy điện.",
+      "trangThai": { "kichBan": "mach-tu" }
+    }
+  ]
+}
