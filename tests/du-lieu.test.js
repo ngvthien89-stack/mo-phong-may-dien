@@ -104,3 +104,111 @@ test('luc-dien-tu.json và câu hỏi 1.2.b: đủ trường, bước trình chi
   assert.ok(ch.cauHoi.length >= ch.soCauMoiLan);
   for (const c of ch.cauHoi) assert.ok(Number.isInteger(c.dapAn) && c.dapAn >= 0 && c.dapAn < c.luaChon.length, c.cauHoi);
 });
+
+test('toan-dong-dien.json và câu hỏi 1.2.c: đủ trường, C nằm trong mặt phẳng hình, đáp án hợp lệ', () => {
+  const nd = doc('toan-dong-dien.json');
+  assert.ok(nd.lyThuyet.phatBieu && nd.lyThuyet.congThuc.length === 2 && nd.lyThuyet.chuY && nd.lyThuyet.kyHieu.length === 3);
+  assert.ok(['ampere', 'mach-tu'].includes(nd.macDinh.kichBan));
+  const mt = nd.machTu;
+  assert.ok(mt.w >= mt.wMin && mt.w <= mt.wMax && mt.i_A <= mt.iMax_A && mt.l_m >= mt.lMin_m && mt.l_m <= mt.lMax_m);
+  assert.ok(mt.muR >= mt.muRMin && mt.muR <= mt.muRMax && mt.S_cm2 > 0);
+  // mặt phẳng hình: |x| ≤ 470, |y| ≤ 360 (đơn vị hình vẽ); hình chữ nhật có nửa cạnh đứng = 0,62·r
+  const trongMatPhang = (C) => Math.abs(C.cx) + C.r <= 470 && Math.abs(C.cy) + C.r * (C.hinh === 'chu-nhat' ? 0.62 : 1) <= 360;
+  assert.ok(trongMatPhang(nd.ampere.C));
+  for (const d of nd.ampere.dayDan) assert.ok(Math.abs(d.I) <= nd.ampere.iMax_A && Math.abs(d.x) < 470 && Math.abs(d.y) < 360);
+  for (const b of nd.trinhChieu) {
+    assert.ok(b.id && b.tieuDe && b.loiGiang, b.id);
+    if (b.trangThai?.kichBan) assert.ok(['ampere', 'mach-tu'].includes(b.trangThai.kichBan), b.id);
+    if (b.trangThai?.C) assert.ok(trongMatPhang(b.trangThai.C), b.id);
+  }
+  const ch = doc('cau-hoi-toan-dong-dien.json');
+  assert.ok(ch.cauHoi.length >= ch.soCauMoiLan);
+  for (const c of ch.cauHoi) assert.ok(Number.isInteger(c.dapAn) && c.dapAn >= 0 && c.dapAn < c.luaChon.length, c.cauHoi);
+});
+
+test('vat-lieu.json và câu hỏi 1.3: nhóm hợp lệ, bộ phận MBA có nguồn slide, bước trình chiếu hợp lệ', () => {
+  const nd = doc('vat-lieu.json');
+  const nhom = nd.nhom.map((n) => n.id);
+  assert.deepEqual(nhom, ['dan-dien', 'dan-tu', 'cach-dien']);
+  assert.equal(new Set(nd.vatLieu.map((v) => v.id)).size, nd.vatLieu.length);
+  for (const v of nd.vatLieu) assert.ok(v.ten && nhom.includes(v.nhom), v.id);
+  assert.equal(nd.lyThuyet.nhomRan.length, 4);
+  assert.equal(nd.capCachDien.length, 7);
+  const boPhan = nd.mba.boPhan.map((b) => b.id);
+  for (const b of nd.mba.boPhan) assert.ok(b.ten && b.nhiemVu && /^Slide \d/.test(b.nguon) && b.nhom.every((n) => nhom.includes(n)), b.id);
+  for (const b of nd.trinhChieu) {
+    assert.ok(b.id && b.tieuDe && b.loiGiang, b.id);
+    assert.ok(['phan-loai', 'mba', 'nhiet-do'].includes(b.trangThai.kichBan), b.id);
+    if (b.trangThai.nhom) assert.ok(nhom.includes(b.trangThai.nhom), b.id);
+    if (b.trangThai.boPhan) assert.ok(boPhan.includes(b.trangThai.boPhan), b.id);
+    if (b.trangThai.t !== undefined) assert.ok(b.trangThai.t >= nd.nhietDo.min && b.trangThai.t <= nd.nhietDo.max, b.id);
+  }
+  const ch = doc('cau-hoi-vat-lieu.json');
+  assert.ok(ch.cauHoi.length >= ch.soCauMoiLan);
+  for (const c of ch.cauHoi) assert.ok(Number.isInteger(c.dapAn) && c.dapAn >= 0 && c.dapAn < c.luaChon.length, c.cauHoi);
+});
+
+test('khai-niem-mba.json và câu hỏi 2.1–2.3: cấp điện áp theo slide 14, bước trình chiếu hợp lệ, đáp án hợp lệ', () => {
+  const nd = doc('khai-niem-mba.json');
+  assert.ok(nd.lyThuyet.dinhNghia.includes('giữ nguyên tần số'));
+  assert.deepEqual(nd.capDienAp.truyenTai, [35, 110, 220, 500]);
+  assert.equal(nd.lyThuyet.chuyenDung.length, 4);
+  const dn = nd.dinhNghia;
+  assert.ok(dn.dsDienAp_kV.includes(dn.U1_kV) && dn.dsDienAp_kV.includes(dn.U2_kV) && dn.f_Hz >= dn.fMin_Hz && dn.f_Hz <= dn.fMax_Hz);
+  const dsU = [nd.capDienAp.uMayPhat_kV, ...nd.capDienAp.truyenTai];
+  const muc = nd.lyThuyet.chuyenDung.map((c) => c.id);
+  for (const b of nd.trinhChieu) {
+    assert.ok(b.id && b.tieuDe && b.loiGiang, b.id);
+    assert.ok(['dinh-nghia', 'truyen-tai', 'chuyen-dung'].includes(b.trangThai.kichBan), b.id);
+    if (b.trangThai.U !== undefined) assert.ok(dsU.includes(b.trangThai.U), b.id);
+    if (b.trangThai.muc) assert.ok(muc.includes(b.trangThai.muc), b.id);
+  }
+  const ch = doc('cau-hoi-khai-niem-mba.json');
+  assert.ok(ch.cauHoi.length >= ch.soCauMoiLan);
+  for (const c of ch.cauHoi) assert.ok(Number.isInteger(c.dapAn) && c.dapAn >= 0 && c.dapAn < c.luaChon.length, c.cauHoi);
+});
+
+test('cau-tao-mba.json và câu hỏi 2.4: bước trình chiếu hợp lệ, đáp án hợp lệ', () => {
+  const nd = doc('cau-tao-mba.json');
+  const kieu = nd.kieuDayQuan.map((k) => k.id);
+  const boPhan = nd.voMay.boPhan.map((b) => b.id);
+  for (const b of nd.trinhChieu) {
+    assert.ok(b.id && b.tieuDe && b.loiGiang, b.id);
+    const tt = b.trangThai;
+    assert.ok(['loi-thep', 'day-quan', 'vo-may'].includes(tt.kichBan), b.id);
+    if (tt.buoc !== undefined) assert.ok(tt.buoc >= 0 && tt.buoc < nd.lapRap.length, b.id);
+    if (tt.kieu) assert.ok(kieu.includes(tt.kieu), b.id);
+    if (tt.sapXep) assert.ok(['dong-tam', 'xen-ke'].includes(tt.sapXep), b.id);
+    if (tt.boPhan) assert.ok(boPhan.includes(tt.boPhan), b.id);
+    if (tt.mucDau !== undefined) assert.ok(tt.mucDau >= 0 && tt.mucDau <= 1, b.id);
+  }
+  const ch = doc('cau-hoi-cau-tao-mba.json');
+  assert.ok(ch.cauHoi.length >= ch.soCauMoiLan);
+  for (const c of ch.cauHoi) assert.ok(Number.isInteger(c.dapAn) && c.dapAn >= 0 && c.dapAn < c.luaChon.length, c.cauHoi);
+});
+
+// Các bài dùng khung chung: kiểm tra bước trình chiếu và câu hỏi
+const BAI_KHUNG = [
+  ['nguyen-ly-mba', ['nguyen-ly', 'he-so-k', 'dinh-muc']],
+  ['phuong-trinh-mba', ['dien-ap', 'std', 'quy-doi']],
+  ['so-do-thay-the', ['so-do', 'vecto', 'sai-so']],
+  ['thi-nghiem-mba', ['khong-tai', 'ngan-mach', 'ket-qua']],
+  ['che-do-lam-viec', ['nang-luong', 'dien-ap', 'hieu-suat']],
+  ['mba-ba-pha', ['ba-tru', 'to-noi-day', 'mot-pha']],
+  ['song-song-mba', ['phan-tai', 'dieu-kien', 'luu-y']],
+  ['bai-tap-chuong-1', ['bt1', 'bt2', 'bt3', 'bt4']],
+];
+for (const [tep, dsKichBan] of BAI_KHUNG) {
+  test(`${tep}.json và câu hỏi: bước trình chiếu dùng kịch bản hợp lệ, đáp án hợp lệ`, () => {
+    const nd = doc(`${tep}.json`);
+    assert.ok(nd.lyThuyet && nd.macDinh && dsKichBan.includes(nd.macDinh.kichBan));
+    assert.ok(nd.trinhChieu.length >= 4);
+    for (const b of nd.trinhChieu) {
+      assert.ok(b.id && b.tieuDe && b.loiGiang, b.id);
+      assert.ok(dsKichBan.includes(b.trangThai.kichBan), b.id);
+    }
+    const ch = doc(`cau-hoi-${tep}.json`);
+    assert.ok(ch.cauHoi.length >= ch.soCauMoiLan);
+    for (const c of ch.cauHoi) assert.ok(Number.isInteger(c.dapAn) && c.dapAn >= 0 && c.dapAn < c.luaChon.length, c.cauHoi);
+  });
+}

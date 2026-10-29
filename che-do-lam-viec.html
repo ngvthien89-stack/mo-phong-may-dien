@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>4.1–4.3. Giản đồ năng lượng, độ thay đổi điện áp, tổn hao và hiệu suất MBA – Mô Phỏng Môn Máy Điện</title>
+  <meta name="description" content="Giản đồ năng lượng P, Q của máy biến áp; độ thay đổi điện áp ΔU% theo hệ số tải và cosφ2; đầu phân áp ±2,5 %, ±5 %; tổn hao, hiệu suất và hệ số tải tối ưu.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230b5cad'/%3E%3Cpath d='M18 3 7 18h7l-2 11 11-15h-7z' fill='%23ffd166'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link rel="stylesheet" href="css/chung.css">
+  <link rel="stylesheet" href="css/mo-phong.css">
+  <link rel="stylesheet" href="css/cam-ung-dien-tu.css">
+  <link rel="stylesheet" href="css/mba.css">
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script type="module" src="js/che-do-lam-viec.js"></script>
+</head>
+<body class="trang-mo-phong trang-cam-ung trang-mba">
+  <header class="thanh-dau">
+    <a class="ve-trang-chu" href="index.html" title="Về danh sách bài học"><span aria-hidden="true">←</span> <span class="chu-an-nho">Bài học</span></a>
+    <h1><span class="so-bai">4.1–4.3.</span> Các chế độ làm việc của MBA</h1>
+    <div class="nhom-nut">
+      <label class="chon-kich-ban">
+        <span class="chu-an-nho">Kịch bản</span>
+        <select id="chon-kich-ban" aria-label="Chọn kịch bản mô phỏng">
+          <option value="nang-luong">a) Giản đồ năng lượng P, Q</option>
+          <option value="dien-ap">b) Độ thay đổi điện áp, đầu phân áp</option>
+          <option value="hieu-suat">c) Tổn hao và hiệu suất</option>
+        </select>
+      </label>
+      <a class="nut nut-bai-tiep" href="thi-nghiem-mba.html" title="Bài trước: 3.4"><span aria-hidden="true">←</span> 3.4</a>
+      <a class="nut nut-bai-tiep" href="mba-ba-pha.html" title="Bài tiếp theo: 5.1–5.2">5.1 <span aria-hidden="true">→</span></a>
+      <button type="button" id="nut-trinh-chieu" class="nut" aria-pressed="false" title="Chế độ trình chiếu (phím ← →)"><span aria-hidden="true">▣</span> Trình chiếu</button>
+      <button type="button" id="nut-cau-hoi" class="nut" title="Câu hỏi kiểm tra nhanh"><span aria-hidden="true">?</span> Câu hỏi</button>
+      <button type="button" id="nut-toan-man-hinh" class="nut nut-bieu-tuong" title="Toàn màn hình" aria-label="Toàn màn hình">
+        <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M4 9V4h5M15 4h5v5M20 15v5h-5M9 20H4v-5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <main class="bo-cuc">
+    <section class="vung-so-do" aria-label="Sân khấu mô phỏng">
+      <p class="goi-y-vuot">← Vuốt ngang để xem toàn bộ hình →</p>
+      <div class="khung-so-do">
+        <div class="cuon-so-do" id="cuon-so-do">
+          <svg id="so-do" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid meet" role="img"
+               aria-label="Giản đồ dòng công suất tác dụng và phản kháng qua máy biến áp, đồ thị độ thay đổi điện áp, đồ thị tổn hao và hiệu suất theo hệ số tải"></svg>
+        </div>
+      </div>
+      <div id="chu-thich-buoc" class="chu-thich-buoc" role="status" aria-live="polite"></div>
+      <div class="thanh-dieu-khien">
+        <button type="button" id="nut-chay" class="nut nut-chinh" aria-pressed="false"><span aria-hidden="true">⏸</span> Tạm dừng</button>
+        <label class="dieu-khien toc-do">Tốc độ
+          <input type="range" id="toc-do" min="0.25" max="3" step="0.25" value="1">
+          <output id="gia-tri-toc-do">1×</output>
+        </label>
+      </div>
+    </section>
+
+    <aside class="bang-ben" aria-label="Lý thuyết, điều khiển và số liệu">
+      <section id="the-ly-thuyet" class="the the-ly-thuyet"></section>
+      <section class="the">
+        <h2>Điều khiển kịch bản</h2>
+        <div id="dieu-khien-kich-ban"></div>
+      </section>
+      <section class="the bang-so-lieu">
+        <h2>Số liệu trực tiếp</h2>
+        <dl class="luoi-so-lieu">
+          <div class="hang nhan-manh" data-che-do="nang-luong dien-ap hieu-suat"><dt>—</dt><dd id="sl-1">—</dd></div>
+          <div class="hang" data-che-do="nang-luong dien-ap hieu-suat"><dt>—</dt><dd id="sl-2">—</dd></div>
+          <div class="hang" data-che-do="nang-luong dien-ap hieu-suat"><dt>—</dt><dd id="sl-3">—</dd></div>
+        </dl>
+
+        <p class="ghi-chu-nho">Nội dung cấu hình trong <code>du-lieu/che-do-lam-viec.json</code>.</p>
+      </section>
+    </aside>
+  </main>
+
+  <div id="thanh-trinh-chieu" class="thanh-trinh-chieu" hidden></div>
+
+  <dialog id="hop-cau-hoi" class="hop-cau-hoi" aria-labelledby="ch-tieu-de">
+    <div class="ch-dau">
+      <h2 id="ch-tieu-de">Câu hỏi kiểm tra nhanh</h2>
+      <button type="button" class="nut-dong" aria-label="Đóng">✕</button>
+    </div>
+    <div id="ch-noi-dung"></div>
+  </dialog>
+
+  <div id="thong-bao-loi" class="thong-bao-loi" role="alert" hidden></div>
+  <noscript><div class="thong-bao-loi">Trang mô phỏng cần bật JavaScript.</div></noscript>
+</body>
+</html>

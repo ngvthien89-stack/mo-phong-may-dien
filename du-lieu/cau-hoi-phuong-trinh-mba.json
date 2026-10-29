@@ -1,0 +1,66 @@
+{
+  "_huongDan": "Ngân hàng câu hỏi bài 3.1–3.2. dapAn là số thứ tự lựa chọn đúng, bắt đầu từ 0.",
+  "soCauMoiLan": 5,
+  "cauHoi": [
+    {
+      "cauHoi": "Sđđ tản e<sub>t1</sub> do từ thông tản Φ<sub>t1</sub> cảm ứng được tính bằng:",
+      "luaChon": ["e<sub>t1</sub> = −L<sub>t1</sub>·di₁/dt", "e<sub>t1</sub> = −w₁·dΦ/dt", "e<sub>t1</sub> = R₁·i₁", "e<sub>t1</sub> = 4,44·f·w₁·Φm"],
+      "dapAn": 0,
+      "giaiThich": "Từ thông Φt1 cảm ứng sđđ et1 = −Lt1·di₁/dt (slide 44)."
+    },
+    {
+      "cauHoi": "Phương trình cân bằng điện áp phía sơ cấp dạng số phức là:",
+      "luaChon": ["U̇₁ = Ė₁ + İ₁Z₁", "U̇₁ = −Ė₁ + İ₁Z₁", "U̇₁ = −Ė₁ − İ₁Z₁", "U̇₁ = İ₁Z₁"],
+      "dapAn": 1,
+      "giaiThich": "U̇₁ = −Ė₁ + İ₁(R₁ + jωLt1) = −Ė₁ + İ₁Z₁ (slide 45)."
+    },
+    {
+      "cauHoi": "Phương trình cân bằng điện áp phía thứ cấp dạng số phức là:",
+      "luaChon": ["U̇₂ = Ė₂ − İ₂Z₂", "U̇₂ = −Ė₂ + İ₂Z₂", "U̇₂ = Ė₂ + İ₂Z₂", "U̇₂ = Ė₁"],
+      "dapAn": 0,
+      "giaiThich": "U̇₂ = Ė₂ − İ₂(R₂ + jωLt2) = Ė₂ − İ₂Z₂."
+    },
+    {
+      "cauHoi": "Nếu điện áp vào U₁ không đổi thì khi tải thay đổi:",
+      "luaChon": ["Từ thông chính Φ tăng theo tải", "Từ thông chính Φ giảm theo tải", "Từ thông chính Φ (gần như) không đổi, stđ tổng không đổi", "Dòng điện sơ cấp không đổi"],
+      "dapAn": 2,
+      "giaiThich": "Nếu điện áp vào không đổi thì từ thông Φ không đổi, suy ra stđ tổng không đổi ở mọi chế độ phụ tải (slide 46)."
+    },
+    {
+      "cauHoi": "Phương trình cân bằng dòng điện của MBA là:",
+      "luaChon": ["İ₁ = İ₀ + İ′₂", "İ₁ = İ₀ + (−İ′₂)", "İ₁ = İ′₂", "İ₀ = İ₁ − İ₂"],
+      "dapAn": 1,
+      "giaiThich": "i₁ = i₀ + (−i′₂), với i′₂ = i₂/k (slide 46)."
+    },
+    {
+      "cauHoi": "Khi quy đổi dây quấn thứ cấp về sơ cấp, sđđ thứ cấp quy đổi là:",
+      "luaChon": ["E′₂ = E₂/k", "E′₂ = k·E₂", "E′₂ = k²·E₂", "E′₂ = E₂"],
+      "dapAn": 1,
+      "giaiThich": "E′₂ = (w₁/w₂)·E₂ = k·E₂ (slide 48)."
+    },
+    {
+      "cauHoi": "Dòng điện thứ cấp quy đổi được xác định trên nguyên tắc:",
+      "luaChon": ["Tổn hao không đổi: I′₂ = I₂·k", "Công suất truyền tải không đổi: I′₂ = I₂/k", "Điện áp không đổi: I′₂ = I₂", "Tổng trở không đổi"],
+      "dapAn": 1,
+      "giaiThich": "E₂·I₂ = E′₂·I′₂ → I′₂ = I₂/k."
+    },
+    {
+      "cauHoi": "Điện trở thứ cấp quy đổi r′₂ bằng:",
+      "luaChon": ["r₂/k", "k·r₂", "k²·r₂", "r₂/k²"],
+      "dapAn": 2,
+      "giaiThich": "Trên nguyên tắc tổn hao không đổi: I₂²·r₂ = I′₂²·r′₂ → r′₂ = k²·r₂."
+    },
+    {
+      "cauHoi": "MBA bài tập 4 có k<sub>p</sub> = 95,2 và R′₂ = 10,45 Ω. Điện trở thứ cấp thực R₂ xấp xỉ:",
+      "luaChon": ["0,11 Ω", "1,15·10⁻³ Ω", "995 Ω", "10,45 Ω"],
+      "dapAn": 1,
+      "giaiThich": "R₂ = R′₂/k<sub>p</sub>² = 10,45/95,2² ≈ 1,15·10⁻³ Ω (slide 83)."
+    },
+    {
+      "cauHoi": "Vì sao phải quy đổi MBA?",
+      "luaChon": ["Để tăng hiệu suất", "Vì hai cuộn dây cách ly nhau nên khó xét quá trình năng lượng; quy đổi để nối hai dây quấn (giả tưởng)", "Để giảm từ thông", "Để đổi tần số"],
+      "dapAn": 1,
+      "giaiThich": "Do MBA có 2 cuộn dây cách ly nhau và cách điện với mạch từ nên việc xét quá trình năng lượng sẽ gặp khó khăn (slide 48)."
+    }
+  ]
+}

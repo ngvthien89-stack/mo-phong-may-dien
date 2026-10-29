@@ -1,0 +1,66 @@
+{
+  "_huongDan": "Ngân hàng câu hỏi bài 5.1–5.2. dapAn là số thứ tự lựa chọn đúng, bắt đầu từ 0.",
+  "soCauMoiLan": 5,
+  "cauHoi": [
+    {
+      "cauHoi": "Khi ghép ba MBA một pha thành MBA ba pha bốn trụ, từ thông qua trụ chung bằng:",
+      "luaChon": ["ΦA", "ΦA + ΦB + ΦC", "3ΦA", "ΦA − ΦB"],
+      "dapAn": 1,
+      "giaiThich": "Từ thông chạy qua trụ chung (MN) Φ = ΦA + ΦB + ΦC (slide 66)."
+    },
+    {
+      "cauHoi": "Vì sao có thể bỏ trụ chung để được MBA ba pha ba trụ?",
+      "luaChon": ["Vì trụ chung quá nặng", "Vì khi máy đối xứng ΦA + ΦB + ΦC = 0", "Vì từ thông không đi qua lõi thép", "Vì dòng điện bằng 0"],
+      "dapAn": 1,
+      "giaiThich": "Khi máy đối xứng Φ = 0, có thể bỏ trụ chung (MN)."
+    },
+    {
+      "cauHoi": "Các đầu đầu của cuộn cao áp MBA ba pha ký hiệu là:",
+      "luaChon": ["a b c", "X Y Z", "A B C", "x y z"],
+      "dapAn": 2,
+      "giaiThich": "Cuộn cao áp: đầu đầu A B C, đầu cuối X Y Z, trung tính N O (slide 68)."
+    },
+    {
+      "cauHoi": "Ký hiệu Y/Δ có nghĩa là:",
+      "luaChon": ["Sơ cấp nối tam giác, thứ cấp nối sao", "Sơ cấp nối sao, thứ cấp nối tam giác", "Cả hai nối sao", "Cả hai nối tam giác"],
+      "dapAn": 1,
+      "giaiThich": "Dây quấn sơ cấp nối sao và thứ cấp nối tam giác, ký hiệu Y/Δ."
+    },
+    {
+      "cauHoi": "Trong phương pháp đồng hồ, véc tơ sđđ dây sơ cấp được đặt:",
+      "luaChon": ["Làm kim giờ", "Làm kim phút, cố định ở số 12", "Ở số 6", "Ở số 3"],
+      "dapAn": 1,
+      "giaiThich": "Sđđ dây quấn sơ cấp là kim phút đặt ở số 12; sđđ thứ cấp là kim giờ (1…12) (slide 70)."
+    },
+    {
+      "cauHoi": "Tổ nối dây 11 nghĩa là điện áp dây thứ cấp lệch so với điện áp dây sơ cấp một góc:",
+      "luaChon": ["30°", "110°", "330°", "11°"],
+      "dapAn": 2,
+      "giaiThich": "Mỗi giờ ứng với 30°: 11 × 30° = 330° (Y/Δ-11 ở slide 72)."
+    },
+    {
+      "cauHoi": "MBA một pha có sđđ hai dây quấn ngược pha thuộc tổ:",
+      "luaChon": ["I/I-12", "I/I-6", "I/I-11", "I/I-1"],
+      "dapAn": 1,
+      "giaiThich": "Ngược pha (180°) → kim giờ chỉ 6: tổ I/I-6."
+    },
+    {
+      "cauHoi": "Tổ nối dây của MBA nối Y/Y luôn là:",
+      "luaChon": ["Số lẻ", "Số chẵn", "Luôn bằng 11", "Luôn bằng 1"],
+      "dapAn": 1,
+      "giaiThich": "Với Y/Y (hoặc Δ/Δ), góc lệch là bội của 60°, nên tổ nối dây là số chẵn; Y/Δ, Δ/Y cho số lẻ."
+    },
+    {
+      "cauHoi": "MBA khô 150 kVA – 6/0,4 kV trong hình 5.2 (slide 67) có kiểu nối:",
+      "luaChon": ["Y/Y", "Δ/Y₀", "Y/Δ", "Δ/Δ"],
+      "dapAn": 1,
+      "giaiThich": "Hình 5.2: MBA khô 150 kVA – 6/0,4 kV – Δ/Y₀."
+    },
+    {
+      "cauHoi": "Ký hiệu Y₀ (như Δ/Y₀-11) cho biết:",
+      "luaChon": ["Phía thứ cấp nối sao có dây trung tính đưa ra", "Thứ cấp hở mạch", "Sơ cấp nối tam giác hở", "Không có tổ nối dây"],
+      "dapAn": 0,
+      "giaiThich": "Bảng ký hiệu đầu dây có trung tính n, o cho cuộn hạ áp; Y₀ là nối sao có trung tính đưa ra (sơ đồ Y/Y₀-12 ở slide 72 có đầu n)."
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "_huongDan": "Phần VI. Một số bài tập (slide 77–84, Chuong1-MBA.pdf). 'deBai' chép theo slide; 'dapAnSlide' là các con số ghi trong lời giải slide để đối chiếu; 'thamSo' là số liệu đề, người học có thể thay đổi.",
+  "lyThuyet": {
+    "muc": "VI. Một số bài tập",
+    "gioiThieu": "Bốn bài tập tổng hợp của chương. Mỗi bài trình bày lời giải từng bước (bấm \"Bước tiếp\"); có thể thay đổi số liệu đề để luyện tập. Cột \"Slide\" ghi kết quả trong slide để đối chiếu; ô màu cam là chỗ kết quả khác slide do làm tròn hoặc nhầm lẫn (xem ghi chú).",
+    "congThucLienQuan": [
+      "Nối Δ: Up = Ud, Ip = Id/√3; nối Y: Up = Ud/√3, Ip = Id (bài 5.2).",
+      "I₂đm = S/(√3·U₂đm) (bài 2.5–2.7).",
+      "pCu = β²·Pn; Σp = P₀ + pCu; β tối ưu = √(P₀/Pn) (bài 4.3).",
+      "βi = S/(uni%·Σ(Sđmi/uni%)) (bài 5.3).",
+      "r₀ = P₀/I₀², z₀ = U₁/I₀; zn = Un/In, rn = Pn/In² (bài 3.4)."
+    ]
+  },
+  "baiTap": [
+    {
+      "id": "bt1", "ten": "Bài tập 1 – Tỷ số biến áp pha", "slide": "77",
+      "deBai": "Một MBA ba pha có các thông số: Sđm = 400 kVA; đấu Δ/Y₀-11; U₁đm/U₂đm = 15 kV/0,4 kV. Tỷ số biến áp kp là bao nhiêu?",
+      "thamSo": { "S_kVA": 400, "U1_kV": 15, "U2_kV": 0.4, "noi1": "D", "noi2": "Y" },
+      "dapAnSlide": { "Up1": "15 kV", "Up2": "0,23 kV", "kp": "65,21" }
+    },
+    {
+      "id": "bt2", "ten": "Bài tập 2 – Tổn hao, hiệu suất cực đại", "slide": "78–79",
+      "deBai": "Một tòa văn phòng lắp đặt 1 trạm biến áp có các thông số: S = 630 kVA, U = 22/0,4 kV, f = 50 Hz, Y/Δ-11, Itải = 550 A, P₀ = 1520 W, Pn = 6000 W, I₀% = 1,3 %, Un% = 6 %. Hãy tính: tổn hao công suất trong MBA; dòng điện tải để MBA đạt hiệu suất cao nhất.",
+      "thamSo": { "S_kVA": 630, "U1_kV": 22, "U2_kV": 0.4, "Itai_A": 550, "P0_W": 1520, "Pn_W": 6000 },
+      "dapAnSlide": { "I2dm": "909,3 A", "beta": "0,6", "pCu": "2160 W", "tong": "3680 W", "betaMax": "0,294", "I2": "267,7 A" }
+    },
+    {
+      "id": "bt3", "ten": "Bài tập 3 – Hai MBA làm việc song song", "slide": "80–81",
+      "deBai": "Cho 2 MBA: máy 1 – 1250 kVA, 22/0,4 kV, 50 Hz, Y/Y-6, Un = 5 %; máy 2 – 1000 kVA, 22/0,4 kV, 50 Hz, Y/Y-6, Un = 5,5 %. Cho 2 MBA trên làm việc song song cung cấp cho tải có công suất 1600 kVA. Tính dung lượng và dòng điện của mỗi máy cung cấp cho tải.",
+      "thamSo": { "S1_kVA": 1250, "un1": 5, "S2_kVA": 1000, "un2": 5.5, "Stai_kVA": 1600, "U2_kV": 0.4 },
+      "dapAnSlide": { "tong": "431,8", "beta1": "0,74", "S1": "925 kVA", "beta2": "0,674", "S2": "674 kVA", "I1dm": "1804,2 A", "I1": "1335,1 A", "I2dm": "1443,4 A", "I2": "972,8 A" }
+    },
+    {
+      "id": "bt4", "ten": "Bài tập 4 – Thông số sơ đồ thay thế", "slide": "82–84",
+      "deBai": "Một máy biến áp có các thông số: S = 500 kVA, U = 22/0,4 kV, f = 50 Hz, Δ/Y-11, P₀ = 900 W, Pn = 3600 W, I₀% = 2 %, un% = 4 %. Hãy xác định các thông số sơ đồ thay thế và hệ số cosφ khi không tải.",
+      "thamSo": { "S_kVA": 500, "U1_kV": 22, "U2_kV": 0.4, "noi1": "D", "noi2": "Y", "P0_W": 900, "Pn_W": 3600, "i0": 2, "un": 4 },
+      "dapAnSlide": { "I1dm": "13,12 A", "I1dmp": "7,58 A", "Rn": "20,9", "R1": "10,45 Ω", "U1n": "880 V", "zn": "116 Ω", "Xn": "114 Ω", "X1": "57 Ω", "kp": "95,2", "R2": "1,15·10⁻³ Ω", "X2": "6,29·10⁻³ Ω", "I0p": "0,152 A", "R0": "12,985 Ω", "z0": "144.737 Ω", "X0": "144.153 Ω", "cos0": "0,09" }
+    }
+  ],
+  "macDinh": { "kichBan": "bt1" },
+  "trinhChieu": [
+    { "id": "bt1", "tieuDe": "Bài tập 1 – Tỷ số biến áp pha", "the": "Δ/Y₀-11", "loiGiang": "Sơ cấp nối Δ nên điện áp pha bằng điện áp dây: 15 kV; thứ cấp nối Y nên Up2 = 0,4/√3 ≈ 0,2309 kV. kp = 15/0,2309 ≈ 64,95. Slide làm tròn Up2 = 0,23 kV nên được 65,21.", "trangThai": { "kichBan": "bt1", "buoc": 99 } },
+    { "id": "bt2", "tieuDe": "Bài tập 2 – Tổn hao và hiệu suất cực đại", "the": "β = √(P₀/Pn)", "loiGiang": "I₂đm = 909,3 A; β = 550/909,3 ≈ 0,6; pCu = 0,6²·6000 = 2160 W; Σp = 3680 W. Hiệu suất cực đại khi β = √(1520/6000) ≈ 0,503 – slide ghi 0,294 là nhầm – nên I₂ ≈ 457,7 A.", "trangThai": { "kichBan": "bt2", "buoc": 99 } },
+    { "id": "bt3", "tieuDe": "Bài tập 3 – Hai MBA song song", "the": "β ∼ 1/un", "loiGiang": "Σ(Sđm/un) = 431,8; β₁ ≈ 0,74, S₁ ≈ 925 kVA; β₂ ≈ 0,674, S₂ ≈ 674 kVA; I₁ ≈ 1335 A, I₂ ≈ 972,8 A.", "trangThai": { "kichBan": "bt3", "buoc": 99 } },
+    { "id": "bt4", "tieuDe": "Bài tập 4 – Thông số sơ đồ thay thế", "the": "cosφ₀ ≈ 0,09", "loiGiang": "Từ Pn, un% tính Rn = 20,9 Ω, zn = 116 Ω, Xn = 114 Ω; từ P₀, I₀% tính R₀, z₀, X₀ và cosφ₀ = R₀/z₀ ≈ 0,09.", "trangThai": { "kichBan": "bt4", "buoc": 99 } }
+  ]
+}

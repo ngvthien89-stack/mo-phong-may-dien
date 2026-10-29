@@ -1,0 +1,26 @@
+{
+  "_huongDan": "Nội dung bài 3.1–3.2 theo slide 44–49 (Chuong1-MBA.pdf). Thông số mạch là một pha của MBA trong bài tập 4 (slide 82–84), đã quy đổi về sơ cấp: U1p = 22 kV, I1đmp = 7,58 A, R1 = R'2 = 10,45 Ω, X1 = X'2 = 57 Ω, Rth ≈ R0 = 12 985 Ω, Xth ≈ X0 = 144 153 Ω, kp = 95,2.",
+  "lyThuyet": {
+    "muc": "III. Quan hệ điện từ trong MBA",
+    "chieu": "Hình 3.1 vẽ mặt cắt MBA một pha: dây quấn w₁ nối với u₁, dây quấn w₂ nối với phụ tải có tổng trở Z. Từ thông tản Φt1 cảm ứng sđđ et1 (chọn trùng chiều i₁), Φt2 cảm ứng sđđ et2 (chọn trùng chiều i₂).",
+    "congThuc": [
+      { "chu": "a. Sđđ tản:", "tex": "e_{t1} = -L_{t1}\\dfrac{di_1}{dt},\\qquad e_{t2} = -L_{t2}\\dfrac{di_2}{dt}", "duPhong": "et1 = −Lt1·di₁/dt; et2 = −Lt2·di₂/dt" },
+      { "chu": "b. Phương trình cân bằng điện áp (Kirchhoff 2):", "tex": "u_1 = -e_1 + R_1 i_1 + L_{t1}\\dfrac{di_1}{dt},\\qquad u_2 = e_2 - R_2 i_2 - L_{t2}\\dfrac{di_2}{dt}", "duPhong": "u₁ = −e₁ + R₁i₁ + Lt1·di₁/dt; u₂ = e₂ − R₂i₂ − Lt2·di₂/dt" },
+      { "chu": "Dạng số phức (Z₁ = R₁ + jX₁, Z₂ = R₂ + jX₂):", "tex": "\\dot U_1 = -\\dot E_1 + \\dot I_1 Z_1,\\qquad \\dot U_2 = \\dot E_2 - \\dot I_2 Z_2", "duPhong": "U̇₁ = −Ė₁ + İ₁Z₁; U̇₂ = Ė₂ − İ₂Z₂" },
+      { "chu": "c. Phương trình cân bằng stđ:", "tex": "i_0 w_1 = i_1 w_1 + i_2 w_2 \\;\\Rightarrow\\; i_1 = i_0 + (-i'_2),\\quad i'_2 = \\dfrac{i_2}{k}", "duPhong": "i₀w₁ = i₁w₁ + i₂w₂ ⇒ i₁ = i₀ + (−i′₂), i′₂ = i₂/k" },
+      { "chu": "3.2. Các đại lượng thứ cấp quy đổi:", "tex": "E'_2 = kE_2,\\quad I'_2 = \\dfrac{I_2}{k},\\quad r'_2 = k^2 r_2,\\quad x'_2 = k^2 x_2,\\quad Z'_t = k^2 Z_t", "duPhong": "E′₂ = kE₂; I′₂ = I₂/k; r′₂ = k²r₂; x′₂ = k²x₂; Z′t = k²Zt" }
+    ],
+    "stdNhanXet": "Khi không tải, từ thông chính Φ do stđ i₀w₁ sinh ra; khi có tải, do stđ tổng (i₁w₁ + i₂w₂) sinh ra. Nếu điện áp vào không đổi thì từ thông Φ không đổi, suy ra stđ tổng không đổi ở mọi chế độ phụ tải.",
+    "quyDoi": "Do MBA có 2 cuộn dây cách ly nhau và cách điện với mạch từ nên việc xét quá trình năng lượng gặp khó khăn. Người ta nối hai dây quấn lại với nhau (giả tưởng) bằng cách quy đổi các thông số từ dây quấn nọ sang dây quấn kia; trị số quy đổi ghi thêm dấu phẩy. Nguyên tắc: cùng sđđ, công suất truyền tải không đổi, tổn hao không đổi."
+  },
+  "mach": { "U1": 22000, "I1dm": 7.58, "r1": 10.45, "x1": 57, "r2": 10.45, "x2": 57, "Rth": 12985, "Xth": 144153, "kp": 95.2, "nguon": "Bài tập 4 (slide 82–84), một pha, quy đổi về sơ cấp" },
+  "macDinh": { "kichBan": "dien-ap", "beta": 1, "cosPhi2": 0.8, "tinhChat": "cam", "phongTo": 20 },
+  "trinhChieu": [
+    { "id": "chieu", "tieuDe": "3.1a. Chiều dòng điện, điện áp (hình 3.1)", "the": "Φ, Φt1, Φt2", "loiGiang": "Từ thông chính Φ khép mạch qua lõi thép, móc vòng cả hai dây quấn. Từ thông tản Φt1, Φt2 chỉ móc vòng riêng từng dây quấn và cảm ứng các sđđ tản et1 = −Lt1·di₁/dt, et2 = −Lt2·di₂/dt.", "trangThai": { "kichBan": "dien-ap" } },
+    { "id": "can-bang-u", "tieuDe": "3.1b. Phương trình cân bằng điện áp", "the": "U̇₁ = −Ė₁ + İ₁Z₁", "loiGiang": "Kirchhoff 2 cho hai mạch: U̇₁ = −Ė₁ + İ₁Z₁ và U̇₂ = Ė₂ − İ₂Z₂. Với máy bài tập 4 ở tải định mức, sụt áp İ₁Z₁ chỉ vài phần trăm nên E₁ gần bằng U₁.", "trangThai": { "kichBan": "dien-ap", "beta": 1 } },
+    { "id": "std", "tieuDe": "3.1c. Phương trình cân bằng stđ", "the": "İ₁ = İ₀ + (−İ′₂)", "loiGiang": "U₁ không đổi thì Φ không đổi, nên stđ tổng không đổi. Khi tải tăng, dòng thứ cấp tăng thì dòng sơ cấp tự tăng theo để bù: İ₁ = İ₀ + (−İ′₂).", "trangThai": { "kichBan": "std", "beta": 1 } },
+    { "id": "khong-tai", "tieuDe": "Không tải: i₁ = i₀", "the": "I₀ ≈ 0,152 A", "loiGiang": "Khi không tải, dòng điện sơ cấp chính là dòng điện từ hóa i₀, rất nhỏ so với dòng định mức (bài tập 4: I₀ ≈ 0,152 A so với I₁đm = 7,58 A).", "trangThai": { "kichBan": "std", "beta": 0 } },
+    { "id": "quy-doi", "tieuDe": "3.2. Quy đổi MBA", "the": "E′₂ = kE₂, I′₂ = I₂/k", "loiGiang": "Quy đổi dây quấn thứ cấp về sơ cấp để nối hai dây quấn (giả tưởng): sđđ nhân k, dòng điện chia k, điện trở, điện kháng, tổng trở nhân k². Công suất và tổn hao không đổi.", "trangThai": { "kichBan": "quy-doi", "beta": 1 } },
+    { "id": "tom-tat", "tieuDe": "Hệ phương trình quy đổi", "the": "slide 49", "loiGiang": "U̇₁ = −Ė₁ + İ₁Z₁; U̇′₂ = Ė′₂ − İ′₂Z′₂; İ₁ = İ₀ + (−İ′₂); Ė′₂ = Ė₁. Đây là cơ sở để lập sơ đồ thay thế ở mục 3.3.", "trangThai": { "kichBan": "quy-doi", "beta": 1 } }
+  ]
+}

@@ -1,0 +1,66 @@
+{
+  "_huongDan": "Ngân hàng câu hỏi bài 2.4. dapAn là số thứ tự lựa chọn đúng, bắt đầu từ 0.",
+  "soCauMoiLan": 5,
+  "cauHoi": [
+    {
+      "cauHoi": "Các bộ phận chính của máy biến áp gồm:",
+      "luaChon": ["Lõi thép, dây quấn, vỏ máy", "Stato, rôto, vỏ máy", "Cổ góp, chổi than, dây quấn", "Lõi thép, rôto, sứ cách điện"],
+      "dapAn": 0,
+      "giaiThich": "MBA bao gồm các bộ phận chính: lõi thép, dây quấn và vỏ máy; ngoài ra còn có bộ phận cách điện, sứ cách điện…"
+    },
+    {
+      "cauHoi": "Lõi thép MBA có nhiệm vụ:",
+      "luaChon": ["Dẫn điện, truyền năng lượng ra", "Dẫn từ thông chính và làm khung để quấn dây", "Chứa dầu làm mát", "Cách điện giữa CA và HA"],
+      "dapAn": 1,
+      "giaiThich": "Lõi thép tạo thành mạch từ khép kín dùng để dẫn từ thông chính, đồng thời làm khung để quấn dây."
+    },
+    {
+      "cauHoi": "Vì sao các lá thép của lõi MBA thường phủ sơn cách điện ở bề mặt?",
+      "luaChon": ["Để chống gỉ khi vận chuyển", "Để giảm tổn hao do từ trễ và dòng điện xoáy", "Để tăng điện áp thứ cấp", "Để dễ quấn dây"],
+      "dapAn": 1,
+      "giaiThich": "Thường các lá thép có phủ sơn cách điện ở bề mặt để giảm tổn hao do từ trễ và dòng điện xoáy (slide 25)."
+    },
+    {
+      "cauHoi": "Trong hình ruột MBA 3 pha kiểu trụ (slide 25), cuộn dây nào đặt sát trụ thép?",
+      "luaChon": ["Cuộn dây cao áp", "Cuộn dây hạ áp", "Cả hai xen kẽ", "Không có cuộn nào"],
+      "dapAn": 1,
+      "giaiThich": "1 – cuộn dây hạ áp đặt bên trong, sát trụ; 2 – cuộn dây cao áp bên ngoài; 3 – mạch từ."
+    },
+    {
+      "cauHoi": "Theo cách sắp xếp dây quấn CA và HA, dây quấn MBA chia làm hai loại chính nào?",
+      "luaChon": ["Đồng tâm và xen kẽ", "Một lớp và hai lớp", "Tròn và bẹt", "Sơ cấp và thứ cấp"],
+      "dapAn": 0,
+      "giaiThich": "Theo cách sắp xếp dây quấn CA và HA: dây quấn đồng tâm và dây quấn xen kẽ."
+    },
+    {
+      "cauHoi": "Dây quấn kiểu trụ dùng dây dẫn tròn, quấn nhiều lớp thường làm:",
+      "luaChon": ["Dây quấn HA (6 kV trở xuống)", "Dây quấn CA (điện áp tới 35 kV)", "Cuộn CA từ 35 kV trở lên, dung lượng lớn", "Dây quấn của máy biến dòng"],
+      "dapAn": 1,
+      "giaiThich": "Tiết diện nhỏ dùng dây tròn, quấn nhiều lớp, thường làm dây quấn CA (điện áp tới 35 kV)."
+    },
+    {
+      "cauHoi": "Dây quấn xoắn ốc liên tục chủ yếu dùng làm:",
+      "luaChon": ["Cuộn HA của MBA nhỏ", "Cuộn CA (35 kV trở lên, dung lượng lớn)", "Cuộn HA 6 kV trở xuống", "Cuộn dây máy hàn"],
+      "dapAn": 1,
+      "giaiThich": "Dùng dây bẹt quấn thành những bánh dây phẳng cách nhau bằng rãnh hở; chủ yếu làm cuộn CA (35 kV trở lên và dung lượng lớn)."
+    },
+    {
+      "cauHoi": "Đặc điểm của dây quấn xen kẽ là:",
+      "luaChon": ["CA lồng ngoài HA trên cùng một trụ", "Các bánh dây CA, HA lần lượt quấn xen kẽ dọc theo trụ thép", "Chỉ có một cuộn dây", "Dây quấn đặt ngoài vỏ máy"],
+      "dapAn": 1,
+      "giaiThich": "Các bánh dây CA, HA lần lượt quấn xen kẽ nhau dọc theo trụ thép; thường một bánh HA được chia làm hai đặt sát gông."
+    },
+    {
+      "cauHoi": "Bình giãn dầu có tác dụng:",
+      "luaChon": ["Làm mát trực tiếp dây quấn", "Đảm bảo đủ thể tích co – giãn dầu khi nhiệt độ dầu thay đổi", "Đỡ sứ cao thế", "Tăng điện áp ra"],
+      "dapAn": 1,
+      "giaiThich": "Bình giãn dầu đảm bảo đủ thể tích co – giãn dầu khi nhiệt độ thay đổi; nhờ quan sát dầu ở bình giãn dầu có thể biết trong thùng luôn đầy dầu."
+    },
+    {
+      "cauHoi": "Yêu cầu nào KHÔNG phải yêu cầu đối với vỏ máy nêu trên slide?",
+      "luaChon": ["Kín, diện tích tản nhiệt lớn", "Độ bền cơ khí cao", "Dẫn từ thông chính", "Cho phép lắp sứ cao, hạ áp, thiết bị đo, bảo vệ"],
+      "dapAn": 2,
+      "giaiThich": "Dẫn từ thông chính là nhiệm vụ của lõi thép, không phải của vỏ máy."
+    }
+  ]
+}

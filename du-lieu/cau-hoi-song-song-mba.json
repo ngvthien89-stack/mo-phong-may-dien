@@ -1,0 +1,66 @@
+{
+  "_huongDan": "Ngân hàng câu hỏi bài 5.3–5.4. dapAn là số thứ tự lựa chọn đúng, bắt đầu từ 0.",
+  "soCauMoiLan": 5,
+  "cauHoi": [
+    {
+      "cauHoi": "Điều kiện nào KHÔNG thuộc các điều kiện để MBA làm việc song song (slide 73)?",
+      "luaChon": ["Cùng tổ nối dây", "Cùng cấp điện áp và hệ số biến đổi", "Cùng điện áp ngắn mạch", "Cùng công suất định mức"],
+      "dapAn": 3,
+      "giaiThich": "Ba điều kiện: cùng tổ nối dây; cùng cấp điện áp và hệ số biến đổi; cùng điện áp ngắn mạch. Công suất có thể khác nhau (bài tập 3: 1250 và 1000 kVA)."
+    },
+    {
+      "cauHoi": "Hệ số tải của các MBA làm việc song song:",
+      "luaChon": ["Tỉ lệ thuận với điện áp ngắn mạch", "Tỉ lệ nghịch với điện áp ngắn mạch", "Bằng nhau trong mọi trường hợp", "Tỉ lệ với số vòng dây"],
+      "dapAn": 1,
+      "giaiThich": "β₁ : β₂ : … = 1/un1 : 1/un2 : …"
+    },
+    {
+      "cauHoi": "Hai MBA song song có un1 = 5 %, un2 = 5,5 %. Máy nào mang tải nặng hơn (theo hệ số tải)?",
+      "luaChon": ["Máy 1", "Máy 2", "Bằng nhau", "Không xác định"],
+      "dapAn": 0,
+      "giaiThich": "β tỉ lệ nghịch với un: máy có un nhỏ hơn (máy 1) có β lớn hơn."
+    },
+    {
+      "cauHoi": "Bài tập 3: Σ(Sđmi/uni%) = 1250/5 + 1000/5,5 bằng:",
+      "luaChon": ["225", "431,8", "450", "2250"],
+      "dapAn": 1,
+      "giaiThich": "250 + 181,8 = 431,8 (slide 80)."
+    },
+    {
+      "cauHoi": "Bài tập 3: tải 1600 kVA, máy 1 (1250 kVA, un = 5 %) có hệ số tải:",
+      "luaChon": ["0,64", "0,674", "0,74", "1,28"],
+      "dapAn": 2,
+      "giaiThich": "β₁ = 1600/(5·431,8) ≈ 0,74; S₁ = 0,74·1250 ≈ 925 kVA."
+    },
+    {
+      "cauHoi": "Khi tăng tổng tải của các MBA song song có un khác nhau, máy nào quá tải trước?",
+      "luaChon": ["Máy có un lớn nhất", "Máy có un nhỏ nhất", "Máy có công suất lớn nhất", "Các máy quá tải cùng lúc"],
+      "dapAn": 1,
+      "giaiThich": "Máy có un nhỏ nhất có β lớn nhất nên đạt β = 1 trước."
+    },
+    {
+      "cauHoi": "Theo lưu ý vận hành (slide 75), MBA nên đặt:",
+      "luaChon": ["Xa phụ tải để an toàn", "Gần hoặc ở trung tâm phụ tải để giảm tổn thất đường dây", "Ở đầu nguồn phát", "Ở bất kỳ đâu"],
+      "dapAn": 1,
+      "giaiThich": "MBA nên đặt gần hoặc trung tâm phụ tải để giảm tổn thất đường dây."
+    },
+    {
+      "cauHoi": "Vì sao không nên để MBA làm việc không tải hoặc quá non tải?",
+      "luaChon": ["Vì điện áp ra bằng 0", "Vì tổn hao không tải P₀ vẫn tồn tại trong khi công suất có ích nhỏ, hiệu suất thấp", "Vì từ thông bằng 0", "Vì dòng điện ngắn mạch lớn"],
+      "dapAn": 1,
+      "giaiThich": "pFe ≈ P₀ không đổi theo tải; khi β nhỏ, η = P₂/(P₂ + Σp) thấp (bài 4.3)."
+    },
+    {
+      "cauHoi": "Vì sao phải định kỳ kiểm tra mức dầu trong máy?",
+      "luaChon": ["Để tăng điện áp", "Tránh dầu cạn gây nóng máy, tăng tổn hao và cháy nổ", "Để đổi tổ nối dây", "Để giảm số vòng dây"],
+      "dapAn": 1,
+      "giaiThich": "Định kỳ kiểm tra mức dầu trong máy, tránh hiện tượng dầu cạn gây nóng máy tăng tổn hao và cháy nổ (slide 75)."
+    },
+    {
+      "cauHoi": "Bài tập 3: dòng điện máy 2 cung cấp cho tải (β₂ = 0,674, I₂đm = 1443,4 A) xấp xỉ:",
+      "luaChon": ["674 A", "972,8 A", "1335,1 A", "1443,4 A"],
+      "dapAn": 1,
+      "giaiThich": "I₂ = β₂·I₂đm = 0,674·1443,4 ≈ 972,8 A (slide 81)."
+    }
+  ]
+}

@@ -1,0 +1,66 @@
+{
+  "_huongDan": "Ngân hàng câu hỏi bài 4.1–4.3. dapAn là số thứ tự lựa chọn đúng, bắt đầu từ 0.",
+  "soCauMoiLan": 5,
+  "cauHoi": [
+    {
+      "cauHoi": "Khi tải có tính cảm (φ₂ > 0), công suất phản kháng:",
+      "luaChon": ["Truyền từ dây quấn sơ cấp sang thứ cấp (Q₁ > 0, Q₂ > 0)", "Truyền từ thứ cấp sang sơ cấp", "Bằng 0", "Chỉ tồn tại ở thứ cấp"],
+      "dapAn": 0,
+      "giaiThich": "φ₂ > 0 → Q₂ > 0, lúc đó Q₁ > 0 → công suất phản kháng truyền từ sơ cấp sang thứ cấp (slide 59)."
+    },
+    {
+      "cauHoi": "Khi tải có tính dung và Q₁ > 0 thì:",
+      "luaChon": ["Q truyền từ thứ cấp sang sơ cấp", "MBA lấy công suất phản kháng từ phía sơ cấp và thứ cấp để từ hóa nó", "MBA không cần từ hóa", "P₂ < 0"],
+      "dapAn": 1,
+      "giaiThich": "Tải dung φ₂ < 0 → Q₂ < 0; nếu Q₁ > 0, MBA lấy Q từ phía sơ cấp và thứ cấp để từ hóa nó."
+    },
+    {
+      "cauHoi": "Độ thay đổi điện áp ΔU% của MBA được định nghĩa là:",
+      "luaChon": ["(U₁ − U₂)/U₁·100", "(U₂₀ − U₂)/U₂₀·100 khi U₁ không đổi", "(U₂ − U₂₀)/U₂·100", "Un%"],
+      "dapAn": 1,
+      "giaiThich": "ΔU% = (U₂₀ − U₂)/U₂₀·100, U₂₀ là điện áp thứ cấp lúc không tải (slide 60)."
+    },
+    {
+      "cauHoi": "Theo đồ thị slide 61, với tải dung (φ₂ < 0), ΔU% có thể:",
+      "luaChon": ["Âm – điện áp thứ cấp tăng khi có tải", "Luôn lớn hơn tải cảm", "Luôn bằng 0", "Không phụ thuộc β"],
+      "dapAn": 0,
+      "giaiThich": "Đường φ₂ < 0 nằm dưới trục hoành: ΔU < 0, U₂ > U₂₀."
+    },
+    {
+      "cauHoi": "MBA thông thường thiết kế đầu điều chỉnh điện áp ở các cấp:",
+      "luaChon": ["±1 %, ±2 %", "±2,5 %, ±5 %", "±10 %, ±20 %", "Không có"],
+      "dapAn": 1,
+      "giaiThich": "MBA thông thường thiết kế đầu điều chỉnh ở các cấp ±2,5 %, ±5 % (slide 62)."
+    },
+    {
+      "cauHoi": "Bộ điều chỉnh điện áp của MBA thường đặt ở:",
+      "luaChon": ["Phía hạ áp", "Phía cao áp", "Trên lõi thép", "Trong bình giãn dầu"],
+      "dapAn": 1,
+      "giaiThich": "Điều chỉnh của MBA thường đặt ở phía CA (slide 62)."
+    },
+    {
+      "cauHoi": "Tổn hao trên lõi thép p<sub>Fe</sub> do:",
+      "luaChon": ["Điện trở dây quấn", "Từ trễ và dòng điện xoáy", "Ma sát", "Điện dung"],
+      "dapAn": 1,
+      "giaiThich": "Tổn hao trên lõi thép do từ trễ và dòng xoáy gọi là pFe (slide 63)."
+    },
+    {
+      "cauHoi": "Tổn hao đồng p<sub>Cu</sub> phụ thuộc hệ số tải β theo:",
+      "luaChon": ["pCu = β·Pn", "pCu = β²·Pn", "pCu = P₀", "pCu = Pn/β"],
+      "dapAn": 1,
+      "giaiThich": "pCu = rn·I₂² = β²·pn (slide 64)."
+    },
+    {
+      "cauHoi": "MBA đạt hiệu suất cao nhất khi hệ số tải:",
+      "luaChon": ["β = 1", "β = √(P₀/Pn)", "β = P₀/Pn", "β = Pn/P₀"],
+      "dapAn": 1,
+      "giaiThich": "Hiệu suất cao nhất khi tổn hao sắt bằng tổn hao đồng: β = √(P₀/Pn)."
+    },
+    {
+      "cauHoi": "MBA có P₀ = 1520 W, Pn = 6000 W. Hệ số tải để hiệu suất cao nhất xấp xỉ:",
+      "luaChon": ["0,253", "0,294", "0,503", "0,6"],
+      "dapAn": 2,
+      "giaiThich": "β = √(1520/6000) = √0,2533 ≈ 0,503. (Slide 79 ghi 0,294 là nhầm số học.)"
+    }
+  ]
+}

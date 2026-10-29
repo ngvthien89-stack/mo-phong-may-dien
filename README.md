@@ -103,6 +103,130 @@ Theo slide 4/6:
 - Đồ thị theo thời gian; trình chiếu 6 bước; ngân hàng 8 câu hỏi.
 - Prompt lưu trong [`docs/prompts/1.2b-dinh-luat-luc-dien-tu.md`](docs/prompts/1.2b-dinh-luat-luc-dien-tu.md).
 
+## Bài 1.2.c – Định luật toàn dòng điện (`toan-dong-dien.html`)
+
+Theo slide 10 (`Chuong1-MBA.pdf`):
+
+- Định luật Ampere: `∮_C H·dl = Σi_k = F`, C là đường cong khép kín bao quanh các dây dẫn mang dòng điện.
+- Áp dụng cho mạch từ hình 1.4: `H·l = w·i = F`; i là dòng điện từ hóa, w·i là sức từ động.
+
+![Bài 1.2.c trên máy chiếu](docs/anh/toan-dong-dien-1920x1080.png)
+
+**Kịch bản:**
+
+- a) **Đường cong kín C quanh các dòng điện:**
+  - Kéo thả dây dẫn và đường cong C (tròn hoặc chữ nhật), bấm vào dây để đổi chiều dòng điện.
+  - Chấm sáng chạy quanh C cộng dồn ∫H·dl; hết một vòng, kết quả tích phân số bằng tổng đại số Σi.
+  - Biểu đồ cho thấy dây nằm ngoài C đóng góp 0.
+- b) **Mạch từ có cuộn dây w vòng (hình 1.4):**
+  - Mặt cắt cho thấy C bao w thanh dẫn cùng chiều nên Σi = w·i.
+  - Chỉnh w, i, l; xem F = w·i, H = w·i/l.
+  - Phần mở rộng: B = μ0·μr·H, φ = B·S (μr minh họa, giả thiết tuyến tính).
+
+**Tiện ích khác:**
+
+- Trình chiếu 7 bước; ngân hàng 9 câu hỏi.
+- Hàm tính toán trong `js/mach-tu.js`, có test.
+- Prompt lưu trong [`docs/prompts/1.2c-dinh-luat-toan-dong-dien.md`](docs/prompts/1.2c-dinh-luat-toan-dong-dien.md).
+- Lộ trình xây dựng toàn bộ chương 1 theo slide: [`docs/lo-trinh-chuong-1.md`](docs/lo-trinh-chuong-1.md).
+
+## Bài 1.3 – Các loại vật liệu dùng trong máy điện (`vat-lieu.html`)
+
+Theo slide 11 (`Chuong1-MBA.pdf`):
+
+- Vật liệu dẫn điện (Cu, Al, hợp kim) và vật liệu dẫn từ (vật liệu sắt từ).
+- Vật liệu cách điện: thể rắn gồm 4 nhóm, ngoài ra có thể khí và thể lỏng.
+- 7 cấp cách điện theo nhiệt độ làm việc cho phép.
+
+![Bài 1.3 trên máy chiếu](docs/anh/vat-lieu-1920x1080.png)
+
+**Kịch bản:**
+
+- a) **Phân loại vật liệu:**
+  - Trò chơi kéo thả 15 thẻ vào 3 nhóm; trên điện thoại và máy chiếu có thể bấm chọn rồi bấm ô nhóm.
+  - Xếp sai thì thẻ quay về khay kèm giải thích.
+- b) **Vật liệu trong máy biến áp:**
+  - Hình cắt minh họa; bấm từng bộ phận để xem nhóm vật liệu và nhiệm vụ (trích slide 25, 26, 28, 35).
+  - Có tùy chọn tô màu theo nhóm vật liệu.
+- c) **Cấp cách điện và nhiệt độ:** chọn nhiệt độ làm việc của dây quấn, xem cấp nào dùng được và cấp thấp nhất dùng được.
+
+**Tiện ích khác:**
+
+- Trình chiếu 7 bước; ngân hàng 10 câu hỏi.
+- Hàm tra cấp cách điện trong `js/cach-dien.js`, có test.
+- Prompt lưu trong [`docs/prompts/1.3-vat-lieu-may-dien.md`](docs/prompts/1.3-vat-lieu-may-dien.md).
+
+## Bài 2.1–2.3 – Định nghĩa, vai trò và công dụng của MBA (`khai-niem-mba.html`)
+
+Theo slide 13–24 (`Chuong1-MBA.pdf`, phần II):
+
+- Định nghĩa máy biến áp và hai ký hiệu MBA trong hệ thống điện lực.
+- Vai trò của MBA trong truyền tải và phân phối điện năng.
+- MBA chuyên dụng; máy biến dòng điện và máy biến điện áp.
+
+![Bài 2.1–2.3 trên máy chiếu](docs/anh/khai-niem-mba-1920x1080.png)
+
+**Kịch bản:**
+
+- a) **Định nghĩa và ký hiệu:**
+  - Hai đồ thị u₁(t) và u₂(t) có vạch chu kỳ trùng nhau: tần số giữ nguyên.
+  - Thử với nguồn một chiều để thấy MBA không có sđđ thứ cấp.
+- b) **Vai trò trong truyền tải:**
+  - Chọn điện áp đường dây 21 kV (không có MBA tăng áp) hoặc 35/110/220/500 kV.
+  - Xem I_d, ΔU, ΔP theo % so với 21 kV. Chỉ so sánh tỉ lệ, không dùng số liệu giả định.
+- c) **MBA chuyên dụng, đo lường:** lò, hàn, thí nghiệm, đo lường; sơ đồ máy biến dòng và máy biến điện áp (slide 24).
+
+**Tiện ích khác:**
+
+- Trình chiếu 8 bước; ngân hàng 10 câu hỏi.
+- Hàm thuần trong `js/may-bien-ap.js`, có test.
+- Prompt lưu trong [`docs/prompts/2.1-2.3-khai-niem-mba.md`](docs/prompts/2.1-2.3-khai-niem-mba.md).
+
+## Bài 2.4 – Cấu tạo máy biến áp (`cau-tao-mba.html`)
+
+Theo slide 25–37 (`Chuong1-MBA.pdf`): lõi thép, dây quấn, vỏ máy.
+
+![Bài 2.4 trên máy chiếu](docs/anh/cau-tao-mba-1920x1080.png)
+
+**Kịch bản:**
+
+- a) **Lõi thép – lắp ráp ruột máy:**
+  - Lắp ruột MBA 3 pha kiểu trụ qua 5 bước có hoạt hình.
+  - So sánh lõi liền khối với lõi ghép lá thép phủ sơn cách điện (dòng điện xoáy, minh họa định tính).
+- b) **Dây quấn:** đồng tâm và xen kẽ trên nửa mặt cắt dọc trụ; bốn kiểu dây quấn đồng tâm a–d (slide 29–30).
+- c) **Vỏ máy, bình giãn dầu:**
+  - Bản vẽ đánh số 1–9 như slide 26; cắt bỏ nửa vỏ để thấy ruột máy.
+  - Nhiệt độ dầu (định tính) làm mức dầu trong bình giãn dầu thay đổi; thùng máy luôn đầy dầu.
+
+**Tiện ích khác:**
+
+- Trình chiếu 10 bước; ngân hàng 10 câu hỏi.
+- Hàm thuần trong `js/cau-tao.js`, có test.
+- Prompt lưu trong [`docs/prompts/2.4-cau-tao-mba.md`](docs/prompts/2.4-cau-tao-mba.md).
+
+## Các bài 2.5 – VI (phần còn lại của chương 1)
+
+Theo slide 38–84 (`Chuong1-MBA.pdf`). Các trang dùng khung chung `js/khung-trang.js`, `js/hinh-mba.js`, `css/mba.css`.
+
+| Bài | Trang | Nội dung mô phỏng |
+|---|---|---|
+| 2.5–2.7 | `nguyen-ly-mba.html` | Φ, e₁, e₂ theo ωt; E = 4,44·f·w·Φm; hệ số biến áp k; nhãn máy, dòng điện định mức |
+| 3.1–3.2 | `phuong-trinh-mba.html` | Phương trình cân bằng điện áp (đồ thị véc tơ), cân bằng stđ, quy đổi |
+| 3.3 | `so-do-thay-the.html` | Sơ đồ thay thế hình T, sơ đồ đơn giản; đồ thị véc tơ tải cảm, tải dung |
+| 3.4 | `thi-nghiem-mba.html` | Phòng thí nghiệm ảo không tải, ngắn mạch; thông số sơ đồ thay thế |
+| 4.1–4.3 | `che-do-lam-viec.html` | Giản đồ năng lượng P, Q; ΔU% và đầu phân áp; tổn hao, hiệu suất, β tối ưu |
+| 5.1–5.2 | `mba-ba-pha.html` | MBA ba trụ; tổ nối dây bằng đồ thị véc tơ và phương pháp đồng hồ |
+| 5.3–5.4 | `song-song-mba.html` | Điều kiện làm việc song song, phân bố tải, lưu ý vận hành |
+| VI | `bai-tap-chuong-1.html` | Bốn bài tập: lời giải từng bước, đổi số liệu, đối chiếu slide |
+
+![Thí nghiệm ngắn mạch ảo](docs/anh/thi-nghiem-mba-1920x1080.png)
+
+![Tổ nối dây – phương pháp đồng hồ](docs/anh/to-noi-day-1920x1080.png)
+
+- Các máy mô phỏng dựng từ số liệu đề bài tập (slide 78, 80, 82); kết quả tính khớp lời giải slide.
+- Những chỗ slide làm tròn hoặc nhầm số học (ví dụ slide 79: β tối ưu đúng là 0,503, không phải 0,294) được đánh dấu trên trang bài tập và liệt kê trong [`docs/lo-trinh-chuong-1.md`](docs/lo-trinh-chuong-1.md).
+- Prompt lưu trong [`docs/prompts/2.5-VI-con-lai-chuong-1.md`](docs/prompts/2.5-VI-con-lai-chuong-1.md).
+
 ## Lưu ý về số liệu
 
 > Các cấp điện áp, công suất phụ tải, đồ thị phụ tải ngày, thông số đường dây… trong `du-lieu/cau-hinh.json`
@@ -118,8 +242,14 @@ index.html              Trang chủ: danh sách bài học (đọc từ du-lieu/
 he-thong-dien.html      Bài 1.1
 cam-ung-dien-tu.html    Bài 1.2.a
 luc-dien-tu.html        Bài 1.2.b
+toan-dong-dien.html     Bài 1.2.c
+vat-lieu.html           Bài 1.3
+khai-niem-mba.html      Bài 2.1–2.3
+cau-tao-mba.html        Bài 2.4
+nguyen-ly-mba.html, phuong-trinh-mba.html, so-do-thay-the.html, thi-nghiem-mba.html,
+che-do-lam-viec.html, mba-ba-pha.html, song-song-mba.html, bai-tap-chuong-1.html   Bài 2.5 – VI
 css/                    chung.css, mo-phong.css (bố cục chung các trang mô phỏng), trang-chu.css,
-                        he-thong-dien.css, cam-ung-dien-tu.css, luc-dien-tu.css
+                        he-thong-dien.css, cam-ung-dien-tu.css, luc-dien-tu.css, toan-dong-dien.css, vat-lieu.css, khai-niem-mba.css, cau-tao-mba.css
 js/
   tinh-toan.js          Hàm tính toán thuần (dòng điện, tổn thất, hiệu suất, phụ tải, tần số) – dùng chung cho trang và test
   so-do.js              Vẽ sơ đồ SVG
@@ -135,6 +265,18 @@ js/
   thanh-dan.js          Kịch bản d bài 1.2.a: Hình 1.2, quy tắc bàn tay phải, e = B·l·v
   hinh-ray.js           Thành phần vẽ dùng chung cho Hình 1.2 và 1.3 (hình chiếu xiên, nam châm, ray, đồng hồ, bàn tay)
   luc-dien-tu.js        Trang bài 1.2.b: Hình 1.3, quy tắc bàn tay trái, F = B·i·l, nguyên lý động cơ
+  mach-tu.js            Hàm tính toán bài 1.2.c (H của dây dẫn thẳng, tích phân vòng ∮H·dl, F = w·i, H = w·i/l)
+  toan-dong-dien.js     Trang bài 1.2.c: đường cong kín C, mạch từ hình 1.4
+  cach-dien.js          Hàm thuần bài 1.3 (tra 7 cấp cách điện, kiểm tra phân loại vật liệu, xáo trộn có hạt giống)
+  vat-lieu.js           Trang bài 1.3: trò chơi phân loại, vật liệu trong MBA, cấp cách điện
+  may-bien-ap.js        Hàm thuần phần II (so sánh tỉ lệ truyền tải, điện áp chuẩn hóa, loại MBA, độ lệch kim)
+  khai-niem-mba.js      Trang bài 2.1–2.3: định nghĩa, ký hiệu, vai trò truyền tải, MBA chuyên dụng
+  cau-tao.js            Hàm thuần bài 2.4 (thứ tự bánh dây xen kẽ, mức dầu bình giãn dầu, giới hạn bước)
+  cau-tao-mba.js        Trang bài 2.4: lắp ráp ruột máy, lá thép, dây quấn, vỏ máy
+  khung-trang.js        Khung dùng chung cho các trang 2.5 – VI (nạp dữ liệu, nút chung, trình chiếu, câu hỏi, vòng lặp)
+  hinh-mba.js           Thành phần vẽ SVG cho các trang MBA (lõi, cuộn dây, đồng hồ đo, trục đồ thị, véc tơ, bảng, R, L)
+  so-phuc.js, mach-mba.js  Số phức; giải sơ đồ thay thế hình T và sơ đồ đơn giản
+  thi-nghiem.js, che-do.js, to-noi-day.js, song-song.js, bai-tap.js  Hàm thuần phần III – VI (có test)
   tien-ich.js           Hàm tiện ích dùng chung (nạp JSON, định dạng số, vẽ KaTeX)
   trang-chu.js          Trang chủ
 du-lieu/                Nội dung cho giảng viên chỉnh sửa (JSON)
@@ -158,7 +300,15 @@ Các khóa bắt đầu bằng `_` (ví dụ `_ghiChu`) chỉ là chú thích, t
 | `cau-hoi-cam-ung-dien-tu.json` | Ngân hàng câu hỏi bài 1.2.a, cùng định dạng với `cau-hoi.json`. |
 | `luc-dien-tu.json` | Bài 1.2.b: lý thuyết theo slide, thông số kịch bản a (`luc`) và b (`dongCo`: U, R, khối lượng thanh…), các bước trình chiếu. |
 | `cau-hoi-luc-dien-tu.json` | Ngân hàng câu hỏi bài 1.2.b. |
-| `bai-hoc.json` | Danh sách bài trên trang chủ. `trangThai`: `"san-sang"` (có trang) hoặc `"sap-ra-mat"`. Các bài "sắp ra mắt" hiện có là ví dụ, sửa theo đề cương môn học. |
+| `toan-dong-dien.json` | Bài 1.2.c: lý thuyết theo slide, vị trí và dòng điện các dây dẫn, đường cong C mặc định (kịch bản `ampere`), thông số mạch từ (`machTu`), các bước trình chiếu. |
+| `cau-hoi-toan-dong-dien.json` | Ngân hàng câu hỏi bài 1.2.c. |
+| `vat-lieu.json` | Bài 1.3: lý thuyết theo slide 11, ba nhóm vật liệu (tên, màu, phím tắt), 15 thẻ vật liệu (`nhom`, `nhomCon`), bảng 7 cấp cách điện, các bộ phận MBA (nhiệm vụ, nguồn slide), các bước trình chiếu. |
+| `cau-hoi-vat-lieu.json` | Ngân hàng câu hỏi bài 1.3. |
+| `khai-niem-mba.json` | Bài 2.1–2.3: lý thuyết theo slide 13–15, các cấp điện áp của sơ đồ slide 14, thông số kịch bản định nghĩa và đo lường, các bước trình chiếu. |
+| `cau-tao-mba.json` | Bài 2.4: lý thuyết theo slide 25–35, các bước lắp ráp, bốn kiểu dây quấn đồng tâm, số bánh CA của dây quấn xen kẽ, các bộ phận theo bản vẽ slide 26, mức dầu bình giãn dầu, các bước trình chiếu. |
+| `cau-hoi-cau-tao-mba.json` | Ngân hàng câu hỏi bài 2.4. |
+| `cau-hoi-khai-niem-mba.json` | Ngân hàng câu hỏi bài 2.1–2.3 (được dùng thẻ `<sub>` cho chỉ số dưới). |
+| `bai-hoc.json` | Danh sách bài trên trang chủ, nhóm theo chương và phần của slide (Chương 1. Máy biến áp – I, II…). `trangThai`: `"san-sang"` (có trang) hoặc `"sap-ra-mat"`. Tên các chương sau theo mục lục slide 3; mô tả là ví dụ, sửa theo đề cương. |
 
 Sau khi sửa, chạy `npm test` (nếu máy có Node.js) để kiểm tra cấu trúc dữ liệu: test sẽ báo nếu thiếu trường,
 đáp án nằm ngoài danh sách lựa chọn, đồ thị phụ tải không đủ 24 giờ hoặc dùng biến điện áp không tồn tại.

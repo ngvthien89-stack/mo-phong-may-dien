@@ -1,0 +1,106 @@
+{
+  "_huongDan": "Nội dung bài 2.4 theo slide 25–37 (Chuong1-MBA.pdf). Hình vẽ minh họa, không theo tỷ lệ. Nhiệt độ dầu chỉ là mức định tính (lạnh → nóng), không có số liệu.",
+  "lyThuyet": {
+    "muc": "II. Khái niệm chung về máy biến áp",
+    "tieuDe": "2.4. Cấu tạo MBA",
+    "tongQuan": "MBA bao gồm các bộ phận chính: lõi thép, dây quấn và vỏ máy. Ngoài ra còn có bộ phận cách điện, sứ cách điện….",
+    "loiThep": "Lõi thép được ghép bằng những lá thép kỹ thuật điện tạo thành mạch từ khép kín dùng để dẫn từ thông chính, đồng thời làm khung để quấn dây.",
+    "laThep": "Thường các lá thép có phủ sơn cách điện ở bề mặt để giảm tổn hao do từ trễ và dòng điện xoáy.",
+    "dayQuan": [
+      "Dây quấn là bộ phận dẫn điện của MBA, làm nhiệm vụ thu năng lượng vào và truyền năng lượng ra.",
+      "Yêu cầu với dây quấn là cảm ứng được sđđ cho trước, cho phép dòng điện định mức đi qua lâu dài mà không phát nóng quá nhiệt độ cho phép."
+    ],
+    "phanLoaiDayQuan": "Theo cách sắp xếp dây quấn CA và HA, người ta chia ra làm hai loại dây quấn chính: dây quấn đồng tâm và dây quấn xen kẽ.",
+    "xenKe": "Các bánh dây CA, HA lần lượt quấn xen kẽ nhau dọc theo trụ thép. Thường có một bánh HA được chia làm hai đặt sát gông. Kiểu này thường dùng trong các MBA mà cả hai dây quấn có nhiều đầu dây.",
+    "voMay": "Vỏ làm nhiệm vụ chứa dầu làm mát và bảo vệ MBA. Trên nắp vỏ máy có đặt sứ ra của dây quấn CA và HA, bình giãn dầu.",
+    "binhGianDau": "Bình giãn dầu đảm bảo đủ thể tích co – giãn dầu khi nhiệt độ dầu thay đổi; ngoài ra, nhờ quan sát dầu ở bình giãn dầu có thể biết trong thùng luôn đầy dầu.",
+    "yeuCauVo": [
+      "Vỏ thùng phải kín và có diện tích tản nhiệt lớn nhất có thể.",
+      "Có khả năng bảo vệ dầu MBA chống xuống cấp do sự tác động của nhiều yếu tố khác nhau.",
+      "Có độ bền cơ khí cao để đảm bảo khi nâng hạ, vận chuyển vỏ MBA không bị biến dạng kéo theo biến dạng chi tiết ruột máy.",
+      "Cho phép lắp các thiết bị chuyển đổi điện áp, các thiết bị chuyển tiếp nguồn điện trong ra ngoài (sứ cao, hạ áp), các thiết bị đo (nhiệt độ), bảo vệ."
+    ],
+    "hinhAnh": "Hình ảnh thực tế: slide 27 (ghép mạch từ), 32 (hình cắt, ruột MBA), 33–34 (lắp ráp, cuộn dây CA, HA), 36–37 (vỏ máy)."
+  },
+  "lapRap": [
+    { "id": "xep-la", "ten": "Xếp lá thép thành trụ T và gông dưới G", "moTa": "Ghép những lá thép kỹ thuật điện thành ba trụ T và gông dưới G." },
+    { "id": "long-ha", "ten": "Lồng cuộn dây hạ áp (1) vào trụ", "moTa": "Cuộn dây hạ áp (1) đặt sát trụ thép, bên trong." },
+    { "id": "long-ca", "ten": "Lồng cuộn dây cao áp (2) bên ngoài", "moTa": "Cuộn dây cao áp (2) lồng đồng tâm bên ngoài cuộn hạ áp." },
+    { "id": "dat-gong", "ten": "Đặt gông trên – khép kín mạch từ (3)", "moTa": "Gông trên khép kín mạch từ (3): dẫn từ thông chính, đồng thời làm khung để quấn dây." },
+    { "id": "hoan-thanh", "ten": "Ruột MBA 3 pha kiểu trụ", "moTa": "Hoàn thành ruột máy: 1 – cuộn dây hạ áp; 2 – cuộn dây cao áp; 3 – mạch từ (slide 25)." }
+  ],
+  "kieuDayQuan": [
+    { "id": "a", "ten": "a) Kiểu trụ – dây tròn", "dong": ["Tiết diện nhỏ, quấn thành nhiều lớp", "Thường làm dây quấn CA (tới 35 kV)"], "nguon": "Slide 29" },
+    { "id": "b", "ten": "b) Kiểu trụ – dây bẹt", "dong": ["Tiết diện lớn, thường quấn hai lớp", "Thường làm dây quấn HA (6 kV trở xuống)"], "nguon": "Slide 29" },
+    { "id": "c", "ten": "c) Hình xoắn ốc", "dong": ["Nhiều sợi chập lại, giữa các vòng có rãnh hở", "Thường làm HA của MBA công suất TB, lớn"], "nguon": "Slide 30" },
+    { "id": "d", "ten": "d) Xoắn ốc liên tục", "dong": ["Dây bẹt quấn thành bánh dây phẳng, rãnh hở", "Chủ yếu làm CA (từ 35 kV, dung lượng lớn)"], "nguon": "Slide 30" }
+  ],
+  "xenKe": { "soBanhCA": 2 },
+  "voMay": {
+    "boPhan": [
+      { "id": "ruot", "so": "1", "ten": "Ruột máy", "moTa": "Gồm lõi thép và dây quấn (slide 25, 32)." },
+      { "id": "vo", "so": "2", "ten": "Vỏ máy", "moTa": "Chứa dầu làm mát và bảo vệ MBA (slide 35)." },
+      { "id": "nap", "so": "3", "ten": "Nắp máy", "moTa": "Trên nắp vỏ máy đặt sứ ra của dây quấn CA và HA, bình giãn dầu (slide 35)." },
+      { "id": "su-cao", "so": "4", "ten": "Sứ cao thế", "moTa": "Sứ ra của dây quấn CA: chuyển tiếp nguồn điện từ trong ra ngoài (slide 35)." },
+      { "id": "moc", "so": "5", "ten": "Móc treo nắp", "moTa": "Bộ phận trên nắp máy theo bản vẽ slide 26." },
+      { "id": "canh", "so": "6, 7", "ten": "Cánh tỏa nhiệt", "moTa": "Tăng diện tích tản nhiệt của vỏ thùng (yêu cầu ở slide 35)." },
+      { "id": "chan", "so": "8", "ten": "Chân đế", "moTa": "Bộ phận đỡ máy theo bản vẽ slide 26." },
+      { "id": "su-ha", "so": "9", "ten": "Sứ hạ thế", "moTa": "Sứ ra của dây quấn HA: chuyển tiếp nguồn điện từ trong ra ngoài (slide 35)." },
+      { "id": "binh", "so": "–", "ten": "Bình giãn dầu", "moTa": "Đảm bảo đủ thể tích co – giãn dầu khi nhiệt độ dầu thay đổi; quan sát được thùng luôn đầy dầu (slide 35)." }
+    ],
+    "mucDau": { "min": 0.2, "max": 0.85, "macDinh": 0.4 }
+  },
+  "macDinh": { "kichBan": "loi-thep" },
+  "trinhChieu": [
+    {
+      "id": "cac-bo-phan", "tieuDe": "2.4. Cấu tạo MBA – các bộ phận chính", "the": "lõi thép · dây quấn · vỏ máy",
+      "loiGiang": "MBA bao gồm các bộ phận chính: lõi thép, dây quấn và vỏ máy. Ngoài ra còn có bộ phận cách điện, sứ cách điện. Bản vẽ slide 26 đánh số 9 bộ phận nhìn thấy từ bên ngoài.",
+      "trangThai": { "kichBan": "vo-may", "boPhan": "ruot", "catVo": true }
+    },
+    {
+      "id": "loi-thep", "tieuDe": "2.4.1. Lõi thép", "the": "mạch từ khép kín",
+      "loiGiang": "Lõi thép được ghép bằng những lá thép kỹ thuật điện tạo thành mạch từ khép kín dùng để dẫn từ thông chính, đồng thời làm khung để quấn dây. MBA 3 pha kiểu trụ có ba trụ T và hai gông G.",
+      "trangThai": { "kichBan": "loi-thep", "buoc": 0, "laThep": true }
+    },
+    {
+      "id": "la-thep", "tieuDe": "Vì sao dùng lá thép phủ sơn cách điện?", "the": "giảm tổn hao",
+      "loiGiang": "Các lá thép có phủ sơn cách điện ở bề mặt để giảm tổn hao do từ trễ và dòng điện xoáy. So sánh: lõi liền khối cho vòng dòng điện xoáy lớn; ghép lá thép cách điện thì dòng điện xoáy bị chia nhỏ trong từng lá.",
+      "trangThai": { "kichBan": "loi-thep", "buoc": 0, "laThep": false }
+    },
+    {
+      "id": "lap-day-quan", "tieuDe": "Lắp ráp dây quấn vào lõi thép", "the": "HA trong, CA ngoài",
+      "loiGiang": "Cuộn dây hạ áp (1) lồng sát trụ thép, cuộn dây cao áp (2) lồng đồng tâm bên ngoài. Sau đó đặt gông trên để khép kín mạch từ (3).",
+      "trangThai": { "kichBan": "loi-thep", "buoc": 2, "laThep": true }
+    },
+    {
+      "id": "ruot-may", "tieuDe": "Ruột MBA 3 pha kiểu trụ", "the": "slide 25",
+      "loiGiang": "Hoàn thành ruột máy: 1 – cuộn dây hạ áp; 2 – cuộn dây cao áp; 3 – mạch từ. Từ thông chính khép kín trong lõi thép.",
+      "trangThai": { "kichBan": "loi-thep", "buoc": 4, "laThep": true }
+    },
+    {
+      "id": "dong-tam", "tieuDe": "2.4.2. Dây quấn đồng tâm – kiểu trụ", "the": "dây tròn · dây bẹt",
+      "loiGiang": "Dây quấn là bộ phận dẫn điện, thu năng lượng vào và truyền năng lượng ra. Dây quấn đồng tâm kiểu trụ: tiết diện nhỏ dùng dây tròn quấn nhiều lớp, thường làm CA tới 35 kV; tiết diện lớn dùng dây bẹt quấn hai lớp, thường làm HA 6 kV trở xuống.",
+      "trangThai": { "kichBan": "day-quan", "sapXep": "dong-tam", "kieu": "a" }
+    },
+    {
+      "id": "xoan-oc", "tieuDe": "Dây quấn xoắn ốc và xoắn ốc liên tục", "the": "hình c · hình d",
+      "loiGiang": "Xoắn ốc: nhiều sợi dây chập lại, giữa các vòng có rãnh hở, thường làm HA của MBA công suất trung bình và lớn. Xoắn ốc liên tục: dây bẹt quấn thành những bánh dây phẳng cách nhau bằng rãnh hở, chủ yếu làm cuộn CA (35 kV trở lên, dung lượng lớn).",
+      "trangThai": { "kichBan": "day-quan", "sapXep": "dong-tam", "kieu": "d" }
+    },
+    {
+      "id": "xen-ke", "tieuDe": "Dây quấn xen kẽ", "the": "HA – CA – HA – CA – HA",
+      "loiGiang": "Các bánh dây CA, HA lần lượt quấn xen kẽ dọc theo trụ thép; thường có một bánh HA chia làm hai đặt sát gông. Kiểu này dùng trong các MBA mà cả hai dây quấn có nhiều đầu dây.",
+      "trangThai": { "kichBan": "day-quan", "sapXep": "xen-ke" }
+    },
+    {
+      "id": "vo-may", "tieuDe": "2.4.3. Vỏ máy và bình giãn dầu", "the": "chứa dầu làm mát, bảo vệ",
+      "loiGiang": "Vỏ chứa dầu làm mát và bảo vệ MBA; vỏ phải kín, diện tích tản nhiệt lớn, bền cơ khí. Khi dầu nóng lên, dầu giãn nở và mức dầu trong bình giãn dầu dâng lên; nhờ bình giãn dầu, thùng luôn đầy dầu.",
+      "trangThai": { "kichBan": "vo-may", "boPhan": "binh", "catVo": true, "mucDau": 0.9 }
+    },
+    {
+      "id": "tom-tat", "tieuDe": "Tóm tắt", "the": "2.4",
+      "loiGiang": "Lõi thép: lá thép kỹ thuật điện phủ sơn cách điện, mạch từ khép kín. Dây quấn: đồng tâm (kiểu trụ, xoắn ốc, xoắn ốc liên tục) hoặc xen kẽ. Vỏ máy: chứa dầu, bảo vệ, tản nhiệt; trên nắp có sứ CA, HA và bình giãn dầu.",
+      "trangThai": { "kichBan": "vo-may", "boPhan": "vo", "catVo": false, "mucDau": 0.4 }
+    }
+  ]
+}

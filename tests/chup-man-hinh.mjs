@@ -61,6 +61,18 @@ async function kiemTraBoCuc(trang, ten) {
 }
 
 /** Trang 1.2.a: kiểm tra các dòng chữ SVG đang hiển thị không đè lên nhau và không tràn khỏi khung thẻ. */
+// Trang dùng khung chung (js/khung-trang.js): [tệp, mã bài, các kịch bản]
+const BAI_MBA = [
+  ['nguyen-ly-mba', '2.5–2.7', ['nguyen-ly', 'he-so-k', 'dinh-muc']],
+  ['phuong-trinh-mba', '3.1–3.2', ['dien-ap', 'std', 'quy-doi']],
+  ['so-do-thay-the', '3.3', ['so-do', 'vecto', 'sai-so']],
+  ['thi-nghiem-mba', '3.4', ['khong-tai', 'ngan-mach', 'ket-qua']],
+  ['che-do-lam-viec', '4.1–4.3', ['nang-luong', 'dien-ap', 'hieu-suat']],
+  ['mba-ba-pha', '5.1–5.2', ['ba-tru', 'to-noi-day', 'mot-pha']],
+  ['song-song-mba', '5.3–5.4', ['dieu-kien', 'phan-tai', 'luu-y']],
+  ['bai-tap-chuong-1', 'VI', ['bt1', 'bt2', 'bt3', 'bt4']],
+];
+
 async function kiemTraChuSvg(trang, ten) {
   const kq = await trang.evaluate(() => {
     const hienThi = (e) => e.checkVisibility?.({ opacityProperty: true, visibilityProperty: true }) ?? true;
@@ -189,6 +201,166 @@ for (const [nhan, kt] of [['1920x1080', { width: 1920, height: 1080 }], ['390x84
     await trang.locator('#nut-cau-hoi').click();
     await trang.locator('.ch-phuong-an').nth(1).click();
     await chup(trang, `luc-cau-hoi-${nhan}`);
+    await ctx.close();
+  }
+  // Trang 1.2.c – Định luật toàn dòng điện
+  {
+    const { ctx, trang } = await moTrang(kt, '/toan-dong-dien.html', `toan-dong-dien ${nhan}`);
+    await trang.waitForSelector('body.da-san-sang');
+    await trang.waitForTimeout(2600);
+    await chup(trang, `toan-a-ampere-${nhan}`, { fullPage: laDT });
+    await kiemTraChuSvg(trang, `1.2.c a) ampere ${nhan}`);
+    await trang.locator('#td-cn').click();
+    await trang.waitForTimeout(1200);
+    await chup(trang, `toan-a-chu-nhat-${nhan}`, { fullPage: laDT });
+    await kiemTraChuSvg(trang, `1.2.c a) C hình chữ nhật ${nhan}`);
+    await trang.selectOption('#chon-kich-ban', 'mach-tu');
+    await trang.waitForTimeout(1200);
+    await chup(trang, `toan-b-mach-tu-${nhan}`, { fullPage: laDT });
+    await kiemTraChuSvg(trang, `1.2.c b) mạch từ ${nhan}`);
+    await trang.locator('#nut-trinh-chieu').click();
+    for (let k = 0; k < 2; k++) await trang.keyboard.press('ArrowRight');
+    await trang.waitForTimeout(1500);
+    await chup(trang, `toan-trinh-chieu-${nhan}`);
+    await trang.keyboard.press('Escape');
+    await trang.locator('#nut-cau-hoi').click();
+    await trang.locator('.ch-phuong-an').nth(1).click();
+    await chup(trang, `toan-cau-hoi-${nhan}`);
+    await ctx.close();
+  }
+  // Trang 1.3 – Vật liệu dùng trong máy điện
+  {
+    const { ctx, trang } = await moTrang(kt, '/vat-lieu.html', `vat-lieu ${nhan}`);
+    await trang.waitForSelector('body.da-san-sang');
+    await trang.waitForTimeout(600);
+    await chup(trang, `vat-lieu-a-khay-${nhan}`, { fullPage: laDT });
+    await kiemTraChuSvg(trang, `1.3 a) khay ${nhan}`);
+    // bấm chọn thẻ rồi bấm vào ô nhóm: một lần đúng, một lần sai
+    const xepThe = async (ten, nhom) => {
+      await trang.locator('.the-vl', { hasText: ten }).click();
+      await trang.locator(`.o-nhom[data-nhom="${nhom}"] .vung-tha`).click();
+    };
+    await xepThe('Mica', 'cach-dien');
+    await xepThe('Gang', 'dan-dien');
+    await trang.waitForTimeout(600);
+    await chup(trang, `vat-lieu-a-dang-xep-${nhan}`, { fullPage: laDT });
+    await kiemTraChuSvg(trang, `1.3 a) đang xếp ${nhan}`);
+    await trang.locator('#pl-dap-an').click();
+    await trang.waitForTimeout(400);
+    await chup(trang, `vat-lieu-a-dap-an-${nhan}`, { fullPage: laDT });
+    await kiemTraChuSvg(trang, `1.3 a) đáp án ${nhan}`);
+    await trang.selectOption('#chon-kich-ban', 'mba');
+    await trang.locator('.hang-bp[data-bp="day-quan-cao"]').click();
+    await trang.waitForTimeout(400);
+    await chup(trang, `vat-lieu-b-mba-${nhan}`, { fullPage: laDT });
+    await kiemTraChuSvg(trang, `1.3 b) máy biến áp ${nhan}`);
+    await trang.locator('#mba-to-mau').check();
+    await trang.waitForTimeout(300);
+    await chup(trang, `vat-lieu-b-to-mau-${nhan}`, { fullPage: laDT });
+    await trang.selectOption('#chon-kich-ban', 'nhiet-do');
+    await trang.waitForTimeout(1500);
+    await chup(trang, `vat-lieu-c-nhiet-do-${nhan}`, { fullPage: laDT });
+    await kiemTraChuSvg(trang, `1.3 c) cấp cách điện ${nhan}`);
+    await trang.locator('#nut-trinh-chieu').click();
+    for (let k = 0; k < 3; k++) await trang.keyboard.press('ArrowRight');
+    await trang.waitForTimeout(800);
+    await chup(trang, `vat-lieu-trinh-chieu-${nhan}`);
+    await trang.keyboard.press('Escape');
+    await trang.locator('#nut-cau-hoi').click();
+    await trang.locator('.ch-phuong-an').nth(1).click();
+    await chup(trang, `vat-lieu-cau-hoi-${nhan}`);
+    await ctx.close();
+  }
+  // Trang 2.1–2.3 – Định nghĩa, vai trò, công dụng của MBA
+  {
+    const { ctx, trang } = await moTrang(kt, '/khai-niem-mba.html', `khai-niem-mba ${nhan}`);
+    await trang.waitForSelector('body.da-san-sang');
+    await trang.waitForTimeout(1200);
+    await chup(trang, `mba-a-dinh-nghia-${nhan}`, { fullPage: laDT });
+    await kiemTraChuSvg(trang, `2.1 a) định nghĩa ${nhan}`);
+    await trang.locator('#dn-mot-chieu').check();
+    await trang.waitForTimeout(600);
+    await chup(trang, `mba-a-mot-chieu-${nhan}`, { fullPage: laDT });
+    await kiemTraChuSvg(trang, `2.1 a) một chiều ${nhan}`);
+    await trang.selectOption('#chon-kich-ban', 'truyen-tai');
+    await trang.locator('[data-ud="500"]').click();
+    await trang.waitForTimeout(1200);
+    await chup(trang, `mba-b-truyen-tai-${nhan}`, { fullPage: laDT });
+    await kiemTraChuSvg(trang, `2.2 b) truyền tải 500 kV ${nhan}`);
+    await trang.locator('[data-ud="21"]').click();
+    await trang.waitForTimeout(800);
+    await chup(trang, `mba-b-21kV-${nhan}`, { fullPage: laDT });
+    await kiemTraChuSvg(trang, `2.2 b) truyền tải 21 kV ${nhan}`);
+    await trang.selectOption('#chon-kich-ban', 'chuyen-dung');
+    await trang.waitForTimeout(1500);
+    await chup(trang, `mba-c-chuyen-dung-${nhan}`, { fullPage: laDT });
+    await kiemTraChuSvg(trang, `2.3 c) chuyên dụng ${nhan}`);
+    await trang.locator('#nut-trinh-chieu').click();
+    for (let k = 0; k < 4; k++) await trang.keyboard.press('ArrowRight');
+    await trang.waitForTimeout(1200);
+    await chup(trang, `mba-trinh-chieu-${nhan}`);
+    await trang.keyboard.press('Escape');
+    await trang.locator('#nut-cau-hoi').click();
+    await trang.locator('.ch-phuong-an').nth(1).click();
+    await chup(trang, `mba-cau-hoi-${nhan}`);
+    await ctx.close();
+  }
+  // Trang 2.4 – Cấu tạo MBA
+  {
+    const { ctx, trang } = await moTrang(kt, '/cau-tao-mba.html', `cau-tao-mba ${nhan}`);
+    await trang.waitForSelector('body.da-san-sang');
+    await trang.waitForTimeout(800);
+    await chup(trang, `cau-tao-a-ruot-${nhan}`, { fullPage: laDT });
+    await kiemTraChuSvg(trang, `2.4 a) ruột máy ${nhan}`);
+    await trang.locator('#lr-tu-dong').click();
+    await trang.waitForTimeout(2600);
+    await trang.locator('#lr-la-thep').uncheck();
+    await trang.waitForTimeout(400);
+    await chup(trang, `cau-tao-a-dang-lap-${nhan}`, { fullPage: laDT });
+    await kiemTraChuSvg(trang, `2.4 a) đang lắp, lõi liền ${nhan}`);
+    await trang.selectOption('#chon-kich-ban', 'day-quan');
+    await trang.locator('.o-kieu[data-kieu="c"] .ten-kieu').click();
+    await trang.waitForTimeout(1500);
+    await chup(trang, `cau-tao-b-dong-tam-${nhan}`, { fullPage: laDT });
+    await kiemTraChuSvg(trang, `2.4 b) đồng tâm ${nhan}`);
+    await trang.locator('[data-sx="xen-ke"]').click();
+    await trang.waitForTimeout(700);
+    await chup(trang, `cau-tao-b-xen-ke-${nhan}`, { fullPage: laDT });
+    await kiemTraChuSvg(trang, `2.4 b) xen kẽ ${nhan}`);
+    await trang.selectOption('#chon-kich-ban', 'vo-may');
+    await trang.locator('.hang-bp[data-bp="binh"] .nen-hang-bp').click();
+    await trang.locator('#vm-nhiet').fill('90');
+    await trang.waitForTimeout(1200);
+    await chup(trang, `cau-tao-c-vo-may-${nhan}`, { fullPage: laDT });
+    await kiemTraChuSvg(trang, `2.4 c) vỏ máy ${nhan}`);
+    await trang.locator('#nut-trinh-chieu').click();
+    for (let k = 0; k < 3; k++) await trang.keyboard.press('ArrowRight');
+    await trang.waitForTimeout(1600);
+    await chup(trang, `cau-tao-trinh-chieu-${nhan}`);
+    await trang.keyboard.press('Escape');
+    await trang.locator('#nut-cau-hoi').click();
+    await trang.locator('.ch-phuong-an').nth(1).click();
+    await chup(trang, `cau-tao-cau-hoi-${nhan}`);
+    await ctx.close();
+  }
+  // Các trang phần II–VI dùng khung chung: chụp mỗi kịch bản, một bước trình chiếu và câu hỏi
+  for (const [tep, ma, dsKichBan] of BAI_MBA) {
+    const { ctx, trang } = await moTrang(kt, `/${tep}.html`, `${tep} ${nhan}`);
+    await trang.waitForSelector('body.da-san-sang');
+    for (const kb of dsKichBan) {
+      await trang.selectOption('#chon-kich-ban', kb);
+      await trang.waitForTimeout(1200);
+      await chup(trang, `${tep}-${kb}-${nhan}`, { fullPage: laDT });
+      await kiemTraChuSvg(trang, `${ma} ${kb} ${nhan}`);
+    }
+    await trang.locator('#nut-trinh-chieu').click();
+    for (let k = 0; k < 2; k++) await trang.keyboard.press('ArrowRight');
+    await trang.waitForTimeout(1000);
+    await chup(trang, `${tep}-trinh-chieu-${nhan}`);
+    await trang.keyboard.press('Escape');
+    await trang.locator('#nut-cau-hoi').click();
+    await trang.locator('.ch-phuong-an').nth(1).click();
+    await chup(trang, `${tep}-cau-hoi-${nhan}`);
     await ctx.close();
   }
   // Trang mô phỏng 1.1

@@ -1,0 +1,100 @@
+/* cau-tao-mba.css — Phần riêng của trang 2.4 (cấu tạo MBA); dùng chung lớp SVG với cam-ung-dien-tu.css */
+.an { fill: none; stroke: none; visibility: hidden; }
+.chu-kq { font-size: 19px; fill: #13202b; }
+.chu-kq.dam { font-weight: 800; fill: #2e7d32; }
+.chu-kq.dam.xau { fill: #c62828; }
+.duong-chi { fill: none; stroke: #13202b; stroke-width: 1.5; }
+.chu-tg { font-size: 24px; font-weight: 800; fill: #263238; font-family: "Times New Roman", serif !important; pointer-events: none; }
+
+/* ---------- Lõi thép ---------- */
+.nen-la-thep { fill: #b0bec5; }
+.vach-la-thep { stroke: #90a4ae; stroke-width: 1.4; }
+.loi-mba { stroke: #546e7a; stroke-width: 2; }
+.loi-mba.doc { fill: url(#la-doc); }
+.loi-mba.ngang { fill: url(#la-ngang); }
+.cuon-ha { fill: #2a78d6; stroke: #1a4f96; stroke-width: 1.5; }
+.cuon-ca { fill: #d62828; stroke: #8e1b1b; stroke-width: 1.5; }
+.duong-phi { fill: none; stroke: #ffd166; stroke-width: 5; stroke-dasharray: 6 30; stroke-linecap: round; }
+.so-chu-thich { font-size: 24px; font-weight: 800; fill: #13202b; }
+.mat-cat-thep { fill: #cfd8dc; }
+.lop-son { fill: #f2c94c; }
+.vien-mat-cat { fill: none; stroke: #546e7a; stroke-width: 2.5; }
+.ky-hieu-phi { font-size: 20px; fill: #2a78d6; opacity: .45; }
+.vong-xoay { fill: none; stroke: #d62828; stroke-dasharray: 10 5; }
+.vong-xoay.lon { stroke-width: 6; }
+.vong-xoay.nho { stroke-width: 3; }
+.nen-hang-buoc { fill: #f7fafc; stroke: #dfe7ee; }
+.cham-buoc { fill: #cfd9e3; }
+.so-buoc { font-size: 15px; font-weight: 800; fill: #1d3557; }
+.hang-buoc.xong .cham-buoc { fill: #2e7d32; }
+.hang-buoc.xong .so-buoc { fill: #fff; }
+.hang-buoc.dang .nen-hang-buoc { fill: #fff8e1; stroke: #f2a900; stroke-width: 2.5; }
+.hang-buoc.dang .cham-buoc { fill: #f2a900; }
+.hang-buoc.dang .ten-buoc { font-weight: 800; fill: #13202b; }
+
+/* ---------- Dây quấn ---------- */
+.truc-doi-xung { stroke: #13202b; stroke-width: 1.2; stroke-dasharray: 12 5 2 5; }
+.vien-ha { stroke: #1a4f96; stroke-width: 1.5; }
+.vien-ca { stroke: #8e1b1b; stroke-width: 1.5; }
+.sap-xep { transition: opacity .45s; }
+.nhan-hc { font-size: 22px; font-weight: 800; font-style: italic; font-family: "Times New Roman", serif !important; }
+.nhan-hc.ha { fill: #1a4f96; }
+.nhan-hc.ca { fill: #8e1b1b; }
+.kieu-dong-tam { transition: opacity .3s; }
+.kieu-dong-tam.mo { opacity: .35; }
+.o-kieu { cursor: pointer; }
+.nen-o-kieu { fill: #f7fafc; stroke: #dfe7ee; stroke-width: 1.5; }
+.o-kieu:hover .nen-o-kieu { fill: #eef4fa; }
+.o-kieu.chon .nen-o-kieu { fill: #fff8e1; stroke: #f2a900; stroke-width: 3; }
+.ten-kieu { font-size: 21px; font-weight: 800; fill: #1d3557; }
+.ong-cach-dien { fill: #fff3c4; stroke: #c9a227; }
+.tiet-dien-tron { fill: #e0a36a; stroke: #8a4b14; stroke-width: 1.2; }
+.vanh-dau { fill: #fff; stroke: #455a64; stroke-width: 1.5; }
+.tiet-dien-bet, .nhom-soi, .banh-day { fill: #f3c08b; stroke: #8a4b14; stroke-width: 1.4; }
+.vach-soi { stroke: #8a4b14; stroke-width: 1; }
+.bang-truoc { fill: #e7b27a; stroke: #8a4b14; stroke-width: 1.2; opacity: .85; }
+.chuyen-banh { stroke: #8a4b14; stroke-width: 3; }
+.duong-quan { fill: none; stroke: #ff8f00; stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; opacity: 0; }
+.o-kieu.chon .duong-quan { opacity: .9; }
+
+/* ---------- Vỏ máy ---------- */
+.bo-phan, .so-bp, .hang-bp { cursor: pointer; }
+.ban-ve .bo-phan { transition: opacity .2s; }
+.ban-ve.co-chon .bo-phan:not(.chon) { opacity: .5; }
+.ban-ve .bo-phan.chon { filter: drop-shadow(0 0 6px #f2a900) drop-shadow(0 0 2px #f2a900); }
+.ong-canh { fill: #78909c; }
+.la-canh { fill: #b0bec5; stroke: #607d8b; stroke-width: 1.5; }
+.vo-thung { fill: #78909c; stroke: #546e7a; stroke-width: 2; }
+.ray-chan { fill: none; stroke: #546e7a; stroke-width: 6; }
+.dau-thung { fill: #f0c46a; fill-opacity: .55; transition: fill .4s; }
+.mat-vo { fill: #a7b6c2; }
+.gan-vo { stroke: #8496a5; stroke-width: 6; }
+.vien-thung { fill: none; stroke: #546e7a; stroke-width: 6; }
+.vien-thung.cat { stroke-dasharray: 14 8; }
+.moc-treo { fill: none; stroke: #455a64; stroke-width: 5; stroke-linecap: round; }
+.tan-su { fill: #8d6e63; stroke: #5d4037; stroke-width: 1.2; }
+.than-su { fill: #a1887f; }
+.dau-su { fill: #607d8b; }
+.gia-do { fill: #78909c; }
+.vo-binh { fill: #eceff1; stroke: #546e7a; stroke-width: 3; }
+.dau-binh { fill: #e8a33a; transition: y .5s, height .5s; }
+.nhan-mba { font-size: 16px; font-weight: 700; fill: #13202b; }
+.hat-dau { fill: #ffb74d; stroke: #fff; stroke-width: 1.2; }
+.hat-dau.nong { fill: #e53935; }
+.hat-dau.nguoi { fill: #1e88e5; }
+.so-bp circle { fill: #1d3557; stroke: #fff; stroke-width: 2.5; }
+.so-bp text { font-size: 17px; font-weight: 800; fill: #fff; pointer-events: none; }
+.so-bp.chon circle { fill: #f2a900; }
+.so-bp.chon text { fill: #13202b; }
+.nen-hang-bp { fill: transparent; }
+.hang-bp:hover .nen-hang-bp { fill: #eef4fa; }
+.hang-bp.chon .nen-hang-bp { fill: #fff3cd; stroke: #f2a900; stroke-width: 2; }
+.so-hang-bp { font-size: 17px; font-weight: 800; fill: #1d3557; }
+.ten-hang-bp { pointer-events: none; }
+.chi-tiet-bp { font: 16px/1.45 var(--font); color: #13202b; }
+.chi-tiet-bp h3 { margin: 4px 0 6px; font-size: 21px; color: #1d3557; display: flex; align-items: center; gap: 10px; }
+.chi-tiet-bp h4 { margin: 14px 0 4px; font-size: 17px; color: #1d3557; }
+.chi-tiet-bp .so-tron { display: inline-grid; place-items: center; min-width: 30px; height: 30px; padding: 0 6px; border-radius: 15px; background: #f2a900; color: #13202b; font-size: 15px; }
+.chi-tiet-bp p { margin: 0; }
+.chi-tiet-bp ul { margin: 0; padding-left: 1.2em; display: grid; gap: 4px; font-size: 15px; }
+.chu-o-kieu { font-size: 15.5px; fill: #4a5b6b; }

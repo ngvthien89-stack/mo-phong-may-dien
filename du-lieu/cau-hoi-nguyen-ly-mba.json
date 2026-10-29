@@ -1,0 +1,66 @@
+{
+  "_huongDan": "Ngân hàng câu hỏi bài 2.5–2.7. dapAn là số thứ tự lựa chọn đúng, bắt đầu từ 0.",
+  "soCauMoiLan": 5,
+  "cauHoi": [
+    {
+      "cauHoi": "Từ thông trong lõi thép MBA khi đặt điện áp hình sin vào sơ cấp có dạng:",
+      "luaChon": ["Φ = Φm (không đổi)", "Φ = Φm·sin ωt", "Φ tăng tuyến tính theo t", "Φ = 0"],
+      "dapAn": 1,
+      "giaiThich": "Dòng điện i₁ sinh ra trong lõi thép từ thông biến thiên Φ = Φm·sin ωt, ω = 2πf."
+    },
+    {
+      "cauHoi": "Giá trị hiệu dụng sđđ dây quấn sơ cấp E₁ bằng:",
+      "luaChon": ["4,44·f·w₁·Φm", "f·w₁·Φm", "√2·f·w₁·Φm", "w₁·Φm/f"],
+      "dapAn": 0,
+      "giaiThich": "E₁ = w₁ωΦm/√2 = 4,44·f·w₁·Φm."
+    },
+    {
+      "cauHoi": "So với từ thông Φ, sđđ e₁ và e₂:",
+      "luaChon": ["Cùng pha với Φ", "Vượt trước Φ góc π/2", "Chậm sau Φ góc π/2", "Ngược pha với Φ"],
+      "dapAn": 2,
+      "giaiThich": "e = √2·E·sin(ωt − π/2) trong khi Φ = Φm·sin ωt: sđđ chậm sau từ thông π/2."
+    },
+    {
+      "cauHoi": "Hệ số biến áp k được định nghĩa là:",
+      "luaChon": ["k = w₂/w₁", "k = w₁/w₂ = E₁/E₂", "k = I₁/I₂", "k = S₁/S₂"],
+      "dapAn": 1,
+      "giaiThich": "Lấy E₁ chia E₂: E₁/E₂ = w₁/w₂ = k."
+    },
+    {
+      "cauHoi": "MBA có w₁ = 1100 vòng, w₂ = 20 vòng, U₁ = 22 kV. Bỏ qua điện áp rơi trên dây quấn, U₂ bằng:",
+      "luaChon": ["0,4 kV", "4 kV", "1,21 kV", "40 kV"],
+      "dapAn": 0,
+      "giaiThich": "k = 1100/20 = 55; U₂ ≈ U₁/k = 22/55 = 0,4 kV."
+    },
+    {
+      "cauHoi": "Với MBA 3 pha, điện áp định mức ghi trên nhãn máy là:",
+      "luaChon": ["Điện áp pha", "Điện áp dây", "Điện áp ngắn mạch", "Điện áp không tải"],
+      "dapAn": 1,
+      "giaiThich": "Với máy 1 pha là điện áp pha, với máy 3 pha là điện áp dây."
+    },
+    {
+      "cauHoi": "Công suất định mức của MBA 3 pha được tính theo:",
+      "luaChon": ["S = U₁đm·I₁đm", "S = 3·U₁đm·I₁đm", "S = √3·U₁đm·I₁đm", "S = U₁đm·I₂đm"],
+      "dapAn": 2,
+      "giaiThich": "MBA 3 pha: S = √3·U₁đm·I₁đm = √3·U₂đm·I₂đm."
+    },
+    {
+      "cauHoi": "MBA 3 pha 630 kVA, U₂đm = 0,4 kV. Dòng điện định mức thứ cấp I₂đm xấp xỉ:",
+      "luaChon": ["1575 A", "909,3 A", "525 A", "16,5 A"],
+      "dapAn": 1,
+      "giaiThich": "I₂đm = S/(√3·U₂đm) = 630000/(√3·400) ≈ 909,3 A (bài tập 2)."
+    },
+    {
+      "cauHoi": "Sđđ sơ cấp và sđđ thứ cấp của MBA:",
+      "luaChon": ["Khác tần số, cùng trị số hiệu dụng", "Cùng tần số, trị số hiệu dụng khác nhau", "Khác tần số và trị số", "Luôn bằng nhau"],
+      "dapAn": 1,
+      "giaiThich": "Sđđ sơ cấp và sđđ thứ cấp có cùng tần số nhưng trị số hiệu dụng khác nhau."
+    },
+    {
+      "cauHoi": "Thông số nào KHÔNG được nêu là thông số ghi trên nhãn máy theo slide 42?",
+      "luaChon": ["Điện áp ngắn mạch Un%", "Tổ nối dây", "Tần số", "Điện trở cách điện của vỏ"],
+      "dapAn": 3,
+      "giaiThich": "Trên nhãn máy còn ghi: điện áp ngắn mạch Un%, tổ nối dây, tần số, chế độ làm việc, tiêu chuẩn sản xuất…"
+    }
+  ]
+}

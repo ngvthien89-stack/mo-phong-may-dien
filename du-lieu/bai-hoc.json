@@ -1,8 +1,8 @@
 {
-  "_huongDan": "trangThai: \"san-sang\" (đã có trang) hoặc \"sap-ra-mat\". Các bài 'sắp ra mắt' dưới đây là ví dụ, giảng viên sửa theo đề cương môn học.",
+  "_huongDan": "trangThai: \"san-sang\" (đã có trang) hoặc \"sap-ra-mat\". Tên chương theo mục lục slide (Chuong1-MBA.pdf, slide 3–4); mô tả các chương sắp ra mắt là ví dụ, giảng viên sửa theo đề cương.",
   "chuong": [
     {
-      "ten": "Chương 1. Tổng quan về hệ thống năng lượng điện",
+      "ten": "Chương 1. Máy biến áp – I. Tổng quan về hệ thống năng lượng điện",
       "baiHoc": [
         {
           "ma": "1.1",
@@ -24,35 +24,144 @@
           "moTa": "Thanh dẫn mang dòng điện trong từ trường chịu lực F_đt = B·i·l; chiều lực theo quy tắc bàn tay trái; nguyên lý động cơ.",
           "duongDan": "luc-dien-tu.html",
           "trangThai": "san-sang"
+        },
+        {
+          "ma": "1.2.c",
+          "ten": "Định luật toàn dòng điện",
+          "moTa": "∮H·dl = Σi = F: đi một vòng quanh đường cong kín để kiểm chứng; áp dụng cho mạch từ H·l = w·i, dòng điện từ hóa, sức từ động.",
+          "duongDan": "toan-dong-dien.html",
+          "trangThai": "san-sang"
+        },
+        {
+          "ma": "1.3",
+          "ten": "Các loại vật liệu dùng trong máy điện",
+          "moTa": "Trò chơi xếp vật liệu dẫn điện, dẫn từ, cách điện; vật liệu trong máy biến áp; 7 cấp cách điện theo nhiệt độ làm việc cho phép.",
+          "duongDan": "vat-lieu.html",
+          "trangThai": "san-sang"
         }
       ]
     },
     {
-      "ten": "Các chương tiếp theo",
+      "ten": "Chương 1. Máy biến áp – II. Khái niệm chung về máy biến áp",
       "baiHoc": [
         {
-          "ma": "",
-          "ten": "Máy biến áp",
-          "moTa": "Cấu tạo, nguyên lý làm việc, mạch tương đương.",
+          "ma": "2.1–2.3",
+          "ten": "Định nghĩa, vai trò và công dụng của máy biến áp",
+          "moTa": "MBA biến đổi điện áp xoay chiều, giữ nguyên tần số; ký hiệu; vì sao tăng điện áp truyền tải giảm I, ΔU, ΔP; MBA chuyên dụng, máy biến dòng điện và máy biến điện áp.",
+          "duongDan": "khai-niem-mba.html",
+          "trangThai": "san-sang"
+        },
+        {
+          "ma": "2.4",
+          "ten": "Cấu tạo máy biến áp",
+          "moTa": "Lắp ráp ruột MBA 3 pha kiểu trụ từng bước; lá thép phủ sơn cách điện và dòng điện xoáy; dây quấn đồng tâm, xen kẽ; vỏ máy, bình giãn dầu.",
+          "duongDan": "cau-tao-mba.html",
+          "trangThai": "san-sang"
+        },
+        {
+          "ma": "2.5–2.7",
+          "ten": "Nguyên lý làm việc, hệ số biến áp, thông số định mức",
+          "moTa": "u₁ → i₁ → Φ = Φm·sin ωt → e₁, e₂; E = 4,44·f·w·Φm; k = w₁/w₂ ≈ U₁/U₂; nhãn máy và dòng điện định mức S = √3·U·I.",
+          "duongDan": "nguyen-ly-mba.html",
+          "trangThai": "san-sang"
+        }
+      ]
+    },
+    {
+      "ten": "Chương 1. Máy biến áp – III. Quan hệ điện từ trong MBA",
+      "baiHoc": [
+        {
+          "ma": "3.1–3.2",
+          "ten": "Phương trình cân bằng và quy đổi MBA",
+          "moTa": "U̇₁ = −Ė₁ + İ₁Z₁, U̇₂ = Ė₂ − İ₂Z₂; cân bằng stđ İ₁ = İ₀ + (−İ′₂); quy đổi E′₂ = kE₂, I′₂ = I₂/k, Z′₂ = k²Z₂ – số liệu bài tập 4.",
+          "duongDan": "phuong-trinh-mba.html",
+          "trangThai": "san-sang"
+        },
+        {
+          "ma": "3.3",
+          "ten": "Sơ đồ thay thế và đồ thị véc tơ của MBA",
+          "moTa": "Hình a → sơ đồ hình T → sơ đồ đơn giản (Rn, Xn); đồ thị véc tơ khi tải điện cảm, điện dung; sai khác giữa hai sơ đồ.",
+          "duongDan": "so-do-thay-the.html",
+          "trangThai": "san-sang"
+        },
+        {
+          "ma": "3.4",
+          "ten": "Thí nghiệm không tải, ngắn mạch",
+          "moTa": "Phòng thí nghiệm ảo: vặn bộ điều chỉnh điện áp, đọc đồng hồ; tính k, i₀%, r₀, z₀, x₀, cosφ₀ và zn, rn, xn, Un%, cosφn – khớp lời giải bài tập 4.",
+          "duongDan": "thi-nghiem-mba.html",
+          "trangThai": "san-sang"
+        }
+      ]
+    },
+    {
+      "ten": "Chương 1. Máy biến áp – IV. Các chế độ làm việc của MBA",
+      "baiHoc": [
+        {
+          "ma": "4.1–4.3",
+          "ten": "Giản đồ năng lượng, độ thay đổi điện áp, hiệu suất",
+          "moTa": "Dòng công suất P, Q qua MBA (tải cảm, dung); ΔU% = f(β), f(cosφ₂) và đầu phân áp ±2,5 %, ±5 %; tổn hao, η(β), β tối ưu = √(P₀/Pn).",
+          "duongDan": "che-do-lam-viec.html",
+          "trangThai": "san-sang"
+        }
+      ]
+    },
+    {
+      "ten": "Chương 1. Máy biến áp – V. Máy biến áp ba pha",
+      "baiHoc": [
+        {
+          "ma": "5.1–5.2",
+          "ten": "MBA ba pha và tổ nối dây",
+          "moTa": "Từ ba MBA một pha đến MBA ba trụ (ΦA + ΦB + ΦC = 0); ký hiệu đầu dây; tự lắp sơ đồ Y/Δ, xem đồ thị véc tơ và đồng hồ tổ nối dây.",
+          "duongDan": "mba-ba-pha.html",
+          "trangThai": "san-sang"
+        },
+        {
+          "ma": "5.3–5.4",
+          "ten": "MBA làm việc song song, lưu ý vận hành",
+          "moTa": "Ba điều kiện làm việc song song; phân bố tải tỉ lệ nghịch với un (bài tập 3), máy nào quá tải trước; năm lưu ý vận hành MBA.",
+          "duongDan": "song-song-mba.html",
+          "trangThai": "san-sang"
+        }
+      ]
+    },
+    {
+      "ten": "Chương 1. Máy biến áp – VI. Một số bài tập",
+      "baiHoc": [
+        {
+          "ma": "VI",
+          "ten": "Bốn bài tập chương 1",
+          "moTa": "Tỷ số biến áp pha; tổn hao và hiệu suất cực đại; hai MBA song song; thông số sơ đồ thay thế – lời giải từng bước, đổi số liệu, đối chiếu kết quả slide.",
+          "duongDan": "bai-tap-chuong-1.html",
+          "trangThai": "san-sang"
+        }
+      ]
+    },
+    {
+      "ten": "Các chương tiếp theo (theo mục lục học phần Máy điện I)",
+      "baiHoc": [
+        {
+          "ma": "Ch. 2",
+          "ten": "Những vấn đề chung về máy điện quay",
+          "moTa": "",
           "duongDan": "",
           "trangThai": "sap-ra-mat"
         },
         {
-          "ma": "",
+          "ma": "Ch. 3",
           "ten": "Máy điện không đồng bộ",
           "moTa": "Từ trường quay, hệ số trượt, đặc tính cơ.",
           "duongDan": "",
           "trangThai": "sap-ra-mat"
         },
         {
-          "ma": "",
+          "ma": "Ch. 4",
           "ten": "Máy điện đồng bộ",
           "moTa": "Máy phát đồng bộ, hòa đồng bộ, đặc tính góc.",
           "duongDan": "",
           "trangThai": "sap-ra-mat"
         },
         {
-          "ma": "",
+          "ma": "Ch. 5",
           "ten": "Máy điện một chiều",
           "moTa": "Cổ góp, phản ứng phần ứng, các phương pháp kích từ.",
           "duongDan": "",

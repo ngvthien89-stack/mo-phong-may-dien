@@ -1,0 +1,60 @@
+{
+  "_huongDan": "Câu hỏi bài 1.2.c. Mỗi lần làm bài lấy ngẫu nhiên 'soCauMoiLan' câu. 'dapAn' là chỉ số lựa chọn đúng, bắt đầu từ 0.",
+  "soCauMoiLan": 5,
+  "cauHoi": [
+    {
+      "cauHoi": "Theo định luật toàn dòng điện, tích phân ∮H·dl dọc đường cong kín C bằng:",
+      "luaChon": ["Tổng đại số các dòng điện xuyên qua mặt giới hạn bởi C", "Tổng các dòng điện trong toàn không gian", "Chiều dài đường cong C", "Từ thông qua mặt giới hạn bởi C"],
+      "dapAn": 0,
+      "giaiThich": "∮H·dl = Σi_k: chỉ các dòng điện được C bao quanh mới đóng góp, có kể đến dấu."
+    },
+    {
+      "cauHoi": "Đường cong C (đi ngược chiều kim đồng hồ) bao dây 5 A đi ra (⊙) và dây 3 A đi vào (⊗); dây 4 A nằm ngoài C. ∮H·dl bằng:",
+      "luaChon": ["12 A", "8 A", "2 A", "6 A"],
+      "dapAn": 2,
+      "giaiThich": "Tổng đại số các dòng được bao quanh: +5 − 3 = 2 A. Dây 4 A nằm ngoài C không đóng góp."
+    },
+    {
+      "cauHoi": "Một dây dẫn nằm ngoài đường cong kín C thì:",
+      "luaChon": ["Không tạo từ trường trên C", "Tạo từ trường trên C nhưng không đóng góp vào ∮H·dl", "Đóng góp một nửa dòng điện của nó", "Làm ∮H·dl bằng 0"],
+      "dapAn": 1,
+      "giaiThich": "Từ trường của dây vẫn có mặt trên C, nhưng phần đóng góp dương và âm dọc theo C triệt tiêu nhau."
+    },
+    {
+      "cauHoi": "Mạch từ có cuộn dây w = 200 vòng, dòng điện i = 2 A, chiều dài trung bình l = 0,5 m. Cường độ từ trường H là:",
+      "luaChon": ["200 A/m", "400 A/m", "800 A/m", "1600 A/m"],
+      "dapAn": 2,
+      "giaiThich": "H·l = w·i ⇒ H = 200·2/0,5 = 800 A/m."
+    },
+    {
+      "cauHoi": "Tích số w·i trong mạch từ được gọi là:",
+      "luaChon": ["Sức điện động", "Sức từ động", "Từ thông móc vòng", "Từ cảm"],
+      "dapAn": 1,
+      "giaiThich": "F = w·i là sức từ động, đơn vị A·vòng (thường viết A)."
+    },
+    {
+      "cauHoi": "Dòng điện chạy trong cuộn dây để tạo ra từ thông cho mạch từ được gọi là:",
+      "luaChon": ["Dòng điện ngắn mạch", "Dòng điện tải", "Dòng điện từ hóa", "Dòng điện xoáy"],
+      "dapAn": 2,
+      "giaiThich": "Theo slide: dòng điện i tạo ra từ thông cho mạch từ, gọi là dòng điện từ hóa."
+    },
+    {
+      "cauHoi": "Giữ nguyên w và i, tăng chiều dài trung bình l của mạch từ lên 2 lần thì cường độ từ trường H:",
+      "luaChon": ["Tăng 2 lần", "Không đổi", "Giảm 2 lần", "Giảm 4 lần"],
+      "dapAn": 2,
+      "giaiThich": "H = w·i/l tỉ lệ nghịch với l."
+    },
+    {
+      "cauHoi": "Đơn vị của cường độ từ trường H là:",
+      "luaChon": ["T (tesla)", "Wb (vêbe)", "A/m", "V/m"],
+      "dapAn": 2,
+      "giaiThich": "Từ H·l = w·i: H có đơn vị A·vòng/m, thường viết A/m."
+    },
+    {
+      "cauHoi": "Thay đổi hình dạng đường cong kín C nhưng vẫn bao đúng các dây dẫn như cũ thì ∮H·dl:",
+      "luaChon": ["Không đổi", "Tăng theo chu vi của C", "Giảm theo diện tích của C", "Bằng 0"],
+      "dapAn": 0,
+      "giaiThich": "Kết quả chỉ phụ thuộc tổng dòng điện được bao quanh, không phụ thuộc hình dạng C."
+    }
+  ]
+}
