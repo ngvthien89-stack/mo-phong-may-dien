@@ -293,6 +293,44 @@ for (const [nhan, kt] of [['1920x1080', { width: 1920, height: 1080 }], ['390x84
     await chup(trang, `mba-cau-hoi-${nhan}`);
     await ctx.close();
   }
+  // Trang 2.4 – Cấu tạo MBA
+  {
+    const { ctx, trang } = await moTrang(kt, '/cau-tao-mba.html', `cau-tao-mba ${nhan}`);
+    await trang.waitForSelector('body.da-san-sang');
+    await trang.waitForTimeout(800);
+    await chup(trang, `cau-tao-a-ruot-${nhan}`, { fullPage: laDT });
+    await kiemTraChuSvg(trang, `2.4 a) ruột máy ${nhan}`);
+    await trang.locator('#lr-tu-dong').click();
+    await trang.waitForTimeout(2600);
+    await trang.locator('#lr-la-thep').uncheck();
+    await trang.waitForTimeout(400);
+    await chup(trang, `cau-tao-a-dang-lap-${nhan}`, { fullPage: laDT });
+    await kiemTraChuSvg(trang, `2.4 a) đang lắp, lõi liền ${nhan}`);
+    await trang.selectOption('#chon-kich-ban', 'day-quan');
+    await trang.locator('.o-kieu[data-kieu="c"] .ten-kieu').click();
+    await trang.waitForTimeout(1500);
+    await chup(trang, `cau-tao-b-dong-tam-${nhan}`, { fullPage: laDT });
+    await kiemTraChuSvg(trang, `2.4 b) đồng tâm ${nhan}`);
+    await trang.locator('[data-sx="xen-ke"]').click();
+    await trang.waitForTimeout(700);
+    await chup(trang, `cau-tao-b-xen-ke-${nhan}`, { fullPage: laDT });
+    await kiemTraChuSvg(trang, `2.4 b) xen kẽ ${nhan}`);
+    await trang.selectOption('#chon-kich-ban', 'vo-may');
+    await trang.locator('.hang-bp[data-bp="binh"] .nen-hang-bp').click();
+    await trang.locator('#vm-nhiet').fill('90');
+    await trang.waitForTimeout(1200);
+    await chup(trang, `cau-tao-c-vo-may-${nhan}`, { fullPage: laDT });
+    await kiemTraChuSvg(trang, `2.4 c) vỏ máy ${nhan}`);
+    await trang.locator('#nut-trinh-chieu').click();
+    for (let k = 0; k < 3; k++) await trang.keyboard.press('ArrowRight');
+    await trang.waitForTimeout(1600);
+    await chup(trang, `cau-tao-trinh-chieu-${nhan}`);
+    await trang.keyboard.press('Escape');
+    await trang.locator('#nut-cau-hoi').click();
+    await trang.locator('.ch-phuong-an').nth(1).click();
+    await chup(trang, `cau-tao-cau-hoi-${nhan}`);
+    await ctx.close();
+  }
   // Trang mô phỏng 1.1
   const { ctx, trang } = await moTrang(kt, '/he-thong-dien.html', `he-thong-dien ${nhan}`);
   await trang.waitForSelector('body.da-san-sang');

@@ -50,6 +50,13 @@
           "moTa": "MBA biến đổi điện áp xoay chiều, giữ nguyên tần số; ký hiệu; vì sao tăng điện áp truyền tải giảm I, ΔU, ΔP; MBA chuyên dụng, máy biến dòng điện và máy biến điện áp.",
           "duongDan": "khai-niem-mba.html",
           "trangThai": "san-sang"
+        },
+        {
+          "ma": "2.4",
+          "ten": "Cấu tạo máy biến áp",
+          "moTa": "Lắp ráp ruột MBA 3 pha kiểu trụ từng bước; lá thép phủ sơn cách điện và dòng điện xoáy; dây quấn đồng tâm, xen kẽ; vỏ máy, bình giãn dầu.",
+          "duongDan": "cau-tao-mba.html",
+          "trangThai": "san-sang"
         }
       ]
     },

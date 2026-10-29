@@ -167,3 +167,22 @@ test('khai-niem-mba.json và câu hỏi 2.1–2.3: cấp điện áp theo slide 
   assert.ok(ch.cauHoi.length >= ch.soCauMoiLan);
   for (const c of ch.cauHoi) assert.ok(Number.isInteger(c.dapAn) && c.dapAn >= 0 && c.dapAn < c.luaChon.length, c.cauHoi);
 });
+
+test('cau-tao-mba.json và câu hỏi 2.4: bước trình chiếu hợp lệ, đáp án hợp lệ', () => {
+  const nd = doc('cau-tao-mba.json');
+  const kieu = nd.kieuDayQuan.map((k) => k.id);
+  const boPhan = nd.voMay.boPhan.map((b) => b.id);
+  for (const b of nd.trinhChieu) {
+    assert.ok(b.id && b.tieuDe && b.loiGiang, b.id);
+    const tt = b.trangThai;
+    assert.ok(['loi-thep', 'day-quan', 'vo-may'].includes(tt.kichBan), b.id);
+    if (tt.buoc !== undefined) assert.ok(tt.buoc >= 0 && tt.buoc < nd.lapRap.length, b.id);
+    if (tt.kieu) assert.ok(kieu.includes(tt.kieu), b.id);
+    if (tt.sapXep) assert.ok(['dong-tam', 'xen-ke'].includes(tt.sapXep), b.id);
+    if (tt.boPhan) assert.ok(boPhan.includes(tt.boPhan), b.id);
+    if (tt.mucDau !== undefined) assert.ok(tt.mucDau >= 0 && tt.mucDau <= 1, b.id);
+  }
+  const ch = doc('cau-hoi-cau-tao-mba.json');
+  assert.ok(ch.cauHoi.length >= ch.soCauMoiLan);
+  for (const c of ch.cauHoi) assert.ok(Number.isInteger(c.dapAn) && c.dapAn >= 0 && c.dapAn < c.luaChon.length, c.cauHoi);
+});

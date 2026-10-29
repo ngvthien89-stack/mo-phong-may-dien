@@ -182,6 +182,28 @@ Theo slide 13–24 (`Chuong1-MBA.pdf`, phần II):
 - Hàm thuần trong `js/may-bien-ap.js`, có test.
 - Prompt lưu trong [`docs/prompts/2.1-2.3-khai-niem-mba.md`](docs/prompts/2.1-2.3-khai-niem-mba.md).
 
+## Bài 2.4 – Cấu tạo máy biến áp (`cau-tao-mba.html`)
+
+Theo slide 25–37 (`Chuong1-MBA.pdf`): lõi thép, dây quấn, vỏ máy.
+
+![Bài 2.4 trên máy chiếu](docs/anh/cau-tao-mba-1920x1080.png)
+
+**Kịch bản:**
+
+- a) **Lõi thép – lắp ráp ruột máy:**
+  - Lắp ruột MBA 3 pha kiểu trụ qua 5 bước có hoạt hình.
+  - So sánh lõi liền khối với lõi ghép lá thép phủ sơn cách điện (dòng điện xoáy, minh họa định tính).
+- b) **Dây quấn:** đồng tâm và xen kẽ trên nửa mặt cắt dọc trụ; bốn kiểu dây quấn đồng tâm a–d (slide 29–30).
+- c) **Vỏ máy, bình giãn dầu:**
+  - Bản vẽ đánh số 1–9 như slide 26; cắt bỏ nửa vỏ để thấy ruột máy.
+  - Nhiệt độ dầu (định tính) làm mức dầu trong bình giãn dầu thay đổi; thùng máy luôn đầy dầu.
+
+**Tiện ích khác:**
+
+- Trình chiếu 10 bước; ngân hàng 10 câu hỏi.
+- Hàm thuần trong `js/cau-tao.js`, có test.
+- Prompt lưu trong [`docs/prompts/2.4-cau-tao-mba.md`](docs/prompts/2.4-cau-tao-mba.md).
+
 ## Lưu ý về số liệu
 
 > Các cấp điện áp, công suất phụ tải, đồ thị phụ tải ngày, thông số đường dây… trong `du-lieu/cau-hinh.json`
@@ -200,8 +222,9 @@ luc-dien-tu.html        Bài 1.2.b
 toan-dong-dien.html     Bài 1.2.c
 vat-lieu.html           Bài 1.3
 khai-niem-mba.html      Bài 2.1–2.3
+cau-tao-mba.html        Bài 2.4
 css/                    chung.css, mo-phong.css (bố cục chung các trang mô phỏng), trang-chu.css,
-                        he-thong-dien.css, cam-ung-dien-tu.css, luc-dien-tu.css, toan-dong-dien.css, vat-lieu.css, khai-niem-mba.css
+                        he-thong-dien.css, cam-ung-dien-tu.css, luc-dien-tu.css, toan-dong-dien.css, vat-lieu.css, khai-niem-mba.css, cau-tao-mba.css
 js/
   tinh-toan.js          Hàm tính toán thuần (dòng điện, tổn thất, hiệu suất, phụ tải, tần số) – dùng chung cho trang và test
   so-do.js              Vẽ sơ đồ SVG
@@ -223,6 +246,8 @@ js/
   vat-lieu.js           Trang bài 1.3: trò chơi phân loại, vật liệu trong MBA, cấp cách điện
   may-bien-ap.js        Hàm thuần phần II (so sánh tỉ lệ truyền tải, điện áp chuẩn hóa, loại MBA, độ lệch kim)
   khai-niem-mba.js      Trang bài 2.1–2.3: định nghĩa, ký hiệu, vai trò truyền tải, MBA chuyên dụng
+  cau-tao.js            Hàm thuần bài 2.4 (thứ tự bánh dây xen kẽ, mức dầu bình giãn dầu, giới hạn bước)
+  cau-tao-mba.js        Trang bài 2.4: lắp ráp ruột máy, lá thép, dây quấn, vỏ máy
   tien-ich.js           Hàm tiện ích dùng chung (nạp JSON, định dạng số, vẽ KaTeX)
   trang-chu.js          Trang chủ
 du-lieu/                Nội dung cho giảng viên chỉnh sửa (JSON)
@@ -251,6 +276,8 @@ Các khóa bắt đầu bằng `_` (ví dụ `_ghiChu`) chỉ là chú thích, t
 | `vat-lieu.json` | Bài 1.3: lý thuyết theo slide 11, ba nhóm vật liệu (tên, màu, phím tắt), 15 thẻ vật liệu (`nhom`, `nhomCon`), bảng 7 cấp cách điện, các bộ phận MBA (nhiệm vụ, nguồn slide), các bước trình chiếu. |
 | `cau-hoi-vat-lieu.json` | Ngân hàng câu hỏi bài 1.3. |
 | `khai-niem-mba.json` | Bài 2.1–2.3: lý thuyết theo slide 13–15, các cấp điện áp của sơ đồ slide 14, thông số kịch bản định nghĩa và đo lường, các bước trình chiếu. |
+| `cau-tao-mba.json` | Bài 2.4: lý thuyết theo slide 25–35, các bước lắp ráp, bốn kiểu dây quấn đồng tâm, số bánh CA của dây quấn xen kẽ, các bộ phận theo bản vẽ slide 26, mức dầu bình giãn dầu, các bước trình chiếu. |
+| `cau-hoi-cau-tao-mba.json` | Ngân hàng câu hỏi bài 2.4. |
 | `cau-hoi-khai-niem-mba.json` | Ngân hàng câu hỏi bài 2.1–2.3 (được dùng thẻ `<sub>` cho chỉ số dưới). |
 | `bai-hoc.json` | Danh sách bài trên trang chủ, nhóm theo chương và phần của slide (Chương 1. Máy biến áp – I, II…). `trangThai`: `"san-sang"` (có trang) hoặc `"sap-ra-mat"`. Tên các chương sau theo mục lục slide 3; mô tả là ví dụ, sửa theo đề cương. |
 

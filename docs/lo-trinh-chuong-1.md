@@ -20,7 +20,7 @@ Ký hiệu trạng thái: ✅ đã xong · 🔨 đang làm · ⏳ chưa làm
 | Slide | Bài trên website | Nội dung chính | Trạng thái |
 |---|---|---|---|
 | 13–24 | 2.1–2.3 Định nghĩa, vai trò, công dụng | MBA là thiết bị điện từ tĩnh, giữ nguyên tần số; ký hiệu; truyền tải (↑U → ↓I, ΔU, ΔP); MBA chuyên dụng, máy biến dòng / biến điện áp | ✅ |
-| 25–37 | 2.4 Cấu tạo | Lõi thép, dây quấn (đồng tâm, xen kẽ), vỏ máy | ⏳ |
+| 25–37 | 2.4 Cấu tạo | Lõi thép, dây quấn (đồng tâm, xen kẽ), vỏ máy | ✅ |
 | 38–40 | 2.5–2.6 Nguyên lý làm việc | E = 4,44·f·w·Φm; k = w1/w2 ≈ U1/U2 | ⏳ |
 | 41–42 | 2.7 Thông số định mức | U, I, S định mức; nhãn máy | ⏳ |
 
