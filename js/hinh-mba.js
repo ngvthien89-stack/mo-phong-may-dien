@@ -101,3 +101,56 @@ export function veTruc(cha, o, { nhanX = [], nhanY = [], donViX = '', donViY = '
 
 /** Chuỗi lệnh path từ danh sách điểm [x, y] (tọa độ màn hình). */
 export const duongGap = (ds) => ds.map(([x, y], k) => `${k ? 'L' : 'M'}${x.toFixed(1)} ${y.toFixed(1)}`).join('');
+
+/**
+ * Véc tơ (mũi tên) có nhãn cho đồ thị véc tơ. dat(a, b, nhan) vẽ từ điểm a đến b (tọa độ màn hình).
+ */
+export function veVecto(cha, mau, { day = 3.5, net = '' } = {}) {
+  const g = el('g', { class: 'vecto' }, cha);
+  const than = el('line', { stroke: mau, 'stroke-width': day, 'stroke-linecap': 'round', ...(net ? { 'stroke-dasharray': net } : {}) }, g);
+  const dau = el('path', { fill: mau }, g);
+  const chu = el('text', { class: 'nhan-vecto', fill: mau }, g);
+  return {
+    g,
+    dat(a, b, nhan = '', lechNhan = [8, -8]) {
+      const dx = b[0] - a[0];
+      const dy = b[1] - a[1];
+      const n = Math.hypot(dx, dy);
+      g.style.display = n < 0.5 ? 'none' : '';
+      if (n < 0.5) return;
+      const [ux, uy] = [dx / n, dy / n];
+      const s = Math.min(13, n * 0.45);
+      than.setAttribute('x1', a[0].toFixed(1));
+      than.setAttribute('y1', a[1].toFixed(1));
+      than.setAttribute('x2', (b[0] - ux * s * 0.7).toFixed(1));
+      than.setAttribute('y2', (b[1] - uy * s * 0.7).toFixed(1));
+      dau.setAttribute('d', `M${b[0]} ${b[1]} L${b[0] - ux * s - uy * s * 0.45} ${b[1] - uy * s + ux * s * 0.45} L${b[0] - ux * s + uy * s * 0.45} ${b[1] - uy * s - ux * s * 0.45} Z`);
+      chu.textContent = nhan;
+      chu.setAttribute('x', ((a[0] + b[0]) / 2 + lechNhan[0]).toFixed(1));
+      chu.setAttribute('y', ((a[1] + b[1]) / 2 + lechNhan[1]).toFixed(1));
+    },
+  };
+}
+
+/**
+ * Bảng chữ trong SVG: trả về ma trận ô chữ (o[hang][cot]) để cập nhật nội dung.
+ * cot = [{w, canh: 'start'|'end'|'middle'}], hàng đầu là tiêu đề.
+ */
+export function veBang(cha, x, y, cot, hangH, tieuDe, soHang) {
+  const g = el('g', { class: 'bang-svg' }, cha);
+  const rong = cot.reduce((t, c) => t + c.w, 0);
+  const o = [];
+  for (let h = 0; h <= soHang; h++) {
+    el('rect', { x, y: y + h * hangH, width: rong, height: hangH, class: `hang-bang ${h ? '' : 'dau'}` }, g);
+    let xc = x;
+    o.push(cot.map((c, k) => {
+      const canh = c.canh || 'start';
+      const xt = canh === 'start' ? xc + 10 : canh === 'end' ? xc + c.w - 10 : xc + c.w / 2;
+      xc += c.w;
+      const t = el('text', { x: xt, y: y + h * hangH + hangH / 2 + 6, class: `chu-bang ${h ? '' : 'dam'}`, 'text-anchor': canh }, g);
+      if (!h) t.textContent = tieuDe[k];
+      return t;
+    }));
+  }
+  return { g, o: o.slice(1) };
+}

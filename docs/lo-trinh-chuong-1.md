@@ -27,8 +27,7 @@ Ký hiệu trạng thái: ✅ đã xong · 🔨 đang làm · ⏳ chưa làm
 
 | Slide | Bài trên website | Nội dung chính | Trạng thái |
 |---|---|---|---|
-| 44–47 | 3.1 Phương trình cân bằng | Cân bằng điện áp, cân bằng sức từ động | ⏳ |
-| 48–49 | 3.2 Quy đổi | E2' = k·E2, I2' = I2/k, Z2' = k²·Z2 | ⏳ |
+| 44–49 | 3.1–3.2 Phương trình cân bằng, quy đổi | Cân bằng điện áp, cân bằng sức từ động; E2' = k·E2, I2' = I2/k, Z2' = k²·Z2 | ✅ |
 | 50–53 | 3.3 Sơ đồ thay thế, đồ thị véc tơ | Sơ đồ hình T, sơ đồ đơn giản; tải cảm / dung | ⏳ |
 | 54–57 | 3.4 Thí nghiệm không tải, ngắn mạch | Xác định r0, x0, rn, xn, Un% | ⏳ |
 
@@ -63,6 +62,7 @@ Ký hiệu trạng thái: ✅ đã xong · 🔨 đang làm · ⏳ chưa làm
 Các điểm phát hiện khi đọc slide; website dùng giá trị/đơn vị đúng và ghi chú lại ở đây:
 
 - Slide 8: đơn vị của B ghi "(Wb)"; đơn vị đúng là T = Wb/m² (slide 9 đã ghi T).
+- Slide 49: dòng thứ hai của hệ phương trình quy đổi ghi Z₂, r₂, X₂; sau quy đổi phải là Z′₂, r′₂, X′₂ (như U̇′₂, İ′₂ cùng dòng).
 - Slide 57: tiêu đề ghi "IV. Quan hệ điện từ trong MBA (13/13)", theo mục lục là phần III.
 - Slide 77: U_p2 = 0,4/√3 = 0,2309 kV; slide làm tròn 0,23 kV nên k_p = 65,21. Nếu giữ 0,2309 kV thì k_p ≈ 64,95.
 - Slide 79–84: tiêu đề ghi "V. Máy biến áp ba pha (x/8)", theo mục lục là phần VI. Một số bài tập.

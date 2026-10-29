@@ -64,6 +64,7 @@ async function kiemTraBoCuc(trang, ten) {
 // Trang dùng khung chung (js/khung-trang.js): [tệp, mã bài, các kịch bản]
 const BAI_MBA = [
   ['nguyen-ly-mba', '2.5–2.7', ['nguyen-ly', 'he-so-k', 'dinh-muc']],
+  ['phuong-trinh-mba', '3.1–3.2', ['dien-ap', 'std', 'quy-doi']],
 ];
 
 async function kiemTraChuSvg(trang, ten) {

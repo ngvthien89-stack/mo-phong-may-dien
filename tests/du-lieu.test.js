@@ -190,6 +190,7 @@ test('cau-tao-mba.json và câu hỏi 2.4: bước trình chiếu hợp lệ, đ
 // Các bài dùng khung chung: kiểm tra bước trình chiếu và câu hỏi
 const BAI_KHUNG = [
   ['nguyen-ly-mba', ['nguyen-ly', 'he-so-k', 'dinh-muc']],
+  ['phuong-trinh-mba', ['dien-ap', 'std', 'quy-doi']],
 ];
 for (const [tep, dsKichBan] of BAI_KHUNG) {
   test(`${tep}.json và câu hỏi: bước trình chiếu dùng kịch bản hợp lệ, đáp án hợp lệ`, () => {

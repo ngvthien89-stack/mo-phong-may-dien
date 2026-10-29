@@ -68,6 +68,18 @@
       ]
     },
     {
+      "ten": "Chương 1. Máy biến áp – III. Quan hệ điện từ trong MBA",
+      "baiHoc": [
+        {
+          "ma": "3.1–3.2",
+          "ten": "Phương trình cân bằng và quy đổi MBA",
+          "moTa": "U̇₁ = −Ė₁ + İ₁Z₁, U̇₂ = Ė₂ − İ₂Z₂; cân bằng stđ İ₁ = İ₀ + (−İ′₂); quy đổi E′₂ = kE₂, I′₂ = I₂/k, Z′₂ = k²Z₂ – số liệu bài tập 4.",
+          "duongDan": "phuong-trinh-mba.html",
+          "trangThai": "san-sang"
+        }
+      ]
+    },
+    {
       "ten": "Các chương tiếp theo (theo mục lục học phần Máy điện I)",
       "baiHoc": [
         {

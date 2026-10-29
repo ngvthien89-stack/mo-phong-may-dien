@@ -49,3 +49,12 @@
 .hang-nhan.tinh { fill: #fff8e1; stroke: #f2a900; stroke-width: 2.5; }
 .gt-nhan { font-size: 21px; font-weight: 800; fill: #13202b; font-variant-numeric: tabular-nums; }
 .gt-nhan.mo { font-size: 16px; font-weight: 400; fill: #8a97a3; }
+.nhan-vecto { font-size: 19px; font-weight: 800; font-style: italic; font-family: "Times New Roman", serif !important; paint-order: stroke; stroke: #fff; stroke-width: 4; stroke-linejoin: round; }
+.tu-tan { fill: none; stroke: #eb6834; stroke-width: 2.5; stroke-dasharray: 7 5; }
+.bang-so th, .bang-so td { font-size: 16px; }
+.hang-bang { fill: #fff; stroke: #e3e9ef; }
+.hang-bang.dau { fill: #eef4fa; }
+.chu-bang { font-size: 17px; fill: #13202b; font-variant-numeric: tabular-nums; }
+.chu-bang.dam { font-weight: 800; }
+.chu-bang.nho { font-size: 15px; fill: #4a5b6b; }
+.diem-noi { fill: #37474f; }
