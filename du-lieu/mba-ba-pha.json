@@ -1,0 +1,34 @@
+{
+  "_huongDan": "Nội dung bài 5.1–5.2 theo slide 66–72 (Chuong1-MBA.pdf). Kiểu nối Δ: D1 – đầu đầu mỗi pha nối đầu cuối pha trước (A–Z, B–X, C–Y); D2 – đầu đầu mỗi pha nối đầu cuối pha sau (A–Y, B–Z, C–X).",
+  "lyThuyet": {
+    "muc": "V. Máy biến áp ba pha",
+    "khaiNiem": [
+      "Để biến đổi điện áp của hệ thống dòng điện ba pha, ta có thể dùng ba MBA một pha (hình 5.1a) hoặc dùng một MBA ba pha ba trụ (hình 5.1c).",
+      "Khi ghép ba MBA một pha thành một MBA ba pha bốn trụ, từ thông chạy qua trụ chung (MN) Φ = ΦA + ΦB + ΦC; khi máy đối xứng Φ = 0, có thể bỏ trụ chung (MN). Ba trụ còn lại thường được bố trí cùng trên mặt phẳng như hình 5.1c.",
+      "Hình 5.2: lõi thép và MBA khô 150 kVA – 6/0,4 kV – Δ/Y₀ dùng trong lưới điện phân phối (ảnh ở slide 67)."
+    ],
+    "kyHieuDauDay": [
+      ["Cuộn cao áp", "A B C", "X Y Z", "N O"],
+      ["Cuộn trung áp", "Am Bm Cm", "Xm Ym Zm", "Nm Om"],
+      ["Cuộn hạ áp", "a b c", "x y z", "n o"]
+    ],
+    "kieuDau": "Dây quấn sơ cấp và thứ cấp MBA ba pha có thể nối sao (Y) hoặc tam giác (Δ hoặc D); dùng chữ in hoa cho sơ cấp, chữ thường cho thứ cấp. Có 4 trường hợp: Y/Y, Δ/Δ, Y/Δ, Δ/Y.",
+    "toNoiDay": "Tổ nối dây biểu thị góc lệch pha giữa điện áp dây thứ cấp và điện áp dây sơ cấp, đọc theo phương pháp đồng hồ: véc tơ sđđ sơ cấp là kim phút đặt cố định ở số 12, véc tơ sđđ thứ cấp là kim giờ (1…12). Mỗi giờ ứng với 30°.",
+    "motPha": "MBA một pha: sđđ dây quấn sơ cấp và thứ cấp cùng pha – tổ I/I-12 (360°); ngược pha – tổ I/I-6 (180°)."
+  },
+  "macDinh": { "kichBan": "ba-tru", "so": "Y", "thu": "D2", "nguocCuc": false, "hoanVi": 0 },
+  "mau4To": [
+    { "ten": "Y/Y-12", "so": "Y", "thu": "Y" },
+    { "ten": "Δ/Δ-12", "so": "D1", "thu": "D1" },
+    { "ten": "Y/Δ-11", "so": "Y", "thu": "D2" },
+    { "ten": "Δ/Y-11", "so": "D1", "thu": "Y" }
+  ],
+  "trinhChieu": [
+    { "id": "ba-mot-pha", "tieuDe": "5.1. Ba MBA một pha hay một MBA ba pha?", "the": "hình 5.1", "loiGiang": "Hệ thống ba pha có thể dùng ba MBA một pha riêng rẽ. Ghép ba lõi lại thành một MBA bốn trụ, trụ chung MN mang từ thông tổng ΦA + ΦB + ΦC.", "trangThai": { "kichBan": "ba-tru", "buoc": 0 } },
+    { "id": "bo-tru", "tieuDe": "Bỏ trụ chung khi máy đối xứng", "the": "ΦA + ΦB + ΦC = 0", "loiGiang": "Ba từ thông lệch nhau 120°, khi đối xứng tổng của chúng bằng 0 tại mọi thời điểm, nên có thể bỏ trụ chung; ba trụ còn lại bố trí trên một mặt phẳng: MBA ba pha ba trụ.", "trangThai": { "kichBan": "ba-tru", "buoc": 2 } },
+    { "id": "ky-hieu", "tieuDe": "5.2a. Ký hiệu đầu dây, các kiểu đấu dây", "the": "Y/Y, Δ/Δ, Y/Δ, Δ/Y", "loiGiang": "Đầu đầu cuộn cao áp A, B, C; đầu cuối X, Y, Z; trung tính N, O. Cuộn hạ áp dùng chữ thường. Mỗi phía nối sao hoặc tam giác – có bốn trường hợp.", "trangThai": { "kichBan": "to-noi-day", "so": "Y", "thu": "Y" } },
+    { "id": "dong-ho", "tieuDe": "5.2c. Phương pháp đồng hồ", "the": "kim phút: sơ cấp, kim giờ: thứ cấp", "loiGiang": "Đặt véc tơ sđđ dây sơ cấp E_AB ở số 12; véc tơ E_ab chỉ giờ nào thì đó là số của tổ nối dây. Y/Y-12: hai véc tơ trùng nhau (360°).", "trangThai": { "kichBan": "to-noi-day", "so": "Y", "thu": "Y" } },
+    { "id": "y-d-11", "tieuDe": "5.2d. Cách xác định tổ Y/Δ-11", "the": "330°", "loiGiang": "Vẽ đồ thị véc tơ sơ cấp (sao) và thứ cấp (tam giác) – sđđ dây quấn trên cùng trụ thì cùng pha. Đo góc từ E_AB đến E_ab theo chiều kim đồng hồ được 330° → kim giờ chỉ 11.", "trangThai": { "kichBan": "to-noi-day", "so": "Y", "thu": "D2" } },
+    { "id": "mot-pha", "tieuDe": "Tổ nối dây MBA một pha", "the": "I/I-12, I/I-6", "loiGiang": "Với MBA một pha, đổi chiều quấn hoặc đổi đầu đánh dấu của dây quấn thứ cấp làm sđđ thứ cấp ngược pha: tổ I/I-12 thành I/I-6.", "trangThai": { "kichBan": "mot-pha", "nguocCuc": true } }
+  ]
+}

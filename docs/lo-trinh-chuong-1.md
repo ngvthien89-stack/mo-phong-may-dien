@@ -43,8 +43,8 @@ Ký hiệu trạng thái: ✅ đã xong · 🔨 đang làm · ⏳ chưa làm
 
 | Slide | Bài trên website | Nội dung chính | Trạng thái |
 |---|---|---|---|
-| 66–67 | 5.1 Khái niệm | Ba MBA một pha, MBA ba pha ba trụ | ⏳ |
-| 68–72 | 5.2 Tổ nối dây | Y/Y, Δ/Δ, Y/Δ, Δ/Y; phương pháp đồng hồ | ⏳ |
+| 66–67 | 5.1 Khái niệm | Ba MBA một pha, MBA ba pha ba trụ | ✅ |
+| 68–72 | 5.2 Tổ nối dây | Y/Y, Δ/Δ, Y/Δ, Δ/Y; phương pháp đồng hồ | ✅ |
 | 73–74 | 5.3 Làm việc song song | Điều kiện; phân bố tải theo Un% | ⏳ |
 | 75 | 5.4 Lưu ý vận hành | | ⏳ |
 

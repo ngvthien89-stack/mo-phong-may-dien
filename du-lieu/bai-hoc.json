@@ -106,6 +106,18 @@
       ]
     },
     {
+      "ten": "Chương 1. Máy biến áp – V. Máy biến áp ba pha",
+      "baiHoc": [
+        {
+          "ma": "5.1–5.2",
+          "ten": "MBA ba pha và tổ nối dây",
+          "moTa": "Từ ba MBA một pha đến MBA ba trụ (ΦA + ΦB + ΦC = 0); ký hiệu đầu dây; tự lắp sơ đồ Y/Δ, xem đồ thị véc tơ và đồng hồ tổ nối dây.",
+          "duongDan": "mba-ba-pha.html",
+          "trangThai": "san-sang"
+        }
+      ]
+    },
+    {
       "ten": "Các chương tiếp theo (theo mục lục học phần Máy điện I)",
       "baiHoc": [
         {
