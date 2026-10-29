@@ -130,6 +130,32 @@ Theo slide 10 (`Chuong1-MBA.pdf`):
 - Prompt lưu trong [`docs/prompts/1.2c-dinh-luat-toan-dong-dien.md`](docs/prompts/1.2c-dinh-luat-toan-dong-dien.md).
 - Lộ trình xây dựng toàn bộ chương 1 theo slide: [`docs/lo-trinh-chuong-1.md`](docs/lo-trinh-chuong-1.md).
 
+## Bài 1.3 – Các loại vật liệu dùng trong máy điện (`vat-lieu.html`)
+
+Theo slide 11 (`Chuong1-MBA.pdf`):
+
+- Vật liệu dẫn điện (Cu, Al, hợp kim) và vật liệu dẫn từ (vật liệu sắt từ).
+- Vật liệu cách điện: thể rắn gồm 4 nhóm, ngoài ra có thể khí và thể lỏng.
+- 7 cấp cách điện theo nhiệt độ làm việc cho phép.
+
+![Bài 1.3 trên máy chiếu](docs/anh/vat-lieu-1920x1080.png)
+
+**Kịch bản:**
+
+- a) **Phân loại vật liệu:**
+  - Trò chơi kéo thả 15 thẻ vào 3 nhóm; trên điện thoại và máy chiếu có thể bấm chọn rồi bấm ô nhóm.
+  - Xếp sai thì thẻ quay về khay kèm giải thích.
+- b) **Vật liệu trong máy biến áp:**
+  - Hình cắt minh họa; bấm từng bộ phận để xem nhóm vật liệu và nhiệm vụ (trích slide 25, 26, 28, 35).
+  - Có tùy chọn tô màu theo nhóm vật liệu.
+- c) **Cấp cách điện và nhiệt độ:** chọn nhiệt độ làm việc của dây quấn, xem cấp nào dùng được và cấp thấp nhất dùng được.
+
+**Tiện ích khác:**
+
+- Trình chiếu 7 bước; ngân hàng 10 câu hỏi.
+- Hàm tra cấp cách điện trong `js/cach-dien.js`, có test.
+- Prompt lưu trong [`docs/prompts/1.3-vat-lieu-may-dien.md`](docs/prompts/1.3-vat-lieu-may-dien.md).
+
 ## Lưu ý về số liệu
 
 > Các cấp điện áp, công suất phụ tải, đồ thị phụ tải ngày, thông số đường dây… trong `du-lieu/cau-hinh.json`
@@ -146,8 +172,9 @@ he-thong-dien.html      Bài 1.1
 cam-ung-dien-tu.html    Bài 1.2.a
 luc-dien-tu.html        Bài 1.2.b
 toan-dong-dien.html     Bài 1.2.c
+vat-lieu.html           Bài 1.3
 css/                    chung.css, mo-phong.css (bố cục chung các trang mô phỏng), trang-chu.css,
-                        he-thong-dien.css, cam-ung-dien-tu.css, luc-dien-tu.css, toan-dong-dien.css
+                        he-thong-dien.css, cam-ung-dien-tu.css, luc-dien-tu.css, toan-dong-dien.css, vat-lieu.css
 js/
   tinh-toan.js          Hàm tính toán thuần (dòng điện, tổn thất, hiệu suất, phụ tải, tần số) – dùng chung cho trang và test
   so-do.js              Vẽ sơ đồ SVG
@@ -165,6 +192,8 @@ js/
   luc-dien-tu.js        Trang bài 1.2.b: Hình 1.3, quy tắc bàn tay trái, F = B·i·l, nguyên lý động cơ
   mach-tu.js            Hàm tính toán bài 1.2.c (H của dây dẫn thẳng, tích phân vòng ∮H·dl, F = w·i, H = w·i/l)
   toan-dong-dien.js     Trang bài 1.2.c: đường cong kín C, mạch từ hình 1.4
+  cach-dien.js          Hàm thuần bài 1.3 (tra 7 cấp cách điện, kiểm tra phân loại vật liệu, xáo trộn có hạt giống)
+  vat-lieu.js           Trang bài 1.3: trò chơi phân loại, vật liệu trong MBA, cấp cách điện
   tien-ich.js           Hàm tiện ích dùng chung (nạp JSON, định dạng số, vẽ KaTeX)
   trang-chu.js          Trang chủ
 du-lieu/                Nội dung cho giảng viên chỉnh sửa (JSON)
@@ -190,6 +219,8 @@ Các khóa bắt đầu bằng `_` (ví dụ `_ghiChu`) chỉ là chú thích, t
 | `cau-hoi-luc-dien-tu.json` | Ngân hàng câu hỏi bài 1.2.b. |
 | `toan-dong-dien.json` | Bài 1.2.c: lý thuyết theo slide, vị trí và dòng điện các dây dẫn, đường cong C mặc định (kịch bản `ampere`), thông số mạch từ (`machTu`), các bước trình chiếu. |
 | `cau-hoi-toan-dong-dien.json` | Ngân hàng câu hỏi bài 1.2.c. |
+| `vat-lieu.json` | Bài 1.3: lý thuyết theo slide 11, ba nhóm vật liệu (tên, màu, phím tắt), 15 thẻ vật liệu (`nhom`, `nhomCon`), bảng 7 cấp cách điện, các bộ phận MBA (nhiệm vụ, nguồn slide), các bước trình chiếu. |
+| `cau-hoi-vat-lieu.json` | Ngân hàng câu hỏi bài 1.3. |
 | `bai-hoc.json` | Danh sách bài trên trang chủ. `trangThai`: `"san-sang"` (có trang) hoặc `"sap-ra-mat"`. Các bài "sắp ra mắt" hiện có là ví dụ, sửa theo đề cương môn học. |
 
 Sau khi sửa, chạy `npm test` (nếu máy có Node.js) để kiểm tra cấu trúc dữ liệu: test sẽ báo nếu thiếu trường,

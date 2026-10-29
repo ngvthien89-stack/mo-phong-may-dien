@@ -1,0 +1,146 @@
+{
+  "_huongDan": "Nội dung bài 1.3 theo slide 11 (Chuong1-MBA.pdf); phần bộ phận MBA trích slide 25, 26, 28, 35. 'nhom' của vật liệu: dan-dien | dan-tu | cach-dien. Bảng cấp cách điện: 'lonHon': true nghĩa là slide ghi '> t'.",
+  "lyThuyet": {
+    "muc": "1.3. Các loại vật liệu dùng trong máy điện",
+    "tieuDe": "Các loại vật liệu dùng trong máy điện",
+    "danDien": "Cu, Al, hợp kim",
+    "danTu": "Vật liệu sắt từ: thép kỹ thuật điện, gang, thép đúc, thép rèn…",
+    "yeuCauCachDien": ["Cường độ cách điện cao", "Chịu nhiệt tốt", "Tản nhiệt tốt", "Chống ẩm", "Bền cơ học"],
+    "nhomRan": [
+      { "id": "huu-co", "ten": "Chất hữu cơ thiên nhiên", "viDu": "giấy, lụa …" },
+      { "id": "vo-co", "ten": "Chất vô cơ", "viDu": "amiăng, mica, sợi thủy tinh …" },
+      { "id": "tong-hop", "ten": "Các chất tổng hợp", "viDu": "" },
+      { "id": "men-son", "ten": "Các loại men, sơn cách điện", "viDu": "" }
+    ],
+    "theKhac": "Cách điện thể khí (không khí), thể lỏng (dầu)"
+  },
+  "nhom": [
+    { "id": "dan-dien", "ten": "Vật liệu dẫn điện", "ngan": "Dẫn điện", "mau": "#c8742a", "phim": "1" },
+    { "id": "dan-tu", "ten": "Vật liệu dẫn từ", "ngan": "Dẫn từ", "mau": "#4f6d8a", "phim": "2" },
+    { "id": "cach-dien", "ten": "Vật liệu cách điện", "ngan": "Cách điện", "mau": "#2e8b57", "phim": "3" }
+  ],
+  "vatLieu": [
+    { "id": "cu", "ten": "Cu – đồng", "nhom": "dan-dien" },
+    { "id": "al", "ten": "Al – nhôm", "nhom": "dan-dien" },
+    { "id": "thep-ktd", "ten": "Thép kỹ thuật điện", "nhom": "dan-tu" },
+    { "id": "gang", "ten": "Gang", "nhom": "dan-tu" },
+    { "id": "thep-duc", "ten": "Thép đúc", "nhom": "dan-tu" },
+    { "id": "thep-ren", "ten": "Thép rèn", "nhom": "dan-tu" },
+    { "id": "giay", "ten": "Giấy", "nhom": "cach-dien", "nhomCon": "Rắn – hữu cơ thiên nhiên" },
+    { "id": "lua", "ten": "Lụa", "nhom": "cach-dien", "nhomCon": "Rắn – hữu cơ thiên nhiên" },
+    { "id": "amiang", "ten": "Amiăng", "nhom": "cach-dien", "nhomCon": "Rắn – vô cơ" },
+    { "id": "mica", "ten": "Mica", "nhom": "cach-dien", "nhomCon": "Rắn – vô cơ" },
+    { "id": "soi-thuy-tinh", "ten": "Sợi thủy tinh", "nhom": "cach-dien", "nhomCon": "Rắn – vô cơ" },
+    { "id": "tong-hop", "ten": "Chất tổng hợp", "nhom": "cach-dien", "nhomCon": "Rắn – tổng hợp" },
+    { "id": "men-son", "ten": "Men, sơn cách điện", "nhom": "cach-dien", "nhomCon": "Rắn – men, sơn" },
+    { "id": "khong-khi", "ten": "Không khí", "nhom": "cach-dien", "nhomCon": "Thể khí" },
+    { "id": "dau", "ten": "Dầu", "nhom": "cach-dien", "nhomCon": "Thể lỏng" }
+  ],
+  "capCachDien": [
+    { "cap": "Y", "t": 90 },
+    { "cap": "A", "t": 105 },
+    { "cap": "E", "t": 120 },
+    { "cap": "B", "t": 130 },
+    { "cap": "F", "t": 155 },
+    { "cap": "H", "t": 180 },
+    { "cap": "C", "t": 180, "lonHon": true }
+  ],
+  "nhietDo": { "macDinh": 125, "min": 20, "max": 220, "_ghiChu": "Thanh trượt nhiệt độ làm việc dùng để tra bảng 7 cấp cách điện; không mô phỏng quá trình phát nóng." },
+  "mba": {
+    "_ghiChu": "Nhiệm vụ từng bộ phận trích nguyên văn hoặc rút gọn từ slide được ghi ở trường 'nguon'.",
+    "boPhan": [
+      {
+        "id": "loi-thep", "ten": "Lõi thép (trụ T, gông G)", "nhom": ["dan-tu", "cach-dien"],
+        "vatLieu": "Lá thép kỹ thuật điện (dẫn từ); bề mặt lá thép phủ sơn cách điện.",
+        "nhiemVu": "Lõi thép được ghép bằng những lá thép kỹ thuật điện tạo thành mạch từ khép kín dùng để dẫn từ thông chính, đồng thời làm khung để quấn dây. Thường các lá thép có phủ sơn cách điện ở bề mặt để giảm tổn hao do từ trễ và dòng điện xoáy.",
+        "nguon": "Slide 25"
+      },
+      {
+        "id": "day-quan-ha", "ten": "Dây quấn hạ áp (HA)", "nhom": ["dan-dien"],
+        "vatLieu": "Vật liệu dẫn điện (Cu, Al…).",
+        "nhiemVu": "Dây quấn là bộ phận dẫn điện của MBA, làm nhiệm vụ thu năng lượng vào và truyền năng lượng ra; phải cho phép dòng điện định mức đi qua lâu dài mà không phát nóng quá nhiệt độ cho phép.",
+        "nguon": "Slide 25, 28"
+      },
+      {
+        "id": "day-quan-cao", "ten": "Dây quấn cao áp (CA)", "nhom": ["dan-dien"],
+        "vatLieu": "Vật liệu dẫn điện (Cu, Al…).",
+        "nhiemVu": "Dây quấn là bộ phận dẫn điện của MBA, làm nhiệm vụ thu năng lượng vào và truyền năng lượng ra; phải cho phép dòng điện định mức đi qua lâu dài mà không phát nóng quá nhiệt độ cho phép.",
+        "nguon": "Slide 25, 28"
+      },
+      {
+        "id": "cach-dien", "ten": "Bộ phận cách điện", "nhom": ["cach-dien"],
+        "vatLieu": "Vật liệu cách điện.",
+        "nhiemVu": "Ngoài lõi thép, dây quấn và vỏ máy, MBA còn có bộ phận cách điện, sứ cách điện…",
+        "nguon": "Slide 25"
+      },
+      {
+        "id": "dau", "ten": "Dầu MBA", "nhom": ["cach-dien"],
+        "vatLieu": "Vật liệu cách điện thể lỏng (dầu).",
+        "nhiemVu": "Vỏ máy chứa dầu làm mát. Dầu là vật liệu cách điện thể lỏng.",
+        "nguon": "Slide 11, 35"
+      },
+      {
+        "id": "su", "ten": "Sứ cao thế, sứ hạ thế", "nhom": ["cach-dien"],
+        "vatLieu": "Sứ cách điện.",
+        "nhiemVu": "Trên nắp vỏ máy có đặt sứ ra của dây quấn CA và HA: thiết bị chuyển tiếp nguồn điện từ trong ra ngoài.",
+        "nguon": "Slide 25, 26, 35"
+      },
+      {
+        "id": "khong-khi", "ten": "Không khí quanh sứ", "nhom": ["cach-dien"],
+        "vatLieu": "Vật liệu cách điện thể khí (không khí).",
+        "nhiemVu": "Phần dẫn điện đi ra ngoài vỏ máy qua sứ; khoảng không khí xung quanh là môi trường cách điện thể khí.",
+        "nguon": "Slide 11"
+      },
+      {
+        "id": "vo-may", "ten": "Vỏ máy, nắp, cánh tỏa nhiệt", "nhom": [],
+        "vatLieu": "Bộ phận kết cấu, bảo vệ – slide không xếp vào ba nhóm vật liệu của mục 1.3.",
+        "nhiemVu": "Vỏ làm nhiệm vụ chứa dầu làm mát và bảo vệ MBA. Vỏ thùng phải kín, có diện tích tản nhiệt lớn nhất có thể, có độ bền cơ khí cao.",
+        "nguon": "Slide 26, 35"
+      },
+      {
+        "id": "binh-gian-dau", "ten": "Bình giãn dầu", "nhom": [],
+        "vatLieu": "Bộ phận kết cấu – slide không xếp vào ba nhóm vật liệu của mục 1.3.",
+        "nhiemVu": "Bình giãn dầu đảm bảo đủ thể tích co – giãn dầu khi nhiệt độ dầu thay đổi; nhờ quan sát dầu ở bình giãn dầu có thể biết trong thùng luôn đầy dầu.",
+        "nguon": "Slide 35"
+      }
+    ]
+  },
+  "macDinh": { "kichBan": "phan-loai" },
+  "trinhChieu": [
+    {
+      "id": "ba-nhom", "tieuDe": "Ba nhóm vật liệu trong máy điện", "the": "dẫn điện · dẫn từ · cách điện",
+      "loiGiang": "Máy điện dùng ba nhóm vật liệu chính: vật liệu dẫn điện, vật liệu dẫn từ và vật liệu cách điện. Hãy kéo từng thẻ vật liệu vào đúng nhóm.",
+      "trangThai": { "kichBan": "phan-loai", "nhom": null }
+    },
+    {
+      "id": "dan-dien", "tieuDe": "a. Vật liệu dẫn điện", "the": "Cu, Al, hợp kim",
+      "loiGiang": "Vật liệu dẫn điện gồm đồng (Cu), nhôm (Al) và hợp kim. Trong máy biến áp, dây quấn là bộ phận dẫn điện.",
+      "trangThai": { "kichBan": "phan-loai", "nhom": "dan-dien" }
+    },
+    {
+      "id": "dan-tu", "tieuDe": "b. Vật liệu dẫn từ", "the": "vật liệu sắt từ",
+      "loiGiang": "Vật liệu dẫn từ là vật liệu sắt từ: thép kỹ thuật điện, gang, thép đúc, thép rèn… Lõi thép MBA ghép bằng các lá thép kỹ thuật điện để dẫn từ thông chính.",
+      "trangThai": { "kichBan": "phan-loai", "nhom": "dan-tu" }
+    },
+    {
+      "id": "cach-dien", "tieuDe": "c. Vật liệu cách điện", "the": "4 nhóm thể rắn · khí · lỏng",
+      "loiGiang": "Yêu cầu: cường độ cách điện cao, chịu nhiệt tốt, tản nhiệt tốt, chống ẩm và bền cơ học. Phần lớn ở thể rắn, gồm 4 nhóm: chất hữu cơ thiên nhiên (giấy, lụa…), chất vô cơ (amiăng, mica, sợi thủy tinh…), các chất tổng hợp, các loại men, sơn cách điện. Ngoài ra có cách điện thể khí (không khí) và thể lỏng (dầu).",
+      "trangThai": { "kichBan": "phan-loai", "nhom": "cach-dien" }
+    },
+    {
+      "id": "trong-mba", "tieuDe": "Vật liệu trong máy biến áp", "the": "lõi thép · dây quấn · dầu · sứ",
+      "loiGiang": "Ba nhóm vật liệu đều có mặt trong máy biến áp: lõi thép bằng lá thép kỹ thuật điện (dẫn từ), dây quấn (dẫn điện), dầu, sứ và bộ phận cách điện (cách điện). Bấm vào từng bộ phận để xem nhiệm vụ.",
+      "trangThai": { "kichBan": "mba", "boPhan": "loi-thep", "toMau": true }
+    },
+    {
+      "id": "cap-cach-dien", "tieuDe": "7 cấp cách điện", "the": "Y · A · E · B · F · H · C",
+      "loiGiang": "Vật liệu cách điện được chia thành 7 cấp theo nhiệt độ làm việc cho phép: Y 90, A 105, E 120, B 130, F 155, H 180, C trên 180. Dây quấn làm việc ở nhiệt độ nào thì phải dùng cấp cách điện có nhiệt độ cho phép không thấp hơn nhiệt độ đó.",
+      "trangThai": { "kichBan": "nhiet-do", "t": 125 }
+    },
+    {
+      "id": "tom-tat", "tieuDe": "Tóm tắt", "the": "1.3",
+      "loiGiang": "Dẫn điện: Cu, Al, hợp kim. Dẫn từ: vật liệu sắt từ. Cách điện: phần lớn thể rắn (4 nhóm), ngoài ra thể khí và thể lỏng; chia 7 cấp theo nhiệt độ làm việc cho phép.",
+      "trangThai": { "kichBan": "nhiet-do", "t": 160 }
+    }
+  ]
+}

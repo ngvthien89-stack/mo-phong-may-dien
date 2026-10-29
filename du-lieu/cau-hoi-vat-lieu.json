@@ -1,0 +1,66 @@
+{
+  "_huongDan": "Ngân hàng câu hỏi bài 1.3. dapAn là số thứ tự lựa chọn đúng, bắt đầu từ 0.",
+  "soCauMoiLan": 5,
+  "cauHoi": [
+    {
+      "cauHoi": "Vật liệu nào sau đây thuộc nhóm vật liệu dẫn điện?",
+      "luaChon": ["Mica", "Nhôm (Al)", "Thép kỹ thuật điện", "Dầu"],
+      "dapAn": 1,
+      "giaiThich": "Vật liệu dẫn điện: Cu, Al, hợp kim."
+    },
+    {
+      "cauHoi": "Vật liệu dẫn từ dùng trong máy điện là loại vật liệu nào?",
+      "luaChon": ["Vật liệu sắt từ", "Chất hữu cơ thiên nhiên", "Men, sơn cách điện", "Đồng và nhôm"],
+      "dapAn": 0,
+      "giaiThich": "Vật liệu dẫn từ là vật liệu sắt từ: thép kỹ thuật điện, gang, thép đúc, thép rèn…"
+    },
+    {
+      "cauHoi": "Giấy và lụa thuộc nhóm vật liệu cách điện nào?",
+      "luaChon": ["Chất vô cơ", "Các chất tổng hợp", "Chất hữu cơ thiên nhiên", "Cách điện thể khí"],
+      "dapAn": 2,
+      "giaiThich": "Chất hữu cơ thiên nhiên: giấy, lụa…"
+    },
+    {
+      "cauHoi": "Amiăng, mica, sợi thủy tinh thuộc nhóm nào?",
+      "luaChon": ["Chất hữu cơ thiên nhiên", "Chất vô cơ", "Vật liệu dẫn từ", "Cách điện thể lỏng"],
+      "dapAn": 1,
+      "giaiThich": "Chất vô cơ: amiăng, mica, sợi thủy tinh…"
+    },
+    {
+      "cauHoi": "Yêu cầu nào KHÔNG nằm trong các yêu cầu đối với vật liệu cách điện nêu trên slide?",
+      "luaChon": ["Cường độ cách điện cao", "Tản nhiệt tốt", "Dẫn từ tốt", "Chống ẩm, bền cơ học"],
+      "dapAn": 2,
+      "giaiThich": "Vật liệu cách điện cần cường độ cách điện cao, chịu nhiệt tốt, tản nhiệt tốt, chống ẩm và bền cơ học."
+    },
+    {
+      "cauHoi": "Dầu trong máy biến áp là vật liệu cách điện ở thể nào?",
+      "luaChon": ["Thể rắn", "Thể lỏng", "Thể khí", "Không phải vật liệu cách điện"],
+      "dapAn": 1,
+      "giaiThich": "Cách điện thể khí (không khí), thể lỏng (dầu)."
+    },
+    {
+      "cauHoi": "Vật liệu cách điện cấp B có nhiệt độ làm việc cho phép là bao nhiêu?",
+      "luaChon": ["105", "120", "130", "155"],
+      "dapAn": 2,
+      "giaiThich": "Bảng 7 cấp cách điện: Y 90, A 105, E 120, B 130, F 155, H 180, C > 180."
+    },
+    {
+      "cauHoi": "Dây quấn làm việc ở 140 °C. Cấp cách điện thấp nhất có thể dùng là cấp nào?",
+      "luaChon": ["B", "E", "F", "H"],
+      "dapAn": 2,
+      "giaiThich": "Cấp B chỉ cho phép 130, thấp hơn 140. Cấp F cho phép 155 ≥ 140 nên là cấp thấp nhất đáp ứng."
+    },
+    {
+      "cauHoi": "Có bao nhiêu cấp cách điện của vật liệu cách điện?",
+      "luaChon": ["4", "5", "6", "7"],
+      "dapAn": 3,
+      "giaiThich": "7 cấp: Y, A, E, B, F, H, C."
+    },
+    {
+      "cauHoi": "Lõi thép máy biến áp được ghép bằng vật liệu nào?",
+      "luaChon": ["Những lá thép kỹ thuật điện", "Gang đúc nguyên khối", "Dây đồng", "Sứ cách điện"],
+      "dapAn": 0,
+      "giaiThich": "Lõi thép được ghép bằng những lá thép kỹ thuật điện tạo thành mạch từ khép kín (slide 25)."
+    }
+  ]
+}

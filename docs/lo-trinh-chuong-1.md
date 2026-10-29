@@ -13,7 +13,7 @@ Ký hiệu trạng thái: ✅ đã xong · 🔨 đang làm · ⏳ chưa làm
 | 7–8 | 1.2.a Định luật cảm ứng điện từ | e = −dφ/dt, e = −w·dφ/dt; e = B·l·v, quy tắc bàn tay phải | ✅ |
 | 9 | 1.2.b Định luật lực điện từ | F = B·i·l, quy tắc bàn tay trái | ✅ |
 | 10 | 1.2.c Định luật toàn dòng điện | ∮H·dl = Σi = F; mạch từ H·l = w·i | ✅ |
-| 11 | 1.3 Vật liệu dùng trong máy điện | Dẫn điện, dẫn từ, cách điện; 7 cấp cách điện | ⏳ |
+| 11 | 1.3 Vật liệu dùng trong máy điện | Dẫn điện, dẫn từ, cách điện; 7 cấp cách điện | ✅ |
 
 ## II. Khái niệm chung về máy biến áp
 

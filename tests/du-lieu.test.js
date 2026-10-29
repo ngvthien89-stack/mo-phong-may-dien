@@ -125,3 +125,25 @@ test('toan-dong-dien.json và câu hỏi 1.2.c: đủ trường, C nằm trong m
   assert.ok(ch.cauHoi.length >= ch.soCauMoiLan);
   for (const c of ch.cauHoi) assert.ok(Number.isInteger(c.dapAn) && c.dapAn >= 0 && c.dapAn < c.luaChon.length, c.cauHoi);
 });
+
+test('vat-lieu.json và câu hỏi 1.3: nhóm hợp lệ, bộ phận MBA có nguồn slide, bước trình chiếu hợp lệ', () => {
+  const nd = doc('vat-lieu.json');
+  const nhom = nd.nhom.map((n) => n.id);
+  assert.deepEqual(nhom, ['dan-dien', 'dan-tu', 'cach-dien']);
+  assert.equal(new Set(nd.vatLieu.map((v) => v.id)).size, nd.vatLieu.length);
+  for (const v of nd.vatLieu) assert.ok(v.ten && nhom.includes(v.nhom), v.id);
+  assert.equal(nd.lyThuyet.nhomRan.length, 4);
+  assert.equal(nd.capCachDien.length, 7);
+  const boPhan = nd.mba.boPhan.map((b) => b.id);
+  for (const b of nd.mba.boPhan) assert.ok(b.ten && b.nhiemVu && /^Slide \d/.test(b.nguon) && b.nhom.every((n) => nhom.includes(n)), b.id);
+  for (const b of nd.trinhChieu) {
+    assert.ok(b.id && b.tieuDe && b.loiGiang, b.id);
+    assert.ok(['phan-loai', 'mba', 'nhiet-do'].includes(b.trangThai.kichBan), b.id);
+    if (b.trangThai.nhom) assert.ok(nhom.includes(b.trangThai.nhom), b.id);
+    if (b.trangThai.boPhan) assert.ok(boPhan.includes(b.trangThai.boPhan), b.id);
+    if (b.trangThai.t !== undefined) assert.ok(b.trangThai.t >= nd.nhietDo.min && b.trangThai.t <= nd.nhietDo.max, b.id);
+  }
+  const ch = doc('cau-hoi-vat-lieu.json');
+  assert.ok(ch.cauHoi.length >= ch.soCauMoiLan);
+  for (const c of ch.cauHoi) assert.ok(Number.isInteger(c.dapAn) && c.dapAn >= 0 && c.dapAn < c.luaChon.length, c.cauHoi);
+});

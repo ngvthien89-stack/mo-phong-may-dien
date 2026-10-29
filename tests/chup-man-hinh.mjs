@@ -216,6 +216,49 @@ for (const [nhan, kt] of [['1920x1080', { width: 1920, height: 1080 }], ['390x84
     await chup(trang, `toan-cau-hoi-${nhan}`);
     await ctx.close();
   }
+  // Trang 1.3 – Vật liệu dùng trong máy điện
+  {
+    const { ctx, trang } = await moTrang(kt, '/vat-lieu.html', `vat-lieu ${nhan}`);
+    await trang.waitForSelector('body.da-san-sang');
+    await trang.waitForTimeout(600);
+    await chup(trang, `vat-lieu-a-khay-${nhan}`, { fullPage: laDT });
+    await kiemTraChuSvg(trang, `1.3 a) khay ${nhan}`);
+    // bấm chọn thẻ rồi bấm vào ô nhóm: một lần đúng, một lần sai
+    const xepThe = async (ten, nhom) => {
+      await trang.locator('.the-vl', { hasText: ten }).click();
+      await trang.locator(`.o-nhom[data-nhom="${nhom}"] .vung-tha`).click();
+    };
+    await xepThe('Mica', 'cach-dien');
+    await xepThe('Gang', 'dan-dien');
+    await trang.waitForTimeout(600);
+    await chup(trang, `vat-lieu-a-dang-xep-${nhan}`, { fullPage: laDT });
+    await kiemTraChuSvg(trang, `1.3 a) đang xếp ${nhan}`);
+    await trang.locator('#pl-dap-an').click();
+    await trang.waitForTimeout(400);
+    await chup(trang, `vat-lieu-a-dap-an-${nhan}`, { fullPage: laDT });
+    await kiemTraChuSvg(trang, `1.3 a) đáp án ${nhan}`);
+    await trang.selectOption('#chon-kich-ban', 'mba');
+    await trang.locator('.hang-bp[data-bp="day-quan-cao"]').click();
+    await trang.waitForTimeout(400);
+    await chup(trang, `vat-lieu-b-mba-${nhan}`, { fullPage: laDT });
+    await kiemTraChuSvg(trang, `1.3 b) máy biến áp ${nhan}`);
+    await trang.locator('#mba-to-mau').check();
+    await trang.waitForTimeout(300);
+    await chup(trang, `vat-lieu-b-to-mau-${nhan}`, { fullPage: laDT });
+    await trang.selectOption('#chon-kich-ban', 'nhiet-do');
+    await trang.waitForTimeout(1500);
+    await chup(trang, `vat-lieu-c-nhiet-do-${nhan}`, { fullPage: laDT });
+    await kiemTraChuSvg(trang, `1.3 c) cấp cách điện ${nhan}`);
+    await trang.locator('#nut-trinh-chieu').click();
+    for (let k = 0; k < 3; k++) await trang.keyboard.press('ArrowRight');
+    await trang.waitForTimeout(800);
+    await chup(trang, `vat-lieu-trinh-chieu-${nhan}`);
+    await trang.keyboard.press('Escape');
+    await trang.locator('#nut-cau-hoi').click();
+    await trang.locator('.ch-phuong-an').nth(1).click();
+    await chup(trang, `vat-lieu-cau-hoi-${nhan}`);
+    await ctx.close();
+  }
   // Trang mô phỏng 1.1
   const { ctx, trang } = await moTrang(kt, '/he-thong-dien.html', `he-thong-dien ${nhan}`);
   await trang.waitForSelector('body.da-san-sang');
