@@ -29,7 +29,7 @@ Ký hiệu trạng thái: ✅ đã xong · 🔨 đang làm · ⏳ chưa làm
 |---|---|---|---|
 | 44–49 | 3.1–3.2 Phương trình cân bằng, quy đổi | Cân bằng điện áp, cân bằng sức từ động; E2' = k·E2, I2' = I2/k, Z2' = k²·Z2 | ✅ |
 | 50–53 | 3.3 Sơ đồ thay thế, đồ thị véc tơ | Sơ đồ hình T, sơ đồ đơn giản; tải cảm / dung | ✅ |
-| 54–57 | 3.4 Thí nghiệm không tải, ngắn mạch | Xác định r0, x0, rn, xn, Un% | ⏳ |
+| 54–57 | 3.4 Thí nghiệm không tải, ngắn mạch | Xác định r0, x0, rn, xn, Un% | ✅ |
 
 ## IV. Các chế độ làm việc
 

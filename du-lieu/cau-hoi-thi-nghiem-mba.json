@@ -1,0 +1,66 @@
+{
+  "_huongDan": "Ngân hàng câu hỏi bài 3.4. dapAn là số thứ tự lựa chọn đúng, bắt đầu từ 0.",
+  "soCauMoiLan": 5,
+  "cauHoi": [
+    {
+      "cauHoi": "Trong thí nghiệm không tải, dây quấn thứ cấp:",
+      "luaChon": ["Nối tắt", "Hở mạch (I₂ = 0)", "Nối tải định mức", "Nối đất"],
+      "dapAn": 1,
+      "giaiThich": "Thí nghiệm không tải: I₁ = I₀, I₂ = 0 (slide 54)."
+    },
+    {
+      "cauHoi": "Dòng điện không tải i₀% của MBA thường nằm trong khoảng:",
+      "luaChon": ["1 % ÷ 10 %", "20 % ÷ 50 %", "50 % ÷ 100 %", "Trên 100 %"],
+      "dapAn": 0,
+      "giaiThich": "i₀% = I₀/I₁đm·100 = 1% ÷ 10% (slide 54)."
+    },
+    {
+      "cauHoi": "Từ thí nghiệm không tải, điện trở không tải r₀ được tính bằng:",
+      "luaChon": ["r₀ = U₁đm/I₀", "r₀ = P₀/I₀²", "r₀ = P₀·I₀", "r₀ = U₂₀/I₀"],
+      "dapAn": 1,
+      "giaiThich": "P₀ = I₀²(r₁ + rm) = I₀²·r₀ → r₀ = P₀/I₀² (slide 55)."
+    },
+    {
+      "cauHoi": "Tỷ số MBA xác định từ thí nghiệm không tải là:",
+      "luaChon": ["k = U₁đm/U₂₀", "k = I₀/I₁đm", "k = P₀/Pn", "k = U₂₀/U₁đm"],
+      "dapAn": 0,
+      "giaiThich": "k = w₁/w₂ = U₁đm/U₂₀."
+    },
+    {
+      "cauHoi": "Trong thí nghiệm ngắn mạch, điện áp đặt vào sơ cấp được tăng đến khi:",
+      "luaChon": ["U₁ = U₁đm", "In = I₁đm", "P = 0", "I₂ = 0"],
+      "dapAn": 1,
+      "giaiThich": "Tăng điện áp qua bộ điều chỉnh đến khi In = I₁đm = I′₂đm (slide 56)."
+    },
+    {
+      "cauHoi": "Điện trở ngắn mạch r<sub>n</sub> tính từ số liệu ngắn mạch:",
+      "luaChon": ["rn = Un/In", "rn = Pn/In²", "rn = √(zn² + xn²)", "rn = Pn·In"],
+      "dapAn": 1,
+      "giaiThich": "Pn = In²(r₁ + r′₂) = In²·rn → rn = Pn/In²."
+    },
+    {
+      "cauHoi": "Trong MBA, có thể lấy gần đúng:",
+      "luaChon": ["x₁ ≈ x′₂ = xn/2 và r₁ ≈ r′₂ = rn/2", "x₁ = xn, r₁ = 0", "r₁ = r₀", "x₁ ≈ x₀/2"],
+      "dapAn": 0,
+      "giaiThich": "Trong MBA có x₁ ≈ x′₂ = xn/2; r₁ ≈ r′₂ = rn/2 (slide 56)."
+    },
+    {
+      "cauHoi": "Điện áp ngắn mạch phần trăm U<sub>n</sub>% bằng:",
+      "luaChon": ["Zn·I₁đm/U₁đm·100%", "rn·I₁đm/U₁đm·100%", "P₀/Pn·100%", "U₂₀/U₁đm·100%"],
+      "dapAn": 0,
+      "giaiThich": "Un% = Zn·I₁đm/U₁đm × 100% (slide 57)."
+    },
+    {
+      "cauHoi": "MBA bài tập 4 có un% = 4 %, U₁p = 22 kV. Điện áp ngắn mạch pha U₁n bằng:",
+      "luaChon": ["88 V", "880 V", "8,8 kV", "220 V"],
+      "dapAn": 1,
+      "giaiThich": "U₁n = un%·U₁đm = 4%·22·10³ = 880 V (slide 83)."
+    },
+    {
+      "cauHoi": "Hệ số công suất ngắn mạch cosφ<sub>n</sub> bằng:",
+      "luaChon": ["xn/Zn", "rn/Zn", "Zn/rn", "P₀/Pn"],
+      "dapAn": 1,
+      "giaiThich": "cosφ = Pn/(I₁đm·U₁đm) = rn/Zn (slide 57)."
+    }
+  ]
+}

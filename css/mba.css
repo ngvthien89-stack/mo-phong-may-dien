@@ -63,3 +63,6 @@
 .nhan-lk { font-size: 16px; font-weight: 700; font-style: italic; font-family: "Times New Roman", serif !important; fill: #13202b; }
 .nguon-phu { fill: #fff; stroke: #37474f; stroke-width: 2.5; }
 .mui-tach { stroke: #13202b; stroke-width: 3; stroke-dasharray: 8 6; }
+.hop-dieu-chinh { fill: #eef4fa; stroke: #546e7a; stroke-width: 2.5; }
+.num-dieu-chinh { fill: #fff; stroke: #455a64; stroke-width: 3; }
+.kim-num { stroke: #c62828; stroke-width: 4; stroke-linecap: round; }

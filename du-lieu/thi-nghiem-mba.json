@@ -1,0 +1,29 @@
+{
+  "_huongDan": "Nội dung bài 3.4 theo slide 54–57 (Chuong1-MBA.pdf). Máy ảo dựng từ số liệu đề bài tập 4 (slide 82) và bài tập 2 (slide 78); mô hình tuyến tính, đo một pha.",
+  "lyThuyet": {
+    "muc": "III. Quan hệ điện từ trong MBA",
+    "khongTai": "Thí nghiệm không tải: đặt U₁ = U₁đm vào sơ cấp, thứ cấp hở mạch (I₂ = 0). Đo U₁, I₀, P₀ (vôn kế V1, ampe kế A, oát kế W) và U₂₀ (vôn kế V2). Từ các số liệu thí nghiệm xác định được tổng trở, điện trở, điện kháng của MBA.",
+    "nganMach": "Thí nghiệm ngắn mạch: nối tắt thứ cấp qua ampe kế A2, dùng bộ điều chỉnh điện áp tăng dần điện áp sơ cấp đến khi In = I₁đm = I′₂đm. Đo In, Un, Pn để xác định các tham số ngắn mạch.",
+    "congThuc": [
+      { "chu": "Không tải – tỷ số MBA, dòng điện không tải %:", "tex": "k = \\dfrac{w_1}{w_2} = \\dfrac{U_{1đm}}{U_{20}},\\qquad i_0\\% = \\dfrac{I_0}{I_{1đm}}\\cdot 100 = 1\\% \\div 10\\%", "duPhong": "k = w₁/w₂ = U₁đm/U₂₀; i₀% = I₀/I₁đm·100 = 1% ÷ 10%" },
+      { "tex": "P_0 = I_0^2(r_1 + r_m) = I_0^2 r_0 \\rightarrow r_0 = \\dfrac{P_0}{I_0^2},\\quad z_0 = \\dfrac{U_{1đm}}{I_0},\\quad x_0 = \\sqrt{z_0^2 - r_0^2}", "duPhong": "r₀ = P₀/I₀²; z₀ = U₁đm/I₀; x₀ = √(z₀² − r₀²)" },
+      { "tex": "\\cos\\varphi_0 = \\dfrac{P_0}{U_{1đm} I_0}", "duPhong": "cosφ₀ = P₀/(U₁đm·I₀)" },
+      { "chu": "Ngắn mạch:", "tex": "z_n = \\dfrac{U_n}{I_n},\\quad r_n = \\dfrac{P_n}{I_n^2},\\quad x_n = \\sqrt{z_n^2 - r_n^2},\\quad r_1 \\approx r'_2 = \\dfrac{r_n}{2},\\ x_1 \\approx x'_2 = \\dfrac{x_n}{2}", "duPhong": "zn = Un/In; rn = Pn/In²; xn = √(zn² − rn²); r₁ ≈ r′₂ = rn/2; x₁ ≈ x′₂ = xn/2" },
+      { "tex": "U_n\\% = \\dfrac{Z_n I_{1đm}}{U_{1đm}}\\cdot 100\\%,\\quad U_{nr}\\% = \\dfrac{r_n I_{1đm}}{U_{1đm}}\\cdot 100\\%,\\quad U_{nx}\\% = \\dfrac{x_n I_{1đm}}{U_{1đm}}\\cdot 100\\%", "duPhong": "Un% = Zn·I₁đm/U₁đm·100%; Unr% = rn·I₁đm/U₁đm·100%; Unx% = xn·I₁đm/U₁đm·100%" },
+      { "tex": "\\cos\\varphi_n = \\dfrac{P_n}{I_{1đm} U_{1đm}} = \\dfrac{r_n}{Z_n}", "duPhong": "cosφn = Pn/(I₁đm·U₁đm) = rn/Zn" }
+    ]
+  },
+  "may": [
+    { "id": "bt4", "ten": "Bài tập 4: 500 kVA, 22/0,4 kV, Δ/Y-11", "S": 500000, "U1": 22000, "U2": 400, "noi1": "D", "noi2": "Y", "P0": 900, "Pn": 3600, "i0": 2, "un": 4, "nguon": "slide 82",
+      "loiGiaiSlide": { "R0": 12985, "z0": 144737, "X0": 144153, "Rn": 20.9, "zn": 116, "Xn": 114, "cos0": 0.09, "kp": 95.2 } },
+    { "id": "bt2", "ten": "Bài tập 2: 630 kVA, 22/0,4 kV, Y/Δ-11", "S": 630000, "U1": 22000, "U2": 400, "noi1": "Y", "noi2": "D", "P0": 1520, "Pn": 6000, "i0": 1.3, "un": 6, "nguon": "slide 78" }
+  ],
+  "macDinh": { "kichBan": "khong-tai", "may": "bt4" },
+  "trinhChieu": [
+    { "id": "khong-tai", "tieuDe": "3.4a. Thí nghiệm không tải", "the": "I₂ = 0", "loiGiang": "Thứ cấp hở mạch, tăng điện áp sơ cấp đến U₁đm. Dòng điện chạy trong sơ cấp chỉ là dòng điện không tải I₀, rất nhỏ (1 % ÷ 10 % I₁đm). Oát kế đo tổn hao không tải P₀.", "trangThai": { "kichBan": "khong-tai", "u": 1 } },
+    { "id": "tinh-kt", "tieuDe": "Tính thông số từ thí nghiệm không tải", "the": "k, i₀%, r₀, z₀, x₀, cosφ₀", "loiGiang": "k = U₁đm/U₂₀; r₀ = P₀/I₀²; z₀ = U₁đm/I₀; x₀ = √(z₀² − r₀²); cosφ₀ = P₀/(U₁đm·I₀). Với máy bài tập 4, cosφ₀ chỉ khoảng 0,09.", "trangThai": { "kichBan": "khong-tai", "u": 1 } },
+    { "id": "ngan-mach", "tieuDe": "3.4b. Thí nghiệm ngắn mạch", "the": "In = I₁đm", "loiGiang": "Thứ cấp nối tắt. Phải dùng bộ điều chỉnh điện áp, tăng từ từ điện áp sơ cấp cho đến khi dòng điện bằng định mức; khi đó điện áp ngắn mạch Un chỉ vài phần trăm U₁đm (bài tập 4: 880 V = 4 % của 22 kV).", "trangThai": { "kichBan": "ngan-mach", "u": 1 } },
+    { "id": "tinh-nm", "tieuDe": "Tính tham số ngắn mạch", "the": "zn, rn, xn, Un%", "loiGiang": "zn = Un/In; rn = Pn/In²; xn = √(zn² − rn²); r₁ ≈ r′₂ = rn/2; x₁ ≈ x′₂ = xn/2. Các thành phần Unr%, Unx% và cosφn = rn/Zn.", "trangThai": { "kichBan": "ngan-mach", "u": 1 } },
+    { "id": "ket-qua", "tieuDe": "Điền thông số vào sơ đồ thay thế", "the": "hai thí nghiệm", "loiGiang": "Thí nghiệm không tải cho nhánh từ hóa (r₀, x₀), thí nghiệm ngắn mạch cho r₁, x₁, r′₂, x′₂. So với lời giải slide 84, sai khác nhỏ do slide làm tròn I₀p = 0,152 A.", "trangThai": { "kichBan": "ket-qua" } }
+  ]
+}

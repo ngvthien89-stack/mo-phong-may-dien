@@ -83,6 +83,13 @@
           "moTa": "Hình a → sơ đồ hình T → sơ đồ đơn giản (Rn, Xn); đồ thị véc tơ khi tải điện cảm, điện dung; sai khác giữa hai sơ đồ.",
           "duongDan": "so-do-thay-the.html",
           "trangThai": "san-sang"
+        },
+        {
+          "ma": "3.4",
+          "ten": "Thí nghiệm không tải, ngắn mạch",
+          "moTa": "Phòng thí nghiệm ảo: vặn bộ điều chỉnh điện áp, đọc đồng hồ; tính k, i₀%, r₀, z₀, x₀, cosφ₀ và zn, rn, xn, Un%, cosφn – khớp lời giải bài tập 4.",
+          "duongDan": "thi-nghiem-mba.html",
+          "trangThai": "san-sang"
         }
       ]
     },
