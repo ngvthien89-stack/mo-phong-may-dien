@@ -156,6 +156,32 @@ Theo slide 11 (`Chuong1-MBA.pdf`):
 - Hàm tra cấp cách điện trong `js/cach-dien.js`, có test.
 - Prompt lưu trong [`docs/prompts/1.3-vat-lieu-may-dien.md`](docs/prompts/1.3-vat-lieu-may-dien.md).
 
+## Bài 2.1–2.3 – Định nghĩa, vai trò và công dụng của MBA (`khai-niem-mba.html`)
+
+Theo slide 13–24 (`Chuong1-MBA.pdf`, phần II):
+
+- Định nghĩa máy biến áp và hai ký hiệu MBA trong hệ thống điện lực.
+- Vai trò của MBA trong truyền tải và phân phối điện năng.
+- MBA chuyên dụng; máy biến dòng điện và máy biến điện áp.
+
+![Bài 2.1–2.3 trên máy chiếu](docs/anh/khai-niem-mba-1920x1080.png)
+
+**Kịch bản:**
+
+- a) **Định nghĩa và ký hiệu:**
+  - Hai đồ thị u₁(t) và u₂(t) có vạch chu kỳ trùng nhau: tần số giữ nguyên.
+  - Thử với nguồn một chiều để thấy MBA không có sđđ thứ cấp.
+- b) **Vai trò trong truyền tải:**
+  - Chọn điện áp đường dây 21 kV (không có MBA tăng áp) hoặc 35/110/220/500 kV.
+  - Xem I_d, ΔU, ΔP theo % so với 21 kV. Chỉ so sánh tỉ lệ, không dùng số liệu giả định.
+- c) **MBA chuyên dụng, đo lường:** lò, hàn, thí nghiệm, đo lường; sơ đồ máy biến dòng và máy biến điện áp (slide 24).
+
+**Tiện ích khác:**
+
+- Trình chiếu 8 bước; ngân hàng 10 câu hỏi.
+- Hàm thuần trong `js/may-bien-ap.js`, có test.
+- Prompt lưu trong [`docs/prompts/2.1-2.3-khai-niem-mba.md`](docs/prompts/2.1-2.3-khai-niem-mba.md).
+
 ## Lưu ý về số liệu
 
 > Các cấp điện áp, công suất phụ tải, đồ thị phụ tải ngày, thông số đường dây… trong `du-lieu/cau-hinh.json`
@@ -173,8 +199,9 @@ cam-ung-dien-tu.html    Bài 1.2.a
 luc-dien-tu.html        Bài 1.2.b
 toan-dong-dien.html     Bài 1.2.c
 vat-lieu.html           Bài 1.3
+khai-niem-mba.html      Bài 2.1–2.3
 css/                    chung.css, mo-phong.css (bố cục chung các trang mô phỏng), trang-chu.css,
-                        he-thong-dien.css, cam-ung-dien-tu.css, luc-dien-tu.css, toan-dong-dien.css, vat-lieu.css
+                        he-thong-dien.css, cam-ung-dien-tu.css, luc-dien-tu.css, toan-dong-dien.css, vat-lieu.css, khai-niem-mba.css
 js/
   tinh-toan.js          Hàm tính toán thuần (dòng điện, tổn thất, hiệu suất, phụ tải, tần số) – dùng chung cho trang và test
   so-do.js              Vẽ sơ đồ SVG
@@ -194,6 +221,8 @@ js/
   toan-dong-dien.js     Trang bài 1.2.c: đường cong kín C, mạch từ hình 1.4
   cach-dien.js          Hàm thuần bài 1.3 (tra 7 cấp cách điện, kiểm tra phân loại vật liệu, xáo trộn có hạt giống)
   vat-lieu.js           Trang bài 1.3: trò chơi phân loại, vật liệu trong MBA, cấp cách điện
+  may-bien-ap.js        Hàm thuần phần II (so sánh tỉ lệ truyền tải, điện áp chuẩn hóa, loại MBA, độ lệch kim)
+  khai-niem-mba.js      Trang bài 2.1–2.3: định nghĩa, ký hiệu, vai trò truyền tải, MBA chuyên dụng
   tien-ich.js           Hàm tiện ích dùng chung (nạp JSON, định dạng số, vẽ KaTeX)
   trang-chu.js          Trang chủ
 du-lieu/                Nội dung cho giảng viên chỉnh sửa (JSON)
@@ -221,7 +250,9 @@ Các khóa bắt đầu bằng `_` (ví dụ `_ghiChu`) chỉ là chú thích, t
 | `cau-hoi-toan-dong-dien.json` | Ngân hàng câu hỏi bài 1.2.c. |
 | `vat-lieu.json` | Bài 1.3: lý thuyết theo slide 11, ba nhóm vật liệu (tên, màu, phím tắt), 15 thẻ vật liệu (`nhom`, `nhomCon`), bảng 7 cấp cách điện, các bộ phận MBA (nhiệm vụ, nguồn slide), các bước trình chiếu. |
 | `cau-hoi-vat-lieu.json` | Ngân hàng câu hỏi bài 1.3. |
-| `bai-hoc.json` | Danh sách bài trên trang chủ. `trangThai`: `"san-sang"` (có trang) hoặc `"sap-ra-mat"`. Các bài "sắp ra mắt" hiện có là ví dụ, sửa theo đề cương môn học. |
+| `khai-niem-mba.json` | Bài 2.1–2.3: lý thuyết theo slide 13–15, các cấp điện áp của sơ đồ slide 14, thông số kịch bản định nghĩa và đo lường, các bước trình chiếu. |
+| `cau-hoi-khai-niem-mba.json` | Ngân hàng câu hỏi bài 2.1–2.3 (được dùng thẻ `<sub>` cho chỉ số dưới). |
+| `bai-hoc.json` | Danh sách bài trên trang chủ, nhóm theo chương và phần của slide (Chương 1. Máy biến áp – I, II…). `trangThai`: `"san-sang"` (có trang) hoặc `"sap-ra-mat"`. Tên các chương sau theo mục lục slide 3; mô tả là ví dụ, sửa theo đề cương. |
 
 Sau khi sửa, chạy `npm test` (nếu máy có Node.js) để kiểm tra cấu trúc dữ liệu: test sẽ báo nếu thiếu trường,
 đáp án nằm ngoài danh sách lựa chọn, đồ thị phụ tải không đủ 24 giờ hoặc dùng biến điện áp không tồn tại.

@@ -1,0 +1,116 @@
+{
+  "_huongDan": "Ngân hàng câu hỏi bài 2.1–2.3. dapAn là số thứ tự lựa chọn đúng, bắt đầu từ 0.",
+  "soCauMoiLan": 5,
+  "cauHoi": [
+    {
+      "cauHoi": "Máy biến áp là thiết bị:",
+      "luaChon": [
+        "Điện từ quay",
+        "Điện từ tĩnh",
+        "Cơ khí",
+        "Điện tử công suất"
+      ],
+      "dapAn": 1,
+      "giaiThich": "MBA là thiết bị điện từ tĩnh, làm việc dựa theo nguyên lý cảm ứng điện từ."
+    },
+    {
+      "cauHoi": "Khi biến đổi điện áp, máy biến áp giữ nguyên đại lượng nào?",
+      "luaChon": [
+        "Điện áp",
+        "Dòng điện",
+        "Tần số",
+        "Số vòng dây"
+      ],
+      "dapAn": 2,
+      "giaiThich": "MBA biến đổi dòng điện xoay chiều ở điện áp này thành dòng điện xoay chiều ở điện áp khác nhưng giữ nguyên tần số."
+    },
+    {
+      "cauHoi": "Máy biến áp làm việc dựa theo nguyên lý nào?",
+      "luaChon": [
+        "Định luật lực điện từ",
+        "Cảm ứng điện từ",
+        "Hiệu ứng nhiệt",
+        "Định luật Ohm"
+      ],
+      "dapAn": 1,
+      "giaiThich": "MBA làm việc dựa theo nguyên lý cảm ứng điện từ."
+    },
+    {
+      "cauHoi": "Theo sơ đồ truyền tải (slide 14), điện áp đường dây truyền tải có thể là:",
+      "luaChon": [
+        "3 ÷ 21 kV",
+        "0,4 – 6 kV",
+        "35, 110, 220, 500 kV",
+        "220/380 V"
+      ],
+      "dapAn": 2,
+      "giaiThich": "Máy phát 3 ÷ 21 kV → MBA tăng áp → đường dây 35, 110, 220, 500 kV → MBA hạ áp → hộ tiêu thụ 0,4 – 6 kV."
+    },
+    {
+      "cauHoi": "Cùng công suất S, khi tăng điện áp truyền tải U<sub>d</sub> thì:",
+      "luaChon": [
+        "Dòng điện I<sub>d</sub> tăng",
+        "Dòng điện I<sub>d</sub> giảm",
+        "Tổn thất công suất tăng",
+        "Tiết diện dây dẫn phải tăng"
+      ],
+      "dapAn": 1,
+      "giaiThich": "Cùng S, tăng U<sub>d</sub> thì I<sub>d</sub> giảm, kéo theo ΔU = z·I<sub>d</sub> và ΔP = R<sub>d</sub>·I<sub>d</sub>² giảm, tiết diện dây dẫn giảm."
+    },
+    {
+      "cauHoi": "Cùng công suất S, nâng điện áp truyền tải từ 110 kV lên 220 kV thì tổn thất công suất ΔP = R<sub>d</sub>·I<sub>d</sub>² trên đường dây:",
+      "luaChon": [
+        "Giảm 2 lần",
+        "Giảm 4 lần",
+        "Tăng 2 lần",
+        "Không đổi"
+      ],
+      "dapAn": 1,
+      "giaiThich": "I<sub>d</sub> giảm 2 lần nên ΔP tỉ lệ với I<sub>d</sub>² giảm 4 lần."
+    },
+    {
+      "cauHoi": "MBA dùng trong hàn điện gọi là:",
+      "luaChon": [
+        "MBA lò",
+        "MBA hàn",
+        "MBA thí nghiệm",
+        "Máy biến dòng điện"
+      ],
+      "dapAn": 1,
+      "giaiThich": "Trong hàn điện: MBA hàn."
+    },
+    {
+      "cauHoi": "Thiết bị nào là MBA dùng trong đo lường?",
+      "luaChon": [
+        "MBA lò",
+        "MBA tăng áp",
+        "Máy biến dòng điện",
+        "MBA hàn"
+      ],
+      "dapAn": 2,
+      "giaiThich": "Trong đo lường: máy biến điện áp, máy biến dòng điện…"
+    },
+    {
+      "cauHoi": "Trong sơ đồ slide 24, cuộn W1 của máy biến dòng điện được mắc thế nào?",
+      "luaChon": [
+        "Nối tiếp trên một dây của đường dây",
+        "Giữa hai dây của đường dây",
+        "Nối với vôn kế",
+        "Nối đất"
+      ],
+      "dapAn": 0,
+      "giaiThich": "W1 của máy biến dòng mắc nối tiếp trên đường dây, W2 nối ampe kế; W1 của máy biến điện áp mắc giữa hai dây, W2 nối vôn kế."
+    },
+    {
+      "cauHoi": "Đồng hồ nối vào cuộn W2 của máy biến điện áp (slide 24) là:",
+      "luaChon": [
+        "Ampe kế",
+        "Vôn kế",
+        "Oát kế",
+        "Tần số kế"
+      ],
+      "dapAn": 1,
+      "giaiThich": "Máy biến điện áp: W2 nối vôn kế (V)."
+    }
+  ]
+}

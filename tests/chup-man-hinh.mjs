@@ -259,6 +259,40 @@ for (const [nhan, kt] of [['1920x1080', { width: 1920, height: 1080 }], ['390x84
     await chup(trang, `vat-lieu-cau-hoi-${nhan}`);
     await ctx.close();
   }
+  // Trang 2.1–2.3 – Định nghĩa, vai trò, công dụng của MBA
+  {
+    const { ctx, trang } = await moTrang(kt, '/khai-niem-mba.html', `khai-niem-mba ${nhan}`);
+    await trang.waitForSelector('body.da-san-sang');
+    await trang.waitForTimeout(1200);
+    await chup(trang, `mba-a-dinh-nghia-${nhan}`, { fullPage: laDT });
+    await kiemTraChuSvg(trang, `2.1 a) định nghĩa ${nhan}`);
+    await trang.locator('#dn-mot-chieu').check();
+    await trang.waitForTimeout(600);
+    await chup(trang, `mba-a-mot-chieu-${nhan}`, { fullPage: laDT });
+    await kiemTraChuSvg(trang, `2.1 a) một chiều ${nhan}`);
+    await trang.selectOption('#chon-kich-ban', 'truyen-tai');
+    await trang.locator('[data-ud="500"]').click();
+    await trang.waitForTimeout(1200);
+    await chup(trang, `mba-b-truyen-tai-${nhan}`, { fullPage: laDT });
+    await kiemTraChuSvg(trang, `2.2 b) truyền tải 500 kV ${nhan}`);
+    await trang.locator('[data-ud="21"]').click();
+    await trang.waitForTimeout(800);
+    await chup(trang, `mba-b-21kV-${nhan}`, { fullPage: laDT });
+    await kiemTraChuSvg(trang, `2.2 b) truyền tải 21 kV ${nhan}`);
+    await trang.selectOption('#chon-kich-ban', 'chuyen-dung');
+    await trang.waitForTimeout(1500);
+    await chup(trang, `mba-c-chuyen-dung-${nhan}`, { fullPage: laDT });
+    await kiemTraChuSvg(trang, `2.3 c) chuyên dụng ${nhan}`);
+    await trang.locator('#nut-trinh-chieu').click();
+    for (let k = 0; k < 4; k++) await trang.keyboard.press('ArrowRight');
+    await trang.waitForTimeout(1200);
+    await chup(trang, `mba-trinh-chieu-${nhan}`);
+    await trang.keyboard.press('Escape');
+    await trang.locator('#nut-cau-hoi').click();
+    await trang.locator('.ch-phuong-an').nth(1).click();
+    await chup(trang, `mba-cau-hoi-${nhan}`);
+    await ctx.close();
+  }
   // Trang mô phỏng 1.1
   const { ctx, trang } = await moTrang(kt, '/he-thong-dien.html', `he-thong-dien ${nhan}`);
   await trang.waitForSelector('body.da-san-sang');

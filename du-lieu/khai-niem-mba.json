@@ -1,0 +1,159 @@
+{
+  "_huongDan": "Nội dung bài 2.1–2.3 theo slide 13–24 (Chuong1-MBA.pdf). Các cấp điện áp lấy từ sơ đồ slide 14. Kịch bản truyền tải chỉ so sánh tỉ lệ (cùng S, cùng đường dây) nên không cần số liệu giả định.",
+  "lyThuyet": {
+    "muc": "II. Khái niệm chung về máy biến áp",
+    "dinhNghia": "Máy biến áp (MBA) là thiết bị điện từ tĩnh, làm việc dựa theo nguyên lý cảm ứng điện từ, dùng để biến đổi hệ thống dòng điện xoay chiều ở điện áp này thành một hệ thống dòng điện xoay chiều ở một điện áp khác nhưng giữ nguyên tần số.",
+    "vaiTro": [
+      "MBA có vai trò đặc biệt quan trọng trong mọi lĩnh vực của nền kinh tế.",
+      "Là thiết bị đặc biệt quan trọng trong hệ thống truyền tải và phân phối điện năng, giúp giảm tổn hao trên hệ thống truyền tải điện."
+    ],
+    "congDung": "Sử dụng để truyền tải và phân phối điện năng.",
+    "ketQuaTangAp": [
+      "trọng lượng, tiết diện, chi phí làm dây dẫn giảm",
+      "ΔU = z·I_d giảm",
+      "ΔP = R_d·I_d² giảm"
+    ],
+    "chuyenDung": [
+      {
+        "id": "lo",
+        "noi": "Trong lò nung",
+        "ten": "MBA lò"
+      },
+      {
+        "id": "han",
+        "noi": "Trong hàn điện",
+        "ten": "MBA hàn"
+      },
+      {
+        "id": "thi-nghiem",
+        "noi": "Trong thí nghiệm",
+        "ten": "MBA thí nghiệm"
+      },
+      {
+        "id": "do-luong",
+        "noi": "Trong đo lường",
+        "ten": "Máy biến điện áp, máy biến dòng điện…"
+      }
+    ],
+    "hinhAnh": "Hình ảnh thực tế: slide 16–23 (MBA phân phối kiểu trạm treo, các trạm 500 kV, 220 kV, 110 kV, máy biến dòng, máy biến điện áp…)."
+  },
+  "capDienAp": {
+    "mayPhat": "3 ÷ 21 kV",
+    "truyenTai": [
+      35,
+      110,
+      220,
+      500
+    ],
+    "hoTieuThu": "0,4 – 6 kV",
+    "uMayPhat_kV": 21,
+    "_ghiChu": "uMayPhat_kV = 21 kV là giá trị lớn nhất của dải điện áp máy phát trên slide 14, dùng làm mốc so sánh khi không có MBA tăng áp."
+  },
+  "dinhNghia": {
+    "dsDienAp_kV": [
+      0.4,
+      6,
+      21,
+      35,
+      110,
+      220,
+      500
+    ],
+    "U1_kV": 21,
+    "U2_kV": 220,
+    "f_Hz": 50,
+    "fMin_Hz": 25,
+    "fMax_Hz": 100,
+    "_ghiChu": "Tần số chỉnh được để thấy u1 và u2 luôn cùng tần số; cửa sổ đồ thị cố định 40 ms."
+  },
+  "doLuong": {
+    "I_phanTram": 60,
+    "U_phanTram": 100,
+    "toiDa_phanTram": 120
+  },
+  "macDinh": {
+    "kichBan": "dinh-nghia"
+  },
+  "trinhChieu": [
+    {
+      "id": "dinh-nghia",
+      "tieuDe": "2.1. Định nghĩa máy biến áp",
+      "the": "thiết bị điện từ tĩnh",
+      "loiGiang": "MBA là thiết bị điện từ tĩnh, làm việc dựa theo nguyên lý cảm ứng điện từ: từ thông xoay chiều trong lõi thép sinh ra sức điện động ở cuộn dây thứ cấp (bài 1.2.a).",
+      "trangThai": {
+        "kichBan": "dinh-nghia",
+        "motChieu": false
+      }
+    },
+    {
+      "id": "giu-tan-so",
+      "tieuDe": "Biến đổi điện áp, giữ nguyên tần số",
+      "the": "U₁ ≠ U₂, f₁ = f₂",
+      "loiGiang": "So sánh hai đồ thị u₁(t) và u₂(t): biên độ khác nhau (điện áp khác nhau) nhưng các vạch chu kỳ trùng nhau – tần số được giữ nguyên.",
+      "trangThai": {
+        "kichBan": "dinh-nghia",
+        "motChieu": false
+      }
+    },
+    {
+      "id": "mot-chieu",
+      "tieuDe": "Vì sao chỉ dùng cho dòng điện xoay chiều?",
+      "the": "liên hệ bài 1.2.a",
+      "loiGiang": "Với nguồn một chiều, ở trạng thái xác lập từ thông trong lõi không biến thiên nên dφ/dt = 0 và cuộn thứ cấp không có sức điện động. Vì thế định nghĩa nói MBA biến đổi hệ thống dòng điện xoay chiều.",
+      "trangThai": {
+        "kichBan": "dinh-nghia",
+        "motChieu": true
+      }
+    },
+    {
+      "id": "khong-tang-ap",
+      "tieuDe": "2.2. Vai trò: nếu không có MBA tăng áp",
+      "the": "truyền ở 21 kV",
+      "loiGiang": "Giả sử truyền thẳng ở điện áp máy phát 21 kV: dòng điện trên đường dây lớn, tổn thất điện áp và tổn thất công suất lớn. Đây là mốc 100 % để so sánh.",
+      "trangThai": {
+        "kichBan": "truyen-tai",
+        "U": 21
+      }
+    },
+    {
+      "id": "tang-ap",
+      "tieuDe": "2.3. Công dụng: truyền tải và phân phối điện năng",
+      "the": "35, 110, 220, 500 kV",
+      "loiGiang": "Cùng công suất S, nâng điện áp lên 500 kV: dòng điện giảm theo tỉ lệ điện áp, tổn thất công suất ΔP = Rd·Id² giảm theo bình phương tỉ lệ đó. Sau đó MBA hạ áp đưa điện áp về 0,4 – 6 kV cho hộ tiêu thụ.",
+      "trangThai": {
+        "kichBan": "truyen-tai",
+        "U": 500
+      }
+    },
+    {
+      "id": "chuyen-dung",
+      "tieuDe": "MBA trong các thiết bị chuyên dụng",
+      "the": "lò · hàn · thí nghiệm · đo lường",
+      "loiGiang": "Ngoài truyền tải, MBA còn dùng trong lò nung (MBA lò), hàn điện (MBA hàn), thí nghiệm (MBA thí nghiệm) và đo lường (máy biến điện áp, máy biến dòng điện…).",
+      "trangThai": {
+        "kichBan": "chuyen-dung",
+        "muc": "lo"
+      }
+    },
+    {
+      "id": "do-luong",
+      "tieuDe": "Máy biến dòng điện và máy biến điện áp",
+      "the": "slide 24",
+      "loiGiang": "Máy biến dòng điện: W1 mắc nối tiếp trên đường dây, W2 nối ampe kế. Máy biến điện áp: W1 mắc vào giữa hai dây, W2 nối vôn kế. Kim đồng hồ chỉ tỉ lệ với dòng điện, điện áp của đường dây.",
+      "trangThai": {
+        "kichBan": "chuyen-dung",
+        "muc": "do-luong"
+      }
+    },
+    {
+      "id": "tom-tat",
+      "tieuDe": "Tóm tắt",
+      "the": "2.1 – 2.3",
+      "loiGiang": "MBA: thiết bị điện từ tĩnh, theo nguyên lý cảm ứng điện từ, biến đổi điện áp xoay chiều, giữ nguyên tần số. Vai trò then chốt trong truyền tải – phân phối: tăng điện áp để giảm dòng điện, giảm ΔU và ΔP. Ngoài ra dùng trong lò, hàn, thí nghiệm, đo lường.",
+      "trangThai": {
+        "kichBan": "truyen-tai",
+        "U": 220
+      }
+    }
+  ]
+}

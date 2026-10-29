@@ -1,8 +1,8 @@
 {
-  "_huongDan": "trangThai: \"san-sang\" (đã có trang) hoặc \"sap-ra-mat\". Các bài 'sắp ra mắt' dưới đây là ví dụ, giảng viên sửa theo đề cương môn học.",
+  "_huongDan": "trangThai: \"san-sang\" (đã có trang) hoặc \"sap-ra-mat\". Tên chương theo mục lục slide (Chuong1-MBA.pdf, slide 3–4); mô tả các chương sắp ra mắt là ví dụ, giảng viên sửa theo đề cương.",
   "chuong": [
     {
-      "ten": "Chương 1. Tổng quan về hệ thống năng lượng điện",
+      "ten": "Chương 1. Máy biến áp – I. Tổng quan về hệ thống năng lượng điện",
       "baiHoc": [
         {
           "ma": "1.1",
@@ -42,31 +42,43 @@
       ]
     },
     {
-      "ten": "Các chương tiếp theo",
+      "ten": "Chương 1. Máy biến áp – II. Khái niệm chung về máy biến áp",
       "baiHoc": [
         {
-          "ma": "",
-          "ten": "Máy biến áp",
-          "moTa": "Cấu tạo, nguyên lý làm việc, mạch tương đương.",
+          "ma": "2.1–2.3",
+          "ten": "Định nghĩa, vai trò và công dụng của máy biến áp",
+          "moTa": "MBA biến đổi điện áp xoay chiều, giữ nguyên tần số; ký hiệu; vì sao tăng điện áp truyền tải giảm I, ΔU, ΔP; MBA chuyên dụng, máy biến dòng điện và máy biến điện áp.",
+          "duongDan": "khai-niem-mba.html",
+          "trangThai": "san-sang"
+        }
+      ]
+    },
+    {
+      "ten": "Các chương tiếp theo (theo mục lục học phần Máy điện I)",
+      "baiHoc": [
+        {
+          "ma": "Ch. 2",
+          "ten": "Những vấn đề chung về máy điện quay",
+          "moTa": "",
           "duongDan": "",
           "trangThai": "sap-ra-mat"
         },
         {
-          "ma": "",
+          "ma": "Ch. 3",
           "ten": "Máy điện không đồng bộ",
           "moTa": "Từ trường quay, hệ số trượt, đặc tính cơ.",
           "duongDan": "",
           "trangThai": "sap-ra-mat"
         },
         {
-          "ma": "",
+          "ma": "Ch. 4",
           "ten": "Máy điện đồng bộ",
           "moTa": "Máy phát đồng bộ, hòa đồng bộ, đặc tính góc.",
           "duongDan": "",
           "trangThai": "sap-ra-mat"
         },
         {
-          "ma": "",
+          "ma": "Ch. 5",
           "ten": "Máy điện một chiều",
           "moTa": "Cổ góp, phản ứng phần ứng, các phương pháp kích từ.",
           "duongDan": "",
