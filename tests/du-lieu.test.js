@@ -193,6 +193,7 @@ const BAI_KHUNG = [
   ['phuong-trinh-mba', ['dien-ap', 'std', 'quy-doi']],
   ['so-do-thay-the', ['so-do', 'vecto', 'sai-so']],
   ['thi-nghiem-mba', ['khong-tai', 'ngan-mach', 'ket-qua']],
+  ['che-do-lam-viec', ['nang-luong', 'dien-ap', 'hieu-suat']],
 ];
 for (const [tep, dsKichBan] of BAI_KHUNG) {
   test(`${tep}.json và câu hỏi: bước trình chiếu dùng kịch bản hợp lệ, đáp án hợp lệ`, () => {

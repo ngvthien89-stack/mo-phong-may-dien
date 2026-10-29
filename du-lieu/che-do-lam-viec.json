@@ -1,0 +1,39 @@
+{
+  "_huongDan": "Nội dung bài 4.1–4.3 theo slide 59–64 (Chuong1-MBA.pdf). Máy mô phỏng dựng từ số liệu đề bài tập 2 (slide 78) và bài tập 4 (slide 82); tính một pha theo sơ đồ thay thế hình T, công suất nhân 3.",
+  "lyThuyet": {
+    "muc": "IV. Các chế độ làm việc của MBA",
+    "nangLuong": [
+      "Công suất P₁ + jQ₁ đưa vào sơ cấp; một phần tiêu hao trên dây quấn sơ cấp (pCu1 + jq₁), trên lõi thép (pFe + jqth) và dây quấn thứ cấp (pCu2 + jq₂); phần còn lại P₂ + jQ₂ đưa ra tải. Pđt + jQđt là công suất điện từ truyền qua từ thông sang thứ cấp.",
+      "Khi tải có tính cảm φ₂ > 0 → Q₂ > 0, lúc đó Q₁ > 0 → công suất phản kháng truyền từ dây quấn sơ cấp sang dây quấn thứ cấp.",
+      "Khi tải có tính dung φ₂ < 0 → Q₂ < 0: nếu Q₁ < 0, công suất phản kháng truyền từ dây quấn thứ cấp sang dây quấn sơ cấp; nếu Q₁ > 0, MBA lấy công suất phản kháng từ phía sơ cấp và thứ cấp để từ hóa nó."
+    ],
+    "dienAp": "Khi MBA làm việc, điện áp thứ cấp U₂ thay đổi theo trị số và tính chất điện cảm hay điện dung của dòng tải. Hiệu số học của điện áp thứ cấp lúc không tải U₂₀ và lúc có tải U₂ khi U₁ không đổi gọi là độ thay đổi điện áp ΔU của MBA.",
+    "dieuChinh": [
+      "Trên cuộn dây MBA có các cuộn điều chỉnh điện áp; MBA thông thường thiết kế đầu điều chỉnh ở các cấp ±2,5 %, ±5 %.",
+      "Điều chỉnh thường đặt ở phía CA, nhằm thay đổi tỉ số biến áp để ổn định điện áp đầu ra; thông thường điều chỉnh khi cắt điện khỏi MBA.",
+      "Trong hệ thống điện lực công suất lớn, có khi cần điều chỉnh khi máy đang làm việc để phân phối lại P, Q giữa các phân đoạn; các MBA này lắp bộ điều chỉnh điện áp dưới tải."
+    ],
+    "congThuc": [
+      { "chu": "4.2. Độ thay đổi điện áp:", "tex": "\\Delta U = U_{20} - U_2,\\qquad \\Delta U\\% = \\dfrac{U_{20} - U_2}{U_{20}}\\cdot 100", "duPhong": "ΔU = U₂₀ − U₂; ΔU% = (U₂₀ − U₂)/U₂₀·100" },
+      { "chu": "4.3. Tổn hao (pFe do từ trễ, dòng xoáy trên lõi thép):", "tex": "p_{Fe} = p_{1/50}\\left[B_T^2\\left(\\tfrac{f}{50}\\right)G_T + B_G^2\\left(\\tfrac{f}{50}\\right)G_G\\right],\\qquad \\sum p = p_{Cu1} + p_{Cu2} + p_{Fe}", "duPhong": "pFe = p1/50[BT²(f/50)GT + BG²(f/50)GG]; Σp = pCu1 + pCu2 + pFe" },
+      { "chu": "Hiệu suất:", "tex": "\\eta\\% = \\dfrac{P_2}{P_1}\\cdot 100 = \\dfrac{P_1 - \\sum p}{P_1}\\cdot 100", "duPhong": "η% = P₂/P₁·100 = (P₁ − Σp)/P₁·100" },
+      { "tex": "p_{Fe} \\approx P_0,\\quad p_{Cu1} + p_{Cu2} = P_n,\\quad p_{Cu} = r_n I_2^2 = \\beta^2 p_n,\\quad \\beta = \\dfrac{I_2}{I_{2đm}}", "duPhong": "pFe ≈ P₀; pCu1 + pCu2 = Pn; pCu = rn·I₂² = β²·pn; β = I₂/I₂đm" },
+      { "chu": "Máy biến áp đạt hiệu suất cao nhất ứng với hệ số tải:", "tex": "\\beta = \\sqrt{\\dfrac{P_0}{P_n}}", "duPhong": "β = √(P₀/Pn)" }
+    ],
+    "kyHieuPFe": "p1/50 – suất tổn hao sắt từ ở tần số 50 Hz và từ cảm B = 1 T; BT, BG, GT, GG – mật độ từ cảm và khối lượng trụ và gông."
+  },
+  "may": [
+    { "id": "bt2", "ten": "Bài tập 2: 630 kVA, 22/0,4 kV, Y/Δ-11", "S": 630000, "U1": 22000, "U2": 400, "noi1": "Y", "noi2": "D", "P0": 1520, "Pn": 6000, "i0": 1.3, "un": 6, "nguon": "slide 78" },
+    { "id": "bt4", "ten": "Bài tập 4: 500 kVA, 22/0,4 kV, Δ/Y-11", "S": 500000, "U1": 22000, "U2": 400, "noi1": "D", "noi2": "Y", "P0": 900, "Pn": 3600, "i0": 2, "un": 4, "nguon": "slide 82" }
+  ],
+  "nacPhanAp": [-5, -2.5, 0, 2.5, 5],
+  "macDinh": { "kichBan": "nang-luong", "may": "bt2", "beta": 1, "cosPhi2": 0.8, "tinhChat": "cam", "phongTo": 20 },
+  "trinhChieu": [
+    { "id": "gian-do", "tieuDe": "4.1. Giản đồ năng lượng của MBA", "the": "P₁ + jQ₁ → P₂ + jQ₂", "loiGiang": "Công suất đi từ sơ cấp sang thứ cấp; dọc đường bị tiêu hao trên dây quấn sơ cấp, lõi thép và dây quấn thứ cấp. Các nhánh tổn hao được phóng to để dễ nhìn – thực tế chỉ khoảng 1–2 % công suất.", "trangThai": { "kichBan": "nang-luong", "tinhChat": "cam", "cosPhi2": 0.8 } },
+    { "id": "q-dung", "tieuDe": "Công suất phản kháng khi tải dung", "the": "φ₂ < 0 → Q₂ < 0", "loiGiang": "Với tải dung, Q₂ < 0. Tùy mức độ, Q₁ có thể âm (Q truyền từ thứ cấp về sơ cấp) hoặc dương (MBA lấy Q từ cả hai phía để từ hóa). Thử thay đổi cosφ₂ và β để thấy cả hai trường hợp.", "trangThai": { "kichBan": "nang-luong", "tinhChat": "dung", "cosPhi2": 0.6 } },
+    { "id": "delta-u", "tieuDe": "4.2. Độ thay đổi điện áp ΔU%", "the": "ΔU = f(β), f(cosφ₂)", "loiGiang": "ΔU% tăng theo hệ số tải; tải cảm làm U₂ giảm (ΔU > 0), tải dung có thể làm U₂ tăng (ΔU < 0), đúng như hai đồ thị ở slide 61.", "trangThai": { "kichBan": "dien-ap", "tinhChat": "cam", "cosPhi2": 0.7 } },
+    { "id": "phan-ap", "tieuDe": "Điều chỉnh điện áp bằng đầu phân áp", "the": "±2,5 %, ±5 %", "loiGiang": "Đầu điều chỉnh đặt ở phía CA, thay đổi số vòng w₁ để thay đổi tỉ số biến áp, ổn định điện áp ra. Thường điều chỉnh khi cắt điện; MBA lớn có bộ điều chỉnh dưới tải.", "trangThai": { "kichBan": "dien-ap", "tinhChat": "cam", "cosPhi2": 0.7 } },
+    { "id": "ton-hao", "tieuDe": "4.3. Tổn hao và hiệu suất", "the": "Σp = pFe + pCu", "loiGiang": "pFe ≈ P₀ không đổi theo tải; pCu = β²·Pn tăng theo bình phương hệ số tải. Hiệu suất η = P₂/P₁ đạt cao nhất khi pFe = pCu, tức β = √(P₀/Pn).", "trangThai": { "kichBan": "hieu-suat", "tinhChat": "cam", "cosPhi2": 0.8 } },
+    { "id": "tom-tat", "tieuDe": "Tóm tắt phần IV", "the": "4.1 – 4.3", "loiGiang": "Giản đồ năng lượng; ΔU% phụ thuộc β và tính chất tải; điều chỉnh bằng đầu phân áp ±2,5 %, ±5 % phía CA; hiệu suất cao nhất tại β = √(P₀/Pn).", "trangThai": { "kichBan": "hieu-suat", "tinhChat": "cam", "cosPhi2": 0.8 } }
+  ]
+}

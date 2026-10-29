@@ -35,9 +35,9 @@ Ký hiệu trạng thái: ✅ đã xong · 🔨 đang làm · ⏳ chưa làm
 
 | Slide | Bài trên website | Nội dung chính | Trạng thái |
 |---|---|---|---|
-| 59 | 4.1 Giản đồ năng lượng | Dòng công suất P, Q và các tổn hao | ⏳ |
-| 60–62 | 4.2 Độ thay đổi điện áp | ΔU% theo β và cosφ2; điều chỉnh đầu phân áp | ⏳ |
-| 63–64 | 4.3 Tổn hao và hiệu suất | pFe, pCu = β²·Pn; β tối ưu = √(P0/Pn) | ⏳ |
+| 59 | 4.1 Giản đồ năng lượng | Dòng công suất P, Q và các tổn hao | ✅ |
+| 60–62 | 4.2 Độ thay đổi điện áp | ΔU% theo β và cosφ2; điều chỉnh đầu phân áp | ✅ |
+| 63–64 | 4.3 Tổn hao và hiệu suất | pFe, pCu = β²·Pn; β tối ưu = √(P0/Pn) | ✅ |
 
 ## V. Máy biến áp ba pha
 
@@ -66,6 +66,6 @@ Các điểm phát hiện khi đọc slide; website dùng giá trị/đơn vị 
 - Slide 57: tiêu đề ghi "IV. Quan hệ điện từ trong MBA (13/13)", theo mục lục là phần III.
 - Slide 77: U_p2 = 0,4/√3 = 0,2309 kV; slide làm tròn 0,23 kV nên k_p = 65,21. Nếu giữ 0,2309 kV thì k_p ≈ 64,95.
 - Slide 79–84: tiêu đề ghi "V. Máy biến áp ba pha (x/8)", theo mục lục là phần VI. Một số bài tập.
-- Slide 79: β = √(P0/Pn) = 0,294 là số không thứ nguyên; slide ghi "0,294W".
+- Slide 79: **sai số học** – β = √(P0/Pn) = √(1520/6000) = √0,2533 ≈ 0,503, slide ghi 0,294 (kèm đơn vị "W" thừa, β không có thứ nguyên). Do đó dòng tải để hiệu suất cực đại là I₂ = 0,503·909,3 ≈ 457,7 A, không phải 267,7 A.
 - Slide 82: R_n = 20,9 có đơn vị Ω; slide ghi "20,9A".
 - Slide 84: dấu phân cách số không thống nhất. R0 = 900/(3·0,152²) ≈ 12 985 Ω (mười hai nghìn chín trăm tám mươi lăm ôm) nhưng dòng đầu ghi "12,985Ω", dòng sau ghi "12.985Ω"; z0 ≈ 144 737 Ω và X0 ≈ 144 153 Ω ghi bằng dấu chấm phân nghìn. Kết quả cosφ0 ≈ 0,09 là đúng.

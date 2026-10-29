@@ -94,6 +94,18 @@
       ]
     },
     {
+      "ten": "Chương 1. Máy biến áp – IV. Các chế độ làm việc của MBA",
+      "baiHoc": [
+        {
+          "ma": "4.1–4.3",
+          "ten": "Giản đồ năng lượng, độ thay đổi điện áp, hiệu suất",
+          "moTa": "Dòng công suất P, Q qua MBA (tải cảm, dung); ΔU% = f(β), f(cosφ₂) và đầu phân áp ±2,5 %, ±5 %; tổn hao, η(β), β tối ưu = √(P₀/Pn).",
+          "duongDan": "che-do-lam-viec.html",
+          "trangThai": "san-sang"
+        }
+      ]
+    },
+    {
       "ten": "Các chương tiếp theo (theo mục lục học phần Máy điện I)",
       "baiHoc": [
         {
