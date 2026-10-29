@@ -61,6 +61,11 @@ async function kiemTraBoCuc(trang, ten) {
 }
 
 /** Trang 1.2.a: kiểm tra các dòng chữ SVG đang hiển thị không đè lên nhau và không tràn khỏi khung thẻ. */
+// Trang dùng khung chung (js/khung-trang.js): [tệp, mã bài, các kịch bản]
+const BAI_MBA = [
+  ['nguyen-ly-mba', '2.5–2.7', ['nguyen-ly', 'he-so-k', 'dinh-muc']],
+];
+
 async function kiemTraChuSvg(trang, ten) {
   const kq = await trang.evaluate(() => {
     const hienThi = (e) => e.checkVisibility?.({ opacityProperty: true, visibilityProperty: true }) ?? true;
@@ -329,6 +334,26 @@ for (const [nhan, kt] of [['1920x1080', { width: 1920, height: 1080 }], ['390x84
     await trang.locator('#nut-cau-hoi').click();
     await trang.locator('.ch-phuong-an').nth(1).click();
     await chup(trang, `cau-tao-cau-hoi-${nhan}`);
+    await ctx.close();
+  }
+  // Các trang phần II–VI dùng khung chung: chụp mỗi kịch bản, một bước trình chiếu và câu hỏi
+  for (const [tep, ma, dsKichBan] of BAI_MBA) {
+    const { ctx, trang } = await moTrang(kt, `/${tep}.html`, `${tep} ${nhan}`);
+    await trang.waitForSelector('body.da-san-sang');
+    for (const kb of dsKichBan) {
+      await trang.selectOption('#chon-kich-ban', kb);
+      await trang.waitForTimeout(1200);
+      await chup(trang, `${tep}-${kb}-${nhan}`, { fullPage: laDT });
+      await kiemTraChuSvg(trang, `${ma} ${kb} ${nhan}`);
+    }
+    await trang.locator('#nut-trinh-chieu').click();
+    for (let k = 0; k < 2; k++) await trang.keyboard.press('ArrowRight');
+    await trang.waitForTimeout(1000);
+    await chup(trang, `${tep}-trinh-chieu-${nhan}`);
+    await trang.keyboard.press('Escape');
+    await trang.locator('#nut-cau-hoi').click();
+    await trang.locator('.ch-phuong-an').nth(1).click();
+    await chup(trang, `${tep}-cau-hoi-${nhan}`);
     await ctx.close();
   }
   // Trang mô phỏng 1.1

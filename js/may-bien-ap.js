@@ -38,3 +38,28 @@ export function loaiMBA(U1, U2) {
 export function doLechKim(phanTram, toiDa = 120) {
   return Math.max(0, Math.min(toiDa, phanTram)) / 100;
 }
+
+/** Giá trị hiệu dụng sđđ dây quấn theo slide 39: E = 4,44·f·w·Φm (Φm tính bằng Wb). */
+export function sddHieuDungMBA(f, w, Phim) {
+  return 4.44 * f * w * Phim;
+}
+
+/** Hệ số biến áp k = w1/w2 (slide 40). */
+export function heSoBienAp(w1, w2) {
+  if (!(w1 > 0) || !(w2 > 0)) throw new RangeError('Số vòng phải dương');
+  return w1 / w2;
+}
+
+/** Điện áp thứ cấp khi bỏ qua điện áp rơi trên dây quấn: U2 = U1·w2/w1 (slide 40). */
+export function dienApThuCap(U1, w1, w2) {
+  return U1 / heSoBienAp(w1, w2);
+}
+
+/**
+ * Dòng điện định mức từ công suất và điện áp định mức (slide 42):
+ * 1 pha I = S/U; 3 pha I = S/(√3·U) với U là điện áp dây.
+ */
+export function dongDinhMuc(S, U, soPha = 3) {
+  if (!(U > 0)) throw new RangeError('Điện áp phải dương');
+  return soPha === 3 ? S / (Math.sqrt(3) * U) : S / U;
+}

@@ -36,3 +36,23 @@ test('loại MBA và độ lệch kim', () => {
   gan(doLechKim(150), 1.2);
   gan(doLechKim(-5), 0);
 });
+
+import { sddHieuDungMBA, heSoBienAp, dienApThuCap, dongDinhMuc } from '../js/may-bien-ap.js';
+
+test('E = 4,44·f·w·Φm và k = w1/w2 = E1/E2', () => {
+  gan(sddHieuDungMBA(50, 1000, 0.0045), 999);
+  gan(sddHieuDungMBA(50, 1000, 0.0045) / sddHieuDungMBA(50, 50, 0.0045), heSoBienAp(1000, 50));
+  gan(heSoBienAp(1100, 20), 55);
+  gan(dienApThuCap(22, 1100, 20), 0.4);
+  assert.throws(() => heSoBienAp(0, 10), RangeError);
+});
+
+test('dòng điện định mức khớp các bài tập trong slide', () => {
+  gan(dongDinhMuc(630e3, 400), 909.3, 0.05); // bài tập 2: 909,3 A
+  gan(dongDinhMuc(500e3, 22e3), 13.12, 0.005); // bài tập 4: 13,12 A
+  gan(dongDinhMuc(1250e3, 400), 1804.2, 0.05); // bài tập 3: 1804,2 A
+  gan(dongDinhMuc(1000e3, 400), 1443.4, 0.05);
+  gan(dongDinhMuc(10e3, 220, 1), 45.4545, 1e-3);
+  // S = √3·U1·I1 = √3·U2·I2
+  gan(Math.sqrt(3) * 22e3 * dongDinhMuc(630e3, 22e3), Math.sqrt(3) * 400 * dongDinhMuc(630e3, 400), 1e-6);
+});

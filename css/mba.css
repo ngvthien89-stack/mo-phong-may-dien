@@ -1,0 +1,51 @@
+/* mba.css — Lớp SVG dùng chung cho các trang máy biến áp (phần II–VI); dùng cùng cam-ung-dien-tu.css */
+.an { fill: none; stroke: none; visibility: hidden; }
+.chu-svg.dam { font-weight: 800; fill: #13202b; }
+.chu-kq { font-size: 19px; fill: #13202b; font-variant-numeric: tabular-nums; }
+.chu-kq.dam { font-weight: 800; fill: #2e7d32; }
+.chu-kq.xau { font-weight: 800; fill: #c62828; }
+.chi-so-duoi { font-size: 70%; }
+.loi-thep-ab { fill: #b0bec5; stroke: #78909c; stroke-width: 2; }
+.cuon-day { fill: none; stroke: #b87333; stroke-width: 6; stroke-linecap: round; }
+.cuon-day.so-cap { stroke: #d62828; }
+.cuon-day.thu-cap { stroke: #2e9e4f; }
+.day-mach { fill: none; stroke: #37474f; stroke-width: 3.5; stroke-linejoin: round; }
+.vo-nguon-ac { fill: #fff; stroke: #1d3557; stroke-width: 3; }
+.ky-hieu-nguon { fill: none; stroke: #1d3557; stroke-width: 3.5; stroke-linecap: round; }
+.than-tai { fill: #fff; stroke: #37474f; stroke-width: 3; }
+.hat-dong { fill: #ffd166; stroke: #b5651d; stroke-width: 1.5; }
+.dong-phi { fill: none; stroke: #2a78d6; stroke-width: 5; stroke-dasharray: 4 30; stroke-linecap: round; }
+.vo-dong-ho { fill: #fff; stroke: #455a64; stroke-width: 3; }
+.thang-dong-ho { fill: none; stroke: #90a4ae; stroke-width: 3; }
+.chu-dong-ho { font-size: 18px; font-weight: 800; fill: #455a64; }
+.kim-dong-ho { stroke: #c62828; stroke-width: 3.5; stroke-linecap: round; }
+.truc-dong-ho { fill: #37474f; }
+.chu-dong-ho-gt { font-size: 17px; font-weight: 800; fill: #13202b; font-variant-numeric: tabular-nums; }
+.nhan-dai-luong { font-size: 24px; font-style: italic; font-weight: 700; font-family: "Times New Roman", serif !important; }
+.mau-u1 { fill: #d62828; }
+.mau-u2 { fill: #2e9e4f; }
+.mau-phi { fill: #2a78d6; }
+.mau-i { fill: #eb6834; }
+.mui-ten-dl { stroke-width: 3; fill: none; }
+.o-gia-tri { fill: #f7fafc; stroke: #dfe7ee; stroke-width: 1.5; }
+.o-gia-tri.noi-bat { fill: #fff8e1; stroke: #f2a900; stroke-width: 2.5; }
+.so-lon { font-size: 34px; font-weight: 800; fill: #13202b; font-variant-numeric: tabular-nums; }
+.nho-xam { font-size: 15px; fill: #6b7c8c; }
+.chip-btn { cursor: pointer; }
+.chip-btn rect { fill: #eef4fa; stroke: #b9c6d2; stroke-width: 1.5; }
+.chip-btn:hover rect { fill: #dde9f5; }
+.chip-btn.chon rect { fill: #1d3557; stroke: #1d3557; }
+.chip-btn text { font-size: 16px; font-weight: 700; fill: #1d3557; pointer-events: none; }
+.chip-btn.chon text { fill: #fff; }
+.dong-noi-bat { fill: #fff8e1; stroke: #f2a900; stroke-width: 2.5; }
+.duong-cham { stroke: #13202b; stroke-width: 1.5; stroke-dasharray: 5 5; opacity: .6; }
+.vec { stroke-width: 4; stroke-linecap: round; fill: none; }
+.diem-cuc { fill: #fff; stroke: #37474f; stroke-width: 3; }
+/* nhãn máy */
+.nhan-may { fill: #eceff1; stroke: #90a4ae; stroke-width: 3; }
+.dinh-tan { fill: #b0bec5; stroke: #78909c; stroke-width: 2; }
+.tieu-de-nhan { font-size: 34px; font-weight: 900; letter-spacing: .12em; fill: #1d3557; }
+.hang-nhan { fill: #fff; stroke: #cfd8dc; }
+.hang-nhan.tinh { fill: #fff8e1; stroke: #f2a900; stroke-width: 2.5; }
+.gt-nhan { font-size: 21px; font-weight: 800; fill: #13202b; font-variant-numeric: tabular-nums; }
+.gt-nhan.mo { font-size: 16px; font-weight: 400; fill: #8a97a3; }

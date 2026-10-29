@@ -186,3 +186,22 @@ test('cau-tao-mba.json và câu hỏi 2.4: bước trình chiếu hợp lệ, đ
   assert.ok(ch.cauHoi.length >= ch.soCauMoiLan);
   for (const c of ch.cauHoi) assert.ok(Number.isInteger(c.dapAn) && c.dapAn >= 0 && c.dapAn < c.luaChon.length, c.cauHoi);
 });
+
+// Các bài dùng khung chung: kiểm tra bước trình chiếu và câu hỏi
+const BAI_KHUNG = [
+  ['nguyen-ly-mba', ['nguyen-ly', 'he-so-k', 'dinh-muc']],
+];
+for (const [tep, dsKichBan] of BAI_KHUNG) {
+  test(`${tep}.json và câu hỏi: bước trình chiếu dùng kịch bản hợp lệ, đáp án hợp lệ`, () => {
+    const nd = doc(`${tep}.json`);
+    assert.ok(nd.lyThuyet && nd.macDinh && dsKichBan.includes(nd.macDinh.kichBan));
+    assert.ok(nd.trinhChieu.length >= 4);
+    for (const b of nd.trinhChieu) {
+      assert.ok(b.id && b.tieuDe && b.loiGiang, b.id);
+      assert.ok(dsKichBan.includes(b.trangThai.kichBan), b.id);
+    }
+    const ch = doc(`cau-hoi-${tep}.json`);
+    assert.ok(ch.cauHoi.length >= ch.soCauMoiLan);
+    for (const c of ch.cauHoi) assert.ok(Number.isInteger(c.dapAn) && c.dapAn >= 0 && c.dapAn < c.luaChon.length, c.cauHoi);
+  });
+}

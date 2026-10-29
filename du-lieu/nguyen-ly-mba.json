@@ -1,0 +1,207 @@
+{
+  "_huongDan": "Nội dung bài 2.5–2.7 theo slide 38–42 (Chuong1-MBA.pdf). Số vòng dây, Φm trong kịch bản a, b là giá trị minh họa; các máy mẫu ở kịch bản c lấy từ slide 67 và phần bài tập (slide 77–84).",
+  "lyThuyet": {
+    "muc": "II. Khái niệm chung về máy biến áp",
+    "nguyenLy": [
+      "Khi nối cuộn dây sơ cấp w₁ với điện áp xoay chiều hình sin u₁, dòng điện i₁ chạy trong dây quấn sơ cấp sẽ sinh ra trong lõi thép từ thông biến thiên Φ = Φm·sin ωt (với ω = 2πf).",
+      "Từ thông biến thiên làm cảm ứng ở dây quấn sơ cấp và thứ cấp các sđđ e₁ và e₂. Chiều của sđđ và từ thông chọn theo quy tắc vặn nút chai."
+    ],
+    "congThuc": [
+      {
+        "chu": "Theo định luật cảm ứng điện từ:",
+        "tex": "e_1 = -w_1\\dfrac{d\\Phi}{dt} = -w_1\\omega\\Phi_m\\cos\\omega t",
+        "duPhong": "e₁ = −w₁·dΦ/dt = −w₁ωΦm·cos ωt"
+      },
+      {
+        "tex": "= w_1\\omega\\Phi_m\\sin\\left(\\omega t-\\tfrac{\\pi}{2}\\right) = \\sqrt{2}E_1\\sin\\left(\\omega t-\\tfrac{\\pi}{2}\\right)",
+        "duPhong": "= w₁ωΦm·sin(ωt − π/2) = √2·E₁·sin(ωt − π/2)"
+      },
+      {
+        "tex": "e_2 = \\sqrt{2}E_2\\sin\\left(\\omega t-\\tfrac{\\pi}{2}\\right)",
+        "duPhong": "e₂ = √2·E₂·sin(ωt − π/2)"
+      },
+      {
+        "chu": "E₁, E₂ là giá trị hiệu dụng của các sđđ dây quấn w₁ và w₂:",
+        "tex": "E_1 = \\dfrac{w_1\\omega\\Phi_m}{\\sqrt{2}} = \\dfrac{2\\pi f w_1\\Phi_m}{\\sqrt{2}} = 4{,}44\\,f\\,w_1\\Phi_m",
+        "duPhong": "E₁ = w₁ωΦm/√2 = 2πf·w₁·Φm/√2 = 4,44·f·w₁·Φm"
+      },
+      {
+        "tex": "E_2 = 4{,}44\\,f\\,w_2\\Phi_m",
+        "duPhong": "E₂ = 4,44·f·w₂·Φm"
+      },
+      {
+        "chu": "2.6. Lấy E₁ chia E₂ được hệ số biến áp k:",
+        "tex": "\\dfrac{E_1}{E_2} = \\dfrac{w_1}{w_2} = k",
+        "duPhong": "E₁/E₂ = w₁/w₂ = k"
+      },
+      {
+        "chu": "Nếu bỏ qua điện áp rơi trên các dây quấn:",
+        "tex": "k = \\dfrac{w_1}{w_2} = \\dfrac{E_1}{E_2} \\approx \\dfrac{U_1}{U_2} \\;\\rightarrow\\; \\dfrac{U_1}{w_1} = \\dfrac{U_2}{w_2}",
+        "duPhong": "k = w₁/w₂ = E₁/E₂ ≈ U₁/U₂ → U₁/w₁ = U₂/w₂"
+      }
+    ],
+    "nhanXet": "Sđđ sơ cấp và sđđ thứ cấp có cùng tần số nhưng trị số hiệu dụng khác nhau.",
+    "dinhMuc": [
+      "Điện áp định mức U₁đm, U₂đm (V hoặc kV): với máy 1 pha là điện áp pha, với máy 3 pha là điện áp dây.",
+      "Dòng điện định mức I₁đm, I₂đm (A): dòng điện đã quy định cho dây quấn MBA ứng với công suất và điện áp định mức.",
+      "Công suất định mức: MBA 1 pha S = U₁đm·I₁đm = U₂đm·I₂đm; MBA 3 pha S = √3·U₁đm·I₁đm = √3·U₂đm·I₂đm.",
+      "Ngoài ra trên nhãn máy còn ghi: điện áp ngắn mạch Un%, tổ nối dây, tần số, chế độ làm việc, tiêu chuẩn sản xuất…"
+    ]
+  },
+  "nguyenLy": {
+    "f_Hz": 50,
+    "fMin_Hz": 25,
+    "fMax_Hz": 100,
+    "w1": 1000,
+    "w2": 50,
+    "wMin": 10,
+    "wMax": 2000,
+    "Phim_mWb": 4.5,
+    "PhimMin_mWb": 1,
+    "PhimMax_mWb": 10,
+    "_ghiChu": "Số liệu minh họa."
+  },
+  "heSoK": {
+    "U1_kV": 22,
+    "w1": 1100,
+    "w2": 20,
+    "wMin": 5,
+    "wMax": 2000,
+    "dsU1_kV": [
+      0.4,
+      6,
+      15,
+      22,
+      35
+    ],
+    "_ghiChu": "w1 = 1100, w2 = 20 cho k = 55 ứng với MBA 22/0,4 kV (máy trong bài tập 2, 4). Số vòng là minh họa."
+  },
+  "mayMau": [
+    {
+      "id": "bt1",
+      "ten": "MBA 400 kVA – 15/0,4 kV",
+      "soPha": 3,
+      "S_kVA": 400,
+      "U1_kV": 15,
+      "U2_kV": 0.4,
+      "toNoiDay": "Δ/Y₀-11",
+      "nguon": "Bài tập 1 (slide 77)"
+    },
+    {
+      "id": "bt2",
+      "ten": "MBA 630 kVA – 22/0,4 kV",
+      "soPha": 3,
+      "S_kVA": 630,
+      "U1_kV": 22,
+      "U2_kV": 0.4,
+      "f_Hz": 50,
+      "toNoiDay": "Y/Δ-11",
+      "Un": 6,
+      "nguon": "Bài tập 2 (slide 78)"
+    },
+    {
+      "id": "bt3",
+      "ten": "MBA 1250 kVA – 22/0,4 kV",
+      "soPha": 3,
+      "S_kVA": 1250,
+      "U1_kV": 22,
+      "U2_kV": 0.4,
+      "f_Hz": 50,
+      "toNoiDay": "Y/Y-6",
+      "Un": 5,
+      "nguon": "Bài tập 3 (slide 80), máy 1"
+    },
+    {
+      "id": "bt4",
+      "ten": "MBA 500 kVA – 22/0,4 kV",
+      "soPha": 3,
+      "S_kVA": 500,
+      "U1_kV": 22,
+      "U2_kV": 0.4,
+      "f_Hz": 50,
+      "toNoiDay": "Δ/Y-11",
+      "Un": 4,
+      "nguon": "Bài tập 4 (slide 82)"
+    },
+    {
+      "id": "kho",
+      "ten": "MBA khô 150 kVA – 6/0,4 kV",
+      "soPha": 3,
+      "S_kVA": 150,
+      "U1_kV": 6,
+      "U2_kV": 0.4,
+      "toNoiDay": "Δ/Y₀",
+      "nguon": "Hình 5.2 (slide 67)"
+    },
+    {
+      "id": "mot-pha",
+      "ten": "MBA 1 pha (tự nhập)",
+      "soPha": 1,
+      "S_kVA": 10,
+      "U1_kV": 0.22,
+      "U2_kV": 0.022,
+      "nguon": "Ví dụ minh họa"
+    }
+  ],
+  "macDinh": {
+    "kichBan": "nguyen-ly"
+  },
+  "trinhChieu": [
+    {
+      "id": "u1-i1",
+      "tieuDe": "2.5. Nguyên lý làm việc: từ u₁ đến Φ",
+      "the": "Φ = Φm·sin ωt",
+      "loiGiang": "Nối cuộn sơ cấp w₁ với điện áp xoay chiều hình sin u₁: dòng điện i₁ chạy trong dây quấn sơ cấp sinh ra trong lõi thép từ thông biến thiên Φ = Φm·sin ωt, với ω = 2πf.",
+      "trangThai": {
+        "kichBan": "nguyen-ly"
+      }
+    },
+    {
+      "id": "e1-e2",
+      "tieuDe": "Từ thông cảm ứng sđđ e₁, e₂",
+      "the": "e = −w·dΦ/dt",
+      "loiGiang": "Từ thông biến thiên móc vòng qua cả hai dây quấn, cảm ứng sđđ e₁ ở w₁ và e₂ ở w₂. Trên đồ thị, e₁ và e₂ chậm sau Φ một góc π/2.",
+      "trangThai": {
+        "kichBan": "nguyen-ly"
+      }
+    },
+    {
+      "id": "e-hieu-dung",
+      "tieuDe": "Giá trị hiệu dụng E = 4,44·f·w·Φm",
+      "the": "cùng f, khác trị số",
+      "loiGiang": "E₁ = 4,44·f·w₁·Φm và E₂ = 4,44·f·w₂·Φm: sđđ sơ cấp và thứ cấp có cùng tần số nhưng trị số hiệu dụng khác nhau, tỉ lệ với số vòng dây.",
+      "trangThai": {
+        "kichBan": "nguyen-ly"
+      }
+    },
+    {
+      "id": "he-so-k",
+      "tieuDe": "2.6. Hệ số biến áp k",
+      "the": "k = w₁/w₂ ≈ U₁/U₂",
+      "loiGiang": "Lấy E₁ chia E₂ được k = w₁/w₂, gọi là hệ số biến áp. Bỏ qua điện áp rơi trên dây quấn: k ≈ U₁/U₂, hay U₁/w₁ = U₂/w₂ – điện áp trên mỗi vòng dây hai phía bằng nhau.",
+      "trangThai": {
+        "kichBan": "he-so-k"
+      }
+    },
+    {
+      "id": "dinh-muc",
+      "tieuDe": "2.7. Các thông số định mức",
+      "the": "U, I, S định mức",
+      "loiGiang": "Nhãn máy ghi điện áp định mức (máy 3 pha là điện áp dây), dòng điện định mức, công suất định mức S = √3·U·I, cùng Un%, tổ nối dây, tần số, chế độ làm việc, tiêu chuẩn sản xuất.",
+      "trangThai": {
+        "kichBan": "dinh-muc",
+        "may": "bt2"
+      }
+    },
+    {
+      "id": "tom-tat",
+      "tieuDe": "Tóm tắt",
+      "the": "2.5 – 2.7",
+      "loiGiang": "u₁ → i₁ → Φ = Φm·sin ωt → e₁, e₂; E = 4,44·f·w·Φm; k = w₁/w₂ ≈ U₁/U₂; S = √3·U₁đm·I₁đm = √3·U₂đm·I₂đm cho MBA 3 pha.",
+      "trangThai": {
+        "kichBan": "dinh-muc",
+        "may": "bt4"
+      }
+    }
+  ]
+}

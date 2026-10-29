@@ -57,6 +57,13 @@
           "moTa": "Lắp ráp ruột MBA 3 pha kiểu trụ từng bước; lá thép phủ sơn cách điện và dòng điện xoáy; dây quấn đồng tâm, xen kẽ; vỏ máy, bình giãn dầu.",
           "duongDan": "cau-tao-mba.html",
           "trangThai": "san-sang"
+        },
+        {
+          "ma": "2.5–2.7",
+          "ten": "Nguyên lý làm việc, hệ số biến áp, thông số định mức",
+          "moTa": "u₁ → i₁ → Φ = Φm·sin ωt → e₁, e₂; E = 4,44·f·w·Φm; k = w₁/w₂ ≈ U₁/U₂; nhãn máy và dòng điện định mức S = √3·U·I.",
+          "duongDan": "nguyen-ly-mba.html",
+          "trangThai": "san-sang"
         }
       ]
     },

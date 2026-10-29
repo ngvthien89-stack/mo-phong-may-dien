@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>2.5–2.7. Nguyên lý làm việc, hệ số biến áp, thông số định mức của MBA – Mô Phỏng Môn Máy Điện</title>
+  <meta name="description" content="Nguyên lý làm việc của máy biến áp: từ thông Φ = Φm·sin ωt, sđđ E = 4,44·f·w·Φm, hệ số biến áp k = w1/w2 ≈ U1/U2, các thông số định mức trên nhãn máy.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230b5cad'/%3E%3Cpath d='M18 3 7 18h7l-2 11 11-15h-7z' fill='%23ffd166'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link rel="stylesheet" href="css/chung.css">
+  <link rel="stylesheet" href="css/mo-phong.css">
+  <link rel="stylesheet" href="css/cam-ung-dien-tu.css">
+  <link rel="stylesheet" href="css/mba.css">
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script type="module" src="js/nguyen-ly-mba.js"></script>
+</head>
+<body class="trang-mo-phong trang-cam-ung trang-mba">
+  <header class="thanh-dau">
+    <a class="ve-trang-chu" href="index.html" title="Về danh sách bài học"><span aria-hidden="true">←</span> <span class="chu-an-nho">Bài học</span></a>
+    <h1><span class="so-bai">2.5–2.7.</span> Nguyên lý làm việc, thông số định mức</h1>
+    <div class="nhom-nut">
+      <label class="chon-kich-ban">
+        <span class="chu-an-nho">Kịch bản</span>
+        <select id="chon-kich-ban" aria-label="Chọn kịch bản mô phỏng">
+          <option value="nguyen-ly">a) Nguyên lý làm việc: Φ, e₁, e₂</option>
+          <option value="he-so-k">b) Hệ số biến áp k</option>
+          <option value="dinh-muc">c) Thông số định mức, nhãn máy</option>
+        </select>
+      </label>
+      <a class="nut nut-bai-tiep" href="cau-tao-mba.html" title="Bài trước: 2.4"><span aria-hidden="true">←</span> 2.4</a>
+      <button type="button" id="nut-trinh-chieu" class="nut" aria-pressed="false" title="Chế độ trình chiếu (phím ← →)"><span aria-hidden="true">▣</span> Trình chiếu</button>
+      <button type="button" id="nut-cau-hoi" class="nut" title="Câu hỏi kiểm tra nhanh"><span aria-hidden="true">?</span> Câu hỏi</button>
+      <button type="button" id="nut-toan-man-hinh" class="nut nut-bieu-tuong" title="Toàn màn hình" aria-label="Toàn màn hình">
+        <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M4 9V4h5M15 4h5v5M20 15v5h-5M9 20H4v-5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <main class="bo-cuc">
+    <section class="vung-so-do" aria-label="Sân khấu mô phỏng">
+      <p class="goi-y-vuot">← Vuốt ngang để xem toàn bộ hình →</p>
+      <div class="khung-so-do">
+        <div class="cuon-so-do" id="cuon-so-do">
+          <svg id="so-do" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid meet" role="img"
+               aria-label="Máy biến áp một pha nối nguồn và tải với từ thông và sức điện động, đồ thị theo thời gian, hệ số biến áp và nhãn máy"></svg>
+        </div>
+      </div>
+      <div id="chu-thich-buoc" class="chu-thich-buoc" role="status" aria-live="polite"></div>
+      <div class="thanh-dieu-khien">
+        <button type="button" id="nut-chay" class="nut nut-chinh" aria-pressed="false"><span aria-hidden="true">⏸</span> Tạm dừng</button>
+        <label class="dieu-khien toc-do">Tốc độ
+          <input type="range" id="toc-do" min="0.25" max="3" step="0.25" value="1">
+          <output id="gia-tri-toc-do">1×</output>
+        </label>
+      </div>
+    </section>
+
+    <aside class="bang-ben" aria-label="Lý thuyết, điều khiển và số liệu">
+      <section id="the-ly-thuyet" class="the the-ly-thuyet"></section>
+      <section class="the">
+        <h2>Điều khiển kịch bản</h2>
+        <div id="dieu-khien-kich-ban"></div>
+      </section>
+      <section class="the bang-so-lieu">
+        <h2>Số liệu trực tiếp</h2>
+        <dl class="luoi-so-lieu">
+          <div class="hang nhan-manh" data-che-do="nguyen-ly"><dt>Sđđ sơ cấp E₁</dt><dd id="sl-e1">—</dd></div>
+          <div class="hang" data-che-do="nguyen-ly"><dt>Sđđ thứ cấp E₂</dt><dd id="sl-e2">—</dd></div>
+          <div class="hang" data-che-do="nguyen-ly"><dt>Hệ số biến áp k</dt><dd id="sl-k">—</dd></div>
+          <div class="hang" data-che-do="he-so-k" hidden><dt>Điện áp U₁</dt><dd id="sl-u1">—</dd></div>
+          <div class="hang nhan-manh" data-che-do="he-so-k" hidden><dt>Điện áp U₂ ≈ U₁/k</dt><dd id="sl-u2">—</dd></div>
+          <div class="hang" data-che-do="he-so-k" hidden><dt>Hệ số biến áp k</dt><dd id="sl-kk">—</dd></div>
+          <div class="hang" data-che-do="dinh-muc" hidden><dt>Công suất định mức S</dt><dd id="sl-s">—</dd></div>
+          <div class="hang nhan-manh" data-che-do="dinh-muc" hidden><dt>I₁đm</dt><dd id="sl-i1">—</dd></div>
+          <div class="hang nhan-manh" data-che-do="dinh-muc" hidden><dt>I₂đm</dt><dd id="sl-i2">—</dd></div>
+        </dl>
+        <div class="cong-thuc" id="ct-e" data-che-do="nguyen-ly"></div>
+        <div class="cong-thuc" id="ct-k" data-che-do="he-so-k" hidden></div>
+        <div class="cong-thuc" id="ct-i" data-che-do="dinh-muc" hidden></div>
+        <p class="ghi-chu-nho">Nội dung cấu hình trong <code>du-lieu/nguyen-ly-mba.json</code>.</p>
+      </section>
+    </aside>
+  </main>
+
+  <div id="thanh-trinh-chieu" class="thanh-trinh-chieu" hidden></div>
+
+  <dialog id="hop-cau-hoi" class="hop-cau-hoi" aria-labelledby="ch-tieu-de">
+    <div class="ch-dau">
+      <h2 id="ch-tieu-de">Câu hỏi kiểm tra nhanh</h2>
+      <button type="button" class="nut-dong" aria-label="Đóng">✕</button>
+    </div>
+    <div id="ch-noi-dung"></div>
+  </dialog>
+
+  <div id="thong-bao-loi" class="thong-bao-loi" role="alert" hidden></div>
+  <noscript><div class="thong-bao-loi">Trang mô phỏng cần bật JavaScript.</div></noscript>
+</body>
+</html>
