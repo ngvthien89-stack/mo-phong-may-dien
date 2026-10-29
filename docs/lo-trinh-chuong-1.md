@@ -45,8 +45,8 @@ Ký hiệu trạng thái: ✅ đã xong · 🔨 đang làm · ⏳ chưa làm
 |---|---|---|---|
 | 66–67 | 5.1 Khái niệm | Ba MBA một pha, MBA ba pha ba trụ | ✅ |
 | 68–72 | 5.2 Tổ nối dây | Y/Y, Δ/Δ, Y/Δ, Δ/Y; phương pháp đồng hồ | ✅ |
-| 73–74 | 5.3 Làm việc song song | Điều kiện; phân bố tải theo Un% | ⏳ |
-| 75 | 5.4 Lưu ý vận hành | | ⏳ |
+| 73–74 | 5.3 Làm việc song song | Điều kiện; phân bố tải theo Un% | ✅ |
+| 75 | 5.4 Lưu ý vận hành | | ✅ |
 
 ## VI. Bài tập
 
@@ -67,5 +67,6 @@ Các điểm phát hiện khi đọc slide; website dùng giá trị/đơn vị 
 - Slide 77: U_p2 = 0,4/√3 = 0,2309 kV; slide làm tròn 0,23 kV nên k_p = 65,21. Nếu giữ 0,2309 kV thì k_p ≈ 64,95.
 - Slide 79–84: tiêu đề ghi "V. Máy biến áp ba pha (x/8)", theo mục lục là phần VI. Một số bài tập.
 - Slide 79: **sai số học** – β = √(P0/Pn) = √(1520/6000) = √0,2533 ≈ 0,503, slide ghi 0,294 (kèm đơn vị "W" thừa, β không có thứ nguyên). Do đó dòng tải để hiệu suất cực đại là I₂ = 0,503·909,3 ≈ 457,7 A, không phải 267,7 A.
+- Slide 81: công thức ghi I₁đm = S₁đm/(√3·U₁đm) nhưng thay số U = 400 V (điện áp thứ cấp); kết quả 1804,2 A là dòng định mức phía 0,4 kV.
 - Slide 82: R_n = 20,9 có đơn vị Ω; slide ghi "20,9A".
 - Slide 84: dấu phân cách số không thống nhất. R0 = 900/(3·0,152²) ≈ 12 985 Ω (mười hai nghìn chín trăm tám mươi lăm ôm) nhưng dòng đầu ghi "12,985Ω", dòng sau ghi "12.985Ω"; z0 ≈ 144 737 Ω và X0 ≈ 144 153 Ω ghi bằng dấu chấm phân nghìn. Kết quả cosφ0 ≈ 0,09 là đúng.

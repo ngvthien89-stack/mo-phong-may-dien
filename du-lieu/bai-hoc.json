@@ -114,6 +114,13 @@
           "moTa": "Từ ba MBA một pha đến MBA ba trụ (ΦA + ΦB + ΦC = 0); ký hiệu đầu dây; tự lắp sơ đồ Y/Δ, xem đồ thị véc tơ và đồng hồ tổ nối dây.",
           "duongDan": "mba-ba-pha.html",
           "trangThai": "san-sang"
+        },
+        {
+          "ma": "5.3–5.4",
+          "ten": "MBA làm việc song song, lưu ý vận hành",
+          "moTa": "Ba điều kiện làm việc song song; phân bố tải tỉ lệ nghịch với un (bài tập 3), máy nào quá tải trước; năm lưu ý vận hành MBA.",
+          "duongDan": "song-song-mba.html",
+          "trangThai": "san-sang"
         }
       ]
     },

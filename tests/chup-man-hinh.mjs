@@ -69,6 +69,7 @@ const BAI_MBA = [
   ['thi-nghiem-mba', '3.4', ['khong-tai', 'ngan-mach', 'ket-qua']],
   ['che-do-lam-viec', '4.1–4.3', ['nang-luong', 'dien-ap', 'hieu-suat']],
   ['mba-ba-pha', '5.1–5.2', ['ba-tru', 'to-noi-day', 'mot-pha']],
+  ['song-song-mba', '5.3–5.4', ['dieu-kien', 'phan-tai', 'luu-y']],
 ];
 
 async function kiemTraChuSvg(trang, ten) {

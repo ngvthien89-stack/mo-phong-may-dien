@@ -1,0 +1,37 @@
+{
+  "_huongDan": "Nội dung bài 5.3–5.4 theo slide 73–75 (Chuong1-MBA.pdf). Máy mặc định lấy từ bài tập 3 (slide 80). Sai lệch Un cho phép trong kiểm tra điều kiện là tham số giảng viên đặt (slide không nêu con số).",
+  "lyThuyet": {
+    "muc": "V. Máy biến áp ba pha",
+    "songSong": "Để đảm bảo các điều kiện kinh tế kỹ thuật, người ta thường cho 2 hoặc nhiều MBA vận hành song song.",
+    "dieuKien": ["Cùng tổ nối dây", "Cùng cấp điện áp và hệ số biến đổi", "Cùng điện áp ngắn mạch"],
+    "phanTai": "Hệ số tải của các MBA làm việc song song tỷ lệ nghịch với điện áp ngắn mạch của chúng.",
+    "congThuc": [
+      { "tex": "\\beta_1 : \\beta_2 : \\beta_3 : \\ldots \\beta_n = \\dfrac{1}{u_{n1}} : \\dfrac{1}{u_{n2}} : \\dfrac{1}{u_{n3}} : \\ldots \\dfrac{1}{u_{nn}}", "duPhong": "β₁ : β₂ : … : βn = 1/un1 : 1/un2 : … : 1/unn" },
+      { "tex": "\\beta_i = \\dfrac{S_i}{S_{đmi}} = \\dfrac{S}{u_{ni}\\%\\,\\sum \\dfrac{S_{đmi}}{u_{ni}\\%}}", "duPhong": "βi = Si/Sđmi = S/(uni%·Σ(Sđmi/uni%))" }
+    ],
+    "kyHieu": "S – tổng công suất của tải; Sđmi – dung lượng MBA thứ i; uni% – điện áp ngắn mạch % của máy thứ i.",
+    "luuY": [
+      { "id": "non-tai", "chu": "Không để MBA làm việc không tải hoặc quá non tải.", "lienHe": "Bài 4.3: hiệu suất thấp khi β nhỏ vì tổn hao sắt P₀ không đổi.", "baiHoc": "che-do-lam-viec.html" },
+      { "id": "gan-tai", "chu": "MBA nên đặt gần hoặc trung tâm phụ tải để giảm tổn thất đường dây.", "lienHe": "Bài 2.1–2.3: ΔP = R·I² trên đường dây.", "baiHoc": "khai-niem-mba.html" },
+      { "id": "hieu-suat", "chu": "Cần theo dõi hiệu suất của MBA để có biện pháp kịp thời về bảo dưỡng, vận hành nâng cao hiệu suất sử dụng máy.", "lienHe": "Bài 4.3: η = P₂/P₁.", "baiHoc": "che-do-lam-viec.html" },
+      { "id": "muc-dau", "chu": "Định kỳ kiểm tra mức dầu trong máy, tránh hiện tượng dầu cạn gây nóng máy tăng tổn hao và cháy nổ.", "lienHe": "Bài 2.4: bình giãn dầu, quan sát mức dầu.", "baiHoc": "cau-tao-mba.html" },
+      { "id": "song-song", "chu": "Khi chọn các MBA làm việc song song phải đảm bảo các điều kiện đã nêu.", "lienHe": "Mục 5.3 (trang này).", "baiHoc": "" }
+    ]
+  },
+  "may": [
+    { "ten": "Máy 1", "Sdm": 1250, "U1": 22, "U2": 0.4, "f": 50, "to": "Y/Y-6", "un": 5 },
+    { "ten": "Máy 2", "Sdm": 1000, "U1": 22, "U2": 0.4, "f": 50, "to": "Y/Y-6", "un": 5.5 }
+  ],
+  "dsTo": ["Y/Y-12", "Y/Y-6", "Y/Δ-11", "Δ/Y-11", "Δ/Δ-12"],
+  "dsU1": [6, 15, 22, 35],
+  "tai_kVA": 1600,
+  "saiUnChoPhep": 0.5,
+  "macDinh": { "kichBan": "dieu-kien" },
+  "trinhChieu": [
+    { "id": "vi-sao", "tieuDe": "5.3. MBA làm việc song song", "the": "2 hoặc nhiều MBA", "loiGiang": "Để đảm bảo các điều kiện kinh tế kỹ thuật, người ta thường cho 2 hoặc nhiều MBA vận hành song song, cùng cấp cho một phụ tải.", "trangThai": { "kichBan": "dieu-kien" } },
+    { "id": "dieu-kien", "tieuDe": "Ba điều kiện làm việc song song", "the": "tổ nối dây · điện áp · Un", "loiGiang": "Cùng tổ nối dây; cùng cấp điện áp và hệ số biến đổi; cùng điện áp ngắn mạch. Thay đổi thông số máy 2 để xem điều kiện nào bị vi phạm.", "trangThai": { "kichBan": "dieu-kien" } },
+    { "id": "phan-tai", "tieuDe": "Phân bố tải theo điện áp ngắn mạch", "the": "β ∼ 1/un", "loiGiang": "Hệ số tải tỉ lệ nghịch với điện áp ngắn mạch: máy có un nhỏ hơn mang tải nặng hơn. Bài tập 3: máy 1 (un = 5 %) có β = 0,74, máy 2 (un = 5,5 %) có β = 0,674.", "trangThai": { "kichBan": "phan-tai", "S": 1600 } },
+    { "id": "qua-tai", "tieuDe": "Máy nào quá tải trước?", "the": "máy có un nhỏ nhất", "loiGiang": "Tăng tổng tải: máy có un nhỏ nhất đạt β = 1 trước, dù tổng dung lượng hai máy còn dư. Vì vậy cần các máy có điện áp ngắn mạch bằng nhau.", "trangThai": { "kichBan": "phan-tai", "S": 2200 } },
+    { "id": "luu-y", "tieuDe": "5.4. Lưu ý khi sử dụng, vận hành MBA", "the": "5 lưu ý", "loiGiang": "Không để không tải hoặc quá non tải; đặt gần trung tâm phụ tải; theo dõi hiệu suất; định kỳ kiểm tra mức dầu; khi làm việc song song phải đảm bảo các điều kiện.", "trangThai": { "kichBan": "luu-y" } }
+  ]
+}

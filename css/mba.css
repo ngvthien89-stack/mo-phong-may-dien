@@ -77,3 +77,18 @@
 .ky-hieu-to { font-size: 40px; font-weight: 900; fill: #1d3557; }
 .day-noi-to { fill: none; stroke: #37474f; stroke-width: 2.5; stroke-linejoin: round; }
 .tam-giac-u { fill: #eef4fa; stroke: #b9c6d2; stroke-width: 1.5; stroke-dasharray: 5 4; }
+.thanh-cai { stroke: #1d3557; stroke-width: 7; stroke-linecap: round; }
+.dong-can { fill: none; stroke: #c62828; stroke-width: 4; stroke-dasharray: 10 6; }
+.dau-dk { font-size: 30px; font-weight: 900; }
+.dau-dk.dat { fill: #2e7d32; }
+.dau-dk.khong { fill: #c62828; }
+.the-luu-y { cursor: pointer; }
+.nen-luu-y { fill: #f7fafc; stroke: #dfe7ee; stroke-width: 2; }
+.the-luu-y:hover .nen-luu-y { fill: #eef4fa; }
+.the-luu-y.chon .nen-luu-y { fill: #fff8e1; stroke: #f2a900; stroke-width: 3; }
+.so-luu-y { fill: #1d3557; }
+.chu-so-luu-y { font-size: 24px; font-weight: 800; fill: #fff; }
+.bt-khung { fill: #eceff1; stroke: #546e7a; stroke-width: 3; }
+.chu-luu-y { font: 17px/1.4 var(--font); color: #13202b; }
+.chu-luu-y p { margin: 0 0 8px; }
+.chu-luu-y .lien-he { font-size: 15px; color: #4a5b6b; }
