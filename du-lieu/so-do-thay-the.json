@@ -1,0 +1,24 @@
+{
+  "_huongDan": "Nội dung bài 3.3 theo slide 50–53 (Chuong1-MBA.pdf). Thông số mạch: một pha MBA bài tập 4 (slide 82–84), quy đổi về sơ cấp.",
+  "lyThuyet": {
+    "muc": "III. Quan hệ điện từ trong MBA",
+    "soDo": "Xuất phát từ các phương trình cơ bản của MBA, có thể biến đổi sơ đồ thay thế hình a sang hình b (hình T).",
+    "congThuc": [
+      { "chu": "Nhánh từ hóa:", "tex": "\\dot U_{MN} = -\\dot E_1 = -k\\dot E_2 = \\dot I_0\\,(R_{th} + jX_{th})", "duPhong": "U̇MN = −Ė₁ = −kĖ₂ = İ₀(Rth + jXth)" },
+      { "chu": "Sơ đồ đơn giản (bỏ nhánh từ hóa):", "tex": "R_n = R_1 + R'_2,\\qquad X_n = X_1 + X'_2", "duPhong": "Rn = R₁ + R′₂; Xn = X₁ + X′₂" }
+    ],
+    "rthXth": "Rth, Xth là điện trở và điện kháng của nhánh từ hóa.",
+    "donGian": "Thông thường tổng trở nhánh từ hóa (Rth, Xth) rất lớn, dòng điện từ hóa I₀ rất nhỏ. Để đơn giản có thể bỏ qua nhánh từ hóa, được sơ đồ thay thế dạng đơn giản. Rn, Xn là điện trở, điện kháng ngắn mạch của MBA. Khi mang tải định mức (zt = zt.đm), I₁ = I₁đm, I₂ = I₂đm.",
+    "vecto": "Tải của MBA thường có tính cảm (RL) hay tính dung (RC). Đồ thị véc tơ vẽ theo hệ phương trình: U̇₁ = −Ė₁ + İ₁r₁ + jİ₁x₁; U̇′₂ = Ė′₂ − İ′₂r′₂ − jİ′₂x′₂; İ₁ = İ₀ + (−İ′₂); Ė′₂ = Ė₁."
+  },
+  "mach": { "U1": 22000, "I1dm": 7.58, "r1": 10.45, "x1": 57, "r2": 10.45, "x2": 57, "Rth": 12985, "Xth": 144153, "nguon": "Bài tập 4 (slide 82–84), một pha, quy đổi về sơ cấp" },
+  "macDinh": { "kichBan": "so-do", "beta": 1, "cosPhi2": 0.8, "phongToU": 12, "phongToI0": 10 },
+  "trinhChieu": [
+    { "id": "hinh-a-b", "tieuDe": "3.3a. Từ phương trình đến sơ đồ thay thế", "the": "hình a → hình b", "loiGiang": "Sau quy đổi E′₂ = E₁ nên hai điểm M, M′ cùng điện thế, nối được với nhau; hai nguồn sđđ thay bằng nhánh từ hóa Rth + jXth với U̇MN = −Ė₁ = İ₀(Rth + jXth). Được sơ đồ thay thế hình T.", "trangThai": { "kichBan": "so-do" } },
+    { "id": "don-gian", "tieuDe": "Sơ đồ thay thế đơn giản", "the": "Rn = R₁ + R′₂, Xn = X₁ + X′₂", "loiGiang": "Nhánh từ hóa có tổng trở rất lớn nên I₀ rất nhỏ; bỏ qua nhánh này được sơ đồ đơn giản với Rn, Xn là điện trở, điện kháng ngắn mạch. Với máy bài tập 4: Rn = 20,9 Ω, Xn = 114 Ω.", "trangThai": { "kichBan": "so-do" } },
+    { "id": "sai-so", "tieuDe": "Sai số khi dùng sơ đồ đơn giản", "the": "rất nhỏ", "loiGiang": "So sánh hai sơ đồ theo hệ số tải: điện áp U′₂ và dòng điện tính bằng sơ đồ đơn giản chỉ sai khác rất ít so với sơ đồ hình T, vì I₀ chỉ khoảng 2 % I₁đm.", "trangThai": { "kichBan": "sai-so", "beta": 1 } },
+    { "id": "vecto-cam", "tieuDe": "3.3b. Đồ thị véc tơ – tải điện cảm", "the": "φ₂ > 0", "loiGiang": "Φ̇ nằm ngang; Ė₁ = Ė′₂ chậm sau Φ̇ góc 90°; İ₀ vượt trước Φ̇ góc α. Với tải cảm, İ′₂ chậm sau Ė′₂; U̇′₂ = Ė′₂ − r′₂İ′₂ − jx′₂İ′₂ nhỏ hơn E′₂; U̇₁ = −Ė₁ + r₁İ₁ + jx₁İ₁.", "trangThai": { "kichBan": "vecto", "cosPhi2": 0.8 } },
+    { "id": "vecto-dung", "tieuDe": "Đồ thị véc tơ – tải điện dung", "the": "φ₂ < 0", "loiGiang": "Với tải dung, İ′₂ vượt trước Ė′₂; các véc tơ sụt áp quay ngược lại nên U′₂ có thể lớn hơn E′₂. Hãy giảm cosφ₂ để thấy rõ khác biệt giữa hai trường hợp.", "trangThai": { "kichBan": "vecto", "cosPhi2": 0.5 } },
+    { "id": "tom-tat", "tieuDe": "Tóm tắt", "the": "3.3", "loiGiang": "Sơ đồ thay thế hình T mô tả đầy đủ MBA; bỏ nhánh từ hóa được sơ đồ đơn giản Rn, Xn. Đồ thị véc tơ cho thấy ảnh hưởng của tính chất tải (cảm, dung) đến điện áp thứ cấp.", "trangThai": { "kichBan": "so-do" } }
+  ]
+}

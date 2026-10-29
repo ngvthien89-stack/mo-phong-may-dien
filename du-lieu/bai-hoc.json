@@ -76,6 +76,13 @@
           "moTa": "U̇₁ = −Ė₁ + İ₁Z₁, U̇₂ = Ė₂ − İ₂Z₂; cân bằng stđ İ₁ = İ₀ + (−İ′₂); quy đổi E′₂ = kE₂, I′₂ = I₂/k, Z′₂ = k²Z₂ – số liệu bài tập 4.",
           "duongDan": "phuong-trinh-mba.html",
           "trangThai": "san-sang"
+        },
+        {
+          "ma": "3.3",
+          "ten": "Sơ đồ thay thế và đồ thị véc tơ của MBA",
+          "moTa": "Hình a → sơ đồ hình T → sơ đồ đơn giản (Rn, Xn); đồ thị véc tơ khi tải điện cảm, điện dung; sai khác giữa hai sơ đồ.",
+          "duongDan": "so-do-thay-the.html",
+          "trangThai": "san-sang"
         }
       ]
     },

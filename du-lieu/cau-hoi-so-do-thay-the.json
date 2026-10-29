@@ -1,0 +1,66 @@
+{
+  "_huongDan": "Ngân hàng câu hỏi bài 3.3. dapAn là số thứ tự lựa chọn đúng, bắt đầu từ 0.",
+  "soCauMoiLan": 5,
+  "cauHoi": [
+    {
+      "cauHoi": "Trong sơ đồ thay thế hình T, R<sub>th</sub> và X<sub>th</sub> là:",
+      "luaChon": ["Điện trở, điện kháng tản sơ cấp", "Điện trở, điện kháng của nhánh từ hóa", "Điện trở, điện kháng của tải", "Điện trở, điện kháng ngắn mạch"],
+      "dapAn": 1,
+      "giaiThich": "Rth, Xth là điện trở và điện kháng của nhánh từ hóa (slide 50)."
+    },
+    {
+      "cauHoi": "Điện áp trên nhánh từ hóa U̇<sub>MN</sub> bằng:",
+      "luaChon": ["Ė₁", "−Ė₁ = −kĖ₂ = İ₀(R<sub>th</sub> + jX<sub>th</sub>)", "İ₁Z₁", "U̇₂"],
+      "dapAn": 1,
+      "giaiThich": "UMN = −E₁ = −kE₂ = I₀(Rth + jXth)."
+    },
+    {
+      "cauHoi": "Vì sao có thể bỏ qua nhánh từ hóa để được sơ đồ thay thế đơn giản?",
+      "luaChon": ["Vì tổng trở nhánh từ hóa rất nhỏ", "Vì tổng trở nhánh từ hóa rất lớn, dòng điện từ hóa I₀ rất nhỏ", "Vì tải luôn thuần trở", "Vì E₁ = 0"],
+      "dapAn": 1,
+      "giaiThich": "Thông thường tổng trở nhánh từ hóa rất lớn, dòng điện từ hóa I₀ rất nhỏ (slide 51)."
+    },
+    {
+      "cauHoi": "Trong sơ đồ đơn giản, điện trở ngắn mạch R<sub>n</sub> bằng:",
+      "luaChon": ["R₁ − R′₂", "R₁ + R′₂", "R₁·R′₂", "R<sub>th</sub> + R₁"],
+      "dapAn": 1,
+      "giaiThich": "Rn = R₁ + R′₂, Xn = X₁ + X′₂."
+    },
+    {
+      "cauHoi": "MBA bài tập 4 có R₁ = R′₂ = 10,45 Ω, X₁ = X′₂ = 57 Ω. Điện kháng ngắn mạch X<sub>n</sub> bằng:",
+      "luaChon": ["57 Ω", "114 Ω", "20,9 Ω", "28,5 Ω"],
+      "dapAn": 1,
+      "giaiThich": "Xn = X₁ + X′₂ = 57 + 57 = 114 Ω (slide 83)."
+    },
+    {
+      "cauHoi": "Trên đồ thị véc tơ của MBA, sđđ Ė₁ so với từ thông Φ̇:",
+      "luaChon": ["Cùng pha", "Chậm sau 90°", "Vượt trước 90°", "Ngược pha"],
+      "dapAn": 1,
+      "giaiThich": "e = √2E·sin(ωt − π/2) nên Ė₁ chậm sau Φ̇ góc 90°."
+    },
+    {
+      "cauHoi": "Với tải điện cảm, dòng điện thứ cấp İ′₂ so với Ė′₂:",
+      "luaChon": ["Vượt trước", "Chậm sau", "Cùng pha", "Vuông góc vượt trước"],
+      "dapAn": 1,
+      "giaiThich": "Tải tính cảm (RL): dòng điện chậm sau điện áp."
+    },
+    {
+      "cauHoi": "Hệ phương trình dùng để vẽ đồ thị véc tơ phía thứ cấp là:",
+      "luaChon": ["U̇′₂ = Ė′₂ − İ′₂r′₂ − jİ′₂x′₂", "U̇′₂ = Ė′₂ + İ′₂r′₂", "U̇′₂ = −Ė′₂", "U̇′₂ = İ′₂Z<sub>th</sub>"],
+      "dapAn": 0,
+      "giaiThich": "U̇′₂ = Ė′₂ − İ′₂Z′₂ = Ė′₂ + (−İ′₂r′₂) + (−jİ′₂x′₂)."
+    },
+    {
+      "cauHoi": "Khi mang tải định mức (z<sub>t</sub> = z<sub>t.đm</sub>), dòng điện trong máy:",
+      "luaChon": ["I₁ = I₀", "I₁ = I₁đm, I₂ = I₂đm", "I₁ = 0", "I₂ = I₀"],
+      "dapAn": 1,
+      "giaiThich": "Khi mang tải định mức, I₁ = I₁đm; I₂ = I₂đm (slide 51)."
+    },
+    {
+      "cauHoi": "So với tải cảm, tải dung có thể làm điện áp thứ cấp U′₂:",
+      "luaChon": ["Luôn giảm mạnh hơn", "Lớn hơn E′₂", "Bằng 0", "Không phụ thuộc tải"],
+      "dapAn": 1,
+      "giaiThich": "Với tải dung, İ′₂ vượt trước Ė′₂, các véc tơ sụt áp có thể làm U′₂ lớn hơn E′₂."
+    }
+  ]
+}

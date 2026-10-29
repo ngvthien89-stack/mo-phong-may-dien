@@ -58,3 +58,8 @@
 .chu-bang.dam { font-weight: 800; }
 .chu-bang.nho { font-size: 15px; fill: #4a5b6b; }
 .diem-noi { fill: #37474f; }
+.dien-tro { fill: #fff; stroke: #37474f; stroke-width: 2.5; }
+.cuon-cam { fill: none; stroke: #37474f; stroke-width: 2.5; }
+.nhan-lk { font-size: 16px; font-weight: 700; font-style: italic; font-family: "Times New Roman", serif !important; fill: #13202b; }
+.nguon-phu { fill: #fff; stroke: #37474f; stroke-width: 2.5; }
+.mui-tach { stroke: #13202b; stroke-width: 3; stroke-dasharray: 8 6; }

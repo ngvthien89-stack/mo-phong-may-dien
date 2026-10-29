@@ -65,6 +65,7 @@ async function kiemTraBoCuc(trang, ten) {
 const BAI_MBA = [
   ['nguyen-ly-mba', '2.5–2.7', ['nguyen-ly', 'he-so-k', 'dinh-muc']],
   ['phuong-trinh-mba', '3.1–3.2', ['dien-ap', 'std', 'quy-doi']],
+  ['so-do-thay-the', '3.3', ['so-do', 'vecto', 'sai-so']],
 ];
 
 async function kiemTraChuSvg(trang, ten) {

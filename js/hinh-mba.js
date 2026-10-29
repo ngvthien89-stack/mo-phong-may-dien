@@ -154,3 +154,45 @@ export function veBang(cha, x, y, cot, hangH, tieuDe, soHang) {
   }
   return { g, o: o.slice(1) };
 }
+
+/** Điện trở (hình chữ nhật) dọc theo dây dẫn, bắt đầu tại (x, y), dài 'dai'. */
+export function veDienTro(cha, x, y, dai = 46, doc = false, nhan = '') {
+  const g = el('g', { class: 'linh-kien' }, cha);
+  if (doc) el('rect', { x: x - 9, y, width: 18, height: dai, class: 'dien-tro' }, g);
+  else el('rect', { x, y: y - 9, width: dai, height: 18, class: 'dien-tro' }, g);
+  if (nhan) el('text', doc ? { x: x + 16, y: y + dai / 2 + 6, class: 'nhan-lk' } : { x: x + dai / 2, y: y - 16, class: 'nhan-lk', 'text-anchor': 'middle' }, g).textContent = nhan;
+  return g;
+}
+
+/** Cuộn cảm (ba vòng bán nguyệt) dọc theo dây dẫn, bắt đầu tại (x, y), dài 'dai'. */
+export function veCuonCam(cha, x, y, dai = 46, doc = false, nhan = '') {
+  const g = el('g', { class: 'linh-kien' }, cha);
+  const r = dai / 6;
+  let d = doc ? `M${x} ${y}` : `M${x} ${y}`;
+  for (let k = 0; k < 3; k++) d += doc ? ` a${r} ${r} 0 0 1 0 ${2 * r}` : ` a${r} ${r} 0 0 1 ${2 * r} 0`;
+  el('path', { d, class: 'cuon-cam' }, g);
+  if (nhan) el('text', doc ? { x: x + 16, y: y + dai / 2 + 6, class: 'nhan-lk' } : { x: x + dai / 2, y: y - 16, class: 'nhan-lk', 'text-anchor': 'middle' }, g).textContent = nhan;
+  return g;
+}
+
+/** Cung chỉ góc giữa hai hướng (rad, theo trục y hướng lên) quanh tâm O. */
+export function veCungGoc(cha, mau) {
+  const g = el('g', {}, cha);
+  const cung = el('path', { fill: 'none', stroke: mau, 'stroke-width': 2 }, g);
+  const chu = el('text', { class: 'nhan-vecto', fill: mau, 'text-anchor': 'middle' }, g);
+  return {
+    dat(O, r, a1, a2, nhan) {
+      let da = a2 - a1;
+      while (da > Math.PI) da -= 2 * Math.PI;
+      while (da < -Math.PI) da += 2 * Math.PI;
+      g.style.display = Math.abs(da) < 0.02 ? 'none' : '';
+      const p1 = [O[0] + r * Math.cos(a1), O[1] - r * Math.sin(a1)];
+      const p2 = [O[0] + r * Math.cos(a1 + da), O[1] - r * Math.sin(a1 + da)];
+      cung.setAttribute('d', `M${p1[0].toFixed(1)} ${p1[1].toFixed(1)} A${r} ${r} 0 0 ${da > 0 ? 0 : 1} ${p2[0].toFixed(1)} ${p2[1].toFixed(1)}`);
+      const am = a1 + da / 2;
+      chu.setAttribute('x', (O[0] + (r + 18) * Math.cos(am)).toFixed(1));
+      chu.setAttribute('y', (O[1] - (r + 18) * Math.sin(am) + 6).toFixed(1));
+      chu.textContent = nhan;
+    },
+  };
+}
