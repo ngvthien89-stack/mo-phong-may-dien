@@ -52,10 +52,10 @@ Ký hiệu trạng thái: ✅ đã xong · 🔨 đang làm · ⏳ chưa làm
 
 | Slide | Bài trên website | Nội dung chính | Trạng thái |
 |---|---|---|---|
-| 77 | Bài tập 1 | Tỷ số biến áp pha của MBA Δ/Y0 | ⏳ |
-| 78–79 | Bài tập 2 | Tổn hao, dòng tải để hiệu suất cực đại | ⏳ |
-| 80–81 | Bài tập 3 | Hai MBA làm việc song song | ⏳ |
-| 82–84 | Bài tập 4 | Thông số sơ đồ thay thế, cosφ0 | ⏳ |
+| 77 | Bài tập 1 | Tỷ số biến áp pha của MBA Δ/Y0 | ✅ |
+| 78–79 | Bài tập 2 | Tổn hao, dòng tải để hiệu suất cực đại | ✅ |
+| 80–81 | Bài tập 3 | Hai MBA làm việc song song | ✅ |
+| 82–84 | Bài tập 4 | Thông số sơ đồ thay thế, cosφ0 | ✅ |
 
 ## Ghi chú rà soát slide (đề nghị giảng viên kiểm tra)
 

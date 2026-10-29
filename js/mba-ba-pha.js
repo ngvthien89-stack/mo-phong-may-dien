@@ -99,12 +99,12 @@ function veSanKhau(svg) {
   r.a.muiPhi = [0, 1, 2].map((k) => el('line', { class: 'vec', stroke: PHA[k], 'stroke-width': 5, 'marker-end': 'url(#mui-den)' }, a1));
   r.a.chuBuoc = el('text', { x: 44, y: 560, class: 'chu-kq' }, a1);
   const a2 = veThe(gA, 20, 600, 1000, 290, 'ΦA, ΦB, ΦC và tổng Φ = ΦA + ΦB + ΦC');
-  r.a.truc = veTruc(a2, { x0: 90, x1: 990, y0: 650, y1: 870, xMin: 0, xMax: 4 * Math.PI, yMin: -1.6, yMax: 1.6 }, {
+  r.a.truc = veTruc(a2, { x0: 90, x1: 990, y0: 650, y1: 850, xMin: 0, xMax: 4 * Math.PI, yMin: -1.6, yMax: 1.6 }, {
     nhanX: [[0, '0'], [Math.PI, 'π'], [2 * Math.PI, '2π'], [3 * Math.PI, '3π'], [4 * Math.PI, '4π ωt']], nhanY: [[0, '0'], [1, '+Φm'], [-1, '−Φm']],
   });
   r.a.dPha = [0, 1, 2].map((k) => el('path', { class: 'duong-dt', stroke: PHA[k] }, a2));
   r.a.dTong = el('path', { class: 'duong-dt', stroke: '#13202b', 'stroke-width': 4 }, a2);
-  r.a.con = el('line', { y1: 650, y2: 870, class: 'duong-cham' }, a2);
+  r.a.con = el('line', { y1: 650, y2: 850, class: 'duong-cham' }, a2);
   const a3 = veThe(gA, 1040, 20, 540, 870, 'Véc tơ từ thông');
   r.a.O = [1310, 330];
   el('circle', { cx: 1310, cy: 330, r: 170, class: 'vong-mo' }, a3);
@@ -286,7 +286,7 @@ async function khoiDong() {
     veDoThi(r.b.vtThu, [880, 690], s.thu === 'Y' ? 105 : 170, s.thu, t.eThu, ['a', 'b', 'c'], false);
     r.b.dongHo.dat(t.goc === 0 ? 360 : t.goc);
     r.b.ketQua.textContent = ky;
-    r.b.goc.textContent = `E_ab chậm sau E_AB ${t.goc === 0 ? 360 : t.goc}° → kim giờ chỉ ${t.so}`;
+    r.b.goc.textContent = `Lệch ${t.goc === 0 ? 360 : t.goc}° → ${t.so} giờ`;
     nd.mau4To.forEach((m, k) => {
       r.b.mau[k].chu.textContent = m.ten;
       r.b.mau[k].g.classList.toggle('chon', m.so === s.so && m.thu === s.thu && !s.nguocCuc && !s.hoanVi);

@@ -92,3 +92,16 @@
 .chu-luu-y { font: 17px/1.4 var(--font); color: #13202b; }
 .chu-luu-y p { margin: 0 0 8px; }
 .chu-luu-y .lien-he { font-size: 15px; color: #4a5b6b; }
+.de-bai { font: 18px/1.5 var(--font); color: #13202b; background: #eef4fa; border-left: 4px solid #1d3557; padding: 10px 14px; border-radius: 0 10px 10px 0; }
+.de-bai .da-doi { color: #c62828; font-weight: 700; }
+.loi-giai { font: 16px/1.4 var(--font); color: #13202b; max-height: 676px; overflow-y: auto; }
+.loi-giai table { width: 100%; border-collapse: collapse; }
+.loi-giai th { text-align: left; background: #eef4fa; padding: 6px 8px; font-size: 15px; }
+.loi-giai td { padding: 5px 8px; border-bottom: 1px solid #e3e9ef; vertical-align: top; }
+.loi-giai td.so { text-align: right; white-space: nowrap; font-variant-numeric: tabular-nums; font-weight: 700; }
+.loi-giai .ct { color: #4a5b6b; font-size: 15px; }
+.loi-giai tr.moi td { background: #fff8e1; }
+.loi-giai tr.lech td.so:last-child { color: #c62828; }
+.loi-giai tr.ghi-chu-lech td { font-size: 14px; color: #b45309; background: #fff7ed; padding-top: 2px; }
+.loi-giai .con-lai { color: #4a5b6b; margin: 10px 0 0; }
+.loi-giai .xong { color: #2e7d32; font-weight: 800; margin: 10px 0 0; }

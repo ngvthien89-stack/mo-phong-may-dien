@@ -204,6 +204,29 @@ Theo slide 25–37 (`Chuong1-MBA.pdf`): lõi thép, dây quấn, vỏ máy.
 - Hàm thuần trong `js/cau-tao.js`, có test.
 - Prompt lưu trong [`docs/prompts/2.4-cau-tao-mba.md`](docs/prompts/2.4-cau-tao-mba.md).
 
+## Các bài 2.5 – VI (phần còn lại của chương 1)
+
+Theo slide 38–84 (`Chuong1-MBA.pdf`). Các trang dùng khung chung `js/khung-trang.js`, `js/hinh-mba.js`, `css/mba.css`.
+
+| Bài | Trang | Nội dung mô phỏng |
+|---|---|---|
+| 2.5–2.7 | `nguyen-ly-mba.html` | Φ, e₁, e₂ theo ωt; E = 4,44·f·w·Φm; hệ số biến áp k; nhãn máy, dòng điện định mức |
+| 3.1–3.2 | `phuong-trinh-mba.html` | Phương trình cân bằng điện áp (đồ thị véc tơ), cân bằng stđ, quy đổi |
+| 3.3 | `so-do-thay-the.html` | Sơ đồ thay thế hình T, sơ đồ đơn giản; đồ thị véc tơ tải cảm, tải dung |
+| 3.4 | `thi-nghiem-mba.html` | Phòng thí nghiệm ảo không tải, ngắn mạch; thông số sơ đồ thay thế |
+| 4.1–4.3 | `che-do-lam-viec.html` | Giản đồ năng lượng P, Q; ΔU% và đầu phân áp; tổn hao, hiệu suất, β tối ưu |
+| 5.1–5.2 | `mba-ba-pha.html` | MBA ba trụ; tổ nối dây bằng đồ thị véc tơ và phương pháp đồng hồ |
+| 5.3–5.4 | `song-song-mba.html` | Điều kiện làm việc song song, phân bố tải, lưu ý vận hành |
+| VI | `bai-tap-chuong-1.html` | Bốn bài tập: lời giải từng bước, đổi số liệu, đối chiếu slide |
+
+![Thí nghiệm ngắn mạch ảo](docs/anh/thi-nghiem-mba-1920x1080.png)
+
+![Tổ nối dây – phương pháp đồng hồ](docs/anh/to-noi-day-1920x1080.png)
+
+- Các máy mô phỏng dựng từ số liệu đề bài tập (slide 78, 80, 82); kết quả tính khớp lời giải slide.
+- Những chỗ slide làm tròn hoặc nhầm số học (ví dụ slide 79: β tối ưu đúng là 0,503, không phải 0,294) được đánh dấu trên trang bài tập và liệt kê trong [`docs/lo-trinh-chuong-1.md`](docs/lo-trinh-chuong-1.md).
+- Prompt lưu trong [`docs/prompts/2.5-VI-con-lai-chuong-1.md`](docs/prompts/2.5-VI-con-lai-chuong-1.md).
+
 ## Lưu ý về số liệu
 
 > Các cấp điện áp, công suất phụ tải, đồ thị phụ tải ngày, thông số đường dây… trong `du-lieu/cau-hinh.json`
@@ -223,6 +246,8 @@ toan-dong-dien.html     Bài 1.2.c
 vat-lieu.html           Bài 1.3
 khai-niem-mba.html      Bài 2.1–2.3
 cau-tao-mba.html        Bài 2.4
+nguyen-ly-mba.html, phuong-trinh-mba.html, so-do-thay-the.html, thi-nghiem-mba.html,
+che-do-lam-viec.html, mba-ba-pha.html, song-song-mba.html, bai-tap-chuong-1.html   Bài 2.5 – VI
 css/                    chung.css, mo-phong.css (bố cục chung các trang mô phỏng), trang-chu.css,
                         he-thong-dien.css, cam-ung-dien-tu.css, luc-dien-tu.css, toan-dong-dien.css, vat-lieu.css, khai-niem-mba.css, cau-tao-mba.css
 js/
@@ -248,6 +273,10 @@ js/
   khai-niem-mba.js      Trang bài 2.1–2.3: định nghĩa, ký hiệu, vai trò truyền tải, MBA chuyên dụng
   cau-tao.js            Hàm thuần bài 2.4 (thứ tự bánh dây xen kẽ, mức dầu bình giãn dầu, giới hạn bước)
   cau-tao-mba.js        Trang bài 2.4: lắp ráp ruột máy, lá thép, dây quấn, vỏ máy
+  khung-trang.js        Khung dùng chung cho các trang 2.5 – VI (nạp dữ liệu, nút chung, trình chiếu, câu hỏi, vòng lặp)
+  hinh-mba.js           Thành phần vẽ SVG cho các trang MBA (lõi, cuộn dây, đồng hồ đo, trục đồ thị, véc tơ, bảng, R, L)
+  so-phuc.js, mach-mba.js  Số phức; giải sơ đồ thay thế hình T và sơ đồ đơn giản
+  thi-nghiem.js, che-do.js, to-noi-day.js, song-song.js, bai-tap.js  Hàm thuần phần III – VI (có test)
   tien-ich.js           Hàm tiện ích dùng chung (nạp JSON, định dạng số, vẽ KaTeX)
   trang-chu.js          Trang chủ
 du-lieu/                Nội dung cho giảng viên chỉnh sửa (JSON)

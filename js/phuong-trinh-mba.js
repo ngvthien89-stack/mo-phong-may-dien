@@ -266,7 +266,7 @@ async function khoiDong() {
     const k0 = doLon(giai(0).E1);
     r.b.cotPhi.setAttribute('width', (E1 / P.U1) * 300);
     r.b.gtPhi.setAttribute('x', 500 + (E1 / P.U1) * 300 + 10);
-    r.b.gtPhi.textContent = `${so((E1 / k0) * 100, 4)} % so với không tải`;
+    r.b.gtPhi.textContent = `${so((E1 / k0) * 100, 4)} %`;
     // tam giác dòng điện (İ0 phóng to ×10)
     const O = [80, 630];
     const tlI = 250 / P.I1dm;

@@ -1,0 +1,66 @@
+{
+  "_huongDan": "Câu hỏi tổng hợp chương 1 (dựa trên bốn bài tập, slide 77–84). dapAn là số thứ tự lựa chọn đúng, bắt đầu từ 0.",
+  "soCauMoiLan": 5,
+  "cauHoi": [
+    {
+      "cauHoi": "MBA Δ/Y₀, U₁đm/U₂đm = 15/0,4 kV. Điện áp pha phía sơ cấp bằng:",
+      "luaChon": ["15 kV", "8,66 kV", "26 kV", "0,23 kV"],
+      "dapAn": 0,
+      "giaiThich": "Sơ cấp nối tam giác nên điện áp pha bằng điện áp dây: Up1 = Ud1 = 15 kV."
+    },
+    {
+      "cauHoi": "MBA Δ/Y₀, 15/0,4 kV. Tỷ số biến áp pha kp (giữ đủ chữ số) xấp xỉ:",
+      "luaChon": ["37,5", "64,95", "112,5", "21,65"],
+      "dapAn": 1,
+      "giaiThich": "kp = 15/(0,4/√3) = 15/0,2309 ≈ 64,95 (slide làm tròn 0,23 kV nên ra 65,21)."
+    },
+    {
+      "cauHoi": "MBA 630 kVA, 22/0,4 kV, Pn = 6000 W làm việc với β = 0,6. Tổn hao đồng pCu bằng:",
+      "luaChon": ["3600 W", "2160 W", "6000 W", "1520 W"],
+      "dapAn": 1,
+      "giaiThich": "pCu = β²·Pn = 0,6²·6000 = 2160 W."
+    },
+    {
+      "cauHoi": "Cũng máy trên (P₀ = 1520 W), dòng điện tải để hiệu suất cao nhất (I₂đm = 909,3 A) xấp xỉ:",
+      "luaChon": ["267,7 A", "457,7 A", "545,6 A", "909,3 A"],
+      "dapAn": 1,
+      "giaiThich": "β = √(1520/6000) ≈ 0,503 → I₂ = 0,503·909,3 ≈ 457,7 A. (Slide ghi 0,294 và 267,7 A là nhầm số học.)"
+    },
+    {
+      "cauHoi": "Hai MBA song song 1250 kVA (un = 5 %) và 1000 kVA (un = 5,5 %) cấp cho tải 1600 kVA. Công suất máy 1 xấp xỉ:",
+      "luaChon": ["800 kVA", "925 kVA", "1250 kVA", "674 kVA"],
+      "dapAn": 1,
+      "giaiThich": "β₁ = 1600/(5·431,8) ≈ 0,74 → S₁ ≈ 925 kVA."
+    },
+    {
+      "cauHoi": "MBA 500 kVA, 22/0,4 kV, Δ/Y-11. Dòng điện pha định mức sơ cấp I₁đmp bằng:",
+      "luaChon": ["13,12 A", "7,58 A", "22,7 A", "722 A"],
+      "dapAn": 1,
+      "giaiThich": "I₁đm = 500·10³/(√3·22·10³) = 13,12 A; nối Δ nên I₁đmp = 13,12/√3 = 7,58 A."
+    },
+    {
+      "cauHoi": "Cũng máy trên, Pn = 3600 W. Điện trở ngắn mạch Rn (một pha) bằng:",
+      "luaChon": ["20,9 Ω", "62,7 Ω", "10,45 Ω", "116 Ω"],
+      "dapAn": 0,
+      "giaiThich": "Rn = Pn/(3·I₁đmp²) = 3600/(3·7,58²) ≈ 20,9 Ω (đơn vị Ω; slide ghi nhầm \"A\")."
+    },
+    {
+      "cauHoi": "Cũng máy trên, un% = 4 %. Tổng trở ngắn mạch zn bằng:",
+      "luaChon": ["58 Ω", "116 Ω", "880 Ω", "20,9 Ω"],
+      "dapAn": 1,
+      "giaiThich": "U₁n = 4 %·22 kV = 880 V; zn = 880/7,58 ≈ 116 Ω."
+    },
+    {
+      "cauHoi": "Cũng máy trên: R₀ ≈ 12 985 Ω, z₀ ≈ 144 737 Ω. Hệ số công suất không tải cosφ₀ xấp xỉ:",
+      "luaChon": ["0,9", "0,09", "0,5", "0,009"],
+      "dapAn": 1,
+      "giaiThich": "cosφ₀ = R₀/z₀ = 12 985/144 737 ≈ 0,09."
+    },
+    {
+      "cauHoi": "Trong bài tập 4, R₂ = R′₂/kp² với kp = 95,2. Vì sao R₂ rất nhỏ (cỡ mΩ)?",
+      "luaChon": ["Vì dây quấn hạ áp có ít vòng, tiết diện lớn", "Vì nhiệt độ thấp", "Vì nối tam giác", "Vì tần số 50 Hz"],
+      "dapAn": 0,
+      "giaiThich": "Quy đổi về sơ cấp nhân k²; giá trị thực của dây quấn hạ áp nhỏ hơn k² lần (bài 3.2)."
+    }
+  ]
+}

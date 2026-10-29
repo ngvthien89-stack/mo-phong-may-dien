@@ -238,7 +238,7 @@ async function khoiDong() {
     o.vt.Phi.dat(O, [O[0] + 150, O[1]], 'Φ̇', [70, -10]);
     o.vt.E1.dat(O, pU(E1), 'Ė₁ = Ė′₂', [16, 120]);
     o.vt.mE1.dat(O, pU(doiDau(E1)), '−Ė₁', [22, -40]);
-    o.vt.I0.dat(O, pI(I0m), `İ₀ (×${s.mI0})`, [10, -14]);
+    o.vt.I0.dat(O, pI(I0m), `İ₀ (×${s.mI0})`, [34, -26]);
     o.vt.I2.dat(O, pI(I2), 'İ′₂', [-26, 0]);
     o.vt.mI2.dat(pI(I0m), pI(I1ve), '−İ′₂', [16, 6]);
     o.vt.I1.dat(O, pI(I1ve), 'İ₁', [-22, -8]);
@@ -257,8 +257,8 @@ async function khoiDong() {
     o.vt.U1.dat(O, pU(U1ve), 'U̇₁', [-36, -10]);
     const g = (z) => goc(q(z));
     o.cung.phi1.dat(O, 70, g(U1ve), g(I1ve), 'φ₁');
-    o.cung.psi2.dat(O, 105, g(E1), g(I2), 'ψ₂');
-    o.cung.alpha.dat(O, 46, 0, g(I0m), 'α');
+    o.cung.psi2.dat(O, 140, g(E1), g(I2), 'ψ₂');
+    o.cung.alpha.dat(O, 30, 0, g(I0m), 'α');
     const U2 = doLon(kqT.U2q);
     o.chu[0].textContent = `U′₂ = ${V(U2)} = ${dinhDangSo((U2 / doLon(E1)) * 100, 2)} % E′₂`;
     o.chu[1].textContent = `I₁ = ${so(doLon(I1))} A · cosφ₁ = ${so(Math.cos(goc(kqT.I1)))} · I₀ = ${so(doLon(kqT.I0))} A`;

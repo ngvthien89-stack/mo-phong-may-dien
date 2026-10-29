@@ -196,6 +196,7 @@ const BAI_KHUNG = [
   ['che-do-lam-viec', ['nang-luong', 'dien-ap', 'hieu-suat']],
   ['mba-ba-pha', ['ba-tru', 'to-noi-day', 'mot-pha']],
   ['song-song-mba', ['phan-tai', 'dieu-kien', 'luu-y']],
+  ['bai-tap-chuong-1', ['bt1', 'bt2', 'bt3', 'bt4']],
 ];
 for (const [tep, dsKichBan] of BAI_KHUNG) {
   test(`${tep}.json và câu hỏi: bước trình chiếu dùng kịch bản hợp lệ, đáp án hợp lệ`, () => {

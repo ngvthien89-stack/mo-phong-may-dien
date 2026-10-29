@@ -125,6 +125,18 @@
       ]
     },
     {
+      "ten": "Chương 1. Máy biến áp – VI. Một số bài tập",
+      "baiHoc": [
+        {
+          "ma": "VI",
+          "ten": "Bốn bài tập chương 1",
+          "moTa": "Tỷ số biến áp pha; tổn hao và hiệu suất cực đại; hai MBA song song; thông số sơ đồ thay thế – lời giải từng bước, đổi số liệu, đối chiếu kết quả slide.",
+          "duongDan": "bai-tap-chuong-1.html",
+          "trangThai": "san-sang"
+        }
+      ]
+    },
+    {
       "ten": "Các chương tiếp theo (theo mục lục học phần Máy điện I)",
       "baiHoc": [
         {
